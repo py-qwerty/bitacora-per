@@ -1,14 +1,15 @@
-# Browser verification — 1 November 2026
+# Browser verification — final mobile revision, 1 November 2026
 
-Executed through the connected Chrome browser against the actual local static server.
+Executed in connected Chrome against the actual static application. Screenshots and DOM state inspected at 390×844, and initial desktop view verified. Final application keeps a maximum 480px mobile width even on desktop.
 
-- Home renders all 11 topic links and bank count; desktop screenshot inspected.
-- Setup displays 45 questions, 90 minutes, 32 minimum correct, quotas, three subject limits, official-source link and material notice.
-- Started an exam; rendered 45 navigator buttons and four radio options. Selected first answer; moved next; reload retained position 2, one saved answer and the running clock (89:06, not reset).
-- Marked question 2, selected another option, opened delivery modal. Dialog displayed 43 blank questions and initially focused the safe cancel action. Escape cancelled and restored focus to the delivery button. Reopened and delivered: result showed 2 correct, 0 incorrect, 43 blank, NO APTO, per-subject distribution and all failed limits. Correct answer highlighted in the review. No solutions appeared during active exam.
-- Topic 5 rendered study cards; revealing a solution displayed the original answer. Search for zzzzsinresultados produced an explanatory no-results panel and working reset action.
-- At 390×844: topic layout and native test filter inspected; search, full options and controls readable. Home has 11 links and scrollWidth equals innerWidth (390). Exam has 45 navigator buttons, four options, and scrollWidth 390. Mobile exam screenshot inspected. Native select popup is platform-owned; Escape dismisses it.
-- Failure server returned HTTP 503 for bank.json while serving the real application: app displayed localized failure explanation, preserved-progress statement and retry button.
-- Desktop and mobile share button labels, option lettering, topic labels, panel appearance and focus styling.
+- Mobile home renders 11 simple topic rows, bottom navigation and completed-test count. No marketing hero, compass panel or desktop grid. Width and document scrollWidth both 390px.
+- Theme → numbered tests → one-question screen. Started topic 1 test 1; selected first answer, checked it and moved to question 2. Reload retained question 2 and the saved response/checked state for question 1.
+- Completed all ten questions, delivered with a zero-blank confirmation, and received the 1/10 test summary. Read-only review displayed checked solutions; home retained completion (1 of 150 ten-question tests). The 150 practice blocks differ from the 149 original source tests because all blocks are now exactly ten.
+- Mock setup shows 45 questions, 90 minutes, 32 minimum correct, three subject limits and the no-progress-saving notice. Started a mock, answered one question and reloaded. The app displayed no active attempt: progress was discarded as requested.
+- Started another mock, answered and delivered. Reload retained the NO APTO final result and its source answers. Review rendered one question per screen. Width/scrollWidth remained 390px.
+- Delivery modal safe initial focus, Escape cancellation and focus restoration had been exercised in the earlier same-primitive flow; the revised practice delivery also initially focuses its safe action.
+- Mobile answer options, feedback, previous/next, bottom tabs, exam header, collapsed answer sheet and topic rows visually inspected. Fixed bottom tabs have safe-area spacing and content bottom padding, and are hidden during mock exams.
+- Error server (HTTP 503 on bank.json) exercised the same finite-timeout loading/failure component: localized explanation and retry; no browser data deletion.
+- Chrome errors checked after the original flow: none. Final syntax/domain tests also pass.
 
-Core domain tests independently validate 1000 random exams, all pass/fail boundaries, blank answers and fixed deadlines. Waiting 90 real minutes was not part of the browser verification. No screen-reader audit, physical touch test, or full cross-browser matrix is claimed. Storage quota failure is handled by persistent warning and in-memory fallback; no forced browser storage-quota exhaustion test was performed.
+Core tests cover 1000 random exams, quotas, all grading thresholds, blanks, fixed deadlines, all ten-question blocks, complete coverage, serialized practice recovery and the absence of in-progress mock storage writes. Waiting 90 real minutes, screen-reader auditing, physical touch tests, storage-quota exhaustion and a full cross-browser matrix are not claimed. No offline mode or multi-device synchronization is implemented.

@@ -46,3 +46,23 @@ test('session validation rejects corrupt or stale stored data',()=>{
   assert(isValidSession(s,map));assert(!isValidSession({...s,index:-1},map));assert(!isValidSession({...s,ids:['missing',...s.ids.slice(1)]},map));assert(!isValidSession({...s,answers:{[s.ids[0]]:'z'}},map));assert(!isValidSession(null,map));
 });
 test('random draw fails clearly if a topic cannot meet its quota',()=>assert.throws(()=>generateExam(bank.questions.filter(q=>q.topic!==11)),/tema 11/));
+
+test('practice blocks are exactly ten and cover every question in every topic',async()=>{
+  const {practiceBlocks,validPractice}=await import('../dist/core.js');
+  for(const t of bank.topics){
+    const blocks=practiceBlocks(bank.questions,t.id),original=bank.questions.filter(q=>q.topic===t.id);
+    assert.equal(blocks.length,Math.ceil(original.length/10));assert.equal(new Set(blocks.flat().map(q=>q.id)).size,original.length);
+    for(const block of blocks){assert.equal(block.length,10);assert.equal(new Set(block.map(q=>q.id)).size,10);assert(block.every(q=>q.topic===t.id));}
+    const ids=blocks[0].map(q=>q.id),p={topic:t.id,block:1,ids,answers:{[ids[0]]:blocks[0][0].correct},index:4,checked:[ids[0]]};
+    const restored=JSON.parse(JSON.stringify(p));assert(validPractice(restored,ids,map));assert.equal(restored.index,4);assert.equal(Object.keys(restored.answers).length,1);
+    assert(!validPractice({...p,index:10},ids,map));assert(!validPractice({...p,answers:{bad:'a'}},ids,map));
+  }
+});
+test('in-progress mock exams are never written to browser storage',()=>{
+  const app=readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
+  const update=app.slice(app.indexOf('function updateSession('),app.indexOf('function finish('));
+  const start=app.slice(app.indexOf('function startExam('),app.indexOf('const dateFormat'));
+  assert(!update.includes('write('));assert(!start.includes('write('));
+  const finish=app.slice(app.indexOf('function finish('),app.indexOf('function startExam('));
+  assert(finish.indexOf('s.finishedAt =')<finish.indexOf("write('session:'"));
+});

@@ -1,11 +1,1 @@
-{
-  "profile": "product-admin",
-  "sourceRoots": ["dist"],
-  "locale": "es-ES",
-  "canonicalMap": "UX-CONTRACT.md",
-  "requiredCapabilities": ["Select/Listbox", "Form", "Scrollbar", "Toast"],
-  "ownership": {"Select/Listbox": "native"},
-  "requiredCommands": ["unit"],
-  "commands": {"unit": "npm run check"},
-  "evidence": {"failurePaths": "tests/exam.test.js", "crudFullFlow": "tests/browser-verification.md"}
-}
+{"profile":"product-admin","sourceRoots":["dist"],"locale":"es-ES","canonicalMap":"UX-CONTRACT.md","requiredCapabilities":["Scrollbar","Toast"],"requiredCommands":["unit"],"commands":{"unit":"npm run check"},"evidence":{"failurePaths":"tests/exam.test.js","crudFullFlow":"tests/browser-verification.md"}}

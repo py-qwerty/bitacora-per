@@ -4,38 +4,28 @@
 
 | Capability | Canonical owner | Source of truth | Allowed variants | Verification |
 | --- | --- | --- | --- | --- |
-| Navigation | app.js currentRoute/render, index.html nav | This contract | study / exam / result | Browser flow |
-| Select/Listbox | native select#test-filter | DESIGN.md | platform-owned native popup | Keyboard and popup browser check |
-| Form | question-search form, setFilters | This contract | subject search | No-results and clear check |
-| Scrollbar | styles.css global baseline | DESIGN.md | table horizontal scrolling | DOM style/phone check |
-| Toast | persistent #notice role=status | This contract | storage failure | Static and failure-path tests |
-| Dialog | native dialog + ask() | This contract | submit / replace exam | Focus, Escape, cancel/submit |
-| Local data | read/write/updateSession | PRODUCT.md | studied IDs / active / result | Refresh and core tests |
+| Navigation | index.html bottom-nav, app.js render | User mobile revision / DESIGN.md | topics / practice / mock / history | Browser mobile flow |
+| Scrollbar | styles.css global baseline | DESIGN.md | table horizontal scrolling | DOM width check |
+| Toast | #notice role=status | PRODUCT.md storage fallback | persistent storage warning | Static evidence |
+| Dialog | native dialog + ask() | This contract | finish / reset / replace | Safe focus, Escape and submit |
+| Local data | read/write/getPractice | PRODUCT.md user retention decision | practice state / final mock results | Reload browser check |
 
-No table selection, date picker, remote mutations, billing or permissions editor is applicable.
+No dropdown, date picker, table selection, billing, permission editor or remote mutations.
 
 ## Flows
 
-- Topic card → topic list, 20 per page. Search by statement/option text and source test. Query, test and page live in URL hash. Explicit submit and Enter commit local search, no asynchronous search race. Clear is immediate. Empty state offers reset. Read-only answer reveal records an ID as consulted, not a claim of mastery. Bank/source PRODUCT.md.
-- Simulacro → setup → start creates 45 questions, persists them and a deadline → examination. The timer starts only on start. Shuffle all selected questions while keeping options fixed. Source PRODUCT.md official quotas.
-- Examination → select/change/clear answer, mark/unmark, jump/next/previous. Store each change. Navigation does not discard the attempt. Returning reloads the stored attempt; refresh never grants time. Core grading/clock owned by core.js.
-- Deliver → app-owned confirmation with unanswered count; cancel returns to trigger; submit grades, persists finished attempt and navigates to result. Deadline expiry submits without another prompt. Repeated finalization uses the same session ID. Replace active attempt explicitly delivers the old one and starts another.
-- Result → verdict, total, disaggregated limits, reasons, review all or errors/blanks → history. History reopens results. No delete action. Source PRODUCT.md rules and local retention.
+- Topic list → ordered ten-question test blocks → one question per screen. Previous/next, selected answer and explicit check persist per test. Last incomplete topic block fills to ten using questions from the beginning; this is disclosed. Original bank provenance retained, study sequence sorted by source test number then question order.
+- Practice select → save answer locally; check → show source solution, preserve feedback; next → save position. Reload resumes that exact test. Finish → confirm blank count → grade and persist. Reopen completed test → summary. Review → read-only solutions, preserves completion; repeat → explicit confirmation then clears that test only.
+- Mock setup → start creates 45 questions and fixed deadline in page memory only. No in-progress session write. Refresh/close loses the attempt, explicitly explained. In-app navigation can return while the clock continues. Four radios, clear response, flag, previous/next and collapsed 45-question answer sheet.
+- Deliver mock → modal shows unanswered count; cancel/Escape restores focus; deliver grades and persists one final snapshot for history/review. Deadline expiry does the same without another prompt. Replace running mock explicitly delivers the old attempt and starts another.
+- Results show total and failed subject limits; subject table is a disclosure. Review is one question per screen with errors/all filter. History reopens delivered results, never in-progress attempts.
 
-## State and recovery
+## Failure and accessibility
 
-Initial bank fetch: stable loading area with spinner and finite timeout; failed fetch: preserve browser data and offer retry. Local storage unavailable/full: persistent warning; current document may continue in memory, no claim of persistent saving. Multiple tabs read latest session before updates and refresh the current exam on storage events; this is browser practice, not an invigilated exam or tamper-resistant environment.
+Finite bank loading timeout, stable spinner and retry view. Persistent warning when browser storage fails; memory fallback does not claim durable saving. Study updates read latest stored state; storage events refresh open practice in another tab. No cross-device synchronization or invigilated/tamper-resistant claims.
 
-## Locale and accessibility
+Spanish Spain, result dates Europe/Madrid. App maximum width 480px, natural document scroll, fixed bottom tabs with safe-area inset; tabs hidden during mock examination. Semantic links/buttons/radios/tables and native disclosure. Main focus after route changes; question focus after mock navigation. Native dialog provides focus trap/inert background/Escape; safe action focused first. Colors have text equivalents. Reduced motion and forced colors supported. No browser alert/confirm/prompt.
 
-Spanish (Spain); result dates Europe/Madrid. All visible acronyms expanded in context or the rules page. Semantic anchors/buttons/radios/tables. Native select popup geometry is intentionally OS-owned. Skip link focuses main without changing application route. Navigation focuses main; exam next focuses question heading. Native modal handles inert background and focus trap; cancel initially focused. Color is supplemental. No browser alert/confirm/prompt. Reduced motion and forced colors respected. Narrow layout uses natural scrolling.
+## Business sources
 
-## Business context sources
-
-| Concern | Owning evidence |
-| --- | --- |
-| Examination rules and limits | PRODUCT.md / Annex II of Real Decreto 875/2014 |
-| Bank and answers | PRODUCT.md / dist/bank.json |
-| Permissions | User's current request and PRODUCT.md private default |
-| Persistence/data lifecycle | PRODUCT.md browser-only retention |
-| Deletion/billing | Not applicable; no such actions |
+User revisions and clarified retention exception: PRODUCT.md. Official quotas/time/grading: PRODUCT.md / Real Decreto 875/2014 Annex II. Bank/answers: dist/bank.json. Access/private defaults: user request and PRODUCT.md. No deletion of account data, billing or permission-changing flows.

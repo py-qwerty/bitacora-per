@@ -1,6 +1,6 @@
 # Bitácora PER
 
-Web personal de estudio del **Patrón de Embarcaciones de Recreo**: 1.464 preguntas, 149 tests de origen y 11 temas. Incluye buscador por tema/test, soluciones a demanda, progreso local y simulacros con corrección e historial.
+Web personal de estudio del **Patrón de Embarcaciones de Recreo**: 1.464 preguntas, 149 tests de origen y 11 temas. App móvil minimalista de una sola columna, con navegación inferior. Cada tema se divide en tests de exactamente 10 preguntas, una por pantalla, con respuestas, posición y resultado guardados en el navegador. El último bloque parcial se completa con preguntas del inicio del tema para incluir todo el banco.
 
 ## Simulacros
 
@@ -8,7 +8,7 @@ Web personal de estudio del **Patrón de Embarcaciones de Recreo**: 1.464 pregun
 
 [Fuente oficial: Real Decreto 875/2014, anexo II](https://www.boe.es/buscar/act.php?id=BOE-A-2014-10344#ai-2). Verificado el 1 de noviembre de 2026. Examen completo; no implementa la modalidad complementaria para quien tiene el título de Patrón para Navegación Básica.
 
-El reloj usa una fecha límite fija, no se pausa al salir o recargar. Las respuestas se guardan en el navegador. El resultado informa de cada límite, incluso si el total de aciertos bastaría para aprobar.
+Los simulacros existen solo en memoria mientras la pestaña siga abierta. El reloj no se pausa en la navegación interna. Cerrar o recargar descarta el intento; se guarda únicamente el resultado final al entregar o agotarse el tiempo. El resultado informa de cada límite, incluso si el total de aciertos bastaría para aprobar.
 
 ## Ejecutar
 
@@ -24,7 +24,7 @@ Abrir http://127.0.0.1:4173. Requiere Python 3 para el servidor local; se puede 
 npm run check
 ```
 
-Las pruebas usan el ejecutor incluido en Node.js. Validan integridad del banco, 1.000 exámenes aleatorios, proporciones, límites de aprobado, blancos, reloj y recuperación de datos corruptos. No hay paquetes que instalar.
+Las pruebas usan el ejecutor incluido en Node.js. Validan integridad del banco, 1.000 exámenes aleatorios, proporciones, límites de aprobado, blancos, reloj y recuperación de datos corruptos. No hay paquetes que instalar. El manifiesto web permite abrirla con presentación de app desde los navegadores que ofrecen añadir a la pantalla de inicio; no incluye un modo sin conexión.
 
 ## Publicación
 
@@ -36,6 +36,6 @@ Sites sirve `dist/`; `.openai/hosting.json` conserva la identidad del proyecto. 
 
 Banco propio de Boat Málaga exportado el 1 de noviembre de 2026; 8 imágenes originales. Las soluciones son las del banco, sin certificación académica independiente. Se mantienen repeticiones entre tests en estudio. Los ejercicios de carta pueden requerir carta de prácticas del Estrecho de Gibraltar y útiles de trazado; la web no sustituye ese material. No son exámenes oficiales de una convocatoria.
 
-El progreso e historial se guardan en `localStorage` del navegador, sin backend, analítica ni sincronización entre dispositivos. Borrar datos del navegador elimina el progreso. Un aviso informa si no es posible guardar. No se publican datos personales ni historial de la academia.
+El progreso de los tests de diez y los resultados finales de los simulacros se guardan en `localStorage` del navegador, sin backend, analítica ni sincronización entre dispositivos. Borrar datos del navegador elimina el progreso. Un aviso informa si no es posible guardar. No se publican datos personales ni historial de la academia.
 
 Las fuentes tipográficas Manrope y Barlow Condensed se alojan localmente (SIL Open Font License, véase `FONT-LICENSES/`).

@@ -27,11 +27,11 @@ rounded:
   control: "8px"
   panel: "14px"
 spacing:
-  page-max: "1200px"
-  section-gap: "64px"
+  page-max: "480px"
+  section-gap: "32px"
 components:
   button:
-    height: "46px"
+    height: "48px"
   card:
     rounded: "panel"
   dialog:
@@ -44,7 +44,7 @@ components:
 
 Product register: a personal Spanish study tool for the Patrón de Embarcaciones de Recreo examination. The source of domain rules is PRODUCT.md; the source bank is dist/bank.json. The audience is a beginner studying in Spain, at a laptop or phone.
 
-The north star is the legible labeling of a nautical instrument, with the familiarity of a study notebook. A compass occupies one half of the home introduction; all reading and exam screens remain quiet. Avoid ocean stock photography, dashboard chart clutter, game rewards, and marketing claims about passing.
+The user's explicit revision is a minimal mobile web app, not a desktop website. The north star is a pocket study notebook: one column, restrained type, eleven simple topic rows, tests in blocks of ten, one question at a time, and bottom navigation. No marketing hero, large compass artwork or multi-column dashboard. Desktop retains the same narrow app width rather than expanding into a different product.
 
 Token model B: dist/styles.css :root is the canonical runtime owner; this frontmatter mirrors the accepted values. Every colors.x maps to --color-x; typography.body/display/mono maps to --font-body/display/mono; rounded.control/panel to --radius-control/panel; spacing.page-max/section-gap to --page-max/section-gap. No framework adapter. Shared .btn, .study-question, .answer-option, and dialog consume those tokens. tests/design.test.js detects palette/radius/spacing drift.
 
@@ -54,15 +54,15 @@ Deep harbor blue is the primary action and compass panel; teal marks study/navig
 
 ## Typography
 
-Locally hosted Barlow Condensed 600 is reserved for headings and instrument-like numbers. Locally hosted Manrope 400–700 is the body and controls face. Spanish accents are included. Body 15px/1.65; question reading 17–21px with 1.65–1.8 line height; phone questions 15–17px. Utility text is smaller but never used for question content. No remote font dependency.
+Locally hosted Manrope is the text, navigation and heading face. Main titles 26px, question text 17px/1.8, body 14px; supporting labels 9–12px. Barlow Condensed remains available but is not used to create oversized promotional headings. Spanish accents included.
 
 ## Layout
 
-Maximum content width 1200px. Desktop: three topic columns, two setup panels, question plus 280px navigator. At 950px: two topic columns; at 700px: stacked exam/setup, two concise topic columns. Natural document scrolling. Header navigation wraps into its own row on phone. Pagination is 20 study questions per page, with state in the hash URL.
+Maximum width 480px at all device sizes. A single natural document scroller with sticky 61px app header and fixed bottom navigation with safe-area padding. No desktop grids. Study: topic list → numbered ten-question tests → one question with previous/next. All ten-question test answers and position persist. Examination hides the tab bar; the answer sheet is a collapsed disclosure and answers remain in memory only until delivery. Final examination results persist.
 
 ## Elevation & Depth
 
-Panels use a one-pixel border. Only the modal has a shadow. The navigator may stick on desktop but is ordinary document content on phone. Stable scrollbars and intrinsic image boxes avoid moving controls.
+Panels use a one-pixel border. Only the modal has a shadow. The exam answer navigator is a document-flow disclosure. Stable scrollbars and intrinsic image boxes avoid moving controls.
 
 ## Shapes
 
@@ -70,9 +70,9 @@ Panels use a one-pixel border. Only the modal has a shadow. The navigator may st
 
 ## Components
 
-Shared .btn owns primary/secondary/text emphasis, visible focus, hover, active and disabled states. Native labels/radios own answer keyboard behavior. Native select is deliberately platform-owned. Search has a clear button and a labeled input. Native dialog.showModal supplies focus trapping/inert background/Escape; app code supplies least-destructive initial focus and restoration. Shared global notice handles storage failure; inline notices explain local limitations.
+Shared .btn owns primary/secondary/text emphasis, visible focus, hover, active and disabled states. Native labels/radios own answer keyboard behavior. The app has no select or search form. Native dialog.showModal supplies focus trapping/inert background/Escape; app code supplies least-destructive initial focus and restoration. Shared global notice handles storage failure; inline notices explain local limitations.
 
-Global scrollbar tokens --scrollbar-thumb/track/hover/active apply to all owned scrolling regions with standard scrollbar-color/width plus WebKit fallback. Forced-colors restores system operability. Motion is limited to 140ms feedback and the loading spinner; reduced motion suppresses both.
+Global scrollbar tokens --scrollbar-thumb/track/hover/active apply to all owned scrolling regions with standard scrollbar-color/width plus WebKit fallback. Forced-colors restores system operability. Motion is limited to 120ms feedback and the loading spinner; reduced motion suppresses both.
 
 ## Do's and Don'ts
 

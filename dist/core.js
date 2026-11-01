@@ -43,3 +43,18 @@ export function formatTime(ms) {
 export function isValidSession(s, questionMap) {
   return s && typeof s.id === 'string' && s.ids?.length === 45 && new Set(s.ids).size === 45 && s.ids.every(id => questionMap.has(id)) && Number.isFinite(s.deadline) && Number.isFinite(s.startedAt) && s.answers && typeof s.answers === 'object' && Array.isArray(s.flags) && Number.isInteger(s.index) && s.index >= 0 && s.index < 45 && Object.entries(s.answers).every(([id, value]) => s.ids.includes(id) && questionMap.get(id).options.some(o => o.key === value));
 }
+
+export function practiceBlocks(questions, topic) {
+  const list = questions.filter(q => q.topic === topic).sort((a,b) => a.test.localeCompare(b.test,'es',{numeric:true}) || a.order-b.order || a.id.localeCompare(b.id));
+  const blocks = [];
+  for(let i=0;i<list.length;i+=10) {
+    const block=list.slice(i,i+10);
+    for(const q of list) { if(block.length>=10)break; if(!block.some(x=>x.id===q.id))block.push(q); }
+    if(block.length!==10)throw Error('No hay suficientes preguntas para un test de diez.');
+    blocks.push(block);
+  }
+  return blocks;
+}
+export function validPractice(p,ids,map) {
+  return p && Array.isArray(p.ids) && p.ids.join(',')===ids.join(',') && Number.isInteger(p.index) && p.index>=0 && p.index<10 && p.answers && typeof p.answers==='object' && Array.isArray(p.checked) && Object.entries(p.answers).every(([id,a])=>ids.includes(id)&&map.get(id)?.options.some(o=>o.key===a));
+}
