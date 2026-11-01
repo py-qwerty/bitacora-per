@@ -176,13 +176,25 @@ $('#dialog').addEventListener('close',()=>{if(dialogTrigger?.isConnected)dialogT
 document.addEventListener('change',e=>{
   if(e.target.name==='practice-answer'){
     const [, ,t,b]=currentRoute().path.split('/');const p=getPractice(Number(t),Number(b));
-    if(!p)return;const id=p.ids[p.index];p.answers[id]=e.target.value;p.checked=p.checked.filter(x=>x!==id);savePractice(p);render(false);document.querySelector(`input[name="practice-answer"][value="${p.answers[id]}"]`)?.focus({preventScroll:true});
+    if(!p)return;
+    const id=p.ids[p.index],selected=e.target.value;
+    const advance=!Object.hasOwn(p.answers,id)&&p.index<p.ids.length-1;
+    p.answers[id]=selected;p.checked=p.checked.filter(x=>x!==id);
+    if(advance)p.index++;
+    savePractice(p);render(false);
+    if(advance){$('.exam-question')?.setAttribute('tabindex','-1');$('.exam-question')?.focus({preventScroll:true});window.scrollTo(0,0);}
+    else document.querySelector(`input[name="practice-answer"][value="${selected}"]`)?.focus({preventScroll:true});
   }
   if(e.target.name==='answer') {
     const selected=e.target.value;
-    if(updateSession(s=>{s.answers[s.ids[s.index]]=selected;})) {
-      const optionFocus=selected;renderExamSafely();
-      document.querySelector(`input[name="answer"][value="${optionFocus}"]`)?.focus({preventScroll:true});
+    let advance=false;
+    if(updateSession(s=>{
+      const id=s.ids[s.index];advance=!Object.hasOwn(s.answers,id)&&s.index<s.ids.length-1;
+      s.answers[id]=selected;if(advance)s.index++;
+    })) {
+      renderExamSafely();
+      if(advance){$('.exam-question')?.setAttribute('tabindex','-1');$('.exam-question')?.focus({preventScroll:true});window.scrollTo(0,0);}
+      else document.querySelector(`input[name="answer"][value="${selected}"]`)?.focus({preventScroll:true});
     }
   }
 });

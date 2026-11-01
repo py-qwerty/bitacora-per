@@ -13,3 +13,7 @@ Executed in connected Chrome against the actual static application. Screenshots 
 - Chrome errors checked after the original flow: none. Final syntax/domain tests also pass.
 
 Core tests cover 1000 random exams, quotas, all grading thresholds, blanks, fixed deadlines, all ten-question blocks, complete coverage, serialized practice recovery and the absence of in-progress mock storage writes. Waiting 90 real minutes, screen-reader auditing, physical touch tests, storage-quota exhaustion and a full cross-browser matrix are not claimed. No offline mode or multi-device synchronization is implemented.
+
+## Automatic progression revision
+
+Verified in actual Chrome after the change: topic 2 test 1 first answer advanced to question 2; returning to question 1 and changing A to B stayed on question 1. Reload preserved question 1 and answer B. The same first-answer advancement and edit-in-place behavior passed in a 45-question mock (question 2 after first answer, question 1 after returning and editing). The final question condition is bounded by ids.length - 1 and does not deliver automatically. Existing 13 checks pass.
