@@ -33,3 +33,7 @@ Actual Chrome: previous/next buttons moved practice 1→2→1 and mock 1→2→1
 ## Optional automatic progression
 
 Actual Chrome: disabled Avance automático, answered practice question 1 and stayed on it; Comprobar respuesta displayed the source solution. Reload preserved the disabled switch and position. Re-enabled the switch on unanswered question 2 and answering advanced to question 3 with transition. Disabled it again, started a mock and answered: stayed on mock question 1; no check-answer control appeared, preserving examination rules. Existing 17 checks pass.
+
+## Preserve question scroll
+
+At 390×650 in actual Chrome: button navigation preserved scrollY 410.5 on the next question; a swipe preserved scrollY 512.5. A direct screen-coordinate tap on a visible answer (avoiding automation's own scroll-into-view behavior) auto-advanced from question 1 to 2 while preserving scrollY 410.5 exactly. Returning to the topic home reset scroll to 0 and cleared the temporary minimum-height floor. Focus uses preventScroll; transitions preserve their initial scroll position and reserve enough page height for shorter questions.

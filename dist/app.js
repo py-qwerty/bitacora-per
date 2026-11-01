@@ -174,7 +174,7 @@ function render(focus=true) {
   else if(path==='/reglas')main.innerHTML=rulesPage();
   else main.innerHTML=notFound();
   document.title=(main.querySelector('h1')?.innerText.replace(/\s+/g,' ')||'Estudiar')+' · Bitácora PER';
-  if(focus){window.scrollTo(0,0);main.focus({preventScroll:true});}
+  if(focus){main.style?.removeProperty('min-height');window.scrollTo(0,0);main.focus({preventScroll:true});}
 }
 let dialogAction, dialogTrigger;
 function ask(title,description,confirmLabel,action,cancelLabel='Seguir con el simulacro') {
@@ -234,13 +234,20 @@ function cancelQuestionTransition() {
 }
 function focusCurrentQuestion(kind) {
   const question=$('.exam-question,.study-question h2');question?.setAttribute('tabindex','-1');question?.focus({preventScroll:true});
-  if(kind==='review')question?.scrollIntoView({block:'start'});else window.scrollTo(0,0);
+}
+function retainQuestionScroll(commit,position={x:window.scrollX||0,y:window.scrollY||0}) {
+  const {x,y}=position;
+  // Keep enough document height when the next question is shorter, otherwise
+  // the browser clamps the scroll before we can restore the previous position.
+  if(y>0)main.style.minHeight=`max(calc(100dvh - 61px), ${Math.ceil(y+window.innerHeight-main.offsetTop)}px)`;
+  else main.style?.removeProperty('min-height');
+  commit();window.scrollTo(x,y);
 }
 function transitionQuestion(direction,commit,after) {
   if(questionTransition)return false;
   const outgoing=$('.question-panel,.study-question');
-  if(!outgoing?.animate||matchMedia('(prefers-reduced-motion: reduce)').matches){commit();after?.();return true;}
-  const tx={hash:location.hash,cancelled:false,animation:null};
+  if(!outgoing?.animate||matchMedia('(prefers-reduced-motion: reduce)').matches){retainQuestionScroll(commit);after?.();return true;}
+  const tx={hash:location.hash,cancelled:false,animation:null,scroll:{x:window.scrollX||0,y:window.scrollY||0}};
   const offset=Math.min(outgoing.clientWidth*.65,260);
   questionTransition=tx;main.inert=true;
   (async()=>{
@@ -253,11 +260,10 @@ function transitionQuestion(direction,commit,after) {
       if(tx.cancelled||location.hash!==tx.hash)return;
       // Release the outgoing animation before rendering so route-level cancellation
       // cannot cancel this intentional commit. Answers have already been saved.
-      questionTransition=null;main.inert=false;commit();
+      questionTransition=null;main.inert=false;retainQuestionScroll(commit,tx.scroll);
       if(tx.cancelled||location.hash!==tx.hash)return;
       const incoming=$('.question-panel,.study-question');if(!incoming)return;
       questionTransition=tx;main.inert=true;
-      if(currentRoute().path.startsWith('/resultado/'))incoming.scrollIntoView({block:'start'});else window.scrollTo(0,0);
       tx.animation=incoming.animate([
         {transform:`translateX(${direction*offset}px)`,opacity:0},
         {transform:'translateX(0)',opacity:1}
