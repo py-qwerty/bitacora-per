@@ -25,3 +25,7 @@ Actual Chrome drags at 390px width moved practice 1→2 (left), 2→1 (right), a
 ## Softer question transition revision
 
 The same exit/entrance transition now wraps swipe, numbered/keyboard navigation and first-answer advancement: 180ms outgoing and 240ms incoming. Actual Chrome practice flow verified first-answer advancement to question 2, swipe back to question 1, editing B staying on question 1 with main interactive, and swipe forward to question 2. Waiting for the interactive new question succeeds after each transition. Existing 14 checks pass. Reduced-motion and route-cancellation paths are implemented; no physical-device motion recording or reduced-motion emulation was performed.
+
+## Restore buttons and fix touch capture
+
+Actual Chrome: previous/next buttons moved practice 1→2→1 and mock 1→2→1 with transitions; dragging also moved practice 1→2. Added a regression fixture that runs the actual app handlers through the touch-specific sequence: implicit capture on an answer child, capture transfer to main, bubbled child lostpointercapture, and pointerup. It advances exactly once without selecting an answer. Separate tests verify genuine main capture loss cancels, and vertical touch movement does not navigate. This fixture checks event logic, not physical touch hardware. 17 checks pass; real iPhone/Android touchscreen verification remains unperformed.

@@ -60,5 +60,5 @@ export function validPractice(p,ids,map) {
 }
 
 export function swipeDirection(dx,dy) {
-  return Math.abs(dx)>=56&&Math.abs(dx)>Math.abs(dy)*1.5?(dx<0?1:-1):0;
+  return Math.abs(dx)>=44&&Math.abs(dx)>Math.abs(dy)*1.25?(dx<0?1:-1):0;
 }

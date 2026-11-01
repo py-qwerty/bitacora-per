@@ -58,7 +58,7 @@ Locally hosted Manrope is the text, navigation and heading face. Main titles 26p
 
 ## Layout
 
-Maximum width 480px at all device sizes. A single natural document scroller with sticky 61px app header and fixed bottom navigation with safe-area padding. No desktop grids. Study: topic list → numbered ten-question tests → one question with horizontal swipes and a collapsed numbered selector. All ten-question test answers and position persist. Examination hides the tab bar; the answer sheet is a collapsed disclosure and answers remain in memory only until delivery. Final examination results persist.
+Maximum width 480px at all device sizes. A single natural document scroller with sticky 61px app header and fixed bottom navigation with safe-area padding. No desktop grids. Study: topic list → numbered ten-question tests → one question with previous/next buttons, horizontal swipes and a collapsed numbered selector. All ten-question test answers and position persist. Examination hides the tab bar; the answer sheet is a collapsed disclosure and answers remain in memory only until delivery. Final examination results persist.
 
 ## Elevation & Depth
 
