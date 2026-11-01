@@ -149,6 +149,7 @@ function rulesPage() {
 function notFound() { return `${heading('Ese rumbo no está en la carta.','La página o el simulacro ya no está disponible en este navegador.')}<a class="btn" href="#/temas">Volver a los temas</a>`; }
 function render(focus=true) {
   if(!bank)return;
+  cancelQuestionTransition();
   clearInterval(timer);timer=null;
   const {path,params}=currentRoute();
   const nav=path.startsWith('/tema')||path.startsWith('/practica')?'temas':path.startsWith('/simulacro')||path==='/examen'?'simulacro':path.startsWith('/historial')||path.startsWith('/resultado')?'historial':'';
@@ -178,6 +179,7 @@ $('#dialog-cancel').addEventListener('click',()=>$('#dialog').close());
 $('#dialog-confirm').addEventListener('click',()=>{const action=dialogAction;$('#dialog').close();action?.();});
 $('#dialog').addEventListener('close',()=>{if(dialogTrigger?.isConnected)dialogTrigger.focus();});
 document.addEventListener('change',e=>{
+  if(questionTransition)return;
   if(e.target.name==='practice-answer'){
     const [, ,t,b]=currentRoute().path.split('/');const p=getPractice(Number(t),Number(b));
     if(!p)return;
@@ -185,9 +187,9 @@ document.addEventListener('change',e=>{
     const advance=!Object.hasOwn(p.answers,id)&&p.index<p.ids.length-1;
     p.answers[id]=selected;p.checked=p.checked.filter(x=>x!==id);
     if(advance)p.index++;
-    savePractice(p);render(false);
-    if(advance){$('.exam-question')?.setAttribute('tabindex','-1');$('.exam-question')?.focus({preventScroll:true});window.scrollTo(0,0);}
-    else document.querySelector(`input[name="practice-answer"][value="${selected}"]`)?.focus({preventScroll:true});
+    savePractice(p);
+    if(advance)transitionQuestion(1,()=>render(false),()=>focusCurrentQuestion('practice'));
+    else {render(false);document.querySelector(`input[name="practice-answer"][value="${selected}"]`)?.focus({preventScroll:true});}
   }
   if(e.target.name==='answer') {
     const selected=e.target.value;
@@ -196,9 +198,8 @@ document.addEventListener('change',e=>{
       const id=s.ids[s.index];advance=!Object.hasOwn(s.answers,id)&&s.index<s.ids.length-1;
       s.answers[id]=selected;if(advance)s.index++;
     })) {
-      renderExamSafely();
-      if(advance){$('.exam-question')?.setAttribute('tabindex','-1');$('.exam-question')?.focus({preventScroll:true});window.scrollTo(0,0);}
-      else document.querySelector(`input[name="answer"][value="${selected}"]`)?.focus({preventScroll:true});
+      if(advance)transitionQuestion(1,()=>renderExamSafely(),()=>focusCurrentQuestion('exam'));
+      else {renderExamSafely();document.querySelector(`input[name="answer"][value="${selected}"]`)?.focus({preventScroll:true});}
     }
   }
 });
@@ -216,15 +217,57 @@ function navigationContext() {
   }
   return null;
 }
-function navigateQuestion(value,absolute=false) {
-  const ctx=navigationContext();if(!ctx||$('#dialog').open)return false;
-  const next=Math.max(0,Math.min(ctx.total-1,absolute?value:ctx.index+value));if(next===ctx.index)return false;
-  if(ctx.kind==='practice'){ctx.practice.index=next;savePractice(ctx.practice);render(false);}
-  if(ctx.kind==='exam'){if(!updateSession(s=>{s.index=next;}))return false;renderExamSafely();}
-  if(ctx.kind==='review'){reviewPage=next;render(false);}
+const QUESTION_MOTION={exit:180,enter:240};
+let questionTransition=null;
+function cancelQuestionTransition() {
+  const tx=questionTransition;if(!tx)return;
+  questionTransition=null;tx.cancelled=true;tx.animation?.cancel();main.inert=false;
+}
+function focusCurrentQuestion(kind) {
   const question=$('.exam-question,.study-question h2');question?.setAttribute('tabindex','-1');question?.focus({preventScroll:true});
-  if(ctx.kind==='review')question?.scrollIntoView({block:'start'});else window.scrollTo(0,0);
+  if(kind==='review')question?.scrollIntoView({block:'start'});else window.scrollTo(0,0);
+}
+function transitionQuestion(direction,commit,after) {
+  if(questionTransition)return false;
+  const outgoing=$('.question-panel,.study-question');
+  if(!outgoing?.animate||matchMedia('(prefers-reduced-motion: reduce)').matches){commit();after?.();return true;}
+  const tx={hash:location.hash,cancelled:false,animation:null};
+  const offset=Math.min(outgoing.clientWidth*.65,260);
+  questionTransition=tx;main.inert=true;
+  (async()=>{
+    try {
+      tx.animation=outgoing.animate([
+        {transform:getComputedStyle(outgoing).transform,opacity:1},
+        {transform:`translateX(${-direction*offset}px)`,opacity:0}
+      ],{duration:QUESTION_MOTION.exit,easing:'cubic-bezier(.4,0,1,1)',fill:'forwards'});
+      await tx.animation.finished;
+      if(tx.cancelled||location.hash!==tx.hash)return;
+      // Release the outgoing animation before rendering so route-level cancellation
+      // cannot cancel this intentional commit. Answers have already been saved.
+      questionTransition=null;main.inert=false;commit();
+      if(tx.cancelled||location.hash!==tx.hash)return;
+      const incoming=$('.question-panel,.study-question');if(!incoming)return;
+      questionTransition=tx;main.inert=true;
+      if(currentRoute().path.startsWith('/resultado/'))incoming.scrollIntoView({block:'start'});else window.scrollTo(0,0);
+      tx.animation=incoming.animate([
+        {transform:`translateX(${direction*offset}px)`,opacity:0},
+        {transform:'translateX(0)',opacity:1}
+      ],{duration:QUESTION_MOTION.enter,easing:'cubic-bezier(.16,1,.3,1)'});
+      await tx.animation.finished;
+    } catch { /* A route change or expired exam may cancel the animation. */ }
+    finally {
+      if(questionTransition===tx){questionTransition=null;main.inert=false;if(!tx.cancelled&&location.hash===tx.hash)after?.();}
+    }
+  })();
   return true;
+}
+function navigateQuestion(value,absolute=false) {
+  const ctx=navigationContext();if(!ctx||$('#dialog').open||questionTransition)return false;
+  const next=Math.max(0,Math.min(ctx.total-1,absolute?value:ctx.index+value));if(next===ctx.index)return false;
+  if(ctx.kind==='practice'){ctx.practice.index=next;savePractice(ctx.practice);}
+  if(ctx.kind==='exam'&&!updateSession(s=>{s.index=next;}))return false;
+  if(ctx.kind==='review')reviewPage=next;
+  return transitionQuestion(Math.sign(next-ctx.index),()=>{if(ctx.kind==='exam')renderExamSafely();else render(false);},()=>focusCurrentQuestion(ctx.kind));
 }
 let drag=null,suppressClickUntil=0;
 document.addEventListener('pointerdown',()=>{suppressClickUntil=0;},true);
@@ -233,7 +276,7 @@ function resetDrag() {
   drag=null;
 }
 main.addEventListener('pointerdown',e=>{
-  resetDrag();if(!e.isPrimary||(e.pointerType==='mouse'&&e.button!==0)||!navigationContext()||$('#dialog').open)return;
+  resetDrag();if(questionTransition||!e.isPrimary||(e.pointerType==='mouse'&&e.button!==0)||!navigationContext()||$('#dialog').open)return;
   if(e.target.closest('button,a,summary,.number-navigation,.question-navigator,.segmented,.actions,table'))return;
   // Leave the screen edge available for the browser's own back gesture.
   if(e.clientX<20||e.clientX>innerWidth-20)return;

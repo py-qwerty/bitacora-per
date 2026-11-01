@@ -72,7 +72,7 @@ Panels use a one-pixel border. Only the modal has a shadow. The exam answer navi
 
 Shared .btn owns primary/secondary/text emphasis, visible focus, hover, active and disabled states. Native labels/radios own answer keyboard behavior. The app has no select or search form. Native dialog.showModal supplies focus trapping/inert background/Escape; app code supplies least-destructive initial focus and restoration. Shared global notice handles storage failure; inline notices explain local limitations.
 
-Global scrollbar tokens --scrollbar-thumb/track/hover/active apply to all owned scrolling regions with standard scrollbar-color/width plus WebKit fallback. Forced-colors restores system operability. Horizontal dragging gives a restrained maximum 35px card displacement. Reduced motion suppresses that movement. Other motion is limited to 120ms feedback and the loading spinner; reduced motion suppresses both.
+Global scrollbar tokens --scrollbar-thumb/track/hover/active apply to all owned scrolling regions with standard scrollbar-color/width plus WebKit fallback. Forced-colors restores system operability. Horizontal dragging gives a restrained maximum 35px card displacement. Reduced motion suppresses that movement. Question changes slide out for 180ms and slide in for 240ms, in the direction of navigation, with a light fade. All question navigation paths share that transition; editing a previous answer does not animate or advance. Other motion is limited to 120ms feedback and the loading spinner; reduced motion suppresses both.
 
 ## Do's and Don'ts
 

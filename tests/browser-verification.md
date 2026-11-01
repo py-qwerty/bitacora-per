@@ -21,3 +21,7 @@ Verified in actual Chrome after the change: topic 2 test 1 first answer advanced
 ## Swipe navigation revision
 
 Actual Chrome drags at 390px width moved practice 1→2 (left), 2→1 (right), and mock 1→2→1. Dragging across an answer option did not select an answer. A vertical drag retained the question. Returning by swipe and immediately editing the answer retained question 1 and saved B. The numbered selector opened question 10, where Terminar test remained available; dragging left at question 10 did not wrap or submit. A deliberate press on Entregar simulacro immediately after a swipe still opened its confirmation. No next/previous buttons remain. Pure swipe tests reject short, vertical and diagonal gestures. Physical touchscreen and cross-browser touch testing were not performed.
+
+## Softer question transition revision
+
+The same exit/entrance transition now wraps swipe, numbered/keyboard navigation and first-answer advancement: 180ms outgoing and 240ms incoming. Actual Chrome practice flow verified first-answer advancement to question 2, swipe back to question 1, editing B staying on question 1 with main interactive, and swipe forward to question 2. Waiting for the interactive new question succeeds after each transition. Existing 14 checks pass. Reduced-motion and route-cancellation paths are implemented; no physical-device motion recording or reduced-motion emulation was performed.
