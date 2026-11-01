@@ -1,4 +1,4 @@
-import { QUOTAS, LIMITS, DURATION, RULES_URL, generateExam, gradeExam, remaining, formatTime, isValidSession, practiceBlocks, validPractice } from './core.js?v=2';
+import { QUOTAS, LIMITS, DURATION, RULES_URL, generateExam, gradeExam, remaining, formatTime, isValidSession, practiceBlocks, validPractice, swipeDirection } from './core.js?v=4';
 const $ = s => document.querySelector(s);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number = n => n.toLocaleString('es-ES');
@@ -45,13 +45,17 @@ function getPractice(topic, block) {
   return saved?.topic===topic&&saved?.block===block&&validPractice(saved,ids,questionMap) ? saved : {topic,block,ids,index:0,answers:{},checked:[],finishedAt:null};
 }
 function savePractice(p){write(`practice:${p.topic}:${p.block}`,p);}
+function swipeHint() { return '<p class="swipe-hint">← Desliza para cambiar de pregunta →<span class="sr-only">También puedes elegir el número de pregunta o usar las flechas del teclado fuera de las respuestas.</span></p>'; }
+function numberNavigation(index,total,kind) {
+  return `<details class="number-navigation"><summary>Ir a pregunta <span>${index+1} / ${total}</span></summary><div class="question-dots">${Array.from({length:total},(_,i)=>`<button type="button" class="question-dot ${i===index?'current':''}" data-action="question-jump" data-index="${i}" aria-label="Ir a pregunta ${i+1}" ${i===index?'aria-current="step"':''}>${i+1}</button>`).join('')}</div></details>`;
+}
 function practicePage(topic,block) {
   const p=getPractice(topic,block);if(!p)return notFound();
   const q=questionMap.get(p.ids[p.index]); const checked=p.checked.includes(q.id);const selected=p.answers[q.id];
   const reviewing=currentRoute().params.get('repaso')==='1'&&!!p.finishedAt;
   const count=Object.keys(p.answers).length;const score=p.ids.filter(id=>p.answers[id]===questionMap.get(id).correct).length;
   if(p.finishedAt&&!reviewing)return `<a class="back-link" href="#/tema/${topic}">← Tests del tema</a>${heading('Test terminado',`${topicTitle(topic)} · Test ${block}`)}<section class="practice-result"><span class="practice-score">${score}<small>/10</small></span><h2>${score>=8?'Buen trabajo':'Sigue practicando'}</h2><p>${10-count} en blanco · ${count-score} incorrectas</p><button class="btn full" data-action="practice-review" data-topic="${topic}" data-block="${block}">Repasar respuestas</button><button class="btn secondary full" data-action="practice-reset" data-topic="${topic}" data-block="${block}">Repetir test</button><a class="btn text full" href="#/tema/${topic}">Volver a los tests</a></section>`;
-  return `<a class="back-link" href="#/tema/${topic}">← Tests del tema</a><div class="practice-heading"><div><p class="eyebrow">TEST ${block} · TEMA ${topic}</p><h1>Pregunta ${p.index+1}<span> / 10</span></h1></div><span class="saved-label">${storageFailed?'Sin guardar':'Guardado'}</span></div><progress class="practice-progress" value="${count}" max="10" aria-label="Preguntas respondidas"></progress><section class="question-panel practice-panel"><h2 class="exam-question">${esc(q.text)}</h2>${questionImage(q)}<fieldset class="answer-options"><legend class="sr-only">Elige una respuesta</legend>${q.options.map(o=>`<label class="answer-option ${selected===o.key?'selected':''} ${checked&&q.correct===o.key?'is-correct':''} ${checked&&selected===o.key&&selected!==q.correct?'is-incorrect':''}"><input type="radio" name="practice-answer" value="${o.key}" ${reviewing?'disabled':''} ${selected===o.key?'checked':''}><span class="option-letter">${o.key.toUpperCase()}</span><span>${esc(o.text)}${checked&&q.correct===o.key?'<strong class="answer-label">✓ Respuesta correcta</strong>':''}</span></label>`).join('')}</fieldset>${checked?`<p class="practice-feedback ${selected===q.correct?'right':'wrong'}" role="status">${selected===q.correct?'✓ Correcto':'La respuesta correcta es '+q.correct.toUpperCase()+'.'}</p>`:`<button class="btn secondary full check-answer" data-action="practice-check" ${selected?'':'disabled'}>Comprobar respuesta</button>`}<div class="exam-pagination"><button class="btn secondary" data-action="practice-move" data-direction="-1" ${p.index===0?'disabled':''}>← Anterior</button><button class="btn" data-action="${p.index===9?'practice-finish':'practice-move'}" data-direction="1">${p.index===9?(reviewing?'Ver resultado':'Terminar test'):'Siguiente →'}</button></div></section><p class="local-note">Respuestas y posición guardadas en este navegador.</p>`;
+  return `<a class="back-link" href="#/tema/${topic}">← Tests del tema</a><div class="practice-heading"><div><p class="eyebrow">TEST ${block} · TEMA ${topic}</p><h1>Pregunta ${p.index+1}<span> / 10</span></h1></div><span class="saved-label">${storageFailed?'Sin guardar':'Guardado'}</span></div><progress class="practice-progress" value="${count}" max="10" aria-label="Preguntas respondidas"></progress><section class="question-panel practice-panel"><h2 class="exam-question">${esc(q.text)}</h2>${questionImage(q)}<fieldset class="answer-options"><legend class="sr-only">Elige una respuesta</legend>${q.options.map(o=>`<label class="answer-option ${selected===o.key?'selected':''} ${checked&&q.correct===o.key?'is-correct':''} ${checked&&selected===o.key&&selected!==q.correct?'is-incorrect':''}"><input type="radio" name="practice-answer" value="${o.key}" ${reviewing?'disabled':''} ${selected===o.key?'checked':''}><span class="option-letter">${o.key.toUpperCase()}</span><span>${esc(o.text)}${checked&&q.correct===o.key?'<strong class="answer-label">✓ Respuesta correcta</strong>':''}</span></label>`).join('')}</fieldset>${checked?`<p class="practice-feedback ${selected===q.correct?'right':'wrong'}" role="status">${selected===q.correct?'✓ Correcto':'La respuesta correcta es '+q.correct.toUpperCase()+'.'}</p>`:`<button class="btn secondary full check-answer" data-action="practice-check" ${selected?'':'disabled'}>Comprobar respuesta</button>`}${swipeHint()}${numberNavigation(p.index,10,'practice')}${p.index===9?`<button class="btn full finish-test" data-action="practice-finish">${reviewing?'Ver resultado':'Terminar test'}</button>`:''}</section><p class="local-note">Respuestas y posición guardadas en este navegador.</p>`;
 }
 function home() {
   const active = activeSession();
@@ -91,7 +95,7 @@ function renderExam() {
   if (!session) { main.innerHTML = `${heading('No hay un simulacro en marcha.','Al recargar o cerrar se descarta el intento. Puedes iniciar otro o consultar los resultados ya entregados.')}<a class="btn" href="#/simulacro">Preparar simulacro →</a>`; return; }
   if (remaining(session.deadline) === 0) { finish(true); return; }
   const q=questionMap.get(session.ids[session.index]); const answered=Object.keys(session.answers).length;
-  main.innerHTML = `<div class="exam-top"><div><p class="eyebrow">SIMULACRO PER · EN CURSO</p><p class="exam-position">Pregunta <b>${session.index+1}</b> de 45</p></div><div class="clock-box"><span>Tiempo restante</span><strong id="clock" role="timer" aria-label="Tiempo restante">${formatTime(remaining(session.deadline))}</strong></div><button class="btn secondary" data-action="submit">Entregar simulacro</button></div><div class="exam-layout"><section class="question-panel"><div class="question-meta">${topicBadge(q.topic)}<span>${esc(topicTitle(q.topic))}</span></div><h1 class="exam-question">${esc(q.text)}</h1>${questionImage(q)}<fieldset class="answer-options"><legend class="sr-only">Elige una respuesta</legend>${q.options.map(o=>`<label class="answer-option ${session.answers[q.id]===o.key?'selected':''}"><input type="radio" name="answer" value="${o.key}" ${session.answers[q.id]===o.key?'checked':''}><span class="option-letter">${o.key.toUpperCase()}</span><span>${esc(o.text)}</span></label>`).join('')}</fieldset><div class="question-tools"><button class="btn text" data-action="flag" aria-pressed="${session.flags.includes(q.id)}">${session.flags.includes(q.id)?'⚑ Marcada para revisar':'⚐ Marcar para revisar'}</button><button class="btn text" data-action="clear-answer" ${session.answers[q.id]?'':'disabled'}>Borrar respuesta</button></div><div class="exam-pagination"><button class="btn secondary" data-action="previous" ${session.index===0?'disabled':''}>← Anterior</button><button class="btn" data-action="${session.index===44?'submit':'next'}">${session.index===44?'Entregar simulacro':'Siguiente →'}</button></div></section><aside class="question-navigator" aria-label="Navegación de preguntas"><details class="navigator-disclosure"><summary>Hoja de respuestas <span>${answered}/45</span></summary><p id="answered-count">${answered} respondidas · ${45-answered} en blanco</p><div class="question-dots">${session.ids.map((id,i)=>`<button type="button" class="question-dot ${session.answers[id]?'answered':''} ${session.flags.includes(id)?'flagged':''} ${i===session.index?'current':''}" data-action="jump" data-index="${i}" aria-label="Pregunta ${i+1}, ${session.answers[id]?'respondida':'en blanco'}${session.flags.includes(id)?', marcada para revisar':''}" ${i===session.index?'aria-current="step"':''}>${i+1}${session.flags.includes(id)?'<span aria-hidden="true">•</span>':''}</button>`).join('')}</div><div class="navigator-key"><span><i class="key-answered"></i>Respondida</span><span><i></i>En blanco</span><span><b>•</b>Para revisar</span></div><p class="small">Este simulacro no guarda el avance. Al recargar se pierde. Las soluciones se ven al entregar.</p></details><a href="#/simulacro" class="back-link">Salir y continuar después</a></aside></div>`;
+  main.innerHTML = `<div class="exam-top"><div><p class="eyebrow">SIMULACRO PER · EN CURSO</p><p class="exam-position">Pregunta <b>${session.index+1}</b> de 45</p></div><div class="clock-box"><span>Tiempo restante</span><strong id="clock" role="timer" aria-label="Tiempo restante">${formatTime(remaining(session.deadline))}</strong></div><button class="btn secondary" data-action="submit">Entregar simulacro</button></div><div class="exam-layout"><section class="question-panel"><div class="question-meta">${topicBadge(q.topic)}<span>${esc(topicTitle(q.topic))}</span></div><h1 class="exam-question">${esc(q.text)}</h1>${questionImage(q)}<fieldset class="answer-options"><legend class="sr-only">Elige una respuesta</legend>${q.options.map(o=>`<label class="answer-option ${session.answers[q.id]===o.key?'selected':''}"><input type="radio" name="answer" value="${o.key}" ${session.answers[q.id]===o.key?'checked':''}><span class="option-letter">${o.key.toUpperCase()}</span><span>${esc(o.text)}</span></label>`).join('')}</fieldset><div class="question-tools"><button class="btn text" data-action="flag" aria-pressed="${session.flags.includes(q.id)}">${session.flags.includes(q.id)?'⚑ Marcada para revisar':'⚐ Marcar para revisar'}</button><button class="btn text" data-action="clear-answer" ${session.answers[q.id]?'':'disabled'}>Borrar respuesta</button></div>${swipeHint()}</section><aside class="question-navigator" aria-label="Navegación de preguntas"><details class="navigator-disclosure"><summary>Hoja de respuestas <span>${answered}/45</span></summary><p id="answered-count">${answered} respondidas · ${45-answered} en blanco</p><div class="question-dots">${session.ids.map((id,i)=>`<button type="button" class="question-dot ${session.answers[id]?'answered':''} ${session.flags.includes(id)?'flagged':''} ${i===session.index?'current':''}" data-action="jump" data-index="${i}" aria-label="Pregunta ${i+1}, ${session.answers[id]?'respondida':'en blanco'}${session.flags.includes(id)?', marcada para revisar':''}" ${i===session.index?'aria-current="step"':''}>${i+1}${session.flags.includes(id)?'<span aria-hidden="true">•</span>':''}</button>`).join('')}</div><div class="navigator-key"><span><i class="key-answered"></i>Respondida</span><span><i></i>En blanco</span><span><b>•</b>Para revisar</span></div><p class="small">Este simulacro no guarda el avance. Al recargar se pierde. Las soluciones se ven al entregar.</p></details><a href="#/simulacro" class="back-link">Salir y continuar después</a></aside></div>`;
   tick();
   timer=setInterval(tick,1000);
 }
@@ -130,7 +134,7 @@ function resultsPage(id) {
   <div class="result-banner ${r.passed?'passed':'failed'}"><div><span class="result-verdict">${r.passed?'APTO':'NO APTO'}</span><p>${r.passed?'Cumples el mínimo de aciertos y todos los límites por materia.':'Para aprobar necesitas cumplir el mínimo total y los tres límites por materia.'}</p></div><strong>${r.correct}<small> / 45</small></strong></div><div class="result-stats"><span><b>${r.wrong}</b> incorrectas</span><span><b>${r.blank}</b> en blanco</span><span><b>${formatTime(Math.min(DURATION,s.finishedAt-s.startedAt))}</b> tiempo empleado</span></div>
   ${r.reasons.length?`<aside class="inline-notice danger"><h2>Lo que hay que reforzar</h2><ul>${r.reasons.map(reason=>`<li>${esc(reason.replace(/Tema (\d+):/,(_,n)=>topicTitle(Number(n))+':'))}</li>`).join('')}</ul></aside>`:''}
   <details class="result-breakdown"><summary>Resultado por temas</summary>${distributionTable(r)}<p class="small">¹ Los errores incluyen las preguntas incorrectas y las que has dejado en blanco.</p></details><div class="section-head"><div><h2>Repasar respuestas</h2></div><div class="segmented" aria-label="Filtrar revisión"><button class="${reviewFilter==='errors'?'active':''}" data-action="review-filter" data-filter="errors" aria-pressed="${reviewFilter==='errors'}">Errores y blancos (${r.errors})</button><button class="${reviewFilter==='all'?'active':''}" data-action="review-filter" data-filter="all" aria-pressed="${reviewFilter==='all'}">Todas (45)</button></div></div>
-  ${filtered.length ? filtered.slice(Math.min(reviewPage,filtered.length-1),Math.min(reviewPage,filtered.length-1)+1).map(q=>`<article class="study-question"><div class="question-meta"><span>Pregunta ${s.ids.indexOf(q.id)+1}</span>${topicBadge(q.topic)}<strong>${s.answers[q.id]===q.correct?'✓ Correcta':s.answers[q.id]?'✕ Incorrecta':'— En blanco'}</strong></div><h2>${esc(q.text)}</h2>${questionImage(q)}${optionsRead(q,s.answers[q.id],true)}</article>`).join('') : '<div class="empty-state"><h3>¡Todas correctas!</h3><p>No hay errores ni preguntas en blanco en este simulacro.</p></div>'}${filtered.length ? `<div class="pagination review-pagination"><button class="btn secondary" data-action="review-page" data-direction="-1" ${reviewPage===0?'disabled':''}>← Anterior</button><span>${Math.min(reviewPage+1,filtered.length)} de ${filtered.length}</span><button class="btn secondary" data-action="review-page" data-direction="1" ${reviewPage>=filtered.length-1?'disabled':''}>Siguiente →</button></div>` : ''}<div class="actions"><a class="btn" href="#/simulacro">Otro simulacro →</a><a class="btn secondary" href="#/temas">Volver a los temas</a></div>`;
+  ${filtered.length ? filtered.slice(Math.min(reviewPage,filtered.length-1),Math.min(reviewPage,filtered.length-1)+1).map(q=>`<article class="study-question"><div class="question-meta"><span>Pregunta ${s.ids.indexOf(q.id)+1}</span>${topicBadge(q.topic)}<strong>${s.answers[q.id]===q.correct?'✓ Correcta':s.answers[q.id]?'✕ Incorrecta':'— En blanco'}</strong></div><h2>${esc(q.text)}</h2>${questionImage(q)}${optionsRead(q,s.answers[q.id],true)}</article>`).join('') : '<div class="empty-state"><h3>¡Todas correctas!</h3><p>No hay errores ni preguntas en blanco en este simulacro.</p></div>'}${filtered.length ? `${swipeHint()}${numberNavigation(Math.min(reviewPage,filtered.length-1),filtered.length,'review')}` : ''}<div class="actions"><a class="btn" href="#/simulacro">Otro simulacro →</a><a class="btn secondary" href="#/temas">Volver a los temas</a></div>`;
 }
 function historyPage() {
   const keys = new Set([...memory.keys()]);
@@ -198,6 +202,71 @@ document.addEventListener('change',e=>{
     }
   }
 });
+function navigationContext() {
+  const {path,params}=currentRoute();
+  if(/^\/practica\/\d+\/\d+$/.test(path)) {
+    const [, ,t,b]=path.split('/');const p=getPractice(Number(t),Number(b));
+    return p&&(!p.finishedAt||params.get('repaso')==='1')?{kind:'practice',index:p.index,total:p.ids.length,practice:p}:null;
+  }
+  if(path==='/examen'&&activeSession())return {kind:'exam',index:session.index,total:session.ids.length};
+  if(path.startsWith('/resultado/')) {
+    const s=read('session:'+path.split('/')[2]);if(!isValidSession(s,questionMap)||!s.finishedAt)return null;
+    const total=s.ids.filter(id=>reviewFilter==='all'||s.answers[id]!==questionMap.get(id).correct).length;
+    return total?{kind:'review',index:Math.min(reviewPage,total-1),total}:null;
+  }
+  return null;
+}
+function navigateQuestion(value,absolute=false) {
+  const ctx=navigationContext();if(!ctx||$('#dialog').open)return false;
+  const next=Math.max(0,Math.min(ctx.total-1,absolute?value:ctx.index+value));if(next===ctx.index)return false;
+  if(ctx.kind==='practice'){ctx.practice.index=next;savePractice(ctx.practice);render(false);}
+  if(ctx.kind==='exam'){if(!updateSession(s=>{s.index=next;}))return false;renderExamSafely();}
+  if(ctx.kind==='review'){reviewPage=next;render(false);}
+  const question=$('.exam-question,.study-question h2');question?.setAttribute('tabindex','-1');question?.focus({preventScroll:true});
+  if(ctx.kind==='review')question?.scrollIntoView({block:'start'});else window.scrollTo(0,0);
+  return true;
+}
+let drag=null,suppressClickUntil=0;
+document.addEventListener('pointerdown',()=>{suppressClickUntil=0;},true);
+function resetDrag() {
+  if(drag?.panel){drag.panel.style.removeProperty('transform');drag.panel.classList.remove('swiping');}
+  drag=null;
+}
+main.addEventListener('pointerdown',e=>{
+  resetDrag();if(!e.isPrimary||(e.pointerType==='mouse'&&e.button!==0)||!navigationContext()||$('#dialog').open)return;
+  if(e.target.closest('button,a,summary,.number-navigation,.question-navigator,.segmented,.actions,table'))return;
+  // Leave the screen edge available for the browser's own back gesture.
+  if(e.clientX<20||e.clientX>innerWidth-20)return;
+  drag={id:e.pointerId,x:e.clientX,y:e.clientY,horizontal:false,ctx:navigationContext(),panel:main.querySelector('.question-panel,.study-question')};
+},{passive:true});
+main.addEventListener('pointermove',e=>{
+  if(!drag||e.pointerId!==drag.id)return;
+  const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+  if(!drag.horizontal){
+    if(Math.abs(dy)>12&&Math.abs(dy)>Math.abs(dx)){resetDrag();return;}
+    if(Math.abs(dx)<12||Math.abs(dx)<Math.abs(dy)*1.5)return;
+    drag.horizontal=true;main.setPointerCapture(e.pointerId);drag.panel?.classList.add('swiping');
+  }
+  e.preventDefault();
+  if(drag.panel)drag.panel.style.transform=`translateX(${Math.max(-35,Math.min(35,dx*.18))}px)`;
+},{passive:false});
+main.addEventListener('pointerup',e=>{
+  if(!drag||e.pointerId!==drag.id)return;
+  const current=navigationContext();
+  const same=current&&current.kind===drag.ctx.kind&&current.index===drag.ctx.index;
+  const direction=drag.horizontal&&same?swipeDirection(e.clientX-drag.x,e.clientY-drag.y):0;
+  if(drag.horizontal){e.preventDefault();suppressClickUntil=performance.now()+400;}
+  resetDrag();if(main.hasPointerCapture(e.pointerId))main.releasePointerCapture(e.pointerId);
+  if(direction)navigateQuestion(direction);
+},{passive:false});
+main.addEventListener('pointercancel',resetDrag);
+main.addEventListener('lostpointercapture',resetDrag);
+document.addEventListener('click',e=>{if(performance.now()<suppressClickUntil){e.preventDefault();e.stopImmediatePropagation();}},true);
+document.addEventListener('keydown',e=>{
+  if(e.altKey||e.ctrlKey||e.metaKey||e.shiftKey||e.target.closest('input,button,a,select,textarea,summary,[contenteditable="true"]'))return;
+  const direction=e.key==='ArrowLeft'?-1:e.key==='ArrowRight'?1:0;
+  if(direction&&navigateQuestion(direction))e.preventDefault();
+});
 function renderExamSafely(){clearInterval(timer);renderExam();}
 document.addEventListener('click',e=>{
   if(e.target.closest('.skip')){e.preventDefault();main.focus();return;}
@@ -206,8 +275,7 @@ document.addEventListener('click',e=>{
   if(a.startsWith('practice-')){
     const parts=currentRoute().path.split('/');const t=Number(button.dataset.topic||parts[2]),b=Number(button.dataset.block||parts[3]);const p=getPractice(t,b);if(!p)return;
     if(a==='practice-check'){const id=p.ids[p.index];if(!p.answers[id])return;p.checked=[...new Set([...p.checked,id])];const seen=seenIds();seen.add(id);write('seen',[...seen]);savePractice(p);render(false);}
-    if(a==='practice-move'){p.index=Math.max(0,Math.min(9,p.index+Number(button.dataset.direction)));savePractice(p);render();}
-    if(a==='practice-finish'){if(p.finishedAt){location.hash=`/practica/${t}/${b}`;return;}ask('¿Terminar este test?',`Quedan ${10-Object.keys(p.answers).length} preguntas en blanco. Tus respuestas y el resultado se guardarán.`, 'Terminar test',()=>{p.finishedAt=Date.now();p.checked=[...p.ids];savePractice(p);render();},'Seguir con el test');}
+      if(a==='practice-finish'){if(p.finishedAt){location.hash=`/practica/${t}/${b}`;return;}ask('¿Terminar este test?',`Quedan ${10-Object.keys(p.answers).length} preguntas en blanco. Tus respuestas y el resultado se guardarán.`, 'Terminar test',()=>{p.finishedAt=Date.now();p.checked=[...p.ids];savePractice(p);render();},'Seguir con el test');}
     if(a==='practice-review'){p.checked=[...p.ids];p.index=0;savePractice(p);location.hash=`/practica/${t}/${b}?repaso=1`;}
     if(a==='practice-reset'){ask('¿Repetir el test?',`Se borrarán las respuestas guardadas del test ${b} de este tema.`, 'Repetir test',()=>{p.answers={};p.checked=[];p.index=0;p.finishedAt=null;savePractice(p);render();},'Cancelar');}
   }
@@ -219,18 +287,13 @@ document.addEventListener('click',e=>{
     const s=activeSession();if(!s)return;
     ask('¿Entregar el simulacro?',`Tienes ${45-Object.keys(s.answers).length} preguntas en blanco. Al entregar se cerrarán las respuestas y podrás ver la corrección.`,'Entregar simulacro',()=>finish(false));
   }
-  if(['previous','next','jump'].includes(a)){
-    if(updateSession(s=>{s.index=a==='jump'?Number(button.dataset.index):s.index+(a==='next'?1:-1);})){
-      renderExamSafely();$('.exam-question')?.setAttribute('tabindex','-1');$('.exam-question')?.focus({preventScroll:true});window.scrollTo(0,0);
-    }
-  }
+  if(a==='jump'||a==='question-jump')navigateQuestion(Number(button.dataset.index),true);
   if(a==='flag'){
     if(updateSession(s=>{const id=s.ids[s.index];s.flags=s.flags.includes(id)?s.flags.filter(x=>x!==id):[...s.flags,id];})){renderExamSafely();$('[data-action="flag"]').focus({preventScroll:true});}
   }
   if(a==='clear-answer'){
     if(updateSession(s=>{delete s.answers[s.ids[s.index]];})){renderExamSafely();$('.answer-option input')?.focus({preventScroll:true});}
   }
-  if(a==='review-page'){reviewPage=Math.max(0,reviewPage+Number(button.dataset.direction));const y=window.scrollY;render(false);window.scrollTo(0,y);}
   if(a==='review-filter'){reviewPage=0;reviewFilter=button.dataset.filter;const y=window.scrollY;render(false);window.scrollTo(0,y);$(`[data-filter="${reviewFilter}"]`)?.focus({preventScroll:true});}
   if(a==='reload')location.reload();
 });

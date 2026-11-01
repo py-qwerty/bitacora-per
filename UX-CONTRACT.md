@@ -14,10 +14,10 @@ No dropdown, date picker, table selection, billing, permission editor or remote 
 
 ## Flows
 
-- Topic list → ordered ten-question test blocks → one question per screen. Previous/next, selected answer and explicit check persist per test. Last incomplete topic block fills to ten using questions from the beginning; this is disclosed. Original bank provenance retained, study sequence sorted by source test number then question order.
+- Topic list → ordered ten-question test blocks → one question per screen. Swipe left to advance and right to return; selected answer, position and explicit check persist per test. There are no previous/next buttons. A collapsed numbered selector and keyboard arrows outside controls provide non-drag alternatives. Last incomplete topic block fills to ten using questions from the beginning; this is disclosed. Original bank provenance retained, study sequence sorted by source test number then question order.
 - First answer to an unanswered question automatically advances one position in practice and mock exams. Editing an existing answer stays on that question. The last question stays in place; delivery is always explicit. Focus follows the new question on automatic advancement.
 - Practice select → save answer locally; check → show source solution, preserve feedback; next → save position. Reload resumes that exact test. Finish → confirm blank count → grade and persist. Reopen completed test → summary. Review → read-only solutions, preserves completion; repeat → explicit confirmation then clears that test only.
-- Mock setup → start creates 45 questions and fixed deadline in page memory only. No in-progress session write. Refresh/close loses the attempt, explicitly explained. In-app navigation can return while the clock continues. Four radios, clear response, flag, previous/next and collapsed 45-question answer sheet.
+- Mock setup → start creates 45 questions and fixed deadline in page memory only. No in-progress session write. Refresh/close loses the attempt, explicitly explained. In-app navigation can return while the clock continues. Four radios, clear response, flag, bidirectional horizontal swipes and collapsed 45-question answer sheet.
 - Deliver mock → modal shows unanswered count; cancel/Escape restores focus; deliver grades and persists one final snapshot for history/review. Deadline expiry does the same without another prompt. Replace running mock explicitly delivers the old attempt and starts another.
 - Results show total and failed subject limits; subject table is a disclosure. Review is one question per screen with errors/all filter. History reopens delivered results, never in-progress attempts.
 
@@ -30,3 +30,7 @@ Spanish Spain, result dates Europe/Madrid. App maximum width 480px, natural docu
 ## Business sources
 
 User revisions and clarified retention exception: PRODUCT.md. Official quotas/time/grading: PRODUCT.md / Real Decreto 875/2014 Annex II. Bank/answers: dist/bank.json. Access/private defaults: user request and PRODUCT.md. No deletion of account data, billing or permission-changing flows.
+
+## Gesture navigation
+
+A deliberate horizontal drag of at least 56 CSS pixels, predominating over vertical displacement by 1.5×, changes one question. Short drags/taps, vertical scrolling, pointer cancellation, and browser-edge gestures never navigate. Native vertical scrolling and pinch zoom remain allowed. A recognized drag suppresses its synthetic click so answer options are not accidentally selected; a subsequent intentional pointerdown resets this suppression. Study saves the new index, mock exams keep it only in memory, review uses the same bounded navigation. No wrapping or automatic submission at either end. Number selectors and keyboard arrows provide non-drag alternatives. Buttons/links/disclosures are excluded from swipe starts.

@@ -58,3 +58,7 @@ export function practiceBlocks(questions, topic) {
 export function validPractice(p,ids,map) {
   return p && Array.isArray(p.ids) && p.ids.join(',')===ids.join(',') && Number.isInteger(p.index) && p.index>=0 && p.index<10 && p.answers && typeof p.answers==='object' && Array.isArray(p.checked) && Object.entries(p.answers).every(([id,a])=>ids.includes(id)&&map.get(id)?.options.some(o=>o.key===a));
 }
+
+export function swipeDirection(dx,dy) {
+  return Math.abs(dx)>=56&&Math.abs(dx)>Math.abs(dy)*1.5?(dx<0?1:-1):0;
+}

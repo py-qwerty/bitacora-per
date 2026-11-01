@@ -17,3 +17,7 @@ Core tests cover 1000 random exams, quotas, all grading thresholds, blanks, fixe
 ## Automatic progression revision
 
 Verified in actual Chrome after the change: topic 2 test 1 first answer advanced to question 2; returning to question 1 and changing A to B stayed on question 1. Reload preserved question 1 and answer B. The same first-answer advancement and edit-in-place behavior passed in a 45-question mock (question 2 after first answer, question 1 after returning and editing). The final question condition is bounded by ids.length - 1 and does not deliver automatically. Existing 13 checks pass.
+
+## Swipe navigation revision
+
+Actual Chrome drags at 390px width moved practice 1→2 (left), 2→1 (right), and mock 1→2→1. Dragging across an answer option did not select an answer. A vertical drag retained the question. Returning by swipe and immediately editing the answer retained question 1 and saved B. The numbered selector opened question 10, where Terminar test remained available; dragging left at question 10 did not wrap or submit. A deliberate press on Entregar simulacro immediately after a swipe still opened its confirmation. No next/previous buttons remain. Pure swipe tests reject short, vertical and diagonal gestures. Physical touchscreen and cross-browser touch testing were not performed.

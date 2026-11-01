@@ -58,7 +58,7 @@ Locally hosted Manrope is the text, navigation and heading face. Main titles 26p
 
 ## Layout
 
-Maximum width 480px at all device sizes. A single natural document scroller with sticky 61px app header and fixed bottom navigation with safe-area padding. No desktop grids. Study: topic list → numbered ten-question tests → one question with previous/next. All ten-question test answers and position persist. Examination hides the tab bar; the answer sheet is a collapsed disclosure and answers remain in memory only until delivery. Final examination results persist.
+Maximum width 480px at all device sizes. A single natural document scroller with sticky 61px app header and fixed bottom navigation with safe-area padding. No desktop grids. Study: topic list → numbered ten-question tests → one question with horizontal swipes and a collapsed numbered selector. All ten-question test answers and position persist. Examination hides the tab bar; the answer sheet is a collapsed disclosure and answers remain in memory only until delivery. Final examination results persist.
 
 ## Elevation & Depth
 
@@ -72,7 +72,7 @@ Panels use a one-pixel border. Only the modal has a shadow. The exam answer navi
 
 Shared .btn owns primary/secondary/text emphasis, visible focus, hover, active and disabled states. Native labels/radios own answer keyboard behavior. The app has no select or search form. Native dialog.showModal supplies focus trapping/inert background/Escape; app code supplies least-destructive initial focus and restoration. Shared global notice handles storage failure; inline notices explain local limitations.
 
-Global scrollbar tokens --scrollbar-thumb/track/hover/active apply to all owned scrolling regions with standard scrollbar-color/width plus WebKit fallback. Forced-colors restores system operability. Motion is limited to 120ms feedback and the loading spinner; reduced motion suppresses both.
+Global scrollbar tokens --scrollbar-thumb/track/hover/active apply to all owned scrolling regions with standard scrollbar-color/width plus WebKit fallback. Forced-colors restores system operability. Horizontal dragging gives a restrained maximum 35px card displacement. Reduced motion suppresses that movement. Other motion is limited to 120ms feedback and the loading spinner; reduced motion suppresses both.
 
 ## Do's and Don'ts
 

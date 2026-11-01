@@ -66,3 +66,10 @@ test('in-progress mock exams are never written to browser storage',()=>{
   const finish=app.slice(app.indexOf('function finish('),app.indexOf('function startExam('));
   assert(finish.indexOf('s.finishedAt =')<finish.indexOf("write('session:'"));
 });
+
+test('swipe navigation accepts deliberate horizontal drags and ignores taps and scrolling',async()=>{
+  const {swipeDirection}=await import('../dist/core.js');
+  assert.equal(swipeDirection(-90,10),1);assert.equal(swipeDirection(90,-10),-1);
+  assert.equal(swipeDirection(20,3),0);assert.equal(swipeDirection(5,100),0);
+  assert.equal(swipeDirection(70,70),0);assert.equal(swipeDirection(-56,0),1);
+});
