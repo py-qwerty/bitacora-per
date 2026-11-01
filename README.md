@@ -28,9 +28,11 @@ Las pruebas usan el ejecutor incluido en Node.js. Validan integridad del banco, 
 
 ## Publicación
 
-Fuente privada en [py-qwerty/bitacora-per](https://github.com/py-qwerty/bitacora-per).
-Web privada en [Bitácora PER](https://bitacora-per-qwerty.codex4coding.chatgpt.site).
-Sites sirve `dist/`; `.openai/hosting.json` conserva la identidad del proyecto. Los archivos del repositorio no contienen credenciales. Para futuros despliegues usar el flujo de Sites con esa identidad; subir cambios a GitHub por sí solo no publica automáticamente en Sites.
+Código público en [py-qwerty/bitacora-per](https://github.com/py-qwerty/bitacora-per).
+Web pública: [Bitácora PER en GitHub Pages](https://py-qwerty.github.io/bitacora-per/).
+
+GitHub Actions comprueba los tests y publica `dist/` automáticamente al subir cambios a `main`. Existe además una copia privada en [Sites](https://bitacora-per-qwerty.codex4coding.chatgpt.site).
+Sites sirve `dist/`; `.openai/hosting.json` conserva la identidad del proyecto. Los archivos del repositorio no contienen credenciales. GitHub Pages se actualiza automáticamente con su workflow. La copia de Sites usa su propio flujo con esa identidad y no se actualiza mediante el workflow de GitHub.
 
 ## Datos y límites
 

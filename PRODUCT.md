@@ -21,6 +21,6 @@ Some chart exercises require the Estrecho de Gibraltar practice chart and plotti
 
 ## Access and retention
 
-Private GitHub repository and owner-private Sites hosting. Browser-only storage, no backend/analytics/synchronization. Practice answers, checked feedback, current position and completion are persisted per ten-question test. Repeating a test explicitly resets that test after confirmation.
+The user explicitly requested public visibility and GitHub publication after the initial private deployment. Public GitHub repository and GitHub Pages hosting; the separate Sites copy remains owner-private. Browser-only storage, no backend/analytics/synchronization. Practice answers, checked feedback, current position and completion are persisted per ten-question test. Repeating a test explicitly resets that test after confirmation.
 
 A mock examination exists in the current page's memory only. In-app navigation can return to the running attempt without pausing time, but closing or reloading discards it. Only a delivered/expired examination's final snapshot and grade are persisted for result review. Browser-local data disappears if the browser data is cleared. Storage failure triggers an explicit warning and in-memory fallback.
