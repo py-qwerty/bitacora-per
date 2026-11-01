@@ -29,3 +29,7 @@ The same exit/entrance transition now wraps swipe, numbered/keyboard navigation 
 ## Restore buttons and fix touch capture
 
 Actual Chrome: previous/next buttons moved practice 1→2→1 and mock 1→2→1 with transitions; dragging also moved practice 1→2. Added a regression fixture that runs the actual app handlers through the touch-specific sequence: implicit capture on an answer child, capture transfer to main, bubbled child lostpointercapture, and pointerup. It advances exactly once without selecting an answer. Separate tests verify genuine main capture loss cancels, and vertical touch movement does not navigate. This fixture checks event logic, not physical touch hardware. 17 checks pass; real iPhone/Android touchscreen verification remains unperformed.
+
+## Optional automatic progression
+
+Actual Chrome: disabled Avance automático, answered practice question 1 and stayed on it; Comprobar respuesta displayed the source solution. Reload preserved the disabled switch and position. Re-enabled the switch on unanswered question 2 and answering advanced to question 3 with transition. Disabled it again, started a mock and answered: stayed on mock question 1; no check-answer control appeared, preserving examination rules. Existing 17 checks pass.
