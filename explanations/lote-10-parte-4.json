@@ -1,0 +1,255 @@
+{
+"phxwjwh4nadj6n8": {
+"a": "065º sería N65E.",
+"b": "En el cuadrante SE: 180º − 65º = 115º.",
+"c": "155º sería S25E.",
+"d": "165º sería S15E."
+},
+"97w0vsc5yfa3duu": {
+"a": "El desvío es el ángulo entre el norte magnético y el de aguja.",
+"b": "La declinación es el ángulo entre el norte geográfico y el magnético.",
+"c": "La corrección total (dm + Δ) es el ángulo entre el norte geográfico (verdadero) y el de aguja.",
+"d": "La demora de aguja es el ángulo entre el norte de aguja y la visual a un objeto."
+},
+"2l4aifx0tm3w5z8": {
+"a": "7,3′ sale de dividir 8 / 1,1, pero el coeficiente se multiplica.",
+"b": "8,0′ sería la distancia real solo con coeficiente 1.",
+"c": "Dreal = Dcorredera × K = 8 × 1,1 = 8,8 millas.",
+"d": "9,1′ no sale de ninguna operación correcta con estos datos."
+},
+"6l8b0sayjqn6xu7": {
+"a": "En la carta Mercator la escala de longitudes no vale como medida de distancias; la milla está en la de latitudes.",
+"b": "Ni se usa la escala de longitudes ni un grado equivale a una milla (un grado son 60 millas).",
+"c": "La distancia se mide en la escala de latitudes (márgenes laterales), donde 1 minuto = 1 milla, a la altura de la zona medida.",
+"d": "Un grado de latitud son 60 millas, no una."
+},
+"wnp9gvdxmm4yxz0": {
+"a": "Es verdadera: es la definición del cero hidrográfico.",
+"b": "Es falsa (y por tanto la respuesta): la sonda de la carta se mide desde el cero hidrográfico, no desde la bajamar de cada día, que suele quedar por encima.",
+"c": "Es verdadera: el IHM usa como cero la bajamar astronómica más baja (LAT).",
+"d": "Es verdadera: es la definición de amplitud."
+},
+"izddc1tbkcd0ijn": {
+"a": "064º sería N64E.",
+"b": "116º sería S64E.",
+"c": "244º sería S64W.",
+"d": "En el cuadrante NW: 360º − 64º = 296º."
+},
+"3i550h2x18lokaq": {
+"a": "La corrección total es el ángulo entre el norte de aguja y el verdadero.",
+"b": "El desvío es el ángulo entre la línea N-S de la aguja y el norte magnético.",
+"c": "La declinación es el ángulo entre el norte verdadero y el magnético.",
+"d": "La demora de aguja es el ángulo entre el norte de aguja y la visual a un objeto."
+},
+"ozos8s8if5ky0y9": {
+"a": "Limo se abrevia «Si» (silt).",
+"b": "Arena fina se indica «fS» (fine sand).",
+"c": "«Sh» (shells) significa conchuela, es decir, restos de conchas.",
+"d": "Piedras se abrevia «St»."
+},
+"kfs4pxq5ulm9xwb": {
+"a": "La hora reloj bitácora la fija el patrón; la del gobierno es la hora oficial.",
+"b": "Las altas presiones hacen disminuir la altura de la marea.",
+"c": "El ángulo entre la estela y la crujía es el abatimiento.",
+"d": "La corriente desplaza toda la masa de agua, y con ella a cualquier barco a la misma velocidad y dirección, sea cual sea su tamaño."
+},
+"dalndhwz8v399p5": {
+"a": "Los meridianos no son paralelos entre sí: todos se cortan en los polos.",
+"b": "La única circunferencia máxima paralela al ecuador es el propio ecuador; las demás paralelas son paralelos (círculos menores).",
+"c": "El meridiano del lugar es el círculo máximo que pasa por los polos y por la situación del barco.",
+"d": "Los meridianos son círculos máximos, no menores."
+},
+"etly5mwu2iz6dhp": {
+"a": "«G» (gravel) indica fondo de cascajo o grava.",
+"b": "La antigüedad de una sonda no se indica con la letra G.",
+"c": "Los guijarros se abrevian «P» (pebbles).",
+"d": "La letra G no indica aguas sucias; se refiere a la naturaleza del fondo."
+},
+"uir7le5rhjoe23z": {
+"a": "Es la respuesta del banco: el minuto de arco equivale a 1852 m. Ver revisión: la milla se define sobre el meridiano, no sobre el ecuador.",
+"b": "Un arco de paralelo no sirve como medida de la milla, porque los paralelos son círculos menores.",
+"c": "La diezmillonésima parte del cuadrante del meridiano es la definición original del metro.",
+"d": "El banco da como correcta la a.",
+"review": "Imprecisa: la milla náutica (1852 m) corresponde a un minuto de arco de meridiano (a latitud media ~45º); un minuto de ecuador mide unos 1855 m. El propio banco usa el meridiano en wz6veb9holeh8xq."
+},
+"jka2hs50zqsp2vy": {
+"a": "9,4′ supondría un coeficiente de 0,9.",
+"b": "Dreal = 10,4 × 0,97 = 10,09 ≈ 10,1 millas.",
+"c": "10,7′ sale de dividir 10,4 / 0,97, pero se multiplica.",
+"d": "11,4′ no sale de ninguna operación correcta con estos datos."
+},
+"9245tm2601gmwap": {
+"a": "Los veriles unen los puntos de igual profundidad.",
+"b": "El buril es una herramienta de grabado, no una línea de la carta.",
+"c": "«Sondiles» no es un término náutico.",
+"d": "Las isobaras unen puntos de igual presión atmosférica en los mapas meteorológicos."
+},
+"4tz1lat6ftc4awy": {
+"a": "La hora legal rige en tierra; la de a bordo la decide el patrón.",
+"b": "Esa diferencia es un intervalo de tiempo, no una hora.",
+"c": "La HRB la fija el patrón y por ella se rige la vida a bordo.",
+"d": "La hora oficial la fija el gobierno y rige en tierra."
+},
+"n366ik42fnmitmk": {
+"a": "Esa es la definición de la longitud, no de la latitud.",
+"b": "En hemisferios distintos uno tiene latitud N y otro S, así que no tienen la misma latitud.",
+"c": "Estar en el ecuador significa latitud 0º; la longitud puede ser cualquiera.",
+"d": "Un paralelo es el conjunto de puntos de igual latitud."
+},
+"nj4tk31w1p6qjg9": {
+"a": "Es la definición de marcación: ángulo desde la proa entre la crujía y la visual a un objeto.",
+"b": "Ese ángulo es la marcación; la enfilación es la alineación de dos puntos con el barco.",
+"c": "El ángulo entre el norte magnético y el de aguja es el desvío.",
+"d": "Respecto al meridiano geográfico es el rumbo verdadero, no el magnético."
+},
+"gb9talbs9is65vn": {
+"a": "La luz de ocultaciones está encendida la mayor parte del tiempo; además 3 es el número de ocultaciones del grupo, no segundos.",
+"b": "Oc(3) 10s 12M: luz casi siempre encendida que se apaga en grupos de 3 ocultaciones cada 10 segundos, con alcance de 12 millas.",
+"c": "Es al revés: está encendida y se apaga brevemente.",
+"d": "No da destellos sino ocultaciones, y 12M es el alcance, no un número de destellos."
+},
+"vsp1vzn8hfq5vuo": {
+"a": "El cero hidrográfico es el plano de referencia desde el que se miden las profundidades de la carta.",
+"b": "La LAT es una referencia vertical (para sondas), no horizontal.",
+"c": "La amplitud es la diferencia entre pleamar y bajamar consecutivas, no entre dos bajamares.",
+"d": "La duración varía; en mareas semidiurnas ronda las 6 h, pero no es constante."
+},
+"m5prj5pq1p0eyba": {
+"a": "El arco de meridiano desde el ecuador es la latitud.",
+"b": "Esa definición no corresponde a ninguna coordenada geográfica.",
+"c": "La longitud es el arco de ecuador desde el meridiano cero (Greenwich) hasta el meridiano del lugar.",
+"d": "La c es correcta."
+},
+"ioeenkwnjpmvn3r": {
+"a": "315º sería N45W.",
+"b": "En el cuadrante SW: 180º + 45º = 225º.",
+"c": "135º sería S45E.",
+"d": "045º sería N45E."
+},
+"y86uywvplqjaiw0": {
+"a": "Las leyendas de la carta van en el título o en los márgenes, no en un cartucho.",
+"b": "La zona de tierra no se llama cartucho.",
+"c": "Un cartucho es un recuadro dentro de la carta que muestra una zona a mayor escala.",
+"d": "Los veriles son líneas de igual profundidad, no cartuchos."
+},
+"4g0oozucr10bi15": {
+"a": "La escala de longitudes no sirve para medir distancias en millas en la carta Mercator.",
+"b": "En la escala de latitudes 1 minuto = 1 milla; se mide a la altura de la zona donde está la distancia.",
+"c": "No es indiferente: solo la escala de latitudes da millas.",
+"d": "La escala de paralelos (longitudes) no da millas, y un grado no es una milla."
+},
+"1ezlsusnpecip7z": {
+"a": "Es la definición del cero hidrográfico.",
+"b": "La sonda es la profundidad medida desde ese plano, no el plano.",
+"c": "La profundidad es la distancia vertical hasta el fondo, no el plano de referencia.",
+"d": "Ni la b ni la c son el plano de referencia."
+},
+"ffand2slny2lalf": {
+"a": "Una demora traza en la carta la línea donde se encuentra el barco: es línea de posición.",
+"b": "La oposición (barco entre dos puntos alineados) también da una línea de posición.",
+"c": "El rumbo indica hacia dónde va el barco, no una línea sobre la que se sabe que está.",
+"d": "La enfilación es una línea de posición muy precisa."
+},
+"mb57o3uvnamk8yb": {
+"a": "La latitud es el arco de meridiano desde el ecuador hasta el lugar.",
+"b": "Los paralelos se usan para la longitud (arcos de ecuador), no para la latitud.",
+"c": "Desde Greenwich se mide la longitud, y sobre el ecuador.",
+"d": "Esa definición mezcla conceptos y no corresponde a ninguna coordenada."
+},
+"2ypj298wlh76rhv": {
+"a": "La amplitud es una diferencia de alturas, no de horas.",
+"b": "El intervalo es el tiempo entre una pleamar o bajamar y un instante cualquiera.",
+"c": "El tiempo entre una bajamar y la pleamar siguiente (o viceversa) es la duración de la marea (aquí, de la creciente).",
+"d": "«Hora de marea» no es este concepto."
+},
+"bto3s3n7lvrzj1g": {
+"a": "El desvío es un error de la aguja, no un efecto del viento.",
+"b": "La declinación es una propiedad del campo magnético terrestre.",
+"c": "El abatimiento es la desviación del rumbo causada por el viento.",
+"d": "La deriva la produce la corriente."
+},
+"on1cqymxvruk4e2": {
+"a": "Los ángulos desde el norte verdadero son demoras verdaderas.",
+"b": "Desde el norte de aguja se miden demoras de aguja.",
+"c": "La marcación se mide desde la proa (es decir, desde la dirección del rumbo).",
+"d": "La b no es correcta."
+},
+"a0nmhhigoal8ks5": {
+"a": "El desvío es el ángulo entre los meridianos magnético y de aguja.",
+"b": "La corrección total es el ángulo entre el meridiano verdadero y el de aguja.",
+"c": "La declinación magnética es el ángulo entre el meridiano geográfico y el magnético.",
+"d": "La demora es el ángulo entre un meridiano y la visual a un objeto."
+},
+"fii59473tppqdod": {
+"a": "Las demoras de aguja no pueden trazarse directamente; hay que pasarlas a verdaderas.",
+"b": "Para trazarlas bien primero hay que corregirlas; no se pueden trazar directamente.",
+"c": "En la carta solo se trazan demoras verdaderas: hay que aplicar antes la corrección total (Dv = Da + Ct).",
+"d": "No basta con el desvío; también hace falta la declinación magnética."
+},
+"suo59wwop6thag7": {
+"a": "Las marcaciones por banda llegan hasta 180º (la popa), no hasta 90º.",
+"b": "El ángulo entre el norte geográfico y el de aguja es la corrección total.",
+"c": "Se mide desde la proa hasta la popa (0º a 180º) por estribor o por babor.",
+"d": "Sí se miden, por ejemplo con un taxímetro o alidada."
+},
+"q8s9x1wc9kneyfg": {
+"a": "La latitud se mide sobre un meridiano desde el ecuador.",
+"b": "La longitud es el arco de ecuador desde Greenwich hasta el meridiano del lugar.",
+"c": "La diferencia en latitud es la distancia en latitud entre dos puntos.",
+"d": "La diferencia en longitud se mide entre dos meridianos cualesquiera, no desde Greenwich."
+},
+"z8ti93wosiktri2": {
+"a": "La demora se mide desde el norte.",
+"b": "La marcación es el ángulo entre la línea proa-popa y la visual a un objeto.",
+"c": "El rumbo es el ángulo entre el meridiano y la línea proa-popa.",
+"d": "La enfilación es la alineación de dos puntos con el barco."
+},
+"fikzze7ed1u5w94": {
+"a": "El Sol influye, pero su efecto es menos de la mitad que el de la Luna.",
+"b": "La Luna es la causa principal, pero no la única.",
+"c": "Las mareas se deben a la atracción combinada de la Luna y el Sol; cuando se alinean hay mareas vivas.",
+"d": "La c es correcta."
+},
+"xcyt7e8nxtef41l": {
+"a": "El transpondedor es un emisor-receptor (por ejemplo del AIS o radar), no mide distancias navegadas.",
+"b": "La corredera mide la velocidad y la distancia navegada respecto al agua.",
+"c": "El transductor es el sensor de la sonda (o de la corredera), no el instrumento en sí.",
+"d": "La sonda mide profundidad."
+},
+"psmbin6zb545bgm": {
+"a": "Las señales de balizamiento se representan con símbolos.",
+"b": "La zona de tierra no se llama cartucho.",
+"c": "El cartucho es un recuadro dentro de la carta que representa a mayor escala una parte de su zona.",
+"d": "La c es correcta."
+},
+"uu2rm1q163szi1h": {
+"a": "El ángulo desde la proa a un objeto es la marcación.",
+"b": "La demora es el ángulo entre el meridiano (norte) y la visual a un objeto.",
+"c": "El ángulo entre el meridiano y la línea proa-popa es el rumbo.",
+"d": "Esta definición no corresponde a la demora."
+},
+"h6mbm3sucuga6uz": {
+"a": "El coeficiente no se suma: es un factor multiplicador.",
+"b": "Vbarco = K × Vcorredera.",
+"c": "Dividir daría el error en sentido contrario.",
+"d": "El coeficiente no se resta."
+},
+"3yfvpcvji3qqdat": {
+"a": "La duración es un tiempo.",
+"b": "La sonda carta es la profundidad sobre el cero hidrográfico.",
+"c": "La amplitud es la diferencia de altura entre pleamar y bajamar.",
+"d": "El cero hidrográfico es el plano de referencia de las sondas."
+},
+"217qav38ymq664u": {
+"a": "La hora reloj bitácora es la que se lleva a bordo, fijada por el patrón.",
+"b": "La hora legal rige en tierra en cada país.",
+"c": "La hora del Estado del pabellón no obliga a la vida a bordo; la fija el patrón.",
+"d": "La hora del Estado de las aguas tampoco es la hora reloj bitácora."
+},
+"c4l0n10rjb4t1s4": {
+"a": "Un faro de ocultaciones emite luz casi siempre; no está apagado ni depende de emergencias.",
+"b": "Las ocultaciones son regulares y forman parte de su característica, no se producen en emergencias.",
+"c": "La luz de ocultaciones está encendida la mayor parte del tiempo y se apaga a intervalos regulares; se reconoce por esos apagones.",
+"d": "Eso describe una luz de destellos, en la que la luz es más corta que la oscuridad."
+}
+}

@@ -2,6 +2,16 @@
 
 Web personal de estudio del **Patrón de Embarcaciones de Recreo**: 1.464 preguntas, 149 tests de origen y 11 temas. App móvil minimalista de una sola columna, con navegación inferior. Cada tema se divide en tests de exactamente 10 preguntas, una por pantalla, con respuestas, posición y resultado guardados en el navegador. El último bloque parcial se completa con preguntas del inicio del tema para incluir todo el banco.
 
+## Explicaciones
+
+Al comprobar una respuesta en estudio, y al repasar un simulacro entregado, cada pregunta muestra por qué la opción correcta lo es y por qué no lo son las demás. Las explicaciones se escriben en `explanations/*.json` (`{id: {a, b, c, d, review?}}`) y se unen con:
+
+```sh
+python3 scripts/build-explanations.py
+```
+
+que valida los IDs y genera `dist/explanations.json`; las preguntas repetidas comparten explicación. `review` marca una solución del banco dudosa y se muestra como aviso. Son explicaciones redactadas con ayuda de IA a partir de la normativa, sin revisión académica.
+
 ## Simulacros
 
 45 preguntas aleatorias sin repetición de enunciado/opciones, 90 minutos, 32 aciertos mínimos. Reparto por temas: **4 / 2 / 4 / 2 / 5 / 10 / 2 / 3 / 4 / 5 / 4**. Máximos de errores: Balizamiento 2; Reglamento Internacional para Prevenir los Abordajes 5; Carta de navegación 2; total 13. Las preguntas en blanco cuentan como error. Las opciones conservan su orden original.

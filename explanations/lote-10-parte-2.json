@@ -1,0 +1,255 @@
+{
+"97j7mf2atsumpbi": {
+"a": "La hora reloj bitácora es la que decide el patrón y por la que se rige la vida a bordo.",
+"b": "La hora fijada por el Gobierno es la hora oficial o legal en tierra.",
+"c": "La hora del meridiano de Greenwich es la hora universal (UTC/TU).",
+"d": "La hora del huso es una referencia teórica; el patrón puede llevar a bordo otra distinta."
+},
+"2qxg9e7v250o6pa": {
+"a": "La altura aumenta con bajas presiones, no con altas.",
+"b": "El efecto es pequeño (≈1 cm por mb de diferencia con la presión normal); nunca duplica la marea.",
+"c": "La alta presión empuja la superficie del mar y hace que el nivel quede por debajo del previsto.",
+"d": "La presión sí afecta a la altura del agua."
+},
+"t5960hmnklpmzhy": {
+"a": "Es la marcación circular, que también se usa (por ejemplo en Demora = Rumbo + Marcación), pero el banco pide la forma semicircular. Ver revisión.",
+"b": "Las marcaciones se cuentan desde la proa hacia babor o estribor, no indicando proa o popa.",
+"c": "Si se indica la banda (babor o estribor), el ángulo solo llega a 180º, no a 360º.",
+"d": "La marcación se cuenta desde la proa de 0º a 180º por estribor o por babor; 180º es la popa.",
+"review": "Ambigua: las marcaciones también se cuentan de 0º a 360º en sentido horario desde la proa (marcación circular, opción a); el propio banco da esa forma como correcta en otra pregunta (678oyg7swetmk57)."
+},
+"ames3vtva5inhtb": {
+"a": "La enfilación es la alineación de dos puntos de la costa con el barco.",
+"b": "El rumbo es el ángulo entre el meridiano y la línea proa-popa.",
+"c": "La demora se mide desde el norte, no desde la línea proa-popa.",
+"d": "La marcación es el ángulo entre la línea proa-popa (proa) y la visual a un objeto."
+},
+"din0wn2w02y4n8g": {
+"a": "Una luz de ocultaciones está encendida la mayor parte del tiempo; no está apagada dando destellos.",
+"b": "Oc 5s 13M 30m: luz de ocultaciones con periodo de 5 s, alcance nominal de 13 millas y altura del foco de 30 m sobre el nivel de referencia.",
+"c": "30m es la altura de la luz en metros, no un alcance de emergencia en millas.",
+"d": "5s es el periodo: una ocultación cada 5 segundos, no cinco por segundo; además falta la altura."
+},
+"jyhvymbcjl327er": {
+"a": "Los portulanos dan el máximo detalle de un puerto o fondeadero concreto, no la aproximación.",
+"b": "Las cartas de recalada sirven para aproximarse a puertos y a accidentes de la costa que requieren más detalle que una carta costera.",
+"c": "Los cartuchos son pequeños planos ampliados insertados dentro de otra carta.",
+"d": "Las cartas de navegación costera cubren tramos más amplios de costa con menos detalle."
+},
+"doc8vt24m2xga52": {
+"a": "La presión afecta a la altura del agua, no a la hora de la bajamar.",
+"b": "Con baja presión el nivel del mar sube unos 1 cm por mb por debajo de la presión normal.",
+"c": "La altura disminuye con altas presiones, no con bajas.",
+"d": "La presión sí afecta a la altura de la marea."
+},
+"m0cz3d138fg96jy": {
+"a": "Con coeficiente 0 la distancia real sería siempre cero, lo que no tiene sentido.",
+"b": "El coeficiente es un número sin unidades (cociente entre real y corredera), no una distancia.",
+"c": "K = distancia real / distancia corredera; si son iguales, K = 1.",
+"d": "Tampoco es una distancia; y si fueran iguales el cociente sería 1."
+},
+"2szzay1rkqynbeb": {
+"a": "El arco de meridiano contado desde el Ecuador es la latitud.",
+"b": "La longitud es el arco de Ecuador entre el meridiano cero (Greenwich) y el meridiano del lugar, de 0º a 180º E o W.",
+"c": "Los paralelos no se cuentan desde el Ecuador como arco; esa definición no corresponde a ninguna coordenada.",
+"d": "La b es correcta."
+},
+"jsgic6qen07z3lr": {
+"a": "El abatimiento es el ángulo entre rumbo verdadero y rumbo de superficie, causado por el viento.",
+"b": "La corriente es un movimiento del agua, no un ángulo; su efecto angular se llama deriva.",
+"c": "La estela es el rastro que deja el barco; sirve para estimar el abatimiento, pero no es el ángulo.",
+"d": "La deriva es el ángulo causado por la corriente, entre el rumbo de superficie y el rumbo efectivo."
+},
+"e6t4fj1vowcsz6f": {
+"a": "Las señales de balizamiento se representan con símbolos, no con cartuchos.",
+"b": "La zona de tierra no se llama cartucho.",
+"c": "Un cartucho es un pequeño plano de una zona, a mayor escala, insertado dentro de una carta.",
+"d": "La c es correcta."
+},
+"5m1kcpkh9avah45": {
+"a": "La distancia de corredera es el dato de partida, no el resultado.",
+"b": "Dreal = Dcorredera × K: así se corrige el error de la corredera.",
+"c": "Es la operación correcta para corregir la corredera, no da un dato erróneo.",
+"d": "La sonda es una profundidad y no tiene relación con la corredera."
+},
+"qlaoqrmq1asv3vn": {
+"a": "El viento de mar a tierra acumula agua en la costa; no se define como una reducción de la amplitud.",
+"b": "El viento persistente de la mar empuja el agua contra la costa y eleva el nivel: la altura de la marea es mayor.",
+"c": "Su efecto principal es sobre la altura, no sobre la hora de la pleamar.",
+"d": "Tampoco altera de forma característica la hora de la bajamar."
+},
+"247a9zd1c81vwq5": {
+"a": "El ángulo entre el norte verdadero y el magnético es la declinación magnética.",
+"b": "El desvío es el ángulo entre el norte magnético y el norte de aguja, causado por el magnetismo del propio barco.",
+"c": "El ángulo entre norte verdadero y norte de aguja es la corrección total.",
+"d": "El ángulo entre el norte de aguja y la visual a un objeto es la demora de aguja."
+},
+"dhva6ia7vyt9hcm": {
+"a": "La sonda mide la profundidad.",
+"b": "El anuario de mareas da horas y alturas de mareas, no la velocidad del barco.",
+"c": "La corredera es el instrumento que mide la velocidad (y la distancia) del barco respecto al agua.",
+"d": "La aguja náutica indica el rumbo, no la velocidad."
+},
+"cqrmslqcgnca7k2": {
+"a": "La hora legal es la del huso con las correcciones de cada país; no es necesariamente la de a bordo.",
+"b": "La hora reloj bitácora es la que se lleva a bordo, fijada por el patrón.",
+"c": "La hora oficial de un Estado rige en tierra; a bordo manda la que establece el patrón.",
+"d": "La hora civil del lugar depende de la longitud exacta y no es la que se usa a bordo."
+},
+"dgg9kro27v2nlp3": {
+"a": "Es al revés: cuanta más superficie fuera del agua, más empuja el viento.",
+"b": "La deriva la produce la corriente sobre la obra viva, no el viento sobre la obra muerta.",
+"c": "Una obra muerta grande ofrece más superficie al viento, por lo que el barco abate más.",
+"d": "La obra muerta afecta al abatimiento (viento), no a la deriva (corriente)."
+},
+"v48p1f3d5is5tto": {
+"a": "Que la altura aumente es el efecto de una baja presión.",
+"b": "La presión sí afecta a la altura del agua.",
+"c": "La alta presión hace bajar el nivel del mar, aproximadamente 1 cm por mb sobre la presión normal.",
+"d": "El efecto de la presión es sobre la altura, no sobre la hora de la pleamar."
+},
+"qyeiuucufq73mnm": {
+"a": "La declinación magnética es el ángulo entre el norte verdadero (geográfico) y el norte magnético; varía con el lugar y el año.",
+"b": "El ángulo entre norte verdadero y de aguja es la corrección total.",
+"c": "El ángulo entre norte magnético y de aguja es el desvío.",
+"d": "El ángulo entre el norte magnético y la visual a un objeto es la demora magnética."
+},
+"ahoz903gkc01i8j": {
+"a": "Se multiplica, no se divide: K = Vreal / Vcorredera.",
+"b": "Despejando, Vcorredera = Vreal / K, no Vreal × K.",
+"c": "Como K = Vreal / Vcorredera, Vreal = K × Vcorredera.",
+"d": "El coeficiente de corredera no da la velocidad de la corriente; esta se obtiene comparando situaciones observadas y estimadas."
+},
+"wz6veb9holeh8xq": {
+"a": "La milla náutica se define como la longitud de un minuto de arco de meridiano (1852 m).",
+"b": "Un minuto de arco de meridiano es una milla, no dos.",
+"c": "La milla se define precisamente sobre el meridiano, no sobre el Ecuador (aunque en el Ecuador el valor es casi igual).",
+"d": "Un minuto de Ecuador mide aproximadamente una milla, no dos."
+},
+"4hpp5i9mpb1ro44": {
+"a": "El abatimiento lo causa el viento y separa el rumbo verdadero del de superficie.",
+"b": "Sin otra causa (sin viento), el ángulo entre el rumbo verdadero y el efectivo lo produce la corriente: es la deriva.",
+"c": "El desvío es un error de la aguja (norte magnético – norte de aguja), no un efecto sobre la trayectoria.",
+"d": "La marcación es el ángulo entre la proa y la visual a un objeto."
+},
+"5m29ub1rli7vvh5": {
+"a": "La duración es un tiempo, no una diferencia de alturas.",
+"b": "El intervalo es un tiempo, no una altura.",
+"c": "La amplitud es la diferencia de altura entre una pleamar y una bajamar consecutivas.",
+"d": "El cero hidrográfico es el plano de referencia de las sondas."
+},
+"41lquzwsa01dsgs": {
+"a": "Ese ángulo es la declinación magnética.",
+"b": "Ese ángulo es la corrección total (declinación + desvío).",
+"c": "El desvío es el ángulo entre el norte magnético y el norte de aguja.",
+"d": "Ese ángulo es la demora de aguja."
+},
+"5c6nhz1rm0m17tu": {
+"a": "La hora de Greenwich es la hora universal (UTC).",
+"b": "La hora que fija el Gobierno es la hora oficial.",
+"c": "La hora reloj bitácora la fija el patrón y por ella se rige la vida a bordo.",
+"d": "La hora del huso es una referencia teórica que el patrón puede no seguir."
+},
+"hoaghcr1y8aynz9": {
+"a": "El primer meridiano (Greenwich) se refiere a longitud 0º, no a la latitud.",
+"b": "El almicantarat es un círculo de la esfera celeste (igual altura de los astros), no una línea de la Tierra.",
+"c": "Estar en el mismo meridiano es tener la misma longitud.",
+"d": "Los puntos de igual latitud forman un paralelo."
+},
+"vm8rq794br1pqkr": {
+"a": "035º sería N35E, no N35W.",
+"b": "En el cuadrante NW: 360º − 35º = 325º.",
+"c": "345º sería N15W.",
+"d": "305º sería N55W."
+},
+"oynfjq3uo8xutw7": {
+"a": "La marcación es el ángulo entre la línea de crujía (la proa) y la visual a un objeto.",
+"b": "La declinación magnética es el ángulo entre el norte verdadero y el magnético.",
+"c": "La demora se mide desde el norte, no desde la crujía.",
+"d": "El rumbo es el ángulo entre el meridiano y la línea de crujía; no interviene ningún objeto."
+},
+"oot8rgacgxc1teg": {
+"a": "La declinación magnética es el ángulo entre el norte verdadero y el norte magnético.",
+"b": "Ese ángulo es la corrección total.",
+"c": "Ese ángulo es el desvío.",
+"d": "Ese ángulo es la demora de aguja."
+},
+"egbj1zylusf515w": {
+"a": "La hora de Greenwich es la hora universal (UTC).",
+"b": "La hora reloj bitácora es la hora que se lleva a bordo, fijada por el patrón.",
+"c": "La hora civil del lugar depende de la longitud exacta del observador; no es la de a bordo.",
+"d": "La hora legal es la que rige en tierra en cada país."
+},
+"vnc8umzrn5klicq": {
+"a": "«Meridiano de referencia» no es el nombre del meridiano del observador.",
+"b": "El meridiano del lugar es el que pasa por la posición del observador.",
+"c": "El meridiano de Greenwich es el de longitud 0º, el origen de longitudes.",
+"d": "El meridiano cero es el de Greenwich."
+},
+"1o6jblbf3rhbuwf": {
+"a": "115º sería S65E (180 − 65).",
+"b": "245º sería S65W (180 + 65).",
+"c": "205º sería S25W (180 + 25).",
+"d": "En el cuadrante SE: 180º − 25º = 155º."
+},
+"2nkol3q12ak5gb4": {
+"a": "El desvío es solo una parte; falta la declinación magnética.",
+"b": "La declinación es solo una parte; falta el desvío.",
+"c": "Dv = Da + Ct, así que la diferencia entre demora verdadera y de aguja es la corrección total (dm + Δ).",
+"d": "La marcación relaciona demora y rumbo, no demora verdadera y de aguja."
+},
+"nuw1e2qrudhnv73": {
+"a": "Con cortes de 10º a 30º las líneas son casi paralelas y un pequeño error en la demora desplaza mucho la situación.",
+"b": "Cortes de 20º son demasiado agudos para una situación fiable.",
+"c": "Cortes de 10º dan una situación muy imprecisa.",
+"d": "El corte ideal es de 90º; entre 60º y 90º el error de situación por errores de demora es pequeño."
+},
+"6medph3rf7gswkh": {
+"a": "El rumbo es el ángulo entre el meridiano y la línea proa-popa.",
+"b": "La demora es el ángulo entre el meridiano y la visual a un objeto.",
+"c": "La marcación es el ángulo entre la línea proa-popa y la visual a un objeto o punto de la costa.",
+"d": "La enfilación es la alineación de dos puntos con el barco."
+},
+"vryk1hfyjqvl32l": {
+"a": "La aguja da el rumbo de aguja; solo coincidiría con el verdadero si la corrección total fuera cero.",
+"b": "Solo coincidiría con el magnético si el desvío fuera cero.",
+"c": "Como Rv = Ra + Ct, el rumbo de aguja es Ra = Rv − Ct.",
+"d": "El signo es el contrario: Rv + Ct no da el rumbo de aguja."
+},
+"4f357tkrb28z792": {
+"a": "Un meridiano une puntos de igual longitud, no de igual latitud.",
+"b": "Greenwich es el meridiano de longitud 0º.",
+"c": "Un paralelo es el círculo formado por los puntos de igual latitud.",
+"d": "La c es correcta."
+},
+"g0mkg0x25toth77": {
+"a": "El meridiano del lugar es el punto de llegada de la longitud, no el origen.",
+"b": "Desde el Ecuador se cuentan las latitudes.",
+"c": "El paralelo del lugar define la latitud.",
+"d": "La longitud se cuenta desde el meridiano de Greenwich (0º), hacia el E o el W hasta 180º."
+},
+"ov6058yxf1d8sxf": {
+"a": "La amplitud se mide entre pleamar y bajamar consecutivas, no entre unas cualesquiera.",
+"b": "Una altura de pleamar no es una diferencia de alturas.",
+"c": "Tampoco: la amplitud es una diferencia entre pleamar y bajamar.",
+"d": "La amplitud es la diferencia de altura entre una bajamar y la pleamar consecutiva (o al revés)."
+},
+"bi39hlg1i1galyu": {
+"a": "K = Vverdadera / Vcorredera; por eso Vverdadera = K × Vcorredera.",
+"b": "Es la relación inversa; al usarla se obtendrían resultados equivocados.",
+"c": "También está invertida: sería Dverdadera / Dcorredera.",
+"d": "Mezcla una distancia con una velocidad, lo que no da un coeficiente sin unidades."
+},
+"x3135aewnnn0dm2": {
+"a": "Eso es la latitud.",
+"b": "La longitud es el arco de Ecuador entre el meridiano de Greenwich y el meridiano del lugar.",
+"c": "El origen de la longitud es Greenwich, no el meridiano del lugar.",
+"d": "La b es correcta."
+},
+"ams2fx66psyx8bp": {
+"a": "Si siguiera la dirección de la proa no habría abatimiento.",
+"b": "El viento empuja el barco hacia sotavento, y la trayectoria real se separa de la proa: es el abatimiento.",
+"c": "El viento no solo altera la velocidad, también desvía la trayectoria.",
+"d": "La b es correcta."
+}
+}

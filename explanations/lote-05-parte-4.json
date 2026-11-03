@@ -1,0 +1,250 @@
+{
+"7nunt30ba84s5oe": {
+"a": "Dos esferas negras son el tope del peligro aislado: un peligro de dimensiones reducidas rodeado de aguas navegables.",
+"b": "Los peligros nuevos, que aún no figuran en las cartas, se señalan con la boya de franjas azules y amarillas.",
+"c": "Una marca con el peligro al sur sería una cardinal Norte, con conos.",
+"d": "Una marca con el peligro al norte sería una cardinal Sur, con conos."
+},
+"63v3eozju9tinlf": {
+"a": "Eso describe una lateral de estribor normal; con banda roja es una bifurcación y su ritmo está fijado: 2+1.",
+"b": "Las ocultaciones no son el ritmo de las bifurcaciones, que es 2+1.",
+"c": "Todos los destellos son del mismo color (verde), no mezcla de verde y rojo.",
+"d": "Verde con banda roja es la bifurcación con canal principal a babor: luz verde Gp D(2+1)."
+},
+"82sycjko646gnwq": {
+"a": "Negra arriba y amarilla abajo es la cardinal Norte.",
+"b": "Amarilla arriba y negra abajo es la cardinal Sur.",
+"c": "Negra con banda amarilla es la cardinal Este.",
+"d": "Para pasar al oeste se usa la cardinal Oeste: amarilla con una ancha banda horizontal negra."
+},
+"tqglpptmoe2j8xu": {
+"a": "La cardinal Norte emite centelleo continuo (Q o VQ).",
+"b": "El destello largo solo lo lleva la cardinal Sur, junto con seis centelleos.",
+"c": "Le falta el destello largo y además es la Sur, no la Norte.",
+"d": "Seis centelleos más un destello largo es la cardinal Sur."
+},
+"7c2er363qanjbn9": {
+"a": "La numeración sigue la dirección convencional del balizamiento (de la mar hacia tierra), con pares para las rojas e impares para las verdes.",
+"b": "Está invertida la paridad: pares para las rojas e impares para las verdes.",
+"c": "La numeración crece en el sentido de entrada, de la mar hacia tierra.",
+"d": "Están mal tanto el sentido como la paridad."
+},
+"wfu8pi8r2flbmyf": {
+"a": "Las cardinales llevan dos conos, no esferas.",
+"b": "La de aguas navegables lleva una sola esfera roja.",
+"c": "La aproximación a puerto se señala con marcas de aguas navegables (esfera roja).",
+"d": "Dos esferas negras superpuestas son el tope de la marca de peligro aislado."
+},
+"bjt6d79g8aixtoo": {
+"a": "Esa es la definición IALA de las marcas especiales, cuyo tope es un aspa amarilla en X.",
+"b": "El aspa va en forma de X, no como una cruz vertical (+).",
+"c": "No existe una esfera amarilla como tope en IALA.",
+"d": "La esfera roja es el tope de las aguas navegables."
+},
+"2k0n14ej7pi814v": {
+"a": "La cardinal Norte emite centelleos.",
+"b": "Igual duración de luz y oscuridad es una luz isofase, característica de las aguas navegables.",
+"c": "La de peligro aislado emite grupos de dos destellos.",
+"d": "Sí existe: la isofase blanca es de las aguas navegables."
+},
+"4vr2zibk7l6w87o": {
+"a": "Negra con banda amarilla es la cardinal Este: conos unidos por sus bases (el de arriba hacia arriba, el de abajo hacia abajo).",
+"b": "Esa disposición, unidos por sus vértices, es la cardinal Oeste.",
+"c": "Las cardinales no llevan una esfera entre los conos.",
+"d": "Las cardinales no llevan una esfera entre los conos, y esa orientación de los conos es la de la Oeste."
+},
+"jv29ncdd9tttg61": {
+"a": "Ese color y ese tope son de la cardinal Este.",
+"b": "El color negro con banda amarilla es de la Este; el tope sí sería de la Oeste.",
+"c": "El color es de la Oeste, pero los conos unidos por sus bases son de la Este.",
+"d": "La cardinal Oeste es amarilla con banda negra y su tope son dos conos unidos por sus vértices."
+},
+"bih6dmj0rlv0339": {
+"a": "No es exclusiva: la babor modificada (canal principal a estribor) también lleva cilindro rojo.",
+"b": "El cilindro rojo lo llevan la lateral de babor y la bifurcación con canal principal a estribor.",
+"c": "La de canal principal a babor lleva cono verde.",
+"d": "Las zonas reservadas se señalan con marcas especiales (aspa amarilla)."
+},
+"2cioe4s42m3dn2q": {
+"a": "Las especiales son amarillas.",
+"b": "Las de bifurcación son rojas o verdes con una banda horizontal.",
+"c": "Franjas verticales rojas y blancas, a menudo en forma esférica, son la marca de aguas navegables.",
+"d": "La de peligro aislado es negra con bandas horizontales rojas."
+},
+"qz51p2534d3emyc": {
+"a": "La cardinal Norte emite centelleos.",
+"b": "La Morse «A» (·-) blanca es uno de los ritmos de la marca de aguas navegables.",
+"c": "La de peligro aislado emite grupos de dos destellos.",
+"d": "Sí existe: la Morse «A» blanca es de las aguas navegables."
+},
+"0lauadsak091v3c": {
+"a": "La cardinal Sur indica que las aguas más profundas de la zona están al sur de ella.",
+"b": "El peligro queda al norte; por eso hay que pasar por el sur.",
+"c": "Al sur están las más profundas, no las menos.",
+"d": "Ni la b) ni la c) son correctas."
+},
+"8d3kifcy9ruwrc9": {
+"a": "Las marcas de aguas navegables pueden definir el eje o centro de un canal.",
+"b": "La de peligro aislado se coloca sobre un peligro, no en el centro de un canal.",
+"c": "Las laterales marcan los márgenes del canal, no su centro.",
+"d": "Las de bifurcación señalan dónde se divide el canal."
+},
+"not9btd1rn2scif": {
+"a": "La cardinal Norte lleva dos conos, no uno.",
+"b": "La lateral de babor lleva cilindro, no cono.",
+"c": "Un solo cono con el vértice hacia arriba es el tope de las marcas de estribor; entrando se dejan por estribor.",
+"d": "La de peligro aislado lleva dos esferas.",
+"review": "Un solo cono también lo lleva la bifurcación con canal principal a babor (verde con banda roja), que también se deja por estribor al entrar; la c) es la mejor opción, pero no la única marca posible."
+},
+"iy5yh3voxe3mys5": {
+"a": "Las aguas navegables no usan centelleos.",
+"b": "La de peligro aislado emite grupos de dos destellos.",
+"c": "Centelleo blanco continuo es la cardinal Norte.",
+"d": "La cardinal Sur emite seis centelleos más un destello largo."
+},
+"t6d0tkq4h5g2t1r": {
+"a": "Igual duración de luz y oscuridad (2 s + 2 s) es una luz isofase: marca de aguas navegables.",
+"b": "La de peligro aislado emite grupos de dos destellos.",
+"c": "La cardinal Norte emite centelleo continuo.",
+"d": "La cardinal Sur emite seis centelleos más un destello largo."
+},
+"vbnxfr5ckmgegjk": {
+"a": "La de canal principal a estribor es una babor modificada y lleva cilindro (rojo).",
+"b": "El cono es el tope de la marca de canal principal a babor.",
+"c": "En la región A no se combinan cilindro y cono en un mismo tope.",
+"d": "En la región A no se combinan cono y cilindro en un mismo tope."
+},
+"fp7qpqscasdgruj": {
+"a": "La marca de aguas navegables, si lleva tope, es una esfera roja.",
+"b": "Es una sola esfera; dos esferas (negras) son del peligro aislado.",
+"c": "La esfera de tope es roja, sin franjas; las franjas las lleva el cuerpo de la marca.",
+"d": "El tope es una esfera, no un cilindro."
+},
+"24mnjf4yzsf8397": {
+"a": "Para un bajo se usarían cardinales; la de peligro aislado no indica una zona que evitar, sino un peligro puntual.",
+"b": "Un peligro al sur de la marca se señala con una cardinal Norte.",
+"c": "Un peligro al norte de la marca se señala con una cardinal Sur.",
+"d": "Dos esferas negras es el peligro aislado: un peligro a cuyo alrededor las aguas son navegables."
+},
+"fwljxx8lrok4qse": {
+"a": "Roja con banda verde es la babor modificada (canal principal a estribor): entrando, se deja por babor.",
+"b": "Dejarla por estribor nos llevaría al canal secundario.",
+"c": "La de aguas navegables tiene franjas verticales rojas y blancas.",
+"d": "Depende de si entramos o salimos de puerto, no del rumbo; aquí entramos, así que es babor."
+},
+"6ziucbxr9n02mqe": {
+"a": "La de peligro aislado emite grupos de dos destellos.",
+"b": "Más tiempo de luz (3 s) que de oscuridad (1 s) es una luz de ocultaciones, Oc 4s: marca de aguas navegables.",
+"c": "La cardinal Este emite grupos de tres centelleos.",
+"d": "Las especiales tienen luz amarilla."
+},
+"3it4ouv5upmipf7": {
+"a": "No solo: también la bifurcación con canal principal a estribor emite luz roja.",
+"b": "Emiten luz roja la lateral de babor y la babor modificada (canal principal a estribor).",
+"c": "La de canal principal a babor emite luz verde.",
+"d": "La de canal principal a babor es verde, y el peligro aislado emite luz blanca."
+},
+"l0q2097suo25s99": {
+"a": "La lateral de babor tiene luz roja.",
+"b": "Las aguas navegables tienen luz blanca.",
+"c": "Las cardinales tienen luz blanca.",
+"d": "La luz amarilla es propia de las marcas especiales."
+},
+"dy9ii4tv69lfi5p": {
+"a": "Una lateral de babor normal no usa el ritmo 2+1.",
+"b": "Las laterales de estribor tienen luz verde.",
+"c": "La de canal principal a babor tiene luz verde.",
+"d": "Luz roja 2+1 es la babor modificada (canal principal a estribor); saliendo, las marcas de babor se dejan por estribor."
+},
+"coorggi5qlhitp6": {
+"a": "Las cruces o aspas (amarillas) son de las marcas especiales.",
+"b": "No existe una cruz verde como tope.",
+"c": "En la región A no existe un cono rojo como tope.",
+"d": "En la región A, la de España, la lateral de babor lleva un cilindro rojo."
+},
+"cyzq599g381dcwq": {
+"a": "Correcto: indica que alrededor de la marca las aguas son navegables.",
+"b": "Correcto: puede definir ejes o centros de canal.",
+"c": "Correcto: también puede indicar una entrada de canal, una aproximación o un punto de recalada.",
+"d": "IALA recoge los tres usos para estas marcas, así que todas son correctas."
+},
+"3gvn7793k3akx2g": {
+"a": "Las aguas navegables no emiten grupos de nueve.",
+"b": "La de peligro aislado emite grupos de dos destellos.",
+"c": "Grupos de 9 (centelleos) es la cardinal Oeste: hay que pasar por su oeste. Con rumbo Norte el oeste queda a babor, así que caemos a babor.",
+"d": "Cayendo a estribor pasaríamos al este de la marca, donde está el peligro."
+},
+"5g4bdh0ldlo4saw": {
+"a": "La cardinal Este lleva los conos unidos por sus bases.",
+"b": "La cardinal Oeste lleva los conos unidos por sus vértices.",
+"c": "La cardinal Norte lleva los vértices hacia arriba.",
+"d": "Vértices hacia abajo es la cardinal Sur: se pasa por su cuadrante Sur."
+},
+"90evka91498atm8": {
+"a": "IALA admite usar la marca de aguas navegables para indicar el mejor punto de paso bajo un puente fijo.",
+"b": "Los bajos se señalan con cardinales o, si son pequeños, con peligro aislado.",
+"c": "Las zonas de ejercicios militares se señalan con marcas especiales.",
+"d": "Es lo contrario: indica que alrededor de ella las aguas son navegables."
+},
+"l6ho8k06x361io4": {
+"a": "La marca de peligro aislado emite luz blanca de grupos de dos destellos.",
+"b": "Un destello largo cada 10 s es de las aguas navegables.",
+"c": "El peligro aislado usa destellos, no ocultaciones.",
+"d": "La c) es falsa."
+},
+"i0tu8t30zds5tge": {
+"a": "Las cardinales señalan dónde están las aguas seguras respecto a un peligro.",
+"b": "Las especiales señalan zonas especiales.",
+"c": "Las laterales marcan los márgenes del canal, no su eje.",
+"d": "Las de aguas navegables se usan para definir ejes o centros de canal."
+},
+"tyx09v7jhes69nb": {
+"a": "El cilindro rojo es el tope de la lateral de babor (y también de la bifurcación con canal principal a estribor).",
+"b": "La de canal principal a babor lleva cono verde.",
+"c": "La de peligro aislado lleva dos esferas negras.",
+"d": "La b) es falsa."
+},
+"duo25y347q86r1a": {
+"a": "Saliendo, las verdes quedan por babor.",
+"b": "Saliendo, las de cilindro (babor) quedan por estribor.",
+"c": "Ni la a) ni la b) son correctas.",
+"d": "Las dos afirmaciones están invertidas para la salida de puerto, así que ninguna es correcta."
+},
+"u9js1kigtkbq9io": {
+"a": "Esa es la definición de las marcas de peligro aislado.",
+"b": "Esa es la definición de las marcas especiales.",
+"c": "IALA permite usar las cardinales para señalar recodos, confluencias, bifurcaciones o el extremo de un bajo.",
+"d": "La c) es correcta."
+},
+"qhw39206unk6q9c": {
+"a": "Grupo de dos destellos blancos es el peligro aislado (el periodo puede variar).",
+"b": "La cardinal Sur emite seis centelleos más un destello largo.",
+"c": "Las aguas navegables usan isofase, ocultaciones, destello largo o Morse «A».",
+"d": "La a) es correcta."
+},
+"hka83niiskrwubc": {
+"a": "Correcto: indica que alrededor de la marca las aguas son navegables.",
+"b": "Correcto: puede definir ejes o centros de canal.",
+"c": "Correcto: también puede indicar una entrada de canal, una aproximación o un punto de recalada.",
+"d": "IALA recoge los tres usos para estas marcas, así que todas son correctas."
+},
+"65sxegfx5vvt5ff": {
+"a": "Falso: las laterales pueden llevar marca de tope.",
+"b": "La esfera roja es de las aguas navegables.",
+"c": "El cono (verde) es de las marcas de estribor.",
+"d": "La lateral de babor, si lleva marca de tope, es un cilindro rojo."
+},
+"5t5fyhayh60mg8u": {
+"a": "Dejarla por babor nos llevaría al canal secundario.",
+"b": "Luz verde 2+1 es la estribor modificada (canal principal a babor): entrando, se deja por estribor.",
+"c": "La marca solo indica una bifurcación; no obliga a invertir el rumbo.",
+"d": "Igual que la c), tiene el mismo texto: no hay que invertir el rumbo.",
+"review": "Las opciones c) y d) tienen exactamente el mismo texto; parece un error de transcripción del banco."
+},
+"twmpluamdgh1tni": {
+"a": "La cardinal Norte emite centelleo continuo.",
+"b": "La de peligro aislado emite grupos de dos destellos.",
+"c": "Igual duración de luz y oscuridad (2 s + 2 s) es una luz isofase: aguas navegables.",
+"d": "Las especiales tienen luz amarilla."
+}
+}
