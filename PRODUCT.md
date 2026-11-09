@@ -17,7 +17,7 @@ https://www.boe.es/buscar/act.php?id=BOE-A-2014-10344#ai-2
 
 Own Boat Málaga bank, exported 1 November 2026: 1464 records, 149 source tests, 11 subjects and 8 images. Answers copied from source, not independently certified. No credentials or student data. Keep source duplicates in study, avoid identical signatures within mock examinations. To make all practice tests exactly ten questions while covering the entire bank, the last partial block wraps with distinct IDs from the start of the same topic. Explain this in the topic list. Preserve option order to retain references to other answers.
 
-Some chart exercises require the Estrecho de Gibraltar practice chart and plotting tools; the app does not supply an interactive chart.
+Chart exercises use the Estrecho de Gibraltar practice chart. User instruction, 9 November 2026: topic 11 exercises open the PER teaching chart (L105 enseñanza, user-supplied KAP) georeferenced in latitude/longitude, with the tools needed to solve them virtually. The app supplies points (tap or coordinates), ruler (true bearing and distance), bearing lines, distance circles and snapping to intersections. Rhumb-line maths, 1 mile = 1′ of latitude. The scan's distortion against the printed graticule is corrected (scripts/calibrate-chart.py). Not valid for navigation. It does not solve exercises or apply compass corrections for the user.
 
 ## Access and retention
 

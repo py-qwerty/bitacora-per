@@ -21,6 +21,10 @@ No dropdown, date picker, table selection, billing, permission editor or remote 
 - Deliver mock → modal shows unanswered count; cancel/Escape restores focus; deliver grades and persists one final snapshot for history/review. Deadline expiry does the same without another prompt. Replace running mock explicitly delivers the old attempt and starts another.
 - Results show total and failed subject limits; subject table is a disclosure. Review is one question per screen with errors/all filter. History reopens delivered results, never in-progress attempts.
 
+## Chart workspace
+
+Topic 11 questions (practice, mock, review) and the topic 11 page open a full-window native modal dialog owned by dist/chart.js; it is the one surface allowed to exceed the 480px app width. Drag pans, pinch/wheel/buttons zoom, a tap acts with the current tool (Mover selects). Tools: Punto, Regla, Demora, Transportador (a 360° true-north graduated circle, fixed on-screen size, pinned to a chart position), Compás (two-point dividers whose locked opening is a paper length; draws distance circles); the 12° toggle hides every automatic measure so angles and distances are read from the instruments; instruments are saved with the drawings but are not part of undo; selected strokes expose editable measures and draggable handles (lifted above the finger on touch). Imán snaps taps to points, ends and intersections. Undo and confirmed clear-all. Escape cancels a pending stroke first, then closes. Practice drawings persist per question; mock drawings stay in page memory and are cleared with a new mock; the mock clock keeps running and any route change closes the chart. Question arrow-key navigation is disabled while the chart is open.
+
 ## Failure and accessibility
 
 Finite bank loading timeout, stable spinner and retry view. Persistent warning when browser storage fails; memory fallback does not claim durable saving. Study updates read latest stored state; storage events refresh open practice in another tab. No cross-device synchronization or invigilated/tamper-resistant claims.

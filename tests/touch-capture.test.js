@@ -37,10 +37,10 @@ async function fixture() {
   const localStorage = {getItem:k=>stored.get(k)??null,setItem:(k,v)=>stored.set(k,v)};
   const bank=JSON.parse(readFileSync(new URL('../dist/bank.json',import.meta.url)));
   const source=readFileSync(new URL('../dist/app.js',import.meta.url),'utf8')
-    .replace(/^import[^\n]+\n/,'').replace(/\ninit\(\);\s*$/,'\nawait init();');
+    .replace(/^import[^\n]+\n/gm,'').replace(/\ninit\(\);\s*$/,'\nawait init();');
   const AsyncFunction=Object.getPrototypeOf(async function(){}).constructor;
-  await new AsyncFunction(...Object.keys(core),'document','window','location','localStorage','fetch','innerWidth',source)(
-    ...Object.values(core),document,window,{hash:'#/practica/1/1'},localStorage,
+  await new AsyncFunction(...Object.keys(core),'openChart','closeChart','isChartOpen','document','window','location','localStorage','fetch','innerWidth',source)(
+    ...Object.values(core),()=>{},()=>{},()=>false,document,window,{hash:'#/practica/1/1'},localStorage,
     async()=>({ok:true,json:async()=>bank}),390
   );
   assert(main.innerHTML.includes('Pregunta 1'));

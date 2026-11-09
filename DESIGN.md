@@ -60,6 +60,8 @@ Locally hosted Manrope is the text, navigation and heading face. Main titles 26p
 
 Maximum width 480px at all device sizes. A single natural document scroller with sticky 61px app header and fixed bottom navigation with safe-area padding. No desktop grids. Study: topic list → numbered ten-question tests → one question with previous/next buttons, horizontal swipes and a collapsed numbered selector. All ten-question test answers and position persist. Examination hides the tab bar; the answer sheet is a collapsed disclosure and answers remain in memory only until delivery. Final examination results persist.
 
+The chart workspace is the single full-window exception: a modal over the app, one column on phones (chart, contextual panel, five-tool bar) and chart plus a 360px side column from 900px. Drawings use two chart-only inks defined on dialog.chart: blue #0b55c4 for strokes and orange #c2410c for the selected stroke, chosen to stay legible over the greyscale chart.
+
 ## Elevation & Depth
 
 Panels use a one-pixel border. Only the modal has a shadow. The exam answer navigator is a document-flow disclosure. Stable scrollbars and intrinsic image boxes avoid moving controls.

@@ -20,6 +20,29 @@ que valida los IDs y genera `dist/explanations.json`; las preguntas repetidas co
 
 Los simulacros existen solo en memoria mientras la pestaña siga abierta. El reloj no se pausa en la navegación interna. Cerrar o recargar descarta el intento; se guarda únicamente el resultado final al entregar o agotarse el tiempo. El resultado informa de cada límite, incluso si el total de aciertos bastaría para aprobar.
 
+## Carta interactiva
+
+Cada pregunta del tema 11 (en tests, simulacros y repasos) tiene un botón que abre la carta L105 de enseñanza del Estrecho de Gibraltar a pantalla completa, con el enunciado a mano. El tema 11 ofrece además una carta de práctica libre. Útiles:
+
+- **Punto**: tocando la carta o por latitud y longitud; muestra su situación.
+- **Regla**: recta entre dos puntos con rumbo/demora verdadera, opuesta y distancia; se puede prolongar, invertir o fijar por rumbo y distancia.
+- **Demora**: recta desde un punto con un rumbo o demora verdadera (o su opuesta) y distancia opcional.
+- **Transportador**: círculo graduado de 360° con el 000° al norte verdadero. Se lleva a un faro o a la situación, se fija en la carta y el ángulo se lee donde la recta corta la graduación.
+- **Compás**: compás de puntas. Se abre llevando las dos puntas a la escala de latitudes, se fija la abertura (una longitud sobre el papel), se lleva la punta al centro y se traza el círculo. La abertura también puede escribirse en millas.
+- **Imán**: ajusta los toques a puntos, extremos, cruces y al centro del transportador, y alinea las rectas casi N, S, E, W o cuadrantales. Los cruces muestran su situación.
+- **12°** (medidas automáticas): al desactivarlo se ocultan rumbos, distancias y coordenadas, para leerlos en el transportador y las escalas como en el examen. La preferencia se guarda en el navegador.
+
+Rumbos y distancias son loxodrómicos sobre la proyección Mercator (1 milla = 1′ de latitud), como al trabajar con transportador y compás sobre el papel. Los trazos de los tests se guardan por pregunta en `localStorage`; los de un simulacro viven en memoria y se descartan con él.
+
+La carta se genera desde el KAP de enseñanza (no incluido en el repositorio) con:
+
+```sh
+python3 scripts/build-chart.py /ruta/a/L105_ensenanza_PER.kap   # teselas WebP en dist/assets/chart
+python3 scripts/calibrate-chart.py                              # dist/chart-warp.js
+```
+
+El segundo script mide la retícula impresa: el escaneo es un mosaico que se aparta hasta 9 px (≈0,1′) de la calibración nominal, y `chart-geo.js` corrige esa deformación con una malla de 2′. Carta de enseñanza, **no válida para la navegación**.
+
 ## Ejecutar
 
 Sin dependencias de producción ni compilación:
@@ -46,7 +69,7 @@ Sites sirve `dist/`; `.openai/hosting.json` conserva la identidad del proyecto. 
 
 ## Datos y límites
 
-Banco propio de Boat Málaga exportado el 1 de noviembre de 2026; 8 imágenes originales. Las soluciones son las del banco, sin certificación académica independiente. Se mantienen repeticiones entre tests en estudio. Los ejercicios de carta pueden requerir carta de prácticas del Estrecho de Gibraltar y útiles de trazado; la web no sustituye ese material. No son exámenes oficiales de una convocatoria.
+Banco propio de Boat Málaga exportado el 1 de noviembre de 2026; 8 imágenes originales. Las soluciones son las del banco, sin certificación académica independiente. Se mantienen repeticiones entre tests en estudio. Los ejercicios de carta se resuelven sobre la carta de prácticas del Estrecho de Gibraltar, incluida en la web (véase «Carta interactiva»). No son exámenes oficiales de una convocatoria.
 
 El progreso de los tests de diez y los resultados finales de los simulacros se guardan en `localStorage` del navegador, sin backend, analítica ni sincronización entre dispositivos. Borrar datos del navegador elimina el progreso. Un aviso informa si no es posible guardar. No se publican datos personales ni historial de la academia.
 
