@@ -176,6 +176,14 @@
           "text": "Entras de noche por el canal principal de un puerto español y ves las marcas laterales verdes por tu costado de babor. Deberían ir por estribor, así que te has salido del canal por su borde de estribor: **el canal de navegación queda a tu babor**. No significa que estés en la región B: España siempre es región A."
         },
         {
+          "type": "image",
+          "src": "assets/temas/numeracion-boyas.webp",
+          "alt": "Entrada a un puerto desde el mar: boyas rojas con números pares a babor y verdes con números impares a estribor, con numeración creciente hacia el puerto.",
+          "width": 1000,
+          "height": 1500,
+          "caption": "Los números aumentan al entrar desde el mar."
+        },
+        {
           "type": "exam",
           "text": "Lee primero si la pregunta dice «entrando» o «saliendo». Trampas vistas: «las rojas se dejan siempre por babor, entrando y saliendo» (falso: saliendo van por estribor); «saliendo tendremos por estribor las verdes» y «saliendo tendremos por babor las marcas con tope de cilindro» (las dos falsas: saliendo las verdes van por babor y las de cilindro, que son las rojas, por estribor; si aparecen juntas, la respuesta es «ninguna es correcta»). Y en un puerto español nunca «depende del puerto»."
         },
@@ -353,6 +361,14 @@
           "text": "Castillete (o espeque, o boya cilíndrica) **rojo con banda ancha verde** y cilindro rojo: bifurcación, canal principal a estribor; entrando lo dejas por **babor** y el canal principal queda a tu estribor. Castillete (o boya cónica) **verde con banda ancha roja**: bifurcación, canal principal a babor; entrando lo dejas por **estribor**. **Saliendo** hacia la mar ves una luz roja de 2+1 destellos: es la marca de canal preferente a estribor y, como toda marca roja al salir, la dejas por **estribor** para seguir el canal principal."
         },
         {
+          "type": "image",
+          "src": "assets/temas/canal-bifurcacion.webp",
+          "alt": "Canal que se divide en dos: boya roja con franja verde si el canal principal queda a estribor, y verde con franja roja si queda a babor.",
+          "width": 1000,
+          "height": 1045,
+          "caption": "Cae a una banda = gira hacia ese lado."
+        },
+        {
           "type": "exam",
           "text": "Trampas vistas: (1) Preguntan el tope o la luz de «canal principal a babor» esperando que digas rojo: es **cono verde y luz verde**. Y «canal principal a estribor»: **cilindro rojo y luz roja**. (2) «Luz verde 2+1» con la opción «lateral de estribor, se deja por estribor»: aunque se deje por estribor, la respuesta buena es **bifurcación con el canal principal por babor**. (3) «Navegando de noche por el canal de un puerto español vemos Gp D(2+1) rojos»: el banco da por buena **«el canal principal queda a estribor de la marca»**, aunque «se deja por babor» también sea cierto entrando; cuando aparezcan las dos, elige la que habla del canal principal. (4) «Grupo de 2 destellos verdes + 1 destello rojo» no existe: los tres destellos son del mismo color. (5) Una marca roja con banda verde nunca es a la vez «lateral de babor» o «de estribor» a secas: es de bifurcación. (6) Verla no significa que estés en un canal secundario ni que haya que dar la vuelta."
         },
@@ -426,6 +442,21 @@
         {
           "type": "analogy",
           "text": "Los conos del Norte apuntan hacia arriba, como el norte en la carta; los del Sur, hacia abajo. El Oeste parece una copa o un reloj de arena; el Este, un rombo o un huevo."
+        },
+        {
+          "type": "image",
+          "src": "assets/temas/cardinales-fotos.webp",
+          "alt": "Las cuatro marcas cardinales, norte, este, sur y oeste, con sus conos de tope y sus bandas negras y amarillas.",
+          "width": 1000,
+          "height": 914,
+          "caption": "Las cuatro cardinales en mar abierto."
+        },
+        {
+          "type": "image",
+          "src": "assets/temas/cardinales.webp",
+          "alt": "Lámina resumen de las marcas cardinales: qué lado de la marca hay que pasar, conos, colores y luces de cada una.",
+          "width": 1000,
+          "height": 1500
         },
         {
           "type": "exam",
@@ -658,6 +689,14 @@
           "text": "Como la marca no dice el tamaño del peligro ni a qué distancia se puede pasar, hay que consultar la carta y darle un resguardo prudente. Se puede pasar por cualquier lado."
         },
         {
+          "type": "image",
+          "src": "assets/temas/peligro-aislado.webp",
+          "alt": "Marca de peligro aislado: boya negra con bandas rojas y dos esferas negras sobre un peligro sumergido; de noche, luz blanca de dos destellos.",
+          "width": 1000,
+          "height": 667,
+          "caption": "Peligro aislado, de día y de noche."
+        },
+        {
           "type": "exam",
           "text": "Trampas vistas, todas cambiando un solo detalle: «franjas **verticales** rojas y negras» (son bandas horizontales); «negra con bandas **amarillas**» (eso sería una cardinal Este); «negra con bandas **verdes**»; «**una** esfera negra» o «dos esferas **rojas**» (son dos y negras; una esfera roja es aguas navegables); «luz roja», «dos destellos rojos» o «verdes» (es blanca); «un destello largo cada 10 s» o «Morse A» (son de aguas navegables); «grupo de dos **ocultaciones**» (son destellos); «grupos de tres destellos». Tampoco señala un peligro «que no figura en las cartas» (eso es un peligro nuevo) ni un peligro «al sur» o «al norte» de la marca."
         },
@@ -743,6 +782,14 @@
           ]
         },
         {
+          "type": "image",
+          "src": "assets/temas/aguas-navegables.webp",
+          "alt": "Marca de aguas navegables: boya con franjas verticales rojas y blancas y una esfera roja, con sus luces blancas de noche.",
+          "width": 1000,
+          "height": 1500,
+          "caption": "Aguas navegables, de día y de noche."
+        },
+        {
           "type": "exam",
           "text": "Trampas vistas: (1) «Las luces de ocultaciones solo las emiten los faros»: falso, las usa la marca de aguas navegables. (2) «No existe ninguna marca con luz isofase» o «con Morse A»: falso, es aguas navegables. (3) «Nunca tiene marca de tope»: falso, puede llevar una esfera roja. (4) Topes trampa: una esfera negra, dos esferas negras, dos esferas rojas, una esfera verde, una esfera a franjas. Es **una** y **roja**. (5) «Una marca cuya luz es un destello blanco cada diez segundos»: el banco da por buena **aguas navegables** aunque el enunciado no diga «largo»; en rigor el destello de esta marca es largo. (6) Para el eje o el centro de un canal la respuesta es aguas navegables, no las laterales. (7) Franjas «horizontales» blancas y rojas no existen."
         },
@@ -809,6 +856,14 @@
         {
           "type": "p",
           "text": "Pueden llevar letras, cifras o un pictograma que aclare su significado. De noche, si ves una **luz amarilla** y no distingues nada más, es una marca especial: ninguna otra de las cinco usa ese color."
+        },
+        {
+          "type": "image",
+          "src": "assets/temas/especiales-emergencia.webp",
+          "alt": "Marca especial amarilla con aspa en X y boya de emergencia o naufragio con franjas verticales azules y amarillas y cruz amarilla.",
+          "width": 1000,
+          "height": 1053,
+          "caption": "Marca especial y marca de emergencia o naufragio."
         },
         {
           "type": "exam",

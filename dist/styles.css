@@ -272,3 +272,7 @@ dialog.chart{--chart-ink:#0b55c4;--chart-ink-selected:#c2410c;width:100vw;max-wi
 @media(min-width:1024px){main>.rules-link{display:block;width:fit-content;margin-left:max(0px,calc((100% - 1040px)/2));margin-right:auto}}
 @media(min-width:1024px){main>.practice-progress,main>.auto-advance,main>.practice-heading{width:100%}main>.practice-progress{display:block}}
 @media(min-width:1024px){main>*:not(.back-link):not(.rules-link){margin-left:auto;margin-right:auto}}
+
+.tb-figure{margin:18px auto;max-width:560px}
+.tb-figure img{display:block;width:100%;height:auto;border:1px solid var(--color-border);border-radius:var(--radius-control);background:var(--color-surface)}
+.tb-figure figcaption{margin-top:6px;font-size:13px;line-height:1.5;color:var(--color-secondary);text-align:center}

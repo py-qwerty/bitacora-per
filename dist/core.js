@@ -64,7 +64,7 @@ export function swipeDirection(dx,dy) {
 }
 
 // ── Temas para estudiar (content/temas → dist/temas) ───────────────────────────
-export const TEMA_BLOCKS = ['p', 'analogy', 'term', 'list', 'steps', 'table', 'example', 'exam', 'key'];
+export const TEMA_BLOCKS = ['p', 'analogy', 'term', 'list', 'steps', 'table', 'example', 'exam', 'key', 'image'];
 const filled = v => typeof v === 'string' && v.trim().length > 0;
 const allFilled = a => Array.isArray(a) && a.length > 0 && a.every(filled);
 /** Valida un tema y comprueba que ninguna pregunta del banco de ese tema queda sin apartado. */
@@ -87,6 +87,7 @@ export function validateTema(tema, bank) {
       if (!b || !TEMA_BLOCKS.includes(b.type)) fail(where);
       if (b.title !== undefined && !filled(b.title)) fail(`título de ${where}`);
       if (b.type === 'term') { if (!filled(b.term) || !filled(b.text)) fail(where); }
+      else if (b.type === 'image') { if (!/^assets\/temas\/[a-z0-9-]+\.webp$/.test(b.src) || !filled(b.alt) || !Number.isInteger(b.width) || !Number.isInteger(b.height) || (b.caption !== undefined && !filled(b.caption))) fail(where); }
       else if (b.type === 'list' || b.type === 'steps') { if (!allFilled(b.items)) fail(where); }
       else if (b.type === 'table') { if (!allFilled(b.head) || !Array.isArray(b.rows) || !b.rows.length || !b.rows.every(r => Array.isArray(r) && r.length === b.head.length && r.every(filled))) fail(where); }
       else if (!filled(b.text)) fail(where);

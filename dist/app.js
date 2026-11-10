@@ -73,6 +73,7 @@ function temaBlock(b) {
     case 'example': return `<aside class="tb tb-example"><span class="tb-label">Ejemplo</span>${title}<p>${rich(b.text)}</p></aside>`;
     case 'exam': return `<aside class="tb tb-exam"><span class="tb-label">Así cae en el test</span>${title}<p>${rich(b.text)}</p></aside>`;
     case 'key': return `<aside class="tb tb-key"><span class="tb-label">Idea clave</span><p>${rich(b.text)}</p></aside>`;
+    case 'image': return `<figure class="tb-figure"><img src="${esc(b.src)}" width="${b.width}" height="${b.height}" loading="lazy" decoding="async" alt="${esc(b.alt)}">${b.caption?`<figcaption>${rich(b.caption)}</figcaption>`:''}</figure>`;
     default: return '';
   }
 }
