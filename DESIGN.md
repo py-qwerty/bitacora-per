@@ -62,6 +62,8 @@ Maximum width 480px at all device sizes. A single natural document scroller with
 
 The chart workspace is the single full-window exception: a modal over the app, one column on phones (chart, contextual panel, five-tool bar) and chart plus a 360px side column from 900px. Drawings use two chart-only inks defined on dialog.chart: blue #0b55c4 for strokes and orange #c2410c for the selected stroke, chosen to stay legible over the greyscale chart.
 
+Desktop (from 1024px), user request of 9 November 2026, ported from the user's Bitácora Ciber app: the bottom tabs become a 220px left rail, content is centred up to 1040px, topic and test lists use two columns, the topic page puts the study card beside the tests, and practice shows the explanation beside the question. The study topic uses up to 1400px: sticky section index, a reading column of about 70 characters and each section's bank questions in a sticky side panel. Study topics are the one place Barlow Condensed speaks loudly (topic title and numbered section openers); block types keep distinct shapes: analogy note, dictionary-entry term, bordered example, amber «Así cae en el test», deep-blue «Idea clave».
+
 ## Elevation & Depth
 
 Panels use a one-pixel border. Only the modal has a shadow. The exam answer navigator is a document-flow disclosure. Stable scrollbars and intrinsic image boxes avoid moving controls.

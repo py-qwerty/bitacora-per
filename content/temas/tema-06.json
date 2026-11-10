@@ -1,0 +1,1875 @@
+{
+  "topic": 6,
+  "title": "Reglamento Internacional para Prevenir los Abordajes (RIPA)",
+  "minutes": 55,
+  "intro": {
+    "why": "El RIPA es el «código de circulación» del mar: dice quién maniobra, cómo y con qué luces, marcas y pitadas se identifica cada barco. Es la unidad con más peso del examen: 10 preguntas y solo puedes fallar 5. Casi todo se pregunta con casos prácticos (marcaciones, luces vistas de noche, niebla), así que hay que entender la lógica, no solo memorizar.",
+    "before": [
+      "Estribor es el costado derecho mirando hacia proa y babor el izquierdo; de noche estribor lleva luz verde y babor luz roja.",
+      "El través es la dirección perpendicular al barco (90º desde la proa); la amura es la zona entre la proa y el través, y la aleta la zona entre el través y la popa.",
+      "Barlovento es el lado por donde viene el viento; sotavento, el lado por donde se va.",
+      "Marcación es el ángulo entre nuestra proa y el otro barco, contado de 0º a 180º hacia estribor (Er) o hacia babor (Br). Demora es la dirección en la que vemos al otro barco medida con el compás."
+    ],
+    "goals": [
+      "Distinguir las categorías de buque del reglamento: propulsión mecánica, vela, pesca, sin gobierno, maniobra restringida y restringido por su calado.",
+      "Saber cuándo hay riesgo de abordaje y cómo debe ser la maniobra para evitarlo.",
+      "Navegar correctamente por canales angostos y dispositivos de separación del tráfico.",
+      "Resolver quién cede el paso en alcance, vuelta encontrada y cruce, entre veleros y entre categorías distintas.",
+      "Aplicar la regla 19 cuando hay visibilidad reducida y los buques no se ven.",
+      "Reconocer cada buque por sus luces de noche y por sus marcas de día.",
+      "Interpretar las pitadas de maniobra, las señales de niebla y las señales de peligro."
+    ]
+  },
+  "sections": [
+    {
+      "id": "ambito-responsabilidad",
+      "title": "Para qué sirve el reglamento y cuándo puedes apartarte de él (reglas 1 y 2)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "El RIPA se aplica a **todos los buques** en alta mar y en todas las aguas que comuniquen con ella y sean navegables por buques de navegación marítima (regla 1). No hay excepciones por tipo de barco: los buques de guerra también cumplen las reglas de rumbo y gobierno; lo único que pueden tener son luces o señales adicionales."
+        },
+        {
+          "type": "p",
+          "text": "Las autoridades pueden dictar reglas especiales para puertos, radas, ríos o aguas interiores, pero deben parecerse todo lo posible al reglamento. Además, la Organización Marítima Internacional puede adoptar dispositivos de separación del tráfico."
+        },
+        {
+          "type": "term",
+          "term": "Regla 2: responsabilidad",
+          "text": "Cumplir el reglamento no exime a nadie (buque, propietario, capitán o dotación) de las consecuencias de una negligencia ni de olvidar las precauciones que exige la práctica normal del marino. Y al interpretarlo y cumplirlo se tomarán en consideración **todos** los peligros de navegación y riesgos de abordaje y **todas las circunstancias especiales, incluidas las limitaciones de los buques interesados, que pudieran hacer necesario apartarse del reglamento para evitar un peligro inmediato**."
+        },
+        {
+          "type": "analogy",
+          "text": "Es como invadir el carril contrario con el coche para esquivar un obstáculo repentino: la norma dice que vayas por tu carril, pero nadie te va a reprochar que te salgas un momento para evitar el golpe. En el mar, apartarse del reglamento solo se justifica por una circunstancia especial y para evitar un peligro inmediato."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: la opción correcta habla de «todas las circunstancias especiales, incluidas las limitaciones de los buques interesados» que obliguen a apartarse del reglamento «para evitar un peligro inmediato». Son falsas las que dicen «algunos peligros y ciertos riesgos», las que afirman que nunca te puedes apartar de las reglas «ni siquiera para evitar un peligro inmediato» y las que eximen a los buques de guerra."
+        },
+        {
+          "type": "key",
+          "text": "El reglamento obliga a todos, pero la regla 2 permite (y exige) apartarse de él cuando sea necesario para evitar un peligro inmediato, teniendo en cuenta todas las circunstancias y las limitaciones de los buques."
+        }
+      ]
+    },
+    {
+      "id": "definiciones-buques",
+      "title": "Qué tipo de buque eres para el reglamento (regla 3)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Para el RIPA, «buque» es toda clase de embarcación que se use o pueda usarse como medio de transporte sobre el agua, incluidas las que no tienen desplazamiento, los hidroaviones y las naves de vuelo rasante. Lo importante es que la categoría depende de **lo que el barco está haciendo en ese momento**, no de cómo está construido ni de en qué lista está matriculado."
+        },
+        {
+          "type": "table",
+          "title": "Categorías de buque de la regla 3",
+          "head": [
+            "Categoría",
+            "Definición",
+            "Claves para el test"
+          ],
+          "rows": [
+            [
+              "Buque de propulsión mecánica",
+              "Todo buque movido por una máquina.",
+              "Un velero con el motor en marcha lo es, aunque lleve las velas izadas. Un pesquero de regreso a puerto sin artes largados también."
+            ],
+            [
+              "Buque de vela",
+              "Todo buque navegando a vela siempre que su maquinaria propulsora, caso de llevarla, no se esté utilizando.",
+              "Si navega a vela y a motor a la vez NO es buque de vela: es de propulsión mecánica. «Motovelero» no es una categoría del reglamento."
+            ],
+            [
+              "Buque dedicado a la pesca",
+              "Todo buque que esté pescando con redes, líneas, aparejos de arrastre u otros artes de pesca que restrinjan su maniobrabilidad.",
+              "No basta con «estar pescando» ni con estar matriculado en la lista 3ª. No lo es quien pesca al curricán o con caña, ni el pesquero que va o vuelve del caladero."
+            ],
+            [
+              "Buque sin gobierno",
+              "El que por cualquier circunstancia excepcional es incapaz de maniobrar en la forma exigida por el reglamento y, por consiguiente, no puede apartarse de la derrota de otro buque.",
+              "Causa excepcional e involuntaria: avería de máquina o de timón, velero sin motor en una encalmada."
+            ],
+            [
+              "Buque con capacidad de maniobra restringida",
+              "El que, debido a la naturaleza de su trabajo, tiene reducida su capacidad para maniobrar en la forma exigida por el reglamento y, por consiguiente, no puede apartarse de la derrota de otro buque.",
+              "Causa voluntaria y normal: su trabajo. No es lo mismo que restringido por su calado."
+            ],
+            [
+              "Buque restringido por su calado",
+              "Buque de propulsión mecánica que, por su calado en relación con la profundidad y la anchura disponibles de agua navegable, tiene muy restringida su capacidad de apartarse de su derrota.",
+              "Solo puede serlo un buque de propulsión mecánica."
+            ],
+            [
+              "Hidroavión",
+              "Toda aeronave proyectada para maniobrar sobre las aguas.",
+              "Amarado, en general se mantiene alejado de todos los buques."
+            ],
+            [
+              "Nave de vuelo rasante",
+              "Nave multimodal que, en su modalidad de funcionamiento principal, vuela muy cerca de la superficie aprovechando la acción del efecto de superficie.",
+              "Se conoce también como WIG. Si la pregunta copia esta definición, la respuesta es «nave de vuelo rasante»."
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Son buques con capacidad de maniobra restringida (la lista no es cerrada)",
+          "items": [
+            "Los que colocan, reparan o recogen marcas de navegación, cables o conductos submarinos.",
+            "Los dedicados a dragados, trabajos hidrográficos u oceanográficos y operaciones submarinas (incluido el buceo).",
+            "Los que, en navegación, hacen combustible o transbordan carga, provisiones o personas.",
+            "Los dedicados al lanzamiento o recuperación de aeronaves (un portaaviones mientras opera).",
+            "Los dedicados a la limpieza de minas.",
+            "Los remolcadores, pero solo cuando el remolque restringe fuertemente la capacidad de remolcador y remolcado para apartarse de su derrota: no «todos los buques dedicados a operaciones de remolque»."
+          ]
+        },
+        {
+          "type": "analogy",
+          "text": "Sin gobierno es el coche averiado en mitad de la carretera: no puede moverse porque algo ha fallado. Maniobra restringida es el camión de obras pintando las líneas: podría moverse, pero su trabajo se lo impide. Los dos te obligan a esquivarlos, pero por motivos distintos."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) «circunstancia excepcional» = sin gobierno; «naturaleza de su trabajo» = capacidad de maniobra restringida. No existen el «buque ingobernable», el «buque sin maniobrabilidad» ni el «buque restringido por su trabajo». 2) Un pesquero de arrastre NO es un buque con capacidad de maniobra restringida: es «buque dedicado a la pesca», categoría propia; tampoco lo es el pesquero de no arrastre. 3) Un buque de vela y un buque sin gobierno tampoco son de maniobra restringida; un buque de trabajos hidrográficos sí. 4) Buque dedicado a la pesca: la opción buena siempre añade «con artes que restringen su maniobrabilidad»; «todo buque que esté pescando» a secas es falsa. 5) Un yate de 20 m a vela y con la máquina arrancada es «buque de propulsión mecánica»."
+        },
+        {
+          "type": "key",
+          "text": "Vela con motor en marcha = propulsión mecánica. Pesca solo si el arte restringe la maniobra. Sin gobierno = circunstancia excepcional. Maniobra restringida = naturaleza del trabajo. Restringido por su calado = solo buques de propulsión mecánica."
+        }
+      ]
+    },
+    {
+      "id": "definiciones-situacion",
+      "title": "En navegación, a la vista y visibilidad reducida (regla 3)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "La regla 3 define además tres expresiones que deciden qué reglas se aplican en cada momento."
+        },
+        {
+          "type": "term",
+          "term": "En navegación",
+          "text": "Se aplica a todo buque que **no esté fondeado, ni amarrado a tierra, ni varado**. Un barco parado y a la deriva, con el motor parado o desembragado, sigue estando «en navegación»."
+        },
+        {
+          "type": "term",
+          "term": "Buques a la vista uno del otro",
+          "text": "**Únicamente** cuando uno pueda ser observado **visualmente** desde el otro. Verlo en el radar no cuenta, ni hay una distancia fija (nada de «a menos de cinco millas»)."
+        },
+        {
+          "type": "term",
+          "term": "Visibilidad reducida",
+          "text": "Toda condición en que la visibilidad está disminuida por niebla, bruma, nieve, fuertes aguaceros, tormentas de arena o cualesquiera otras causas análogas. Navegar de noche, con buena visibilidad, **no** es visibilidad reducida; tampoco lo es que los buques estén tan lejos que no se vean."
+        },
+        {
+          "type": "term",
+          "term": "Eslora y manga",
+          "text": "Para el reglamento son la eslora total y la manga máxima."
+        },
+        {
+          "type": "example",
+          "title": "La lancha que pesca con caña a la deriva",
+          "text": "Una embarcación de recreo para la máquina (o la deja desembragada) y se queda a la deriva pescando con caña. No es un buque dedicado a la pesca (la caña no restringe su maniobra), no es un buque sin gobierno (no hay ninguna avería: puede arrancar cuando quiera) y no es de maniobra restringida. Es, sencillamente, **un buque en navegación**, y de propulsión mecánica, con todas sus obligaciones."
+        },
+        {
+          "type": "p",
+          "text": "Las reglas de rumbo y gobierno (parte B) se organizan según la visibilidad. La sección I (reglas 4 a 10) vale en **cualquier condición de visibilidad**. La sección II (reglas 11 a 18) solo se aplica a buques **a la vista** uno del otro. La sección III (regla 19) es para buques que **no están a la vista** cuando navegan dentro o cerca de una zona de visibilidad reducida."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: en la pregunta de la embarcación a la deriva pescando con caña aparece la opción «las respuestas b) y c) son correctas» (sin gobierno y en navegación). Es falsa: la única correcta es «un buque en navegación»."
+        },
+        {
+          "type": "key",
+          "text": "En navegación = ni fondeado, ni amarrado, ni varado. A la vista = solo visualmente, nunca por radar. Visibilidad reducida = niebla, bruma, nieve, aguaceros, tormentas de arena o causas análogas; la noche no lo es."
+        }
+      ]
+    },
+    {
+      "id": "vigilancia-velocidad-riesgo",
+      "title": "Vigilancia, velocidad de seguridad y riesgo de abordaje (reglas 5, 6 y 7)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Estas tres reglas se aplican siempre, con buena o mala visibilidad, y son la base de todo lo demás: primero mirar, después ir a una velocidad sensata y, por último, decidir si hay riesgo."
+        },
+        {
+          "type": "term",
+          "term": "Vigilancia (regla 5)",
+          "text": "Todos los buques mantendrán en todo momento una eficaz vigilancia **visual y auditiva**, utilizando además todos los medios disponibles que sean apropiados a las circunstancias, para evaluar plenamente la situación y el riesgo de abordaje."
+        },
+        {
+          "type": "term",
+          "term": "Velocidad de seguridad (regla 6)",
+          "text": "La velocidad que permite al buque ejecutar la maniobra adecuada y eficaz para evitar el abordaje y pararse a la distancia que sea apropiada a las circunstancias y condiciones del momento. Todo buque debe navegar siempre a esa velocidad. No es una cifra fija, y no se llama «velocidad de gobierno», «de vigilancia» ni «óptima»."
+        },
+        {
+          "type": "list",
+          "title": "Factores para fijar la velocidad de seguridad en TODOS los buques",
+          "items": [
+            "El estado de visibilidad.",
+            "La densidad de tráfico, incluidas las concentraciones de pesqueros o de otros buques.",
+            "La maniobrabilidad del buque: distancia de parada y capacidad de giro.",
+            "De noche, la existencia de resplandor, por ejemplo el producido por las luces de tierra o por el reflejo de las luces propias.",
+            "El estado del viento, la mar y la corriente, y la proximidad de peligros para la navegación.",
+            "El calado en relación con la profundidad disponible de agua."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Los buques con radar en funcionamiento tienen en cuenta además sus características y limitaciones: la escala que se esté usando, las interferencias por el estado de la mar, la posibilidad de no detectar buques pequeños, hielos u objetos flotantes, y el número y movimiento de los buques detectados."
+        },
+        {
+          "type": "term",
+          "term": "Riesgo de abordaje (regla 7)",
+          "text": "Cada buque usará todos los medios disponibles para determinar si existe riesgo de abordaje. **En caso de abrigarse alguna duda, se considerará que el riesgo existe.** Si hay radar que funciona correctamente, se utilizará de forma adecuada, incluida la exploración a gran distancia, para tener pronto conocimiento del riesgo. Se evitarán las suposiciones basadas en información insuficiente, sobre todo de radar."
+        },
+        {
+          "type": "list",
+          "title": "Las dos consideraciones de la regla 7 d)",
+          "items": [
+            "Se considerará que **existe riesgo** si la demora (o la marcación) de un buque que se aproxima **no varía en forma apreciable**.",
+            "En algunos casos **puede existir riesgo aun cuando la demora varíe de forma apreciable**, en particular al aproximarse a un buque de gran tamaño, a un remolque o a cualquier buque a muy corta distancia."
+          ]
+        },
+        {
+          "type": "analogy",
+          "text": "Si miras a otro barco por encima de un candelero de tu barandilla y, minuto tras minuto, sigue «clavado» en el mismo punto mientras se hace más grande, vais a llegar los dos al mismo sitio a la vez. Si se va desplazando claramente hacia proa o hacia popa, lo normal es que pase libre."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) Si la demora no varía de forma apreciable, la única respuesta es «se considerará que existe riesgo de abordaje»; no obliga a reducir a la mínima de gobierno, ni a dar cinco pitadas, ni a parar máquinas. La opción «tenemos la certeza de que no existe riesgo» es la falsa cuando piden la incorrecta. 2) «¿Cuándo se considera que hay riesgo?»: cuando haya dudas Y cuando la demora no varía (las dos son correctas). 3) De los factores de la velocidad de seguridad, el que suele ser la respuesta es «el calado en relación con la profundidad disponible de agua»; la eslora, la obra muerta o el tipo de propulsión no figuran. El resplandor de las luces de tierra sí es un factor."
+        },
+        {
+          "type": "key",
+          "text": "Vigilancia visual y auditiva siempre. Velocidad de seguridad = poder maniobrar y parar a tiempo. Demora constante con distancia que disminuye = riesgo de abordaje; y, en caso de duda, el riesgo existe."
+        }
+      ]
+    },
+    {
+      "id": "maniobra-evitar",
+      "title": "Cómo debe ser la maniobra para evitar el abordaje (reglas 8 y 16)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Cuando te toca maniobrar, el reglamento no solo dice que lo hagas: dice **cómo**. La idea es que el otro barco entienda sin ninguna duda lo que estás haciendo."
+        },
+        {
+          "type": "list",
+          "title": "Requisitos de la regla 8",
+          "items": [
+            "Si las circunstancias del caso lo permiten, la maniobra se efectuará **en forma clara, con la debida antelación y respetando las buenas prácticas marineras**.",
+            "Los cambios de **rumbo y/o velocidad** (uno, otro o ambos a la vez) serán **lo suficientemente amplios para ser fácilmente percibidos** por otro buque que los observe visualmente o por medio del radar.",
+            "**Deberá evitarse una sucesión de pequeños cambios de rumbo y/o velocidad.**",
+            "Si hay espacio suficiente, cambiar solamente de rumbo puede ser lo más eficaz, siempre que se haga con bastante antelación, sea considerable y no produzca una nueva situación de aproximación excesiva.",
+            "La maniobra será tal que el buque **pase a una distancia segura** del otro.",
+            "Su eficacia se irá **comprobando hasta que el otro buque esté pasado y en franquía** (ya libre del todo).",
+            "Si es necesario para evitar el abordaje o para tener más tiempo para estudiar la situación, el buque **reducirá su velocidad o suprimirá toda su arrancada** parando o invirtiendo sus medios de propulsión."
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Regla 16: buque que cede el paso",
+          "text": "Todo buque obligado a mantenerse apartado de la derrota de otro maniobrará, en lo posible, **con anticipación suficiente y de forma decidida** para quedar bien franco del otro buque."
+        },
+        {
+          "type": "term",
+          "term": "No estorbar",
+          "text": "Cuando una regla obliga a «no estorbar el tránsito» de otro buque (canales angostos, dispositivos de separación), hay que maniobrar pronto para dejarle espacio suficiente. Esa obligación no desaparece aunque después surja riesgo de abordaje."
+        },
+        {
+          "type": "example",
+          "title": "Un cambio que se ve",
+          "text": "Si caes 5º y luego otros 5º, desde el otro barco no se nota nada y nadie sabe qué pretendes. Si caes 40º de una vez, de noche le enseñas otra luz de costado y de día ve cambiar tu silueta: mensaje recibido."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: la frase trampa es siempre la de los pequeños cambios. Son FALSAS: «si hay espacio suficiente es aconsejable una sucesión de pequeños cambios de rumbo», «cambios pequeños para no desviarse mucho de su derrota», «se hará lo más tarde posible», «esperar a que el abordaje sea inminente», «debe coordinarse previamente por radio», «cambiar el rumbo o la velocidad pero no los dos a la vez», «la eficacia se comprueba solo una vez», «no es necesario hacerla con antelación» y «se procurará no parar el buque para no confundir a los demás» (al contrario: se puede reducir o suprimir la arrancada). Cuando las tres primeras opciones son verdaderas (forma clara y con antelación, evitar pequeños cambios, distancia segura), la correcta es «todas las anteriores»."
+        },
+        {
+          "type": "key",
+          "text": "Maniobra clara, con antelación, amplia (de rumbo, de velocidad o de ambos), sin sucesiones de pequeños cambios, pasando a distancia segura y vigilando el resultado hasta estar en franquía. Si hace falta, se reduce o se para."
+        }
+      ]
+    },
+    {
+      "id": "canales-angostos",
+      "title": "Canales angostos (regla 9)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Un paso o canal angosto es cualquier tramo estrecho donde los barcos no tienen sitio para maniobrar con libertad: una ría, un canal dragado, la bocana de un puerto. Como en una carretera estrecha, cada uno va por su derecha."
+        },
+        {
+          "type": "list",
+          "title": "Lo que dice la regla 9",
+          "items": [
+            "**a)** Los buques que naveguen a lo largo de un paso o canal angosto se mantendrán **lo más cerca posible del límite exterior del paso o canal que quede por su costado de estribor**, siempre que puedan hacerlo sin que ello entrañe peligro. Ni por el centro, ni por la parte más profunda, ni por babor; y no depende de la región de balizamiento.",
+            "**b)** Los **buques de eslora inferior a 20 metros** y los **buques de vela** no estorbarán el tránsito de un buque que solo pueda navegar con seguridad dentro del paso o canal angosto.",
+            "**c)** Los **buques dedicados a la pesca** no estorbarán el tránsito de ningún otro buque que navegue dentro del paso o canal (pueden pescar, pero sin estorbar).",
+            "**d)** Se puede **cruzar** un canal angosto, pero no cuando al hacerlo se estorbe el tránsito de otro buque que solo pueda navegar con seguridad dentro de dicho canal. Ese buque, si duda de las intenciones del que cruza, puede dar al menos cinco pitadas cortas y rápidas.",
+            "**e)** **Adelantar** está permitido. Si el adelantamiento puede hacerse con seguridad sin que el buque alcanzado tenga que maniobrar, se adelanta directamente, sin ninguna acción previa. Solo cuando el alcanzado tenga que maniobrar para dejar paso hay que pedirlo y acordarlo con pitadas (se ven en el apartado de señales de maniobra). En todo caso, el que alcanza sigue obligado por la regla 13.",
+            "**f)** Al acercarse a un recodo o zona donde la visión esté obstruida, se navega alerta y con precaución, y se da una pitada larga.",
+            "**g)** **Siempre que las circunstancias lo permitan, los buques evitarán fondear** en un canal angosto. No es una prohibición absoluta."
+          ]
+        },
+        {
+          "type": "table",
+          "title": "¿Quién no debe estorbar a quién en un canal angosto?",
+          "head": [
+            "Buque protegido",
+            "No deben estorbarle"
+          ],
+          "rows": [
+            [
+              "El que solo puede navegar con seguridad dentro del canal",
+              "Los buques de vela, los de eslora inferior a 20 m y los dedicados a la pesca; tampoco quien cruce el canal."
+            ],
+            [
+              "Cualquier buque que navegue dentro del canal",
+              "Los buques dedicados a la pesca."
+            ]
+          ]
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) «¿Qué buques no estorbarán?» tiene dos versiones. Si existe la opción con los tres (vela, menos de 20 m y pesca), esa es la correcta. Si la más completa es «los de vela y los de eslora inferior a 20 metros», esa es la buena. Nunca «las embarcaciones de recreo» ni «los de menos de 25 TRB». 2) En el canal no hay límite de 3 nudos ni obligación de encender las luces de día. 3) Es falso que los veleros no deban estorbar a los pesqueros: es al revés, el pesquero no estorba a nadie. 4) Es falso que no se pueda adelantar o cruzar: se puede, con las condiciones anteriores."
+        },
+        {
+          "type": "key",
+          "text": "En un canal angosto: pegado a tu estribor, sin estorbar al grande si mides menos de 20 m, vas a vela o estás pescando; se cruza y se adelanta solo si no se molesta, y se evita fondear siempre que sea posible."
+        }
+      ]
+    },
+    {
+      "id": "dst",
+      "title": "Dispositivos de separación del tráfico (regla 10)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Un dispositivo de separación del tráfico (DST) es una «autovía» marítima adoptada por la Organización Marítima Internacional en zonas de mucho tráfico, como Finisterre, el estrecho de Gibraltar o el cabo de Gata. Cada sentido de circulación tiene su propia vía."
+        },
+        {
+          "type": "table",
+          "title": "Las partes de un dispositivo",
+          "head": [
+            "Parte",
+            "Qué es"
+          ],
+          "rows": [
+            [
+              "Vías de circulación",
+              "Dos «carriles» de sentido contrario, cada uno con su dirección general de la corriente del tráfico."
+            ],
+            [
+              "Zona o línea de separación",
+              "La «mediana» que separa las dos vías."
+            ],
+            [
+              "Límites laterales",
+              "Los bordes exteriores de las vías. Existen y están definidos: se puede entrar o salir por ellos."
+            ],
+            [
+              "Extremos",
+              "Las entradas y salidas del dispositivo."
+            ],
+            [
+              "Zona de navegación costera",
+              "La franja entre el dispositivo y la costa adyacente."
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Cómo se usa (regla 10 b y c)",
+          "items": [
+            "Se navega por la **vía de circulación apropiada**, siguiendo la dirección general de la corriente del tráfico de esa vía.",
+            "En lo posible, se mantiene el rumbo **fuera de la línea o zona de separación**.",
+            "**Normalmente se entra y se sale por los extremos.** Pero también se puede entrar o salir por un límite lateral, y entonces se hace **con el menor ángulo posible** en relación con la dirección general de la corriente del tráfico (como al incorporarte a una autovía por el carril de aceleración).",
+            "Siempre que se pueda, se evita **cruzar** las vías. Si no hay más remedio, se cruzan siguiendo un rumbo que, en la medida de lo posible, forme **una perpendicular (ángulo recto)** con la dirección general de la corriente del tráfico. Así se está el menor tiempo posible dentro y los demás ven claramente tu costado. No está prohibido cruzar ni hay que hacerlo a velocidad máxima."
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Zona de separación: cuándo se puede entrar",
+          "text": "Normalmente no se entra en una zona de separación ni se cruza una línea de separación. Excepciones: **en caso de emergencia para evitar un peligro inmediato**, **para dedicarse a la pesca dentro de la zona de separación** y, por supuesto, **cuando sea necesario cruzar una vía de circulación** (o al entrar o salir de ella)."
+        },
+        {
+          "type": "term",
+          "term": "Zona de navegación costera: quién puede usarla",
+          "text": "El tráfico directo que pueda ir con seguridad por la vía apropiada no debe usar normalmente la zona costera. Pero **pueden usarla en cualquier circunstancia los buques de eslora inferior a 20 metros, los buques de vela y los buques dedicados a la pesca**. Cualquier otro buque puede usarla cuando esté **en ruta hacia o desde un lugar situado dentro de la zona de navegación costera** (un puerto, una estación de prácticos) o **para evitar un peligro inmediato**."
+        },
+        {
+          "type": "list",
+          "title": "Otras obligaciones",
+          "items": [
+            "Los **buques dedicados a la pesca** no estorbarán el tránsito de ningún buque que navegue por una vía de circulación. Pueden pescar en las vías y en la zona de separación, pero sin estorbar.",
+            "Los **buques de eslora inferior a 20 metros o los buques de vela no estorbarán el tránsito seguro de los buques de propulsión mecánica que naveguen en una vía de circulación**. Eso no les prohíbe usar las vías ni cruzarlas.",
+            "Siempre que se pueda, se evita fondear dentro del dispositivo o cerca de sus extremos, y junto a los extremos se navega con particular precaución.",
+            "Quien no utilice el dispositivo se apartará de él dejando el mayor margen posible.",
+            "Los buques con capacidad de maniobra restringida que trabajen en el mantenimiento de la seguridad de la navegación o con cables submarinos dentro del dispositivo quedan exentos de la regla 10 en lo necesario para su trabajo."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Muy importante: **ir por la vía de circulación no da ninguna preferencia de paso**. La regla 10 no modifica las demás. Si dentro de un dispositivo surge riesgo de abordaje con un buque a la vista, se aplican las reglas normales de alcance, vuelta encontrada, cruce y obligaciones entre categorías."
+        },
+        {
+          "type": "example",
+          "title": "Tres casos típicos dentro de un dispositivo",
+          "text": "1) Vas a motor por tu vía y por estribor ves un buque de propulsión mecánica que cruza perpendicularmente con riesgo de abordaje: es un cruce y lo tienes por estribor, así que te mantienes apartado de su derrota tú y, si puedes, evitas cortarle la proa. 2) El buque Alfa va por la vía y el Beta la cruza, ambos de propulsión mecánica: se aparta «el que tenga al otro por su costado de estribor», sea cual sea. 3) Vas por tu vía y ves por la proa un buque de propulsión mecánica a rumbo opuesto: vuelta encontrada, caes a estribor para pasar por su banda de babor."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) El lío entre los dos ángulos: incorporarse o salir por un límite lateral = menor ángulo posible; cruzar = lo más perpendicular posible. Las opciones falsas los intercambian. 2) Los buques de menos de 20 m pueden navegar «tanto por las vías de circulación como por la zona de navegación costera adyacente»; es falso que tengan prohibidas las vías o que las vías se reserven a buques de gran porte. 3) Un buque de propulsión mecánica de 40 m solo puede usar la zona costera «para evitar un peligro inmediato» (o si va o viene de un punto situado dentro de ella); no «siempre» ni «si va a menos de tres nudos». 4) Zona de separación: según las opciones, la correcta es la más completa que ofrezcan. Si aparece «emergencia, pesca y cuando sea necesario cruzar», es esa; si solo dan «emergencia» y «pesca» por separado, la buena es «a) y c) son correctas». 5) Es falso que quien cruza deba apartarse siempre de los que van por la vía, y es falso que los veleros, dentro de una vía, deban «mantenerse apartados de la derrota» de los de motor: su obligación es «no estorbar el tránsito seguro»."
+        },
+        {
+          "type": "exam",
+          "text": "Aviso sobre el temario: el texto de la regla 10 que suele manejarse en los apuntes solo menciona a los buques de menos de 20 m y a los de vela como usuarios libres de la zona de navegación costera. El banco de preguntas sigue la redacción vigente del reglamento, que añade a los buques dedicados a la pesca y los supuestos de ir o venir de un punto de la zona costera y de evitar un peligro inmediato. Responde como el banco."
+        },
+        {
+          "type": "key",
+          "text": "Por tu vía y en su sentido; entrar y salir por los extremos o, por los laterales, con el menor ángulo; cruzar en perpendicular; no entrar en la zona de separación salvo emergencia, pesca o cruce. Y la vía no da preferencia: las reglas de cruce, alcance y vuelta encontrada siguen mandando."
+        }
+      ]
+    },
+    {
+      "id": "veleros",
+      "title": "Dos veleros a la vista: manda el viento (reglas 11 y 12)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Desde aquí hasta la regla 18 estamos en la sección II, que solo vale para buques **a la vista uno del otro** (regla 11). La regla 12 resuelve el encuentro entre dos buques de vela con riesgo de abordaje. Entre veleros no importa por qué costado ves al otro ni si os cruzáis o vais de vuelta encontrada: **depende de por dónde recibe el viento cada uno**."
+        },
+        {
+          "type": "table",
+          "title": "Regla 12: quién se mantiene apartado",
+          "head": [
+            "Situación",
+            "Quién se mantiene apartado de la derrota del otro"
+          ],
+          "rows": [
+            [
+              "Reciben el viento por bandas contrarias",
+              "El que recibe el viento por **babor**."
+            ],
+            [
+              "Reciben el viento por la misma banda (da igual que sea babor o estribor)",
+              "El que está a **barlovento** se aparta del que está a sotavento."
+            ],
+            [
+              "Uno recibe el viento por babor, ve a otro por barlovento y no puede saber con certeza por qué banda recibe el viento el otro",
+              "El que recibe el viento por babor se aparta."
+            ]
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Banda de barlovento",
+          "text": "A efectos de esta regla, la banda contraria a la que se lleva cazada la vela mayor. Recibir el viento por babor es llevar la mayor cazada a estribor (ir «amurado a babor»)."
+        },
+        {
+          "type": "analogy",
+          "text": "El velero que recibe el viento por estribor tiene «prioridad», igual que en la carretera la tiene el que viene por la derecha. Y con el viento por la misma banda, el de barlovento es quien le tapa el viento al otro y quien maniobra con más facilidad, así que se aparta él."
+        },
+        {
+          "type": "p",
+          "text": "Dos veleros que navegan de vuelta encontrada a rumbos opuestos reciben el viento por bandas contrarias, así que tampoco aquí «caen los dos a estribor»: se aparta el que recibe el viento por babor. La regla de vuelta encontrada (regla 14) es solo para buques de propulsión mecánica."
+        },
+        {
+          "type": "p",
+          "text": "Hay una excepción que pasa por delante de la regla 12: el **alcance**. Si un velero está alcanzando a otro velero, se aparta el que alcanza, reciban el viento por donde lo reciban (regla 13, en el apartado siguiente)."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) Las opciones «el que tenga al otro por su costado de estribor (o de babor)» son de la regla de cruce entre buques de motor y aquí siempre son falsas; también «ambos caerán a estribor». 2) Las trampas invierten las palabras: «el que lo reciba por estribor se apartará» (falso) o «el de sotavento se apartará del de barlovento» (falso). También mezclan: «con bandas contrarias, el que esté a barlovento» (falso). 3) Si preguntan en general «¿quién maniobrará entre dos buques de vela?», la respuesta es «dependerá de por dónde reciban el viento». 4) Hay una pregunta que dice solo «en caso de riesgo de abordaje de dos veleros se mantendrá apartado…» y la clave es «el que reciba el viento por la banda de babor»: es la única opción bien formulada, porque se sobreentiende que reciben el viento por bandas contrarias."
+        },
+        {
+          "type": "key",
+          "text": "Entre veleros a la vista: bandas contrarias, se aparta el que recibe el viento por babor; misma banda, se aparta el de barlovento; y si uno alcanza al otro, se aparta el que alcanza."
+        }
+      ]
+    },
+    {
+      "id": "alcance",
+      "title": "Buque que alcanza (regla 13)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "La regla 13 es la más fuerte de la sección II: empieza diciendo «no obstante lo dispuesto en las reglas de la parte B, secciones I y II», es decir, pasa por delante de todas las demás. **Todo buque que alcance a otro se mantendrá apartado de la derrota del buque alcanzado. Siempre**, sea cual sea la categoría de cada uno."
+        },
+        {
+          "type": "term",
+          "term": "Buque que alcanza",
+          "text": "Todo buque que se aproxime a otro viniendo desde una **marcación mayor de 22,5 grados a popa del través** de este último; es decir, que se encuentre en una posición tal respecto del buque alcanzado que **de noche solamente le sea posible ver la luz de alcance de dicho buque y ninguna de sus luces de costado**. Las dos formas de decirlo son la misma definición."
+        },
+        {
+          "type": "p",
+          "text": "En números: el través está a 90º de la proa. Si le sumas 22,5º obtienes **112,5º**. Un barco que se te acerca desde una marcación de más de 112,5º (por estribor o por babor) te está alcanzando. Si viene desde menos de 112,5º, es un cruce. Ese sector de popa, de 67,5º a cada banda, es justo el que ilumina la luz de alcance."
+        },
+        {
+          "type": "list",
+          "title": "Lo que añade la regla 13",
+          "items": [
+            "**En caso de duda**: cuando un buque abrigue dudas de si está alcanzando o no a otro, considerará que lo está haciendo y actuará como buque que alcanza, apartándose.",
+            "**Una vez alcanzando, siempre alcanzando**: ninguna variación posterior de la marcación convierte al buque que alcanza en un buque que cruza. Sigue obligado a mantenerse apartado hasta que haya adelantado completamente al otro y esté en franquía.",
+            "**Vale para todos**: un velero que alcanza a un buque de propulsión mecánica debe apartarse él, y un velero que alcanza a otro velero también, sin mirar por dónde reciben el viento. La regla 13 prevalece sobre la 12 y sobre la 18."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Marcaciones que caen en el test",
+          "text": "Un buque se nos aproxima desde marcación 115º estribor: alcance (115 es mayor que 112,5). Un velero se acerca a un buque de motor desde 25º a popa de su través de estribor (eso es marcación 115º), desde 130º estribor o desde 170º estribor: el velero es el buque que alcanza y debe apartarse; el buque de motor es el que «sigue a rumbo» y, en principio, mantiene rumbo y velocidad. En cambio, a 103º, 105º, 107º o 110º todavía es un cruce."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) La única situación en la que un buque de vela debe apartarse de uno de propulsión mecánica en mar abierto es cuando el velero lo está alcanzando. Dicho al revés: el buque de propulsión mecánica NO está obligado a apartarse del velero cuando este le da alcance. Si ofrecen además «cuando se crucen y el de motor esté por estribor del velero», es falso: en un cruce siempre cede el de motor. 2) «¿Cuándo se considera que A alcanza a B?»: marcación mayor de 22,5º a popa del través, o ver de noche solo la luz de alcance, o tener dudas de si lo alcanza: todas valen, así que marca la opción que las reúna («b y c son correctas» o «todas las anteriores»). Navegar más rápido que el otro no es la definición. 3) Los distractores cambian el ángulo (45º, 67,5º, «menor de 22,5º», «a proa del través») o dicen que se ve la luz de alcance «y una de costado»: falso, solo la de alcance. 4) «¿Cuándo debe apartarse el que alcanza?»: siempre; no depende de las categorías."
+        },
+        {
+          "type": "key",
+          "text": "Alcanza quien viene desde más de 22,5º a popa del través del otro (marcación superior a 112,5º; de noche solo ve su luz de alcance). El que alcanza se aparta siempre, sea velero o motor, y en caso de duda se considera que alcanza."
+        }
+      ]
+    },
+    {
+      "id": "vuelta-cruce",
+      "title": "Dos buques de motor: vuelta encontrada y cruce (reglas 14 y 15)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Estas dos reglas son solo para **dos buques de propulsión mecánica a la vista**. No importa el tamaño: un mercante y una lancha de recreo se rigen por lo mismo."
+        },
+        {
+          "type": "term",
+          "term": "Vuelta encontrada (regla 14)",
+          "text": "Dos buques de propulsión mecánica que navegan a rumbos opuestos o casi opuestos con riesgo de abordaje. **Cada uno caerá a estribor**, de forma que pase por la banda de babor del otro («babor con babor»). Existe cuando ves al otro por tu proa o casi por tu proa: de noche verías sus luces de tope enfiladas o casi enfiladas y/o sus **dos luces de costado** a la vez. Si dudas de si es vuelta encontrada, supón que lo es."
+        },
+        {
+          "type": "term",
+          "term": "Cruce (regla 15)",
+          "text": "Dos buques de propulsión mecánica se cruzan con riesgo de abordaje. **El buque que tenga al otro por su costado de estribor se mantendrá apartado de la derrota de este otro y, si las circunstancias lo permiten, evitará cortarle la proa.** El que tiene al otro por su costado de babor es el buque que «sigue a rumbo»."
+        },
+        {
+          "type": "analogy",
+          "text": "El cruce funciona como la prioridad a la derecha en un cruce sin señales: cede el que ve al otro por su derecha. Y de noche hay un truco: si a tu estribor ves la luz **roja** de un buque de motor, es como un semáforo en rojo: cedes tú. Si a tu babor ves su luz **verde**, tienes paso."
+        },
+        {
+          "type": "table",
+          "title": "¿En qué situación estoy? (buque de motor a la vista de otro de motor, con riesgo de abordaje)",
+          "head": [
+            "Dónde veo al otro",
+            "Situación",
+            "Qué hago"
+          ],
+          "rows": [
+            [
+              "Justo por la proa o casi, a rumbo opuesto (tope y las dos luces de costado)",
+              "Vuelta encontrada",
+              "Caigo a estribor; el otro también."
+            ],
+            [
+              "Por estribor, desde cerca de la proa hasta marcación 112,5º",
+              "Cruce: lo tengo por estribor",
+              "Cedo el paso: me mantengo apartado y evito cortarle la proa."
+            ],
+            [
+              "Por babor, desde cerca de la proa hasta marcación 112,5º",
+              "Cruce: lo tengo por babor",
+              "Sigo a rumbo: mantengo rumbo y velocidad."
+            ],
+            [
+              "Se me acerca desde más de 112,5º por cualquier banda",
+              "Alcance: me alcanza él",
+              "Sigo a rumbo; se aparta el que alcanza."
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "El cruce es, en el fondo, el caso que queda cuando no es ni alcance ni vuelta encontrada: los dos buques se ven a proa de la línea situada 22,5º a popa del través (marcación inferior a 112,5º), sin venir de frente."
+        },
+        {
+          "type": "example",
+          "title": "Casos de noche resueltos",
+          "text": "1) Navegando a motor ves por tu amura de estribor, o en marcación 050º estribor, una luz de tope y una luz roja de costado, con demora constante: es un buque de motor que te enseña su babor y lo tienes por estribor; cedes el paso. 2) Lo mismo en marcación 103º o 105º estribor: sigue siendo cruce (menos de 112,5º) y cedes tú, evitando cortarle la proa. 3) Ves por tu través de babor una luz de tope y una luz verde que se acerca a rumbo de colisión: es un buque de motor que te tiene a ti por su estribor; cede él, y tú mantienes rumbo y velocidad (ni moderas ni paras). 4) Un buque de motor se acerca por tu costado de babor con demora constante: lo primero es mantener rumbo y velocidad. 5) Un buque en marcación 110º babor o 107º babor con marcación constante: cruce con riesgo de abordaje, no alcance."
+        },
+        {
+          "type": "example",
+          "title": "El buque que te enseña las dos luces de costado por tu estribor",
+          "text": "Navegas a motor y ves en marcación 045º estribor la luz de tope y las DOS luces de costado de un buque de motor. Que veas el verde y el rojo a la vez significa que su proa apunta exactamente al punto donde estás ahora. Pero tú avanzas: cuando él llegue, tú ya no estarás ahí. Si ninguno cambia el rumbo, su marcación irá **aumentando** (se irá quedando hacia tu popa) y te pasará por la popa. Basta con mantener la vigilancia; no es rumbo de colisión."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) Cruce entre buques de motor: la opción correcta es «el que tenga al otro por su costado de estribor se mantendrá apartado»; si añade «y evitará cortarle la proa», también es correcta, pero es falsa si dice «cortarle la popa». Preguntado al revés: «sigue a rumbo» el que ve al otro por babor; «debe maniobrar» el que ve al otro por estribor. 2) Mercante contra embarcación de recreo, ambos de motor: no cede «el mercante» ni «la de recreo», sino «el que tenga al otro por su costado de estribor». 3) Vuelta encontrada: «ambos caen a estribor»; nunca a babor, ni uno a cada banda, ni «el primero que reaccione». 4) «¿Cuándo es un cruce?»: «cuando no se trate de una situación de alcance o de vuelta encontrada». 5) Con una única luz blanca que se aproxima por la proa no puedes distinguir: puede ser vuelta encontrada o alcance (las dos pueden ser correctas)."
+        },
+        {
+          "type": "exam",
+          "text": "Aviso de redacción: una pregunta define el cruce como «siempre que dos buques de propulsión mecánica se encuentren a la vista el uno del otro, observándose ambos por una marcación menor de 22,5 grados a popa del través». La frase está mal construida (quiere decir que se ven a proa del límite de 22,5º a popa del través), pero es la clave del banco. Descarta la que dice «mayor de 22,5 grados a popa del través», que describe el alcance."
+        },
+        {
+          "type": "key",
+          "text": "Motor contra motor: de frente, los dos a estribor; en cruce, cede el que tiene al otro por estribor (ve su luz roja) y evita cortarle la proa; el otro mantiene rumbo y velocidad. El límite entre cruce y alcance es la marcación 112,5º."
+        }
+      ]
+    },
+    {
+      "id": "cede-sigue",
+      "title": "El buque que «sigue a rumbo» (regla 17)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "En cada encuentro hay un buque que «cede el paso» (debe mantenerse apartado de la derrota del otro, como pide la regla 16) y otro que «sigue a rumbo». El segundo también tiene obligaciones: si hiciera cosas raras, el que cede no sabría cómo esquivarlo."
+        },
+        {
+          "type": "steps",
+          "title": "Las tres fases del buque que sigue a rumbo",
+          "items": [
+            "**Debe mantener su rumbo y su velocidad.** Las dos cosas: no vale mantener el rumbo y moderar, ni cambiar el rumbo «para facilitar» la maniobra del otro.",
+            "**Puede** actuar para evitar el abordaje con su propia maniobra **tan pronto como le resulte evidente que el buque que debería apartarse no está actuando en la forma preceptuada por el reglamento**. Si es un buque de motor en un cruce con otro de motor, al hacerlo no caerá a babor para un buque que tenga por su banda de babor, si las circunstancias lo permiten.",
+            "**Debe** ejecutar la maniobra que mejor pueda ayudar a evitar el abordaje cuando esté tan cerca que este no pueda evitarse por la sola maniobra del buque que cede el paso."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Nada de esto libera al buque que cede el paso de su obligación de mantenerse apartado. Y quién sigue a rumbo no tiene nada que ver con el tamaño: lo deciden las reglas 12 a 18 según la situación (alcance, cruce, viento) y la categoría de cada buque, no la maniobrabilidad ni el tonelaje."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: «¿Cuándo puede maniobrar el buque que sigue a rumbo?» No «en cualquier momento», ni «nunca», ni «solo en vuelta encontrada»: tan pronto como le resulte evidente que el que cede el paso no está actuando como exige el reglamento. Y cuando piden la afirmación NO correcta, es la que dice que el buque que sigue a rumbo «será el de menor maniobrabilidad, que normalmente coincidirá con el de mayor tonelaje»."
+        },
+        {
+          "type": "key",
+          "text": "El que sigue a rumbo mantiene rumbo y velocidad; puede maniobrar cuando sea evidente que el otro no cumple, y debe hacerlo cuando la maniobra del otro ya no baste."
+        }
+      ]
+    },
+    {
+      "id": "categorias",
+      "title": "Quién se aparta de quién según la categoría (regla 18)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Cuando los dos buques a la vista son de categorías distintas, no se mira por qué costado se ven: se aplica una jerarquía. **Se aparta el que maniobra con más facilidad.** Todo ello «sin perjuicio de las reglas 9, 10 y 13»: el canal angosto, el dispositivo de separación y, sobre todo, el alcance pasan por delante."
+        },
+        {
+          "type": "table",
+          "title": "Regla 18: obligaciones entre categorías de buques",
+          "head": [
+            "Este buque, en navegación…",
+            "…se mantendrá apartado de la derrota de"
+          ],
+          "rows": [
+            [
+              "Buque de propulsión mecánica",
+              "Buque sin gobierno, buque con capacidad de maniobra restringida, buque dedicado a la pesca y buque de vela."
+            ],
+            [
+              "Buque de vela",
+              "Buque sin gobierno, buque con capacidad de maniobra restringida y buque dedicado a la pesca."
+            ],
+            [
+              "Buque dedicado a la pesca (en la medida de lo posible)",
+              "Buque sin gobierno y buque con capacidad de maniobra restringida."
+            ],
+            [
+              "Cualquiera, salvo el buque sin gobierno y el de maniobra restringida",
+              "Evitará, si las circunstancias lo permiten, estorbar el tránsito seguro de un buque restringido por su calado que exhiba sus señales."
+            ],
+            [
+              "Hidroavión amarado",
+              "En general se mantendrá bien alejado de todos los demás buques y evitará estorbar su navegación; si hay riesgo de abordaje, cumple las reglas como los demás."
+            ]
+          ]
+        },
+        {
+          "type": "analogy",
+          "text": "Imagina una escalera. Arriba, los que casi no pueden moverse: sin gobierno y maniobra restringida. Debajo, el pesquero faenando. Debajo, el velero. Y en el último peldaño, el buque de motor, que es el más ágil. Cada uno se aparta de todos los que tiene por encima."
+        },
+        {
+          "type": "p",
+          "text": "Consecuencia práctica: entre un buque de propulsión mecánica y uno de vela a la vista, **se aparta el de motor en cualquier situación**, sea cruce (da igual por qué costado se vean) o vuelta encontrada. Aquí no se aplica «ambos caen a estribor» ni «el que tenga al otro por estribor». Lo mismo entre un buque de motor y uno dedicado a la pesca que vienen de vuelta encontrada: se aparta el de motor. La única excepción es que el velero (o el pesquero) sea el que alcanza."
+        },
+        {
+          "type": "table",
+          "title": "De noche: reconocer a un velero para aplicar la regla 18",
+          "head": [
+            "Navegando a motor veo…",
+            "Es…",
+            "Qué hago"
+          ],
+          "rows": [
+            [
+              "Por la proa, las dos luces de costado (roja y verde) y ninguna otra luz",
+              "Un buque de vela que viene de vuelta encontrada (no lleva luz de tope)",
+              "Soy el buque que cede el paso: me aparto de su derrota, cayendo a babor o a estribor; él mantiene rumbo y velocidad. No es «ambos a estribor»."
+            ],
+            [
+              "Por mi amura o mi través de babor, una luz verde sola que se acerca con demora constante",
+              "Un buque de vela que me enseña su estribor",
+              "Me aparto de su derrota, aunque lo tenga por babor."
+            ],
+            [
+              "Por la proa, dos luces de tope y las dos de costado",
+              "Un buque de propulsión mecánica de 50 m o más que viene de frente",
+              "Si yo voy a motor, vuelta encontrada. Si yo voy exclusivamente a vela, debe maniobrar el otro buque."
+            ]
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Casos con velero",
+          "text": "1) Vas a vela y un buque de motor se acerca por tu estribor en situación de cruce: eres el buque que «sigue a rumbo», aunque lo veas por estribor. 2) Vas a vela y ves a un buque de motor en marcación 090º estribor con riesgo de abordaje: el de motor es el que «cede el paso». 3) Un buque de motor ve por su través de babor a un velero que se aproxima en cruce: el de motor cede el paso. 4) Pero si el velero se acerca al de motor desde más de 112,5º, lo está alcanzando y se aparta el velero."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) «Un buque de vela se mantendrá apartado de…»: sin gobierno, maniobra restringida y pesca. Si las opciones son «de propulsión mecánica / sin gobierno / maniobra restringida / b y c», la buena es «b y c»; si dan los tres por separado, «todas las anteriores». Nunca de un buque de propulsión mecánica (salvo alcance). 2) «Un buque dedicado a la pesca se mantendrá apartado de…»: de un buque sin gobierno (y del de maniobra restringida). No de un velero: es el velero quien se aparta del pesquero. Tampoco de quien pesca al curricán, que no es más que un buque de motor o de vela. 3) En motor contra vela de vuelta encontrada, la opción «ambos caen a estribor» es la trampa."
+        },
+        {
+          "type": "key",
+          "text": "Orden de privilegio a la vista: sin gobierno y maniobra restringida, después pesca, después vela, y el último el buque de motor. El de motor se aparta siempre del velero, salvo que el velero le esté alcanzando."
+        }
+      ]
+    },
+    {
+      "id": "visibilidad-reducida",
+      "title": "Conducta con visibilidad reducida (regla 19)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "La regla 19 se aplica a los buques que **no están a la vista** uno del otro cuando navegan **dentro o cerca** de una zona de visibilidad reducida. Es otro mundo: como no os veis, **no hay buque que «cede el paso» ni buque que «sigue a rumbo»**. No se aplican las reglas 12 a 18: ni alcance, ni cruce, ni vuelta encontrada, ni las obligaciones entre categorías. Un velero no tiene ningún privilegio sobre un buque de motor al que solo ve en el radar, y todos deben actuar."
+        },
+        {
+          "type": "list",
+          "title": "Obligaciones generales",
+          "items": [
+            "Todos los buques navegarán a una **velocidad de seguridad adaptada a las circunstancias y condiciones de visibilidad** del momento.",
+            "Los buques de propulsión mecánica tendrán sus **máquinas listas para maniobrar inmediatamente**. Los veleros no están obligados a arrancar el motor.",
+            "Es obligatorio emitir las señales acústicas de visibilidad reducida de la regla 35, se oiga o no a otros buques.",
+            "Las luces de navegación se encienden también de día."
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Los dos casos de la regla 19",
+          "head": [
+            "Cómo detecto al otro",
+            "Qué debo hacer",
+            "Qué debo evitar"
+          ],
+          "rows": [
+            [
+              "Únicamente por radar, con aproximación excesiva o riesgo de abordaje (regla 19 d)",
+              "Maniobrar con suficiente antelación.",
+              "Si la maniobra es un cambio de rumbo, evitar en lo posible: 1) caer a BABOR para un buque situado a PROA del través (salvo que sea un buque al que estoy alcanzando); 2) caer HACIA un buque situado por el través o a popa del través."
+            ],
+            [
+              "Oigo su señal de niebla, al parecer a proa de mi través, o no puedo evitar una aproximación excesiva con un buque a proa del través (regla 19 e)",
+              "Reducir la velocidad hasta la mínima de gobierno y, si es necesario, suprimir toda la arrancada; navegar con extrema precaución hasta que pase el peligro.",
+              "Caer a ciegas a una u otra banda: no sé dónde está exactamente ni qué hace. Esto se aplica salvo que haya comprobado que no existe riesgo de abordaje."
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Solo radar: qué caída hay que evitar según dónde esté el otro",
+          "head": [
+            "Posición del buque detectado",
+            "Zona",
+            "Evitar caer a"
+          ],
+          "rows": [
+            [
+              "Amura de babor; marcación 50º, 55º o 65º babor",
+              "A proa del través",
+              "Babor"
+            ],
+            [
+              "Amura de estribor",
+              "A proa del través",
+              "Babor"
+            ],
+            [
+              "Través de babor",
+              "Por el través",
+              "Babor (sería caer hacia él)"
+            ],
+            [
+              "Través de estribor",
+              "Por el través",
+              "Estribor (sería caer hacia él)"
+            ],
+            [
+              "145º o 155º estribor; aleta de estribor; nos alcanza por estribor",
+              "A popa del través",
+              "Estribor (sería caer hacia él)"
+            ],
+            [
+              "Aleta de babor",
+              "A popa del través",
+              "Babor (sería caer hacia él)"
+            ]
+          ]
+        },
+        {
+          "type": "analogy",
+          "text": "La lógica es doble. Con un buque por delante, lo natural es que los dos caigáis a estribor, como en una vuelta encontrada; si tú caes a babor, os metéis el uno en el otro. Con un buque por el costado o por detrás, lo que no debes hacer es girar hacia él y cruzarte en su camino."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) En todas las preguntas de «detectamos en el radar un buque que no está a la vista…», la opción «mantendremos rumbo y velocidad, somos el buque que sigue a rumbo» es FALSA, aunque el enunciado hable de «situación de cruce» o «de alcance», aunque seamos un velero y aunque nos estén alcanzando. 2) No confundas los dos casos: detectado solo por radar = maniobrar con antelación evitando la caída mala; oído por la proa, por la amura o a proa del través (con o sin radar) = mínima de gobierno. En el caso de la señal de niebla oída, «caer a estribor con decisión» es falso, y también «a) y b) son correctas» cuando b) es caer a estribor. 3) «Deberá suprimir toda su arrancada» a secas es incompleta: primero se reduce a la mínima de gobierno y solo «si es necesario» se suprime la arrancada. 4) Son falsas: que los veleros deban arrancar el motor, que todos los buques deban reducir a la mínima de gobierno por el mero hecho de haber niebla, que de día no haga falta encender las luces, que los de motor se aparten de los veleros «aunque no estén a la vista», que los veleros se aparten de los pesqueros sin estar a la vista y que la señal acústica solo se emita al oír o detectar a otro. Cuando las tres opciones son de este tipo, la correcta es «ninguna de las anteriores». 5) Cinco pitadas cortas no pintan nada aquí: son para buques a la vista."
+        },
+        {
+          "type": "key",
+          "text": "Sin veros no hay preferencias. Solo radar: maniobra pronto, sin caer a babor si está a proa del través y sin caer hacia él si está por el través o a popa. Si oyes su señal de niebla a proa del través: mínima de gobierno y, si hace falta, parar."
+        }
+      ]
+    },
+    {
+      "id": "luces-definiciones",
+      "title": "Luces de navegación: cuándo se encienden y qué sector cubre cada una (reglas 20 y 21)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Las luces sirven para saber de noche que hay un barco, hacia dónde va y de qué tipo es. Las marcas (bolas, conos, cilindros, de color negro) hacen ese papel de día."
+        },
+        {
+          "type": "list",
+          "title": "Cuándo (regla 20)",
+          "items": [
+            "Las reglas de luces y marcas se cumplen con cualquier estado del tiempo.",
+            "Las luces se exhiben **entre la puesta y la salida del sol**. Durante ese tiempo no se mostrará ninguna otra luz que pueda confundirse con ellas o estorbar la vigilancia.",
+            "También se exhiben **de día si hay visibilidad reducida** (en niebla, siempre), y pueden encenderse en cualquier otra circunstancia en que se considere necesario.",
+            "Las marcas se exhiben de día."
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Las luces de la regla 21",
+          "head": [
+            "Luz",
+            "Color",
+            "Sector",
+            "Dónde va y qué cubre"
+          ],
+          "rows": [
+            [
+              "Luz de tope",
+              "Blanca",
+              "225º",
+              "Sobre el eje longitudinal del buque. Visible desde la proa hasta 22,5º a popa del través de cada costado: 112,5º contados desde la proa hacia cada banda."
+            ],
+            [
+              "Luces de costado",
+              "Verde a estribor y roja a babor",
+              "112,5º cada una",
+              "Cada una visible desde la proa hasta 22,5º a popa del través de su costado. En buques de eslora inferior a 20 m pueden ir combinadas en un solo farol en el eje longitudinal."
+            ],
+            [
+              "Luz de alcance",
+              "Blanca",
+              "135º",
+              "Lo más cerca posible de la popa. Visible 67,5º contados desde la popa hacia cada banda."
+            ],
+            [
+              "Luz de remolque",
+              "Amarilla",
+              "135º",
+              "Las mismas características que la luz de alcance. La lleva el remolcador, encima de su luz de alcance; no la lleva el remolcado."
+            ],
+            [
+              "Luz todo horizonte",
+              "Según el caso",
+              "360º",
+              "Visible sin interrupción en todo el horizonte."
+            ],
+            [
+              "Luz centelleante",
+              "Según el caso",
+              "—",
+              "Centelleos regulares, 120 o más por minuto."
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Las cuentas encajan: 112,5 + 112,5 = 225 (los dos costados cubren lo mismo que el tope) y 225 + 135 = 360. Por eso desde la popa nunca se ven las luces de costado, solo la de alcance; y desde delante del límite de 22,5º a popa del través nunca se ve la de alcance."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) Sectores: tope 225º (112,5º desde la proa hacia cada banda); costado 112,5º medidos desde la proa hacia popa del través; alcance 135º (67,5º desde la popa hacia cada banda). Las opciones falsas cruzan estos números o cuentan «desde la popa» lo que es «desde la proa». 2) La luz blanca de popa de 135º se llama «luz de alcance»; «luz de popa» no existe en el reglamento. No es amarilla ni va a proa. 3) Luces de costado: falso «rojo en estribor y verde en babor», falso que se vean las dos desde la popa y falso que el farol combinado sea para menos de 50 m (es para menos de 20 m). 4) Luz de tope: es blanca Y va en el eje longitudinal con arco de 225º; las dos afirmaciones son correctas. 5) Luz de remolque: «amarilla, de las mismas características que la de alcance»; no la lleva el buque remolcado. 6) «¿De día deben encenderse las luces?»: sí, si hay visibilidad reducida. «¿En niebla?»: sí, siempre. «¿Cuándo es obligatorio?»: entre la puesta y la salida del sol y, si hay visibilidad reducida, en cualquier momento."
+        },
+        {
+          "type": "key",
+          "text": "Tope blanca 225º; costados verde (Er) y roja (Br) 112,5º; alcance blanca 135º; remolque amarilla 135º; todo horizonte 360º. Luces de puesta a salida del sol y siempre que haya visibilidad reducida."
+        }
+      ]
+    },
+    {
+      "id": "luces-motor-vela",
+      "title": "Luces de los buques de motor, de vela y de remo (reglas 23 y 25)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Son las luces que llevarás tú. La pista fundamental: **la luz de tope es la firma del motor**. Un buque de vela nunca exhibe luz de tope."
+        },
+        {
+          "type": "table",
+          "title": "Buque de propulsión mecánica en navegación (regla 23)",
+          "head": [
+            "Eslora",
+            "Luces"
+          ],
+          "rows": [
+            [
+              "50 m o más",
+              "Luz de tope a proa; segunda luz de tope a popa y más alta que la de proa; luces de costado; luz de alcance."
+            ],
+            [
+              "Menos de 50 m (por ejemplo 15, 45 o entre 12 y 50 m)",
+              "Una luz de tope, luces de costado y luz de alcance. La segunda luz de tope es optativa."
+            ],
+            [
+              "Menos de 12 m",
+              "Puede llevar lo anterior o, en su lugar, una luz blanca todo horizonte y luces de costado (la blanca todo horizonte sustituye a la vez a la de tope y a la de alcance)."
+            ],
+            [
+              "Menos de 7 m y velocidad máxima no superior a 7 nudos",
+              "Puede llevar una única luz blanca todo horizonte; si es posible, también luces de costado."
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Buques de vela y de remo (regla 25)",
+          "head": [
+            "Buque",
+            "Luces"
+          ],
+          "rows": [
+            [
+              "De vela en navegación",
+              "Luces de costado y luz de alcance. Nada más: sin luz de tope."
+            ],
+            [
+              "De vela de eslora inferior a 20 m",
+              "Las mismas (costados y alcance), que podrán ir en un farol combinado en el tope del palo o cerca de él, en el lugar más visible."
+            ],
+            [
+              "De vela, de forma opcional",
+              "Además de costados y alcance, dos luces todo horizonte en línea vertical en el tope del palo, roja la superior y verde la inferior. No se pueden usar junto con el farol combinado."
+            ],
+            [
+              "De vela de eslora inferior a 7 m",
+              "Si es posible, las anteriores; si no, tendrá a mano una linterna eléctrica o farol encendido de luz blanca, que exhibirá con tiempo suficiente para evitar el abordaje."
+            ],
+            [
+              "De remos",
+              "Podrá exhibir las luces prescritas para los buques de vela; si no, la misma linterna o farol de luz blanca."
+            ]
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Cono con el vértice hacia abajo",
+          "text": "Un buque que navega a vela y a la vez se propulsa mecánicamente exhibirá de día, a proa y en el lugar más visible, una marca cónica con el vértice hacia abajo (regla 25 e). Indica que tiene la consideración de «buque de propulsión mecánica», no de «buque de vela». De noche lleva las luces de un buque de motor de su eslora."
+        },
+        {
+          "type": "example",
+          "title": "Velero navegando a vela y a motor: qué luces",
+          "text": "Con 11, 14, 15 o 45 m de eslora: luz de tope, luces de costado y luz de alcance (con 45 m una sola luz de tope, porque no llega a 50 m). Con menos de 12 m (por ejemplo 10 m con el cono a proa) son válidas dos configuraciones: «luces de costado, una luz de tope y luz de alcance» o «una luz blanca todo horizonte y luces de costado». Lo que nunca vale es «solo costados y alcance» (eso es ir a vela) ni «blanca todo horizonte, costados y alcance» (la blanca todo horizonte ya hace de alcance)."
+        },
+        {
+          "type": "table",
+          "title": "Qué buque es según lo que ves de noche",
+          "head": [
+            "Veo…",
+            "Puede ser"
+          ],
+          "rows": [
+            [
+              "Solo una luz roja (o solo una verde)",
+              "Un buque de vela visto de costado. Un buque de motor enseñaría además la luz de tope, y un pesquero dos luces en vertical."
+            ],
+            [
+              "Las dos luces de costado y nada más",
+              "Un buque de vela que viene de frente."
+            ],
+            [
+              "Dos luces en vertical, roja la superior y verde la inferior, y más abajo y sin alinear una única luz verde",
+              "Un buque de vela con las luces opcionales del tope del palo, que enseña su costado de estribor. Si eres un buque de motor, eres el que cede el paso."
+            ],
+            [
+              "Luz de tope y las dos luces de costado",
+              "Un buque de motor de menos de 50 m que viene de frente."
+            ],
+            [
+              "Solo una luz blanca",
+              "Cualquiera: un buque de motor o uno de vela vistos por la popa (luz de alcance), un buque fondeado de menos de 50 m o un buque de motor pequeño con su luz todo horizonte."
+            ]
+          ]
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) Buque de motor de 6,5 m navegando a 10 nudos: «una luz blanca todo horizonte y luces de costado». No vale la única luz blanca, porque el requisito es la velocidad máxima no superior a 7 nudos. Buque de motor de 11 m a 9 nudos: lo mismo. 2) «¿Cuál puede exhibir una única luz blanca todo horizonte?»: solo el de motor de 6,5 m y velocidad máxima de 6 nudos; un velero de 6,5 m no (lleva costados y alcance, o la linterna), y un fondeado de 65 m tampoco (necesita dos). 3) «¿Qué buques deben exhibir dos luces de tope?»: los de propulsión mecánica de más de 50 m; no «todos los buques de más de 50 m». 4) «¿Qué buques nunca exhiben luz de tope?»: los de vela. 5) Buque de motor de 60 m: dos topes, costados y alcance. De 45 m: «una luz de tope, luces de costado y luz de alcance», no la blanca todo horizonte. 6) Veleros de menos de 20 m: «luces de costado y luz de alcance, que podrán ir en un farol combinado»."
+        },
+        {
+          "type": "key",
+          "text": "Motor: tope, costados y alcance (dos topes desde 50 m; blanca todo horizonte más costados si mide menos de 12 m; solo blanca si mide menos de 7 m y no pasa de 7 nudos). Vela: costados y alcance, nunca tope. Vela con motor: cono con el vértice hacia abajo de día y luces de motor de noche."
+        }
+      ]
+    },
+    {
+      "id": "luces-especiales",
+      "title": "Luces y marcas de pesca, sin gobierno, maniobra restringida, calado, práctico y remolque (reglas 24 y 26 a 29)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Los buques «especiales» se identifican con luces todo horizonte en línea vertical, colocadas en el lugar más visible, y de día con marcas negras. Hay una lógica común: esas luces dicen **qué es** el buque; si además **lleva arrancada** (se mueve por el agua) añade luces de costado y de alcance, y si no la lleva, las apaga."
+        },
+        {
+          "type": "table",
+          "title": "Identificación de noche y de día",
+          "head": [
+            "Buque",
+            "Luces todo horizonte en vertical",
+            "Marca de día",
+            "Además"
+          ],
+          "rows": [
+            [
+              "Pesca de arrastre",
+              "Verde la superior y blanca la inferior",
+              "Dos conos unidos por sus vértices en línea vertical, uno sobre el otro",
+              "Con arrancada: luces de costado y de alcance. Luz de tope a popa y más alta que la verde, obligatoria desde 50 m y optativa con menos."
+            ],
+            [
+              "Pesca que no es de arrastre",
+              "Roja la superior y blanca la inferior",
+              "Dos conos unidos por sus vértices (la misma marca)",
+              "Con arrancada: costados y alcance. Si el aparejo se extiende más de 150 m: una luz blanca todo horizonte o un cono con el vértice hacia arriba en la dirección del aparejo."
+            ],
+            [
+              "Sin gobierno",
+              "Dos rojas",
+              "Dos bolas",
+              "Con arrancada: costados y alcance (nunca luz de tope)."
+            ],
+            [
+              "Capacidad de maniobra restringida",
+              "Roja, blanca y roja (rojas la más elevada y la más baja, blanca la central)",
+              "Bola, marca bicónica y bola, en ese orden",
+              "Con arrancada: luz o luces de tope, costados y alcance. Sin arrancada: solo las tres luces. Fondeado: además las luces o la marca de fondeo."
+            ],
+            [
+              "Restringido por su calado",
+              "Tres rojas",
+              "Un cilindro",
+              "Las luces normales de buque de motor. Estas señales son potestativas («podrá exhibir»)."
+            ],
+            [
+              "Embarcación de práctico en servicio",
+              "Blanca la superior y roja la inferior, en la parte superior del palo",
+              "—",
+              "En navegación: costados y alcance. Fondeada: las luces de fondeo."
+            ],
+            [
+              "Buque de motor remolcando",
+              "Dos luces de tope en línea vertical (tres si el remolque mide más de 200 m)",
+              "Marca bicónica si el remolque mide más de 200 m (también en el remolcado)",
+              "Costados, alcance y, encima de la de alcance, la luz amarilla de remolque."
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Trucos para recordarlo",
+          "items": [
+            "**Verde sobre blanca**: arrastre (la red va por el fondo, «por lo verde»). **Roja sobre blanca**: pesca que no es de arrastre.",
+            "**Blanca sobre roja**: práctico. Es justo la inversa de la pesca de no arrastre; fíjate siempre en cuál va arriba.",
+            "**Dos rojas**: sin gobierno. **Tres rojas**: restringido por su calado. **Roja, blanca y roja**: maniobra restringida.",
+            "**Marca bicónica** = dos conos unidos por sus **bases** (un rombo). **Pesca** = dos conos unidos por sus **vértices** (un reloj de arena). No son lo mismo.",
+            "Un **cono solo con el vértice hacia abajo**: velero que usa el motor. Un **cono solo con el vértice hacia arriba**: dirección del aparejo de un pesquero cuando se extiende más de 150 m."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Vistos por la popa",
+          "text": "Si das alcance a una embarcación de práctico en navegación verás su luz de alcance y, por encima, las dos luces todo horizonte, blanca la superior y roja la inferior. Si ves dos luces todo horizonte, roja la superior y blanca la inferior, y más abajo otra luz blanca, es un buque dedicado a la pesca que no es de arrastre visto por la popa: la blanca de abajo es su luz de alcance. Un arrastrero de menos de 50 m y sin arrancada solo muestra verde sobre blanca."
+        },
+        {
+          "type": "term",
+          "term": "Buceo y bandera «A»",
+          "text": "La bandera «A» (Alfa) del Código Internacional de Señales es blanca y azul y significa que hay buzos sumergidos. La embarcación que la exhibe está dedicada a operaciones de buceo y tiene la consideración de **buque con capacidad de maniobra restringida**. Cuando por su tamaño no pueda llevar todas las señales de un buque de operaciones submarinas, exhibirá de noche las tres luces todo horizonte roja, blanca y roja, y de día una reproducción rígida de la bandera «A» de altura no inferior a 1 metro, visible en todo el horizonte."
+        },
+        {
+          "type": "p",
+          "text": "Los buques de menos de 12 m de eslora no están obligados a exhibir las luces y marcas de sin gobierno o de maniobra restringida, **salvo los dedicados a operaciones de buceo**. Por eso una embarcación de buceo de menos de 7 m exhibirá de noche, como mínimo, las tres luces roja, blanca y roja: no le basta con tener una linterna a mano, y no es un «buque sin gobierno»."
+        },
+        {
+          "type": "list",
+          "title": "Otros casos de la regla 27",
+          "items": [
+            "**Draga u operaciones submarinas con obstrucción**: además de las señales de maniobra restringida, dos luces rojas o dos bolas en la banda de la obstrucción y dos luces verdes o dos marcas bicónicas en la banda por la que se puede pasar.",
+            "**Limpieza de minas**: tres luces verdes todo horizonte o tres bolas (una en el tope del palo de proa y una en cada extremo de la verga). Es peligroso acercarse a menos de 1000 metros.",
+            "**Remolque que restringe mucho la maniobra**: las luces de remolcador y, además, las de maniobra restringida.",
+            "Las señales de la regla 27 no son señales de peligro: no piden ayuda."
+          ]
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) La marca de dos conos unidos por sus vértices es de TODO buque dedicado a la pesca, de arrastre o no; no es de remolcadores ni de remolcados. Cuando piden la afirmación NO correcta, es «una marca bicónica es característica de los buques dedicados a la pesca». En esa misma pregunta son verdaderas las demás: el resplandor de las luces de tierra cuenta para la velocidad de seguridad, y un buque que lanza o recupera aeronaves exhibe bola, marca bicónica y bola. 2) «Dos esferas negras superpuestas» de día: buque sin gobierno. Una sola bola: fondeado. 3) Roja sobre blanca: si las opciones son «práctico / pesquero / maniobra restringida / calado», es «un pesquero». 4) Maniobra restringida sin arrancada: solo roja, blanca y roja; la opción con «dos rojas, costados y alcance» describe a un buque sin gobierno con arrancada. 5) Bandera Alfa: si preguntan qué consideración tiene, «buque con capacidad de maniobra restringida»; si las opciones describen aeronaves, limpieza de minas o un hidroavión, la buena es «ninguna de las anteriores»."
+        },
+        {
+          "type": "key",
+          "text": "Arrastre verde sobre blanca; otra pesca roja sobre blanca; ambos con dos conos unidos por los vértices. Sin gobierno dos rojas y dos bolas. Maniobra restringida roja, blanca y roja, y bola, bicónica y bola. Calado tres rojas y cilindro. Práctico blanca sobre roja. Buceo: bandera A y roja, blanca y roja aunque mida menos de 12 m."
+        }
+      ]
+    },
+    {
+      "id": "fondeado-varado",
+      "title": "Buques fondeados y varados (regla 30)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Un buque fondeado no puede apartarse de nadie, así que tiene que dejarse ver. Lo hace con luces blancas todo horizonte de noche y con una bola negra de día."
+        },
+        {
+          "type": "table",
+          "title": "Señales de fondeo y de varada",
+          "head": [
+            "Buque",
+            "De noche",
+            "De día"
+          ],
+          "rows": [
+            [
+              "Fondeado de menos de 50 m",
+              "Puede llevar una sola luz blanca todo horizonte en el lugar más visible.",
+              "Una bola en la parte de proa."
+            ],
+            [
+              "Fondeado de 50 m o más",
+              "Dos luces blancas todo horizonte: una en la parte de proa y otra en la popa o cerca de ella, más baja que la de proa.",
+              "Una bola en la parte de proa."
+            ],
+            [
+              "Fondeado de 100 m o más",
+              "Las dos luces anteriores y, obligatoriamente, sus luces de trabajo o equivalentes para iluminar las cubiertas (con menos de 100 m son optativas).",
+              "Una bola en la parte de proa."
+            ],
+            [
+              "Varado",
+              "Las luces de fondeo que correspondan y, además, dos luces rojas todo horizonte en línea vertical.",
+              "Tres bolas en línea vertical."
+            ]
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Exenciones",
+          "items": [
+            "Las embarcaciones de **menos de 7 m** fondeadas en un lugar que no esté dentro ni cerca de un canal angosto, paso, fondeadero o zona de navegación frecuente no están obligadas a exhibir las luces o la marca de fondeo.",
+            "Los buques de **menos de 12 m** varados no están obligados a exhibir las dos luces rojas ni las tres bolas.",
+            "No hay más exenciones: una embarcación de recreo de 7 m o más fondeada, sea de vela o de motor, debe poner su bola de día y su luz de noche."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Fíjate en la altura de las luces: en el buque fondeado, la luz de **popa es más baja** que la de proa. En el buque de motor en navegación ocurre lo contrario: la segunda luz de tope, la de popa, es **más alta**."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) Embarcación de recreo de 11 m fondeada de día: ¿debe exhibir una bola negra a proa? «Sí, siempre». La opción «no, si está fondeada en un lugar que no esté dentro ni cerca de un canal angosto…» copia la exención, pero esa exención es solo para menos de 7 m. 2) Velero de 20 m fondeado: «una bola en la parte de proa»; es falso que las embarcaciones de recreo no deban exhibir marcas. 3) La marca de fondeo es UNA bola a proa con cualquier eslora; la opción «una bola a proa y otra a popa más baja, salvo eslora inferior a 50 m» mezcla la regla de las luces con la de las marcas y es falsa. 4) Buque de 150 m fondeado: dos luces blancas todo horizonte, la de popa más baja, «y sus luces de trabajo o equivalentes». 5) Buque de motor fondeado de noche (sin dar eslora): blanca a proa y blanca a popa «más baja que la de proa»."
+        },
+        {
+          "type": "key",
+          "text": "Fondeado: de día una bola a proa; de noche una luz blanca todo horizonte (menos de 50 m) o dos, la de popa más baja (50 m o más), con luces de trabajo obligatorias desde 100 m. Varado: además dos rojas, y de día tres bolas."
+        }
+      ]
+    },
+    {
+      "id": "senales-maniobra",
+      "title": "Pitadas: equipo, duración y señales de maniobra y advertencia (reglas 32, 33 y 34)",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Pitada corta",
+          "text": "Sonido de una duración aproximada de **un segundo**."
+        },
+        {
+          "type": "term",
+          "term": "Pitada larga",
+          "text": "Sonido de una duración aproximada de **cuatro a seis segundos**."
+        },
+        {
+          "type": "table",
+          "title": "Equipo para señales acústicas (regla 33)",
+          "head": [
+            "Eslora del buque",
+            "Qué debe llevar"
+          ],
+          "rows": [
+            [
+              "Inferior a 12 m (por ejemplo, un velero de 11 m)",
+              "No está obligado a llevar pito: basta cualquier medio capaz de hacer señales acústicas eficaces."
+            ],
+            [
+              "Igual o superior a 12 m (por ejemplo, 12 m justos)",
+              "Un pito."
+            ],
+            [
+              "Igual o superior a 20 m (por ejemplo, 21 m)",
+              "Un pito y una campana."
+            ],
+            [
+              "Igual o superior a 100 m",
+              "Un pito, una campana y un gong."
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Las señales de maniobra de la regla 34 son para buques **a la vista** unos de otros. Las emite todo buque de propulsión mecánica en navegación cuando maniobra según el reglamento: son obligatorias, no una cortesía."
+        },
+        {
+          "type": "table",
+          "title": "Señales de maniobra y advertencia (regla 34)",
+          "head": [
+            "Señal",
+            "Significado"
+          ],
+          "rows": [
+            [
+              "Una pitada corta",
+              "Caigo a estribor."
+            ],
+            [
+              "Dos pitadas cortas",
+              "Caigo a babor."
+            ],
+            [
+              "Tres pitadas cortas",
+              "Estoy dando atrás."
+            ],
+            [
+              "Cinco o más pitadas cortas y rápidas",
+              "Duda: no entiendo tus acciones o intenciones, o dudo de que estés maniobrando lo suficiente para evitar el abordaje."
+            ],
+            [
+              "Dos largas y una corta (canal angosto)",
+              "Pretendo alcanzarle por su banda de estribor."
+            ],
+            [
+              "Dos largas y dos cortas (canal angosto)",
+              "Pretendo alcanzarle por su banda de babor."
+            ],
+            [
+              "Larga, corta, larga, corta, en este orden (canal angosto)",
+              "Conformidad del buque que va a ser alcanzado."
+            ],
+            [
+              "Una pitada larga",
+              "Me aproximo a un recodo o zona de un canal donde la visión está obstruida. Todo buque que la oiga al otro lado contesta con otra pitada larga."
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Fíjate en la lógica: una corta = estribor, dos cortas = babor, y para adelantar en un canal se anteponen dos largas (dos largas y una corta = por estribor; dos largas y dos cortas = por babor). El buque alcanzado que no esté conforme responde con las cinco pitadas cortas de duda."
+        },
+        {
+          "type": "p",
+          "text": "Las pitadas pueden complementarse con destellos de una luz blanca todo horizonte con el mismo código: un destello, caigo a estribor; dos, caigo a babor; tres, doy atrás; y cinco o más destellos cortos y rápidos para la duda."
+        },
+        {
+          "type": "example",
+          "title": "El recodo sin visión",
+          "text": "Navegas por un canal angosto y te acercas a un recodo que el terreno no deja ver entero. Das una pitada larga y navegas alerta y con precaución. Si eres tú quien oye la pitada larga de otro, haces lo mismo y además contestas con una pitada larga. La señal es la misma se navegue a motor o a vela y sea el recodo a babor o a estribor."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) Tres pitadas cortas = «está dando atrás»; no confundir con las cinco de duda ni con las de adelantamiento. 2) Cinco pitadas cortas y rápidas: no es peligro, ni fallo de gobierno, ni «buceadores en el agua», ni la señal del práctico. 3) Si vas a caer a babor para apartarte de un buque a la vista, debes dar dos pitadas cortas; la respuesta «ninguna» es falsa. 4) Para indicar duda no vale el sonido continuo (eso es peligro), ni corta-larga-corta (fondeado), ni larga-corta-larga-corta (conformidad). 5) Equipo: 12 m, un pito; 21 m, pito y campana; velero de 11 m, cualquier medio eficaz."
+        },
+        {
+          "type": "exam",
+          "text": "Aviso sobre el temario: algunos apuntes dicen que la campana es obligatoria desde 12 m. El banco sigue el reglamento vigente: pito desde 12 m, campana desde 20 m y gong desde 100 m. Por eso una embarcación de 12 m lleva solo pito."
+        },
+        {
+          "type": "key",
+          "text": "Corta, 1 segundo; larga, de 4 a 6. Una corta estribor, dos babor, tres atrás, cinco o más duda. Adelantar en canal: dos largas más una corta (estribor) o dos cortas (babor); conforme: larga, corta, larga, corta. Recodo: una larga, que se contesta con otra."
+        }
+      ]
+    },
+    {
+      "id": "senales-niebla",
+      "title": "Señales acústicas en visibilidad reducida (regla 35)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Dentro o cerca de una zona de visibilidad reducida, **de día o de noche**, es obligatorio emitir estas señales. Sirven para que los demás sepan que estás ahí y, más o menos, qué eres. Se emiten siempre, no solo cuando oyes o detectas a otro barco."
+        },
+        {
+          "type": "table",
+          "title": "Señales de niebla",
+          "head": [
+            "Buque",
+            "Señal",
+            "Intervalo máximo"
+          ],
+          "rows": [
+            [
+              "De propulsión mecánica con arrancada",
+              "Una pitada larga",
+              "2 minutos"
+            ],
+            [
+              "De propulsión mecánica en navegación, pero parado y sin arrancada",
+              "Dos pitadas largas consecutivas, separadas por un intervalo de unos 2 segundos",
+              "2 minutos"
+            ],
+            [
+              "De vela, dedicado a la pesca, sin gobierno, con capacidad de maniobra restringida, restringido por su calado, y el que remolca o empuja a otro",
+              "Una pitada larga seguida de dos cortas",
+              "2 minutos"
+            ],
+            [
+              "Remolcado (solo el último del remolque, si va tripulado)",
+              "Una larga seguida de tres cortas",
+              "2 minutos"
+            ],
+            [
+              "Fondeado",
+              "Repique de campana de unos 5 segundos (con 100 m o más, además gong a popa). Puede añadir tres pitadas: una corta, una larga y una corta",
+              "1 minuto"
+            ],
+            [
+              "Varado",
+              "Tres golpes de campana claros y separados, el repique y otros tres golpes",
+              "1 minuto"
+            ],
+            [
+              "De eslora inferior a 12 m",
+              "No está obligado a las anteriores, pero entonces hará otra señal acústica eficaz",
+              "2 minutos"
+            ],
+            [
+              "Embarcación de práctico en servicio",
+              "Además de la suya, puede dar cuatro pitadas cortas de identificación",
+              "—"
+            ]
+          ]
+        },
+        {
+          "type": "analogy",
+          "text": "El buque de motor que avanza «dice» una larga; el que está parado, dos. Y todos los que tienen alguna limitación para maniobrar (vela, pesca, remolque, sin gobierno, restringidos) comparten la misma señal, una larga y dos cortas: por eso en la niebla no puedes saber qué tipo de barco es y no se aplican las preferencias entre categorías."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) Un buque de vela en niebla emite «una pitada larga seguida de dos cortas» cada 2 minutos como máximo. 2) Si oyes grupos de dos pitadas largas separadas por unos dos segundos, repetidos cada dos minutos como máximo, es un buque de propulsión mecánica en navegación, parado y sin arrancada. 3) Una corta, una larga y una corta en niebla: «un buque fondeado» que avisa de su posición. 4) Es obligatorio emitir estas señales: es la opción correcta frente a «de día no hay que encender las luces» o «las máquinas no tienen que estar listas», que son falsas."
+        },
+        {
+          "type": "exam",
+          "text": "Aviso: en la pregunta «un buque de propulsión mecánica en navegación, pero parado y sin arrancada, en visibilidad reducida emitirá», la clave del banco es «dos pitadas largas que no excedan dos minutos de duración». Está mal redactada: los dos minutos son el intervalo máximo entre señales, no la duración. Aun así es la que hay que marcar, porque es la única que habla de dos pitadas largas."
+        },
+        {
+          "type": "key",
+          "text": "Niebla, cada 2 minutos como máximo: motor con arrancada, una larga; motor parado, dos largas; todos los demás en navegación, una larga y dos cortas; último remolcado, una larga y tres cortas. Fondeado: campana cada minuto y, si quiere, corta, larga, corta."
+        }
+      ]
+    },
+    {
+      "id": "senales-peligro",
+      "title": "Señales de peligro (regla 37 y anexo IV)",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Cuando un buque está en peligro y necesita ayuda, utiliza las señales del anexo IV, juntas o por separado. Está prohibido usarlas para cualquier otra cosa, y también usar señales que puedan confundirse con ellas."
+        },
+        {
+          "type": "list",
+          "title": "Señales que indican peligro y necesidad de ayuda",
+          "items": [
+            "Un disparo de cañón u otra señal detonante, repetidos a intervalos de un minuto aproximadamente.",
+            "**Un sonido continuo producido por cualquier aparato de señales de niebla** (por ejemplo, el pito sonando sin parar).",
+            "Cohetes o granadas que despidan estrellas rojas, lanzados uno a uno y a cortos intervalos.",
+            "La señal **SOS** en código Morse (tres puntos, tres rayas, tres puntos: «. . . – – – . . .»), emitida por cualquier sistema de señales, también con una luz.",
+            "La palabra «Mayday» por radiotelefonía.",
+            "La señal «NC» del Código Internacional de Señales.",
+            "Una bandera cuadra con una bola u objeto análogo encima o debajo.",
+            "Llamaradas a bordo, como las de un barril de brea o de petróleo ardiendo.",
+            "Un cohete-bengala con paracaídas o una bengala de mano de luz roja.",
+            "**Una señal fumígena que produzca una densa humareda de color naranja.**",
+            "Movimientos lentos y repetidos, subiendo y bajando los brazos extendidos lateralmente.",
+            "Las alertas por radio (llamada selectiva digital, radiobalizas de localización de siniestros, respondedores de radar)."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Para dejarse ver desde el aire se usan además un trozo de lona naranja con un cuadrado y un círculo negros, y una marca colorante en el agua."
+        },
+        {
+          "type": "p",
+          "text": "Distinto de todo esto es la regla 36: para simplemente **llamar la atención** de otro buque se pueden hacer señales luminosas o acústicas que no se confundan con ninguna otra del reglamento, o dirigir el haz del proyector hacia el peligro, evitando luces intermitentes o giratorias de gran intensidad."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: 1) Un buque cercano hace sonar su pito de forma continua: «está en peligro y necesita ayuda». No está dando atrás (eso son tres cortas) ni avisándote de que vas hacia un peligro. 2) Una señal luminosa «. . . – – – . . .» indica «peligro y necesidad de ayuda»; no tiene nada que ver con las señales de adelantamiento. 3) El humo naranja denso es peligro; no significa buceadores (eso es la bandera «A»), ni contaminación, ni carga de combustible."
+        },
+        {
+          "type": "key",
+          "text": "Pito continuo, SOS, Mayday, bengalas y cohetes rojos, humo naranja, llamaradas y brazos arriba y abajo significan lo mismo: peligro y necesidad de ayuda."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "La categoría de un buque depende de lo que hace en ese momento: un velero con el motor en marcha es de propulsión mecánica; «dedicado a la pesca» solo si el arte restringe su maniobra; sin gobierno por circunstancia excepcional; maniobra restringida por la naturaleza de su trabajo.",
+    "En navegación = ni fondeado, ni amarrado, ni varado. A la vista = solo visualmente, no por radar. La regla 2 permite apartarse del reglamento para evitar un peligro inmediato.",
+    "Hay riesgo de abordaje si la demora de un buque que se aproxima no varía de forma apreciable, y en caso de duda se considera que existe. Se navega siempre a velocidad de seguridad.",
+    "La maniobra para evitar el abordaje es clara, con antelación, amplia y sin sucesiones de pequeños cambios; se pasa a distancia segura y, si hace falta, se reduce o se suprime la arrancada.",
+    "Canal angosto: pegado al límite exterior de tu estribor; los buques de menos de 20 m, los de vela y los de pesca no estorban al que solo puede navegar dentro; se evita fondear.",
+    "Dispositivo de separación: incorporarse por un lateral con el menor ángulo, cruzar en perpendicular, zona de separación solo por emergencia, pesca o cruce. Ir por la vía no da preferencia.",
+    "Dos veleros: con el viento por bandas contrarias se aparta el que lo recibe por babor; por la misma banda, el de barlovento.",
+    "Alcanza quien viene desde más de 22,5º a popa del través (marcación superior a 112,5º; de noche solo ve la luz de alcance). El que alcanza se aparta siempre, aunque sea un velero.",
+    "Dos buques de motor: de vuelta encontrada, ambos caen a estribor; en cruce, cede el que tiene al otro por su estribor y evita cortarle la proa. El que sigue a rumbo mantiene rumbo y velocidad.",
+    "Entre categorías a la vista: el buque de motor se aparta de vela, pesca, maniobra restringida y sin gobierno; el de vela, de los tres últimos; el de pesca, de los dos últimos.",
+    "Visibilidad reducida sin verse: no hay preferencias. Solo por radar: no caer a babor con un buque a proa del través, ni hacia un buque por el través o a popa. Señal de niebla oída a proa del través: mínima de gobierno.",
+    "Sectores: tope 225º, costados 112,5º, alcance 135º, remolque (amarilla) 135º. Luces de puesta a salida del sol y siempre que haya visibilidad reducida.",
+    "Motor: tope, costados y alcance (dos topes desde 50 m; blanca todo horizonte y costados con menos de 12 m). Vela: costados y alcance, nunca tope; con motor, cono con el vértice hacia abajo.",
+    "Verde sobre blanca, arrastre; roja sobre blanca, otra pesca; blanca sobre roja, práctico; dos rojas, sin gobierno; roja, blanca y roja, maniobra restringida; tres rojas o cilindro, calado; una bola, fondeado; dos bolas, sin gobierno; tres bolas, varado.",
+    "Pitadas: una corta estribor, dos babor, tres atrás, cinco o más duda, una larga en el recodo. Niebla: motor una larga, motor parado dos largas, los demás una larga y dos cortas, cada 2 minutos. Pito continuo, SOS y humo naranja: peligro."
+  ],
+  "glossary": [
+    {
+      "term": "RIPA",
+      "text": "Reglamento Internacional para Prevenir los Abordajes, el conjunto de reglas de rumbo, luces y señales que evita las colisiones en el mar."
+    },
+    {
+      "term": "Abordaje",
+      "text": "Colisión entre dos buques."
+    },
+    {
+      "term": "Buque de propulsión mecánica",
+      "text": "Todo buque movido por una máquina, incluido el velero que lleva el motor en marcha."
+    },
+    {
+      "term": "Buque de vela",
+      "text": "Buque que navega a vela sin estar utilizando su maquinaria propulsora, caso de llevarla."
+    },
+    {
+      "term": "Buque dedicado a la pesca",
+      "text": "Buque que pesca con redes, líneas, aparejos de arrastre u otros artes que restringen su maniobrabilidad."
+    },
+    {
+      "term": "Buque sin gobierno",
+      "text": "Buque que por una circunstancia excepcional no puede maniobrar como exige el reglamento ni apartarse de la derrota de otro."
+    },
+    {
+      "term": "Buque con capacidad de maniobra restringida",
+      "text": "Buque que por la naturaleza de su trabajo tiene reducida su capacidad de maniobra y no puede apartarse de la derrota de otro."
+    },
+    {
+      "term": "Buque restringido por su calado",
+      "text": "Buque de propulsión mecánica que, por su calado respecto a la profundidad y anchura disponibles, apenas puede apartarse de su derrota."
+    },
+    {
+      "term": "Nave de vuelo rasante",
+      "text": "Nave multimodal que vuela muy cerca de la superficie aprovechando el efecto de superficie."
+    },
+    {
+      "term": "En navegación",
+      "text": "Situación de todo buque que no está fondeado, ni amarrado a tierra, ni varado."
+    },
+    {
+      "term": "Buques a la vista",
+      "text": "Buques que pueden observarse visualmente el uno desde el otro; el radar no cuenta."
+    },
+    {
+      "term": "Visibilidad reducida",
+      "text": "Visibilidad disminuida por niebla, bruma, nieve, fuertes aguaceros, tormentas de arena o causas análogas."
+    },
+    {
+      "term": "Derrota",
+      "text": "Camino que sigue un buque sobre el agua."
+    },
+    {
+      "term": "Demora",
+      "text": "Dirección en la que se ve un objeto o un buque, medida con el compás."
+    },
+    {
+      "term": "Marcación",
+      "text": "Ángulo entre la proa propia y la dirección en la que se ve otro buque, de 0º a 180º por estribor o por babor."
+    },
+    {
+      "term": "Través",
+      "text": "Dirección perpendicular al eje del buque, a 90º de la proa."
+    },
+    {
+      "term": "Amura",
+      "text": "Zona del costado entre la proa y el través."
+    },
+    {
+      "term": "Aleta",
+      "text": "Zona del costado entre el través y la popa."
+    },
+    {
+      "term": "Barlovento y sotavento",
+      "text": "Lado por donde viene el viento y lado por donde se va, respectivamente."
+    },
+    {
+      "term": "Arrancada",
+      "text": "Movimiento que lleva un buque sobre el agua."
+    },
+    {
+      "term": "Mínima de gobierno",
+      "text": "La menor velocidad a la que el buque todavía obedece al timón."
+    },
+    {
+      "term": "Velocidad de seguridad",
+      "text": "La que permite ejecutar la maniobra adecuada para evitar el abordaje y pararse a una distancia apropiada a las circunstancias."
+    },
+    {
+      "term": "Franquía",
+      "text": "Situación de un buque que ya ha pasado y está libre del otro."
+    },
+    {
+      "term": "Buque que cede el paso",
+      "text": "El obligado a mantenerse apartado de la derrota del otro."
+    },
+    {
+      "term": "Buque que sigue a rumbo",
+      "text": "El que debe mantener su rumbo y su velocidad mientras el otro se aparta."
+    },
+    {
+      "term": "Vuelta encontrada",
+      "text": "Situación de dos buques de propulsión mecánica que navegan a rumbos opuestos o casi opuestos con riesgo de abordaje."
+    },
+    {
+      "term": "Cruce",
+      "text": "Situación de dos buques de propulsión mecánica que se aproximan con riesgo de abordaje sin ser alcance ni vuelta encontrada."
+    },
+    {
+      "term": "Alcance",
+      "text": "Situación en la que un buque se aproxima a otro desde más de 22,5º a popa de su través."
+    },
+    {
+      "term": "Canal angosto",
+      "text": "Paso estrecho en el que los buques se mantienen junto al límite exterior de su estribor."
+    },
+    {
+      "term": "Dispositivo de separación del tráfico",
+      "text": "Sistema de vías de circulación de sentido único separadas por una zona o línea de separación."
+    },
+    {
+      "term": "Zona de navegación costera",
+      "text": "Franja entre un dispositivo de separación del tráfico y la costa adyacente."
+    },
+    {
+      "term": "Luz de tope",
+      "text": "Luz blanca en el eje longitudinal, visible en 225º desde la proa hasta 22,5º a popa del través de cada banda."
+    },
+    {
+      "term": "Luces de costado",
+      "text": "Verde a estribor y roja a babor, visibles cada una en 112,5º desde la proa hasta 22,5º a popa del través."
+    },
+    {
+      "term": "Luz de alcance",
+      "text": "Luz blanca a popa visible en 135º, 67,5º hacia cada banda desde la popa."
+    },
+    {
+      "term": "Luz de remolque",
+      "text": "Luz amarilla con las mismas características que la de alcance, que lleva el remolcador."
+    },
+    {
+      "term": "Luz todo horizonte",
+      "text": "Luz visible sin interrupción en un arco de 360º."
+    },
+    {
+      "term": "Marca bicónica",
+      "text": "Marca negra formada por dos conos unidos por sus bases; indica remolque de más de 200 m y es la marca central del buque de maniobra restringida."
+    },
+    {
+      "term": "Pitada corta",
+      "text": "Sonido de aproximadamente un segundo."
+    },
+    {
+      "term": "Pitada larga",
+      "text": "Sonido de aproximadamente cuatro a seis segundos."
+    },
+    {
+      "term": "Bandera «A» (Alfa)",
+      "text": "Bandera blanca y azul del Código Internacional de Señales que indica buzos sumergidos."
+    }
+  ],
+  "questions": {
+    "6zvpkbc13fefl42": "luces-especiales",
+    "w6arsfgwxo0q9yf": "maniobra-evitar",
+    "536d901exkfm6bz": "vuelta-cruce",
+    "52t75wylpu4e6c9": "categorias",
+    "rmqylurj41iis3c": "alcance",
+    "3b8n8gtu89aqpn1": "veleros",
+    "8it1hciw3ybm4lk": "definiciones-buques",
+    "57162vm1bes17hh": "categorias",
+    "z27ihs0i76kjq8u": "dst",
+    "pnkqu7h3919m71q": "fondeado-varado",
+    "p05x28pkl208vng": "senales-maniobra",
+    "nte69051uyp4x4a": "canales-angostos",
+    "18c4eunsmopz6b3": "luces-motor-vela",
+    "cpoimr1xm3c2kbs": "vuelta-cruce",
+    "970yc62oestyr98": "fondeado-varado",
+    "hctxz1hm1v3jrnb": "visibilidad-reducida",
+    "grac5jwemxepvy8": "vuelta-cruce",
+    "vmhisv3n4q0hvpp": "visibilidad-reducida",
+    "fdz7ejcvll3khnd": "veleros",
+    "d6wva1bf1b9nuii": "luces-definiciones",
+    "solcqvfn9yqcqn5": "dst",
+    "rvj8ub5dwv9kqo2": "luces-especiales",
+    "3e0dao7jm6gqump": "canales-angostos",
+    "46ibb5jo0vhi4do": "vigilancia-velocidad-riesgo",
+    "qyjonqpzwqy16dt": "visibilidad-reducida",
+    "o9bqx7zjeyl8c4z": "veleros",
+    "v4lywsnqj513aai": "vuelta-cruce",
+    "3t3y806cp3rkks0": "categorias",
+    "oelf2sjid1zxkci": "senales-maniobra",
+    "xcg4yql2kgidhpp": "cede-sigue",
+    "s89x8ko5cnrq27g": "alcance",
+    "lq8vm246v4j8dwr": "luces-motor-vela",
+    "xn6icsuyi4hr1gr": "maniobra-evitar",
+    "ehhqg1716lcplw8": "definiciones-buques",
+    "u1tnjszfv0dj8vd": "senales-maniobra",
+    "rf4frnbfjuyol23": "alcance",
+    "3xw6ci81netuk0v": "vuelta-cruce",
+    "u38oxq1vv1hfbbq": "visibilidad-reducida",
+    "fomzts9zojz01r5": "luces-especiales",
+    "vervx4sv1dgzrze": "veleros",
+    "8zd6jomi7zaz3mo": "vigilancia-velocidad-riesgo",
+    "d5oaj478w0kncvp": "luces-motor-vela",
+    "i1cnkaghqkc6mfx": "alcance",
+    "5k3svk1digoqoxm": "fondeado-varado",
+    "qys8utjiwcd92cs": "categorias",
+    "xawm81s5vm7nwwn": "luces-definiciones",
+    "yrzpapvctm15cqs": "visibilidad-reducida",
+    "dhu7blod3jcd025": "definiciones-buques",
+    "7xjrpgxa9q795bk": "categorias",
+    "s14sjemafjc1zdb": "dst",
+    "428v0rg21g2eg4t": "veleros",
+    "yrakwie880r5g8s": "dst",
+    "4crd7w917p80uia": "vigilancia-velocidad-riesgo",
+    "7dswsl4rto78khv": "definiciones-buques",
+    "exoi9e8vj7to2my": "luces-especiales",
+    "ksy5sndqrf6pyyq": "senales-maniobra",
+    "byydlnjeaqbaep5": "visibilidad-reducida",
+    "p5hmyqcmsa1c0h8": "vuelta-cruce",
+    "j4eg0z18zucl4ff": "vuelta-cruce",
+    "p76w5p1oazlly2i": "luces-motor-vela",
+    "fbrwpk4lr085qam": "definiciones-buques",
+    "cuvg7o8i8kgiz2a": "vuelta-cruce",
+    "y6qg7vtalib64i7": "veleros",
+    "c96di8feizn88wk": "categorias",
+    "07mm2tbx95ynr95": "dst",
+    "3m312fkzgg3qc4p": "luces-especiales",
+    "q22l9yhs11n318j": "luces-definiciones",
+    "z5qt56a03zhe15d": "luces-especiales",
+    "2xdr3so3psqrpf9": "senales-niebla",
+    "bi1sq08vac4c85r": "senales-maniobra",
+    "rbj8cmynyt6zxbe": "vigilancia-velocidad-riesgo",
+    "qmai1ubjz02rjp8": "dst",
+    "h1b50ue624mptae": "veleros",
+    "ebtruk8jfymciwr": "alcance",
+    "w96n4ma5lokgm9k": "luces-motor-vela",
+    "ekjz5sesy6kqu3e": "luces-motor-vela",
+    "1ych318did0noqd": "luces-especiales",
+    "ny84auvouvaxb7o": "categorias",
+    "og9i5jz6o2tunak": "senales-niebla",
+    "0ykefhggf081osw": "senales-maniobra",
+    "nnklspcezbfvdlf": "visibilidad-reducida",
+    "bflvd4xs2onno82": "veleros",
+    "vtv1y2rrkhkng02": "luces-motor-vela",
+    "v5yhoh3iiiulmh1": "categorias",
+    "81ysftqb6xigyzk": "vuelta-cruce",
+    "wwixy82k0csiv7w": "canales-angostos",
+    "8dmbbgrkkx4ukxm": "alcance",
+    "9nj8pss23001y7w": "alcance",
+    "2n05uh7qwxrfiel": "senales-maniobra",
+    "ioftjfp8uje9oq6": "dst",
+    "u087x5m4s9g7bev": "vuelta-cruce",
+    "admjpeksaewvlop": "alcance",
+    "49n9c61m9cfis9k": "senales-maniobra",
+    "on61fkmnfzpc466": "dst",
+    "m03gtopyi278vyw": "definiciones-buques",
+    "7zqzleucwz035t6": "luces-especiales",
+    "e5pbe51o92859n8": "luces-definiciones",
+    "sgoiqyzqct8o4ck": "senales-maniobra",
+    "jwobgtsvhhswbb0": "categorias",
+    "3xapcmr7gppu7u5": "visibilidad-reducida",
+    "1b8qif2cle68c8h": "dst",
+    "e2k1mkqcia4srme": "maniobra-evitar",
+    "f9ookovvdiyn7za": "luces-motor-vela",
+    "d7qwn9v4hermbxt": "visibilidad-reducida",
+    "k3rrd9iwm37zruo": "definiciones-situacion",
+    "tv8694shn596tfe": "vuelta-cruce",
+    "svlws1k8at4lqyw": "canales-angostos",
+    "g6xjmc1qkd3hfz5": "vuelta-cruce",
+    "1wk650w65ej08el": "veleros",
+    "g5tryzw77eeq6sk": "categorias",
+    "md9dlj37s70m2ij": "vuelta-cruce",
+    "94eqh7lub0cpsxu": "veleros",
+    "06hb5tsoml7n02p": "senales-niebla",
+    "g9a58lnh5v2l172": "luces-especiales",
+    "atujvrhyk433bw4": "vuelta-cruce",
+    "edx1r27ltyuxm9z": "definiciones-buques",
+    "xa8283cafhc2r2w": "cede-sigue",
+    "gq1klf0xs2vdcbe": "fondeado-varado",
+    "ymm219smi33jrlb": "vigilancia-velocidad-riesgo",
+    "g3oio4r9rp2hvqa": "dst",
+    "vjbz2n7qcxq2khi": "vuelta-cruce",
+    "9l5z1arl6kit9oc": "vuelta-cruce",
+    "sstmcolmc1l1wgn": "canales-angostos",
+    "i56c7lzwidwxm8n": "luces-especiales",
+    "gg6z1380ranwa3k": "luces-definiciones",
+    "1ws2bkti84xbpur": "veleros",
+    "sdkzts8k8kq57ns": "senales-maniobra",
+    "zg1x3zyrkrtxpkz": "definiciones-buques",
+    "dg4650gwsta2qiz": "senales-maniobra",
+    "7grx6l88o0t3hga": "alcance",
+    "pe885zx9k4hwpkp": "veleros",
+    "8w86srrqpkcxjew": "definiciones-buques",
+    "7mmtqdnzikukyb2": "vigilancia-velocidad-riesgo",
+    "36n6bq5pu5bk689": "maniobra-evitar",
+    "tg7bi7emxvwn4g2": "dst",
+    "0s9wzhbo4vmi3w5": "categorias",
+    "qmemw2v7nozpijw": "luces-definiciones",
+    "firql463we0xxmt": "luces-motor-vela",
+    "58hosid0txvc4hx": "vuelta-cruce",
+    "hdjpg6gb6ydtfba": "visibilidad-reducida",
+    "pacgrer8nsemirw": "alcance",
+    "wtcatedfazma8dy": "senales-maniobra",
+    "ffgw7tvpzsopiog": "alcance",
+    "f9blwo0il02ycef": "dst",
+    "55ggkwrffsglsl7": "maniobra-evitar",
+    "htlddwss37ii1hm": "luces-definiciones",
+    "cu79jkwj9dxcl21": "senales-niebla",
+    "37cboqkyldpwb69": "vuelta-cruce",
+    "3neaqpd02j0esux": "vuelta-cruce",
+    "of49tf6r8nscnd4": "visibilidad-reducida",
+    "i3o7zdafo6i7kwd": "luces-especiales",
+    "uodjof5t5opmj9m": "veleros",
+    "lbca8p6o0ezmc7e": "senales-peligro",
+    "a024ei0evpiikvh": "categorias",
+    "papp0a1pfi55pjf": "maniobra-evitar",
+    "43z10prtepy4k6b": "vuelta-cruce",
+    "46gbfalwnzxlu5o": "luces-especiales",
+    "nubrrpnfdx3pv0j": "alcance",
+    "l2umz1999kwojxg": "visibilidad-reducida",
+    "dhk5mn8dqpw7chj": "luces-motor-vela",
+    "4jkkvuw97f3v2rw": "alcance",
+    "8t60hq50k351clk": "vuelta-cruce",
+    "jvi6aofb30j1hzp": "luces-motor-vela",
+    "5iapct2o5586dlk": "senales-maniobra",
+    "18scquka2y29vfn": "cede-sigue",
+    "wk47vlh3ea107z8": "dst",
+    "czebnjsc437g5o2": "visibilidad-reducida",
+    "7m3pi176bu7difp": "canales-angostos",
+    "24acuivh59efapo": "fondeado-varado",
+    "erv1dispocaxzj0": "definiciones-buques",
+    "hj3kmc4r2amu5ar": "definiciones-buques",
+    "pgf8raa2cc19ed3": "vigilancia-velocidad-riesgo",
+    "1y8ft95udnbsj3e": "maniobra-evitar",
+    "vzjq414ctppuyht": "categorias",
+    "m59se8hfgy04yg0": "canales-angostos",
+    "2fyhvqg1wyjss77": "dst",
+    "mfcrks3euluu26q": "alcance",
+    "py8a6h3iq3e7nv6": "senales-maniobra",
+    "3p9er0x756pqb4z": "luces-especiales",
+    "nbnn8e8e57chz8d": "luces-motor-vela",
+    "gx987w6g3tl7f4b": "luces-definiciones",
+    "9j28883y2pagvz3": "definiciones-buques",
+    "u5egb908k1751t5": "vuelta-cruce",
+    "3eg2yv5lqzfmi8b": "canales-angostos",
+    "7z0xuz7c4y4kxgg": "senales-maniobra",
+    "4ygnk0e9yv3cm4l": "categorias",
+    "7zgyzdjnxrnivow": "dst",
+    "n9j8n0vq55kh6xb": "visibilidad-reducida",
+    "ln291flpjk8ar1p": "luces-especiales",
+    "s2ehhdxelcut7k9": "luces-motor-vela",
+    "juofeawhxjtgqdb": "vuelta-cruce",
+    "upinhl30v48aecr": "luces-especiales",
+    "vbjye6iokw1u5xr": "categorias",
+    "wwz7psjdvz8xg7v": "alcance",
+    "19xejbgnx83b2ay": "luces-especiales",
+    "bdxr3pl5j1elyk5": "senales-maniobra",
+    "rl5klk7ykyzgkii": "luces-definiciones",
+    "tra3wvjm7a3ok93": "luces-especiales",
+    "guakc7jn6t6enz6": "vuelta-cruce",
+    "66o5lsd6i55xvpu": "fondeado-varado",
+    "5y2vqt799hoauw9": "veleros",
+    "os0hu0ya4opbb2o": "luces-especiales",
+    "tv8209jvr4b3g0a": "definiciones-buques",
+    "zwupea8ygawhlv0": "categorias",
+    "v6jufk8xwau41sr": "alcance",
+    "z5ucykk12ydri6j": "senales-niebla",
+    "sy8s0dkbkv6rmwv": "maniobra-evitar",
+    "dkn5izfwzta3m78": "definiciones-buques",
+    "3gtyih3si1wgq0r": "ambito-responsabilidad",
+    "c8c36vebk3cg5ij": "luces-especiales",
+    "xzc733mwva99a2x": "definiciones-situacion",
+    "y9xynuxi8jpt70k": "senales-maniobra",
+    "fvjy0itdxhke1ab": "luces-definiciones",
+    "noja1g5p092ab2t": "vuelta-cruce",
+    "65ebn4lh2zxdfbi": "dst",
+    "538jusf772e6tsn": "maniobra-evitar",
+    "y5qa6bxl563ew03": "definiciones-buques",
+    "e7f7ya2jt6x7kt5": "luces-motor-vela",
+    "jb4my133h5mlwsc": "alcance",
+    "9uwai0xwlz98nko": "visibilidad-reducida",
+    "zfuooh8rfitz3bx": "alcance",
+    "l7yii5r03xtt2c6": "luces-motor-vela",
+    "jpo1vrv5fkbf7mh": "dst",
+    "33knncjo61bzmm5": "senales-maniobra",
+    "08oa1fpithawzn4": "definiciones-situacion",
+    "c12c2z7iogdrje6": "veleros",
+    "eimjkfyrenbh3nm": "vuelta-cruce",
+    "c2nd8s810z575hz": "visibilidad-reducida",
+    "l6cmy28tx2zo24e": "luces-especiales",
+    "ok9yf63ascn4ium": "senales-peligro",
+    "0sgy5xuu97zjf5y": "vuelta-cruce",
+    "v0kmlivlzuuris5": "dst",
+    "fmd7wm7vlvofizx": "visibilidad-reducida",
+    "co6q9xqzsggqfti": "definiciones-buques",
+    "is2r5atkxq9hn0u": "luces-especiales",
+    "k8j6vqy4ll9i0qu": "canales-angostos",
+    "vkgzaaqcpt9446k": "visibilidad-reducida",
+    "xrei8096presmkc": "veleros",
+    "zncqwtg9rrys9vt": "luces-motor-vela",
+    "lijttq068hnqh15": "senales-maniobra",
+    "4c1wijgjsnvhjns": "dst",
+    "2wj4qjmvcr2vxod": "luces-motor-vela",
+    "7fxi1krdi8r9huu": "senales-maniobra",
+    "g5c4cwry1hj29br": "definiciones-situacion",
+    "8sn4lgvlyag2jz2": "alcance",
+    "dfnlblvogdd1f1b": "canales-angostos",
+    "2kb6732uzga52xh": "vuelta-cruce",
+    "4bkp4fhqybq5ioy": "luces-motor-vela",
+    "amvnj6m79rcmkti": "luces-especiales",
+    "dr6mavh6az3chfx": "visibilidad-reducida",
+    "4jvvk7hi3q7h26i": "vuelta-cruce",
+    "6eu7969zzdt14b5": "luces-definiciones",
+    "8w9ro8rjvq5tjvu": "senales-peligro",
+    "xckyoojue1hbpk3": "alcance",
+    "q93rlllr88l00zb": "senales-maniobra",
+    "c99j9mmo1m1gpvm": "vuelta-cruce",
+    "wtskjj28m8rex0r": "categorias",
+    "c7lrtki09dp8nv1": "luces-motor-vela",
+    "yt5tk97el2u9af4": "canales-angostos",
+    "rud2d3m6vuedyjr": "maniobra-evitar",
+    "eihjb2lu94pjllk": "senales-maniobra",
+    "8g8ltwcbrvrp2e3": "vigilancia-velocidad-riesgo",
+    "l7rej6886p3vs15": "definiciones-buques",
+    "cycpad1r19loxcr": "luces-motor-vela",
+    "rolgk3ax6b4zc88": "luces-motor-vela",
+    "flx70xmebu39r8n": "alcance",
+    "v3nkpu5k0h71p4o": "vuelta-cruce",
+    "l8t0gauv8iw06in": "canales-angostos",
+    "qwj8qr3x1ac6m6j": "visibilidad-reducida",
+    "oo4quoan0l8v5g5": "dst"
+  }
+}

@@ -1,0 +1,1198 @@
+{
+  "topic": 2,
+  "title": "Elementos de amarre y fondeo",
+  "minutes": 22,
+  "intro": {
+    "why": "Amarrar y fondear son las dos formas de dejar un barco quieto, y las dos se hacen en todas las salidas. Este tema es sobre todo vocabulario: piezas, partes de un cabo, cuatro nudos y las palabras del fondeo. En el examen las preguntas se repiten mucho y casi todas se resuelven sabiendo qué significa cada término y tres o cuatro datos exactos.",
+    "before": [
+      "Proa es la parte delantera del barco y popa la trasera; el costado es cada uno de los lados.",
+      "Dar avante es mover el barco hacia delante con el motor; dar atrás, hacia atrás.",
+      "El ancla va unida al barco por una cadena (o por cadena y cabo) que sale por la proa."
+    ],
+    "goals": [
+      "Nombrar las partes de un cabo: chicote, seno, firme y gaza.",
+      "Distinguir lo que está en el muelle (noray), en el agua (muerto, boya) y a bordo (bita, cornamusa, guía-cabos, roldana).",
+      "Saber para qué sirve cada nudo: llano, as de guía, ballestrinque y vuelta de rezón.",
+      "Elegir un buen lugar de fondeo y reconocer los buenos y malos tenederos.",
+      "Recordar cuánta cadena se fila con buen y con mal tiempo.",
+      "Diferenciar bornear, garrear, zarpar y orincar.",
+      "Preparar el molinete para fondear y para levar, y saber qué hacer si la cadena tira por largo."
+    ]
+  },
+  "sections": [
+    {
+      "id": "partes-de-un-cabo",
+      "title": "Las partes de un cabo: chicote, seno, firme y gaza",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A bordo no se dice «cuerda»: se dice **cabo**. Y cada parte del cabo tiene nombre propio. Son cuatro palabras que salen una y otra vez en el resto del tema, así que conviene fijarlas antes de nada."
+        },
+        {
+          "type": "term",
+          "term": "Chicote",
+          "text": "El **extremo libre** de un cabo o de un cable: la punta con la que trabajas y haces los nudos. Un cabo tiene dos chicotes (sus dos puntas); cuando se distingue del firme, el chicote es el extremo corto."
+        },
+        {
+          "type": "term",
+          "term": "Seno",
+          "text": "La **curva** que forma el cabo entre sus extremos cuando se trabaja con él. «Pasar un cabo por seno» es pasarlo doblado, sin usar la punta."
+        },
+        {
+          "type": "term",
+          "term": "Firme",
+          "text": "La **parte más larga** o principal del cabo: la que no es el chicote y la que soporta el esfuerzo."
+        },
+        {
+          "type": "term",
+          "term": "Gaza",
+          "text": "Un **lazo o anillo cerrado** en el extremo (chicote) de un cabo. La gaza «de verdad» se hace con una costura, entrelazando los cordones del propio cabo. Sirve para **encapillar**."
+        },
+        {
+          "type": "term",
+          "term": "Encapillar",
+          "text": "Enganchar la gaza de un cabo pasándola por encima de una pieza (un noray, una bita, una cornamusa) para que quede sujeta."
+        },
+        {
+          "type": "term",
+          "term": "Hacer firme / afirmar",
+          "text": "Sujetar un cabo a algo de forma segura, con un nudo o dándole vueltas."
+        },
+        {
+          "type": "analogy",
+          "text": "Piensa en el cordón de un zapato: la punta que coges con los dedos es el chicote, la curva que haces para la lazada es el seno y el resto del cordón, el que va cosido al zapato, es el firme."
+        },
+        {
+          "type": "example",
+          "text": "Amarras con un cabo que tiene una gaza en la punta. Esa gaza está hecha en el **chicote**. La encapillas en el noray del muelle: el **chicote queda afirmado a tierra**. El resto del cabo, el **firme**, lo llevas al barco y lo haces firme en una cornamusa: el **firme queda afirmado a bordo**.",
+          "title": "La gaza en el noray"
+        },
+        {
+          "type": "exam",
+          "text": "Dos preguntas piden el nombre del «extremo libre de un cabo o cable»: es el **chicote** (no el seno, ni el firme, ni la gaza, ni la boza). Otra pregunta plantea «la gaza de un cabo de amarre está encapillada a un noray» y la respuesta correcta es: **el firme está afirmado a bordo y el chicote a tierra**. No lo inviertas."
+        },
+        {
+          "type": "key",
+          "text": "Chicote = extremo libre. Seno = curva. Firme = parte larga. Gaza = lazo en el chicote para encapillar. Con la gaza en el noray: chicote a tierra, firme a bordo."
+        }
+      ]
+    },
+    {
+      "id": "elementos-en-tierra-y-en-el-agua",
+      "title": "En el muelle y en el agua: noray, bolardo, muertos y boyas",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Para amarrar un barco hace falta algo sólido a lo que sujetar los cabos. Unas piezas están **en tierra** (en el muelle) y otras **en el agua**. Las preguntas juegan a mezclarlas con las piezas que van a bordo, así que lo primero es saber dónde está cada una."
+        },
+        {
+          "type": "term",
+          "term": "Noray",
+          "text": "Pieza **fijada al muelle**, de forma cilíndrica y simétrica, a la que **se hacen firmes los cabos con los que se amarran los buques**. Es el elemento **de tierra** donde se **encapilla la gaza** de un cabo de amarre."
+        },
+        {
+          "type": "term",
+          "term": "Bolardo",
+          "text": "Lo mismo que el noray, pero de forma asimétrica (con la cabeza curvada hacia un lado). También está en el muelle."
+        },
+        {
+          "type": "term",
+          "term": "Muerto",
+          "text": "Bloque muy pesado de hierro, hormigón u otro material sólido que descansa **en el fondo del mar**. Se une con cabo, cable o cadena a una boya en la superficie y sirve para amarrar a él las embarcaciones."
+        },
+        {
+          "type": "term",
+          "term": "Boya",
+          "text": "Objeto **flotante** (de hierro, plástico, etc.) unido por un cabo o cable a un muerto. Sirve para señalar algo (por ejemplo, una boya de toma de datos) o para marcar los límites de una zona (por ejemplo, las boyas que marcan los 200 metros de una zona de baño)."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Elemento",
+            "Dónde está",
+            "Para qué sirve"
+          ],
+          "rows": [
+            [
+              "Noray",
+              "En el muelle (tierra)",
+              "Hacer firmes las amarras; encapillar la gaza"
+            ],
+            [
+              "Bolardo",
+              "En el muelle (tierra)",
+              "Igual que el noray, con forma asimétrica"
+            ],
+            [
+              "Muerto",
+              "En el fondo del mar",
+              "Punto de amarre fijo, unido a una boya"
+            ],
+            [
+              "Boya",
+              "Flotando en la superficie",
+              "Señalar o balizar; va unida a un muerto"
+            ],
+            [
+              "Bita y cornamusa",
+              "En la cubierta del barco (a bordo)",
+              "Hacer firmes las amarras en el barco"
+            ]
+          ],
+          "title": "Cada cosa en su sitio"
+        },
+        {
+          "type": "exam",
+          "text": "«Pieza fijada al muelle a la que se hacen firmes los cabos con los que se amarran los buques» y «elemento de tierra que sirve para encapillar en él la gaza de un cabo de amarre»: en las dos la respuesta es **noray**. Las otras opciones son trampas de lugar: la **bita** y la **cornamusa** están a bordo, el **muerto** está en el fondo y la **boya** flota."
+        },
+        {
+          "type": "key",
+          "text": "Noray (y bolardo) = en el muelle. Muerto = en el fondo. Boya = flotando. Si la pregunta dice «muelle» o «tierra», la respuesta es noray."
+        }
+      ]
+    },
+    {
+      "id": "elementos-a-bordo",
+      "title": "En la cubierta: bitas, cornamusas, guía-cabos y roldanas",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "En el barco hay dos familias de piezas relacionadas con los cabos. Unas sirven para **hacer firme** el cabo (sujetarlo) y otras para **guiarlo** o para que corra sin rozar. Distinguir estas dos funciones resuelve todas las preguntas del apartado."
+        },
+        {
+          "type": "term",
+          "term": "Bita",
+          "text": "Pieza de madera o metal, con forma de U, unida fuertemente a la cubierta. En ella **se hacen firmes** las amarras (dándoles vueltas o encapillando una gaza)."
+        },
+        {
+          "type": "term",
+          "term": "Cornamusa",
+          "text": "Pieza de madera o metal, con forma de T o de doble T (como dos cuernos), unida fuertemente a la cubierta. También sirve para **hacer firmes** las amarras."
+        },
+        {
+          "type": "term",
+          "term": "Guía-cabos (o guiacabos)",
+          "text": "Pieza **por donde pasan los cabos o amarras**. Sirve para **conducirlos en la dirección correcta** y para **evitar que rocen** con el casco, con la cubierta o con cualquier otro elemento de la cubierta. En un guía-cabos el cabo pasa, **no se hace firme**."
+        },
+        {
+          "type": "term",
+          "term": "Roldana",
+          "text": "**Rueda** acanalada y **giratoria por la que laborea un cabo**. Al girar, **facilita el laboreo de los cabos** (reduce el rozamiento). Es la rueda que hay dentro de una polea."
+        },
+        {
+          "type": "term",
+          "term": "Laborear",
+          "text": "Correr o trabajar un cabo por una roldana o una polea."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Pieza",
+            "Forma",
+            "Función"
+          ],
+          "rows": [
+            [
+              "Bita",
+              "U",
+              "Hacer firme un cabo (a bordo)"
+            ],
+            [
+              "Cornamusa",
+              "T o doble T",
+              "Hacer firme un cabo (a bordo)"
+            ],
+            [
+              "Guía-cabos",
+              "Pieza abierta o anillo por el que pasa el cabo",
+              "Conducir el cabo y evitar roces"
+            ],
+            [
+              "Roldana",
+              "Rueda acanalada",
+              "Que el cabo laboree (corra) con poco rozamiento"
+            ]
+          ]
+        },
+        {
+          "type": "exam",
+          "text": "«¿Qué elemento **de a bordo** sirve para hacer firme un cabo?» con las opciones cornamusa, noray y bita: la correcta es **«las respuestas a) y c)»**, es decir, **cornamusa y bita**. El noray también sirve para hacer firme un cabo, pero está en el muelle, no a bordo."
+        },
+        {
+          "type": "exam",
+          "text": "Sobre los guía-cabos, la afirmación correcta es que **evitan el roce de las amarras con la cubierta y otros elementos de la misma**. No son «las piezas donde se hacen firmes los cabos» (eso son bitas y cornamusas) ni «la rueda por donde laborea el cabo» (eso es la roldana), así que tampoco vale «b) y c) son correctas». Y la roldana **no** sirve para levar el ancla, ni para amarrar, ni para proteger de los golpes de mar: es solo «una pieza giratoria que facilita el laboreo de los cabos»."
+        },
+        {
+          "type": "key",
+          "text": "Bita (U) y cornamusa (T) = hacer firme a bordo. Guía-cabos = conducir y evitar roces. Roldana = rueda por donde laborea el cabo."
+        }
+      ]
+    },
+    {
+      "id": "defensas-y-bichero",
+      "title": "Defensas y bichero",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Defensas",
+          "text": "**Protecciones** que se emplean en las embarcaciones o en los muelles (y pantalanes) para **evitar roces y golpes**. Protegen el **casco** y se colocan **entre la embarcación y el muelle, o entre la embarcación y la embarcación adyacente** (la de al lado). Suelen ser cilindros o bolas hinchables que se cuelgan del costado."
+        },
+        {
+          "type": "term",
+          "term": "Bichero",
+          "text": "Palo de madera o de metal (hoy casi siempre de aluminio) con un **gancho** en la punta. Sirve para coger cabos, aguantar la embarcación y acercarla o alejarla del muelle o de otros barcos. Es como una prolongación del brazo."
+        },
+        {
+          "type": "analogy",
+          "text": "Las defensas son los parachoques del barco: no hacen nada hasta que hay contacto, y entonces evitan el daño."
+        },
+        {
+          "type": "p",
+          "text": "Las defensas se cuelgan con un nudo. Cuál se usa depende del tiempo que vayan a estar puestas, y eso lo preguntan: lo tienes en el apartado del ballestrinque y la vuelta de rezón."
+        },
+        {
+          "type": "exam",
+          "text": "Las defensas no protegen la hélice, no aseguran las velas y no sirven para guardar cabos. La definición que da el banco es: «se utilizan para la protección del casco contra golpes y deben colocarse entre la embarcación y el muelle o embarcación adyacente». Y cuando preguntan el nombre de «las protecciones para evitar roces y golpes», la respuesta es **defensas** (no boyas, ni bolardos, ni guiacabos)."
+        },
+        {
+          "type": "key",
+          "text": "Defensas = protegen el casco de roces y golpes, colocadas entre el barco y el muelle u otro barco. Bichero = palo con gancho."
+        }
+      ]
+    },
+    {
+      "id": "nudo-llano",
+      "title": "Nudo llano: unir dos cabos del mismo grosor",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "El temario exige cuatro nudos: llano, as de guía, ballestrinque y vuelta de rezón. El examen no pide hacerlos, pide saber **para qué sirve cada uno**. Empezamos por el más sencillo."
+        },
+        {
+          "type": "term",
+          "term": "Mena",
+          "text": "El **grosor** de un cabo. «De la misma mena» significa «del mismo grosor»."
+        },
+        {
+          "type": "term",
+          "term": "Nudo llano (o de envergue)",
+          "text": "Nudo que sirve para **unir por sus chicotes dos cabos de la misma mena (mismo grosor) y del mismo material**. También vale para unir los dos extremos de un mismo cabo."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cuanto más trabaja (más tira), más se **azoca**, es decir, más se aprieta.",
+            "Cuando deja de trabajar es fácil de deshacer.",
+            "Con cabos de distinto grosor no sirve: se escurre."
+          ],
+          "title": "Qué hay que saber de él"
+        },
+        {
+          "type": "term",
+          "term": "Azocar",
+          "text": "Apretarse un nudo al tirar de él."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Lo que NO hace el llano",
+            "Quién lo hace"
+          ],
+          "rows": [
+            [
+              "Unir un cabo al arganeo o a una argolla",
+              "Vuelta de rezón"
+            ],
+            [
+              "Hacer firmes las defensas a los guardamancebos o pasamanos",
+              "Ballestrinque"
+            ],
+            [
+              "Realizar una gaza",
+              "As de guía"
+            ],
+            [
+              "Afirmar un cabo a un palo o a una bita",
+              "No es su función"
+            ],
+            [
+              "Unir dos cabos de distinto grosor",
+              "No sirve para eso"
+            ]
+          ],
+          "title": "Las opciones falsas que le ponen al lado"
+        },
+        {
+          "type": "exam",
+          "text": "Hay cinco preguntas casi idénticas. Con cualquiera de estas formulaciones la respuesta es **llano**: «unir por sus chicotes dos cabos del mismo grosor», «unir dos cabos del mismo material y mena (grosor)», «unir dos cabos de la misma mena y material», «unir dos cabos del mismo grosor», «unir dos cabos de la misma mena». La trampa habitual es la opción «unir dos cabos de **distinto** grosor»: es falsa."
+        },
+        {
+          "type": "key",
+          "text": "Llano = unir dos cabos de la misma mena (mismo grosor) y material."
+        }
+      ]
+    },
+    {
+      "id": "as-de-guia",
+      "title": "As de guía: una gaza sin costuras",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "As de guía",
+          "text": "Nudo que forma en el chicote un lazo fijo que no se corre: es decir, una **gaza sin costuras**. Se emplea para **sustituir a una gaza**, sobre todo **para el amarre**: haces la gaza con el nudo y la encapillas en un noray o en una bita."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**No se zafa**: no se deshace solo ni se corre.",
+            "**Apenas se azoca** cuando trabaja: por mucho que tire, luego se deshace bien.",
+            "Es uno de los nudos más útiles a bordo."
+          ],
+          "title": "Ventajas"
+        },
+        {
+          "type": "term",
+          "term": "Zafarse",
+          "text": "Soltarse o deshacerse un nudo o un cabo."
+        },
+        {
+          "type": "example",
+          "text": "Llegas a un muelle con un cabo sin gaza. Haces un as de guía en el chicote, lo suficientemente grande para que entre en el noray, y lo encapillas. Ya tienes el barco amarrado a tierra con una gaza improvisada.",
+          "title": "En el puerto"
+        },
+        {
+          "type": "exam",
+          "text": "Tres preguntas, la misma idea: el as de guía sirve «para realizar una gaza y amarrar a un noray», «para hacer una gaza para el amarre», y es «el nudo empleado para hacer una gaza sin costuras». No es para unir dos cabos (ni de la misma mena, que es el llano, ni de distinta), no es «el nudo específico para afirmar un cabo a una argolla» (vuelta de rezón), no es para hacer firme una defensa (ballestrinque) y tampoco es el nudo que impide que un chicote pase por un hueco."
+        },
+        {
+          "type": "key",
+          "text": "As de guía = gaza sin costuras, para amarrar (por ejemplo, a un noray). No se zafa y apenas se azoca."
+        }
+      ]
+    },
+    {
+      "id": "ballestrinque-y-vuelta-de-rezon",
+      "title": "Ballestrinque y vuelta de rezón: argollas y defensas",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Estos dos nudos sirven para sujetar un cabo a un objeto, y el banco los enfrenta con las defensas. La diferencia está en dos cosas: **a qué** se afirma el cabo y **cuánto tiempo** va a estar puesto."
+        },
+        {
+          "type": "term",
+          "term": "Ballestrinque",
+          "text": "Nudo muy rápido de hacer y de deshacer, que se da alrededor de algo alargado: una **regala**, un **pasamanos**, un candelero o un guardamancebos. Se aprieta solo a medida que trabaja. Es el nudo habitual para **colgar una defensa** del pasamanos, sobre todo si **no ha de estar tendida mucho tiempo**, y para **afirmar rápidamente un cabo a la regala**."
+        },
+        {
+          "type": "term",
+          "term": "Vuelta de rezón",
+          "text": "Nudo cuya **función principal es unir un cabo al arganeo** del ancla, del anclote o del rezón; en general, el nudo **especialmente indicado para afirmar un cabo a una argolla** (o a un cáncamo). Es seguro, no se afloja y se deshace bien incluso mojado. Por eso es también el indicado para **amarrar defensas que han de estar tendidas mucho tiempo**."
+        },
+        {
+          "type": "term",
+          "term": "Arganeo",
+          "text": "La **argolla** que tiene el ancla en el extremo superior, donde se une la cadena o el cabo."
+        },
+        {
+          "type": "term",
+          "term": "Rezón",
+          "text": "Ancla pequeña de varios brazos (normalmente cuatro), sin cepo, usada en embarcaciones menores. El anclote es simplemente un ancla pequeña."
+        },
+        {
+          "type": "term",
+          "term": "Regala, pasamanos y guardamancebos",
+          "text": "La regala es el borde superior del costado del barco. El pasamanos y los guardamancebos son las barras o cables que rodean la cubierta, sujetos a los candeleros (postes verticales), para que la tripulación no caiga al agua."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Situación",
+            "Nudo"
+          ],
+          "rows": [
+            [
+              "Unir un cabo al arganeo del ancla",
+              "Vuelta de rezón"
+            ],
+            [
+              "Afirmar un cabo a una argolla",
+              "Vuelta de rezón"
+            ],
+            [
+              "Defensa que va a estar tendida **mucho** tiempo",
+              "Vuelta de rezón"
+            ],
+            [
+              "Defensa que va a estar tendida **poco** tiempo, hecha firme rápidamente",
+              "Ballestrinque"
+            ],
+            [
+              "Colgar una defensa del pasamanos",
+              "Ballestrinque"
+            ],
+            [
+              "Afirmar rápidamente un cabo a la regala",
+              "Ballestrinque"
+            ]
+          ],
+          "title": "Cuál elegir"
+        },
+        {
+          "type": "analogy",
+          "text": "El ballestrinque es como dejar la chaqueta colgada del respaldo de la silla: rápido y para un rato. La vuelta de rezón es como colgarla en una percha y cerrar el armario: para dejarla."
+        },
+        {
+          "type": "exam",
+          "text": "Con las defensas manda la palabra «tiempo». Si la pregunta dice que la defensa **no ha de estar tendida mucho tiempo**, o habla de hacerla firme **rápidamente**, o simplemente de colgarla del **pasamanos**: **ballestrinque**. Si dice que **han de estar tendidas mucho tiempo**: **vuelta de rezón**."
+        },
+        {
+          "type": "exam",
+          "text": "La pregunta «¿para qué se emplea la vuelta de rezón?» ofrece «amarrar defensas que han de estar tendidas mucho tiempo», «afirmar un cabo a una argolla» y «las respuestas a) y c) son correctas»: la buena es **a) y c)**, las dos cosas. No sirve para «amarrar a un noray» (eso es la gaza o el as de guía), ni para unir dos argollas, ni para unir dos cabos de la misma mena (llano), ni es un nudo «solo de pescadores». Cuando solo dan una opción válida, quédate con **argolla** o con **arganeo**: son lo mismo."
+        },
+        {
+          "type": "key",
+          "text": "Vuelta de rezón = cabo a una argolla o al arganeo, y defensas para mucho tiempo. Ballestrinque = rápido, al pasamanos o a la regala, defensas para poco tiempo."
+        }
+      ]
+    },
+    {
+      "id": "lugar-de-fondeo",
+      "title": "Elegir el lugar de fondeo",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Fondear",
+          "text": "Dejar caer el ancla en un lugar elegido para que el barco quede sujeto al fondo. El sitio donde se fondea es el fondeadero."
+        },
+        {
+          "type": "p",
+          "text": "Un ancla no sujeta en cualquier parte. Antes de fondear hay que valorar **varios factores a la vez**; nunca uno solo."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Viento y mar**: dirección e intensidad. Hay que buscar un lugar **abrigado** (resguardado) del viento y de la mar. El ancla y la cadena no están para aguantarlo todo.",
+            "**Corrientes**: si las hay y hacia dónde tiran.",
+            "**Profundidad** (la sonda): de ella depende cuánta cadena hay que largar.",
+            "**Tipo de fondo** (el tenedero): unos fondos agarran y otros no.",
+            "**Espacio disponible para el borneo**: el barco va a girar alrededor del ancla y no debe tocar nada.",
+            "**Amplitud**: sitio suficiente para las maniobras de entrada y de salida, para no quedar encerrado si hay que irse deprisa.",
+            "**Pendiente del fondo**: no conviene que tenga **gran pendiente**, ni que pase bruscamente de sondas pequeñas a grandes sondas."
+          ],
+          "title": "Qué se tiene en cuenta"
+        },
+        {
+          "type": "term",
+          "term": "Sonda",
+          "text": "La profundidad del agua en un punto. «Sondas pequeñas» es poca profundidad; «grandes sondas», mucha."
+        },
+        {
+          "type": "term",
+          "term": "Derrotero",
+          "text": "Libro que describe la costa, sus fondeaderos, los vientos y las corrientes habituales. Si **no conoces la zona, hay que consultarlo**."
+        },
+        {
+          "type": "p",
+          "text": "¿Por qué importa la pendiente? En un fondo muy inclinado el ancla resbala cuesta abajo. Y si el fondo cae de golpe, en cuanto el ancla se mueve un poco pasa a aguas profundas, la cadena deja de ser suficiente y el barco queda a la deriva."
+        },
+        {
+          "type": "exam",
+          "text": "Las respuestas correctas son siempre las largas, las que enumeran varios factores: «la dirección (e intensidad) del viento, la profundidad, el tipo de fondo, la presencia de corrientes (y el espacio disponible para el borneo), entre otros». Son falsas todas las que empiezan por «únicamente» o «solo» (solo la profundidad, solo la proximidad a otros barcos, la cercanía a la costa, las señales de radio)."
+        },
+        {
+          "type": "exam",
+          "text": "En las preguntas de «¿cuál es correcta respecto al lugar de fondeo?» la verdadera es la de la pendiente: «**no conviene que el fondo presente una gran pendiente**» o «no conviene que el fondo presente una disminución repentina de la pendiente pasando bruscamente de sondas pequeñas a grandes sondas». Son falsas: que convenga mucha pendiente para que el ancla agarre mejor, que no haga falta estar resguardado de la mar y el viento, que no haga falta consultar los derroteros aunque no conozcamos la zona y que no haga falta amplitud para maniobrar. Por tanto, tampoco valen «todas son correctas» ni «ninguna es correcta»."
+        },
+        {
+          "type": "key",
+          "text": "Buen fondeadero: abrigado, con buen tenedero, profundidad adecuada, sin gran pendiente ni cambios bruscos de sonda, amplio y con sitio para bornear. Si no conoces la zona, derrotero."
+        }
+      ]
+    },
+    {
+      "id": "tenederos",
+      "title": "El tenedero: fondos buenos y malos",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Tenedero",
+          "text": "La **calidad del fondo** marino para que el ancla agarre. Un buen tenedero es un fondo donde el ancla se clava y aguanta."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Fondo",
+            "Calidad",
+            "Por qué"
+          ],
+          "rows": [
+            [
+              "**Fango duro o compacto**",
+              "De los mejores",
+              "El ancla se clava y agarra con firmeza"
+            ],
+            [
+              "**Arena** (sobre todo compacta)",
+              "De los mejores",
+              "El ancla se entierra bien"
+            ],
+            [
+              "Cascajo (o conchuela)",
+              "Aceptable, peor que fango y arena",
+              "Grava y arena mezcladas: agarra, pero menos"
+            ],
+            [
+              "Arcilla",
+              "Poco recomendable",
+              "Resbaladiza; si las uñas no clavan a la primera se llenan de pellas y hay que subir el ancla a limpiarla"
+            ],
+            [
+              "**Fango blando**",
+              "Malo",
+              "Demasiado blando: el ancla se abre paso y garrea"
+            ],
+            [
+              "Algas",
+              "Malo",
+              "Resbaladizas: casi no ofrecen resistencia"
+            ],
+            [
+              "Piedra (roca lisa o arrecife) y coral",
+              "Malo",
+              "En roca lisa no agarra; entre rocas o coral el ancla puede quedar enrocada"
+            ]
+          ],
+          "title": "De mejor a peor"
+        },
+        {
+          "type": "term",
+          "term": "Enrocada",
+          "text": "Se dice del ancla que queda enganchada entre rocas y no se puede recuperar."
+        },
+        {
+          "type": "term",
+          "term": "Escandallo y sondaleza",
+          "text": "El escandallo es un peso con forma de campana que se baja al fondo con sebo en la base: lo que se queda pegado (arena, fango, arcilla…) indica el tipo de fondo. El cabo del que cuelga se llama sondaleza. Hoy está en desuso porque las sondas electrónicas ya informan del fondo."
+        },
+        {
+          "type": "exam",
+          "text": "Si entre las opciones aparece **fango duro** (o «fango duro o compacto»), esa es la respuesta a «el mejor» o «el más adecuado», por delante de cascajo, arcilla, fango blando, algas, piedra y coral. Ojo: el coral es malo, así que «coral y fango duro son correctas» es falsa. Si **no** aparece el fango duro y las opciones son arena, cascajo, piedra y algas, el mejor tenedero es la **arena**."
+        },
+        {
+          "type": "exam",
+          "text": "Pregunta discutible del banco: «¿cuál sería el **menos apropiado** para fondear?» entre cascajo, arcilla, fango duro y fango blando. La clave del banco es **fango blando**. Hay manuales que también tratan el cascajo como mal tenedero, pero en el examen marca fango blando. Fíjate en el adjetivo: fango **duro** es de lo mejor; fango **blando**, lo peor de esa lista."
+        },
+        {
+          "type": "key",
+          "text": "Mejores: fango duro (o compacto) y arena. Aceptable: cascajo. Malos: fango blando, arcilla, algas, piedra y coral."
+        }
+      ]
+    },
+    {
+      "id": "maniobra-de-fondeo",
+      "title": "Dar fondo: el molinete, el freno y el embrague",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "En barcos con cierto peso de ancla y cadena, el fondeo se maneja con un **molinete**. Entender sus dos mandos, el freno y el embrague, resuelve tanto las preguntas de fondear como las de levar."
+        },
+        {
+          "type": "term",
+          "term": "Molinete",
+          "text": "Máquina de cubierta, en la proa, que sirve para largar y recoger la cadena del ancla."
+        },
+        {
+          "type": "term",
+          "term": "Barbotén",
+          "text": "La corona dentada del molinete en la que engranan los eslabones de la cadena. Cuando gira el barbotén, se mueve la cadena."
+        },
+        {
+          "type": "term",
+          "term": "Embrague",
+          "text": "Une o separa el barbotén del motor del molinete. **Embragado**: el motor arrastra el barbotén. **Desembragado**: el barbotén queda suelto y puede girar libre."
+        },
+        {
+          "type": "term",
+          "term": "Freno",
+          "text": "Sujeta el barbotén. **Aplicado**: la cadena no se mueve. **Libre o suelto**: la cadena puede correr."
+        },
+        {
+          "type": "term",
+          "term": "A la pendura",
+          "text": "Se dice del ancla cuando ya cuelga fuera del barco, lista para caer, sujeta solo por el freno."
+        },
+        {
+          "type": "term",
+          "term": "Destrincar",
+          "text": "Soltar las trincas, es decir, las sujeciones que mantienen el ancla inmóvil durante la navegación."
+        },
+        {
+          "type": "term",
+          "term": "Dar fondo",
+          "text": "Dejar caer el ancla al agua."
+        },
+        {
+          "type": "steps",
+          "items": [
+            "**Destrincar** el ancla.",
+            "Dejarla **a la pendura y frenada**: colgando fuera, sujeta por el freno.",
+            "**Aplicar el freno y desembragar**. El barbotén queda libre del motor y solo lo sujeta el freno.",
+            "En el punto elegido, **quitar el freno y dar fondo**. La cadena sale por su propio peso y su velocidad se controla con el freno.",
+            "Filar la cadena necesaria mientras el barco cae despacio hacia atrás, para que quede tendida en el fondo y no amontonada sobre el ancla."
+          ],
+          "title": "Antes de dar fondo, por regla general"
+        },
+        {
+          "type": "term",
+          "term": "Filar",
+          "text": "Largar, dejar salir cadena o cabo poco a poco."
+        },
+        {
+          "type": "exam",
+          "text": "«¿Secuencia correcta en el molinete **antes** de iniciar la maniobra de fondeo?»: **aplicar el freno y desembragar, para poder controlar la velocidad de salida de la cadena**. El orden importa: primero freno, luego desembragar. No es «desembragar y soltar el freno para que corra libre» (saldría sin control) ni nada que deje el molinete embragado."
+        },
+        {
+          "type": "exam",
+          "text": "«Si queremos fondear con un ancla, antes de dar fondo debemos…»: **destrincar, dejar el ancla a la pendura y frenada, quitar el freno y dar fondo**. Son falsas: dar fondo sin más preparación que destrincar, arriarla con el barbotén sin quitar el freno y quitar solo el freno."
+        },
+        {
+          "type": "key",
+          "text": "Para fondear: destrincar, ancla a la pendura y frenada, freno aplicado y molinete desembragado; se da fondo quitando el freno."
+        }
+      ]
+    },
+    {
+      "id": "longitud-de-fondeo-y-borneo",
+      "title": "Fondeo a la gira: cuánta cadena y el círculo de borneo",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Fondeo a la gira",
+          "text": "Fondear con **una sola ancla**, de modo que el barco puede girar libremente alrededor de ella. Tiene dos ventajas: se leva más rápido y, si entra mal tiempo, la maniobra de salida es más sencilla."
+        },
+        {
+          "type": "term",
+          "term": "Bornear (borneo)",
+          "text": "**Girar el barco fondeado alrededor de su ancla**, por efecto del viento o de la corriente (normalmente la de marea)."
+        },
+        {
+          "type": "term",
+          "term": "Círculo de borneo",
+          "text": "El **círculo que describe el barco estando fondeado** al girar alrededor de su ancla. Su radio es, aproximadamente, la cantidad de cadena filada. Dentro de ese círculo no puede haber obstáculos (otros barcos, boyas, piedras), porque el barco acabaría tocándolos."
+        },
+        {
+          "type": "term",
+          "term": "Longitud de fondeo",
+          "text": "La cantidad de cadena (o de cadena y cabo) que se fila. Se mide en **veces el fondo**, es decir, en múltiplos de la profundidad del lugar. No se mide en esloras."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Tiempo",
+            "Longitud de fondeo"
+          ],
+          "rows": [
+            [
+              "**Buen tiempo**",
+              "**De 3 a 4 veces el fondo**"
+            ],
+            [
+              "Mal tiempo",
+              "De 5 a 6 veces el fondo"
+            ]
+          ],
+          "title": "Cuánta cadena filar"
+        },
+        {
+          "type": "example",
+          "text": "Fondeas con buen tiempo en 5 metros de agua: filas entre 15 y 20 metros de cadena. Si se anuncia mal tiempo, entre 25 y 30 metros. El barco podrá girar en un círculo de un radio parecido a esa longitud, así que el barco más próximo debe quedar fuera de él.",
+          "title": "Con números"
+        },
+        {
+          "type": "analogy",
+          "text": "Un perro atado a una estaca con una correa: puede dar la vuelta entera alrededor de la estaca. La estaca es el ancla, la correa es la cadena y el círculo que pisa el perro es el círculo de borneo."
+        },
+        {
+          "type": "p",
+          "text": "¿Por qué tanta cadena? Porque el ancla agarra cuando el tiro le llega horizontal, pegado al fondo. Con poca cadena el tiro es hacia arriba y la arranca."
+        },
+        {
+          "type": "exam",
+          "text": "Cuatro preguntas piden la longitud de fondeo **con buen tiempo** y la respuesta es siempre **de tres a cuatro veces el fondo**. Las trampas: «de tres a cuatro veces la **eslora**» y «de cinco a seis veces la eslora» (la referencia es el fondo, nunca la eslora), «de cinco a seis veces el fondo» (eso es con mal tiempo), «dos veces el fondo» y «de cuatro a seis veces el fondo»."
+        },
+        {
+          "type": "exam",
+          "text": "No confundas los verbos. Girar alrededor del ancla es **bornear**, y el círculo es el **círculo de borneo** (no existen el «círculo de fondeo», el «círculo de garreo», el «círculo del orinque» ni el «círculo a la gira»). **Garrear** es arrastrar el ancla; **rolar** es cambiar de dirección el viento; **escorar** es inclinarse el barco hacia un costado. Trampa fina: en «cuando un barco fondeado gira alrededor de su ancla decimos que…» aparecen «se encuentra a la gira» y «bornea». La correcta es **bornea**: «a la gira» es el tipo de fondeo; la acción de girar es bornear."
+        },
+        {
+          "type": "key",
+          "text": "Buen tiempo: 3 a 4 veces el fondo. Mal tiempo: 5 a 6 veces el fondo. Girar alrededor del ancla = bornear, y dibuja el círculo de borneo."
+        }
+      ]
+    },
+    {
+      "id": "garreo-y-vigilancia",
+      "title": "Garreo y vigilancia del fondeo",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Garreo (garrear)",
+          "text": "La acción que se produce cuando **el ancla no agarra bien en el fondo y se arrastra por él**. El ancla, ya fondeada, se desplaza por el fondo y el barco con ella."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fondo demasiado duro: el ancla no se clava.",
+            "Fondo demasiado blando: el ancla se abre paso sin sujetar.",
+            "Ancla sucia: las uñas no giran o van llenas de fango o arcilla.",
+            "Cadena amontonada sobre el ancla, que le impide agarrar.",
+            "Poca cadena filada, sobre todo con mala mar."
+          ],
+          "title": "Por qué garrea un ancla"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Si no habías filado bastante, **filar más cadena**.",
+            "Si el fondeadero es malo, **cambiar de fondeadero**.",
+            "Si el fondo es bueno y sigue garreando, **levar** el ancla y comprobar qué le pasa."
+          ],
+          "title": "Qué hacer si garreas"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Tomar situaciones** de vez en cuando con referencias de tierra: enfilaciones, demoras, distancias por radar. Si cambian, el barco se mueve.",
+            "**Observar la cadena**: si mantiene su tensión, el ancla agarra; si da tirones y se afloja, se ha soltado.",
+            "**Alarma de sonda**: avisa cuando cambia la profundidad, señal de que el barco se sale del fondeadero. No es recomendable donde la marea varía varios metros, porque saltaría sola."
+          ],
+          "title": "Cómo vigilar el fondeo"
+        },
+        {
+          "type": "table",
+          "head": [
+            "Palabra",
+            "Qué significa"
+          ],
+          "rows": [
+            [
+              "Garrear",
+              "El ancla no agarra y se arrastra por el fondo"
+            ],
+            [
+              "Bornear",
+              "El barco gira alrededor del ancla (que sí agarra)"
+            ],
+            [
+              "Enrocarse",
+              "El ancla queda enganchada entre rocas"
+            ],
+            [
+              "Zarpar",
+              "El ancla se despega del fondo al levarla"
+            ],
+            [
+              "Orincar",
+              "Poner un orinque (cabo con boya) al ancla"
+            ]
+          ],
+          "title": "Para no confundirlas"
+        },
+        {
+          "type": "exam",
+          "text": "Cinco preguntas preguntan lo mismo en los dos sentidos. Definición a nombre: «la acción que se produce cuando el ancla no (se) agarra en el fondo y se arrastra por él» es el **garreo** (no zarpar, orincar, borneo, fondear ni «cobrar el ancla»). Nombre a definición: que un ancla garrea quiere decir «que el ancla no agarra bien y se desplaza por el fondo»; el garreo es «arrastrar por el fondo un ancla fondeada». Las opciones falsas describen otras cosas: que el ancla se separa de la cadena, que se enroca, o que el barco gira alrededor del ancla (eso es bornear)."
+        },
+        {
+          "type": "key",
+          "text": "Garreo = el ancla no agarra y se arrastra por el fondo. Se detecta con situaciones, la tensión de la cadena y la alarma de sonda."
+        }
+      ]
+    },
+    {
+      "id": "orinque",
+      "title": "El orinque: balizar el ancla",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Orinque",
+          "text": "**Cabo** que une el ancla con una boya pequeña. Uno de sus chicotes se amarra a la **cruz del ancla** (o al arganeo) y el otro a una **boya o boyarín** que flota justo encima. Sirve para **balizar el ancla**, es decir, para señalar dónde está."
+        },
+        {
+          "type": "term",
+          "term": "Cruz del ancla",
+          "text": "La parte inferior del ancla, donde se unen la caña (el eje) y los brazos."
+        },
+        {
+          "type": "term",
+          "term": "Boyarín",
+          "text": "Boya pequeña."
+        },
+        {
+          "type": "term",
+          "term": "Orincar",
+          "text": "Poner un orinque al ancla."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Señalar la posición del ancla**, para que otras embarcaciones la tengan en cuenta y no fondeen encima.",
+            "**No perderla**: si hay que abandonarla o se rompe la cadena, el boyarín indica dónde está y facilita recuperarla."
+          ],
+          "title": "Para qué sirve"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Longitud: un poco mayor que la profundidad del lugar **en pleamar** (marea alta), para que el boyarín no quede sumergido.",
+            "Peso: debe ser ligero, para que no hunda el boyarín."
+          ],
+          "title": "Cómo debe ser el cabo"
+        },
+        {
+          "type": "exam",
+          "text": "Todas las preguntas llevan al mismo sitio. El orinque es «el cabo cuyos chicotes se amarran a la cruz del ancla y a un boyarín», «un cabo que sirve para unir una boya con el ancla y señalar dónde está el ancla»; sirve para **balizar el ancla**; la posición del ancla se señala con «un orinque con boya o boyarín, amarrado a la cruz del ancla»; y para tener balizada el ancla y no perderla «se coloca en ella un orinque». Distractores: aro salvavidas con luz, guardín, espeque, cabo de leva, cabo de garreo, «una boya cerca del lugar del fondeo, no en el ancla», un cabo de amarre a un muerto, una driza o el cabo del molinete. No sirve para balizar el freno del molinete ni un grillete, y no era un adorno de las anclas de cepo."
+        },
+        {
+          "type": "key",
+          "text": "Orinque = cabo de la cruz del ancla a un boyarín. Sirve para balizar el ancla y no perderla."
+        }
+      ]
+    },
+    {
+      "id": "levar-el-ancla",
+      "title": "Levar el ancla",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Levar",
+          "text": "Recoger la cadena y el ancla para salir del fondeo. Recoger cadena o cabo se dice también **cobrar** o **virar**."
+        },
+        {
+          "type": "p",
+          "text": "Para levar, el molinete tiene que estar justo al revés que para fondear: ahora el motor debe arrastrar el barbotén y nada debe frenarlo."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Maniobra",
+            "Embrague",
+            "Freno"
+          ],
+          "rows": [
+            [
+              "Preparar el fondeo",
+              "**Desembragado**",
+              "**Aplicado** (se afloja para dar fondo)"
+            ],
+            [
+              "Levar el ancla",
+              "**Embragado**",
+              "**Libre** (suelto)"
+            ]
+          ],
+          "title": "El molinete en cada maniobra"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "**Embragar** el molinete (el barbotén) y **dejar libre el freno**.",
+            "Dar **avante** poco a poco mientras se cobra cadena, para que el molinete no tenga que arrastrar el barco.",
+            "Seguir cobrando hasta que la cadena esté **a pique**: vertical, con el barco justo encima del ancla.",
+            "Cobrar un poco más hasta que el ancla se despega del fondo: en ese momento el ancla **zarpa**.",
+            "Seguir cobrando hasta dejar el ancla estibada a bordo, y trincarla."
+          ],
+          "title": "La maniobra"
+        },
+        {
+          "type": "term",
+          "term": "A pique",
+          "text": "La cadena trabaja en vertical: el ancla está justo debajo de la proa."
+        },
+        {
+          "type": "term",
+          "term": "Zarpar",
+          "text": "Despegarse el ancla del fondo al levarla."
+        },
+        {
+          "type": "term",
+          "term": "Tirar por largo",
+          "text": "La cadena trabaja muy tendida hacia proa: el ancla está lejos, por delante del barco, y la cadena llama con fuerza."
+        },
+        {
+          "type": "term",
+          "term": "Palada",
+          "text": "Golpe corto de máquina. «Unas paladas avante» es dar avante solo un momento."
+        },
+        {
+          "type": "p",
+          "text": "Si al levar **la cadena tira por largo con mucha fuerza**, el molinete está intentando arrastrar todo el barco hacia el ancla. La solución es ayudarle con el motor: **dar unas paladas avante**. El barco se acerca al ancla, la cadena se afloja y el molinete vuelve a cobrar sin esfuerzo."
+        },
+        {
+          "type": "p",
+          "text": "El temario añade un matiz: si con la cadena ya a pique sigue tirando mucho hacia proa, es probable que el ancla esté enrocada. En ese caso se larga algo de cadena o cabo con cuidado (para que no se enrede en la hélice), se dan unas paladas avante y se empieza de nuevo."
+        },
+        {
+          "type": "exam",
+          "text": "Hay cinco preguntas iguales: «al levar el ancla, esta tira por largo con mucha fuerza, ¿qué hacemos?». Siempre: **dar unas paladas avante**. Nunca «dar unas paladas atrás» ni «dar atrás» (tensaría más la cadena), ni «aumentar la fuerza o la potencia del molinete» (lo forzarías), ni «dar avante con todo el timón a la banda contraria al ancla fondeada», ni «sacar la cadena del barbotén»."
+        },
+        {
+          "type": "exam",
+          "text": "Tres preguntas sobre el molinete al levar. La respuesta lleva siempre **embragar + freno libre**: «embragar el barbotén y dejar libre el freno», «embragar el molinete y dejar libre el freno», o, si piden una sola palabra, el molinete debe estar **embragado** (no desembragado, aparejado ni armado). Descarta lo que deje el molinete desembragado, lo que deje el barbotén frenado («frenar el barbotén y embragar el molinete»), «dejar libre el freno solamente» y «embragar el molinete y aparejar el barbotén»."
+        },
+        {
+          "type": "key",
+          "text": "Levar: molinete embragado y freno libre. Si tira por largo con mucha fuerza: unas paladas avante. A pique = cadena vertical; zarpar = el ancla se despega del fondo."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Chicote es el extremo libre de un cabo, seno la curva, firme la parte larga y gaza el lazo del extremo que se encapilla. Con la gaza en el noray, el chicote queda en tierra y el firme a bordo.",
+    "El noray está fijado al muelle; la bita (U) y la cornamusa (T) están a bordo. Los tres sirven para hacer firmes los cabos.",
+    "El guía-cabos conduce las amarras y evita que rocen; la roldana es la rueda giratoria por donde laborea un cabo.",
+    "Las defensas protegen el casco de golpes y roces y se colocan entre el barco y el muelle o el barco de al lado.",
+    "Nudo llano: unir dos cabos de la misma mena (grosor) y material.",
+    "As de guía: hacer una gaza sin costuras para el amarre, por ejemplo a un noray.",
+    "Vuelta de rezón: afirmar un cabo a una argolla o al arganeo, y defensas que estarán tendidas mucho tiempo. Ballestrinque: rápido, al pasamanos o la regala, para defensas de poco tiempo.",
+    "Para elegir fondeadero se valoran viento, corrientes, profundidad, tipo de fondo, espacio de borneo y amplitud. No conviene un fondo con gran pendiente ni con cambios bruscos de sonda.",
+    "Mejores tenederos: fango duro o compacto y arena. El cascajo es aceptable. Malos: fango blando, arcilla, algas, piedra y coral.",
+    "Longitud de fondeo: de 3 a 4 veces el fondo con buen tiempo y de 5 a 6 veces el fondo con mal tiempo. Nunca se mide en esloras.",
+    "Bornear es girar el barco alrededor de su ancla; el círculo que describe es el círculo de borneo.",
+    "Garrear es que el ancla no agarra y se arrastra por el fondo.",
+    "El orinque es un cabo de la cruz del ancla a un boyarín: baliza el ancla y evita perderla.",
+    "Para fondear: destrincar, ancla a la pendura y frenada, freno aplicado y molinete desembragado; se da fondo quitando el freno. Para levar: molinete embragado y freno libre.",
+    "Si al levar el ancla la cadena tira por largo con mucha fuerza, se dan unas paladas avante."
+  ],
+  "glossary": [
+    {
+      "term": "Cabo",
+      "text": "Cualquier cuerda de a bordo."
+    },
+    {
+      "term": "Chicote",
+      "text": "Extremo libre de un cabo o cable."
+    },
+    {
+      "term": "Seno",
+      "text": "Curva que forma un cabo entre sus extremos."
+    },
+    {
+      "term": "Firme",
+      "text": "Parte más larga o principal de un cabo, la que no es el chicote."
+    },
+    {
+      "term": "Gaza",
+      "text": "Lazo cerrado en el extremo de un cabo, que sirve para encapillarlo."
+    },
+    {
+      "term": "Encapillar",
+      "text": "Enganchar una gaza pasándola por encima de un noray, una bita o una cornamusa."
+    },
+    {
+      "term": "Hacer firme (afirmar)",
+      "text": "Sujetar un cabo de forma segura a una pieza o a un objeto."
+    },
+    {
+      "term": "Mena",
+      "text": "Grosor de un cabo."
+    },
+    {
+      "term": "Azocar",
+      "text": "Apretarse un nudo al trabajar."
+    },
+    {
+      "term": "Zafarse",
+      "text": "Soltarse o deshacerse un nudo o un cabo."
+    },
+    {
+      "term": "Laborear",
+      "text": "Correr o trabajar un cabo por una roldana o polea."
+    },
+    {
+      "term": "Noray",
+      "text": "Pieza cilíndrica fijada al muelle donde se hacen firmes las amarras."
+    },
+    {
+      "term": "Bolardo",
+      "text": "Pieza de amarre del muelle, como el noray pero de forma asimétrica."
+    },
+    {
+      "term": "Muerto",
+      "text": "Bloque pesado depositado en el fondo y unido a una boya, al que se amarran embarcaciones."
+    },
+    {
+      "term": "Boya",
+      "text": "Objeto flotante unido a un muerto, que señala algo o delimita una zona."
+    },
+    {
+      "term": "Bita",
+      "text": "Pieza en forma de U fija a la cubierta para hacer firmes las amarras."
+    },
+    {
+      "term": "Cornamusa",
+      "text": "Pieza en forma de T o doble T fija a la cubierta para hacer firmes las amarras."
+    },
+    {
+      "term": "Guía-cabos",
+      "text": "Pieza por la que pasan las amarras, que las conduce y evita que rocen con el casco o la cubierta."
+    },
+    {
+      "term": "Roldana",
+      "text": "Rueda acanalada y giratoria por la que laborea un cabo."
+    },
+    {
+      "term": "Defensas",
+      "text": "Protecciones que se cuelgan entre el casco y el muelle u otro barco para evitar golpes y roces."
+    },
+    {
+      "term": "Bichero",
+      "text": "Palo con un gancho en la punta para coger cabos y acercar o alejar la embarcación."
+    },
+    {
+      "term": "Nudo llano",
+      "text": "Nudo para unir dos cabos de la misma mena y material."
+    },
+    {
+      "term": "As de guía",
+      "text": "Nudo que forma una gaza fija sin costuras, usado para el amarre."
+    },
+    {
+      "term": "Ballestrinque",
+      "text": "Nudo rápido para afirmar un cabo a una regala o colgar una defensa del pasamanos."
+    },
+    {
+      "term": "Vuelta de rezón",
+      "text": "Nudo para afirmar un cabo a una argolla o al arganeo del ancla."
+    },
+    {
+      "term": "Arganeo",
+      "text": "Argolla del extremo superior del ancla, donde se une la cadena o el cabo."
+    },
+    {
+      "term": "Cruz del ancla",
+      "text": "Parte inferior del ancla donde se unen la caña y los brazos."
+    },
+    {
+      "term": "Fondear",
+      "text": "Dejar caer el ancla para que el barco quede sujeto al fondo."
+    },
+    {
+      "term": "Tenedero",
+      "text": "Calidad del fondo marino para que agarre el ancla."
+    },
+    {
+      "term": "Sonda",
+      "text": "Profundidad del agua en un punto."
+    },
+    {
+      "term": "Derrotero",
+      "text": "Libro que describe la costa, sus fondeaderos, vientos y corrientes."
+    },
+    {
+      "term": "Fondeo a la gira",
+      "text": "Fondeo con una sola ancla, alrededor de la cual el barco gira libremente."
+    },
+    {
+      "term": "Bornear",
+      "text": "Girar el barco fondeado alrededor de su ancla por el viento o la corriente."
+    },
+    {
+      "term": "Círculo de borneo",
+      "text": "Círculo que describe el barco fondeado al girar alrededor de su ancla."
+    },
+    {
+      "term": "Garrear",
+      "text": "Arrastrarse el ancla por el fondo por no agarrar bien."
+    },
+    {
+      "term": "Orinque",
+      "text": "Cabo que une la cruz del ancla con un boyarín para balizarla."
+    },
+    {
+      "term": "Molinete",
+      "text": "Máquina de proa para largar y recoger la cadena del ancla."
+    },
+    {
+      "term": "Barbotén",
+      "text": "Corona dentada del molinete en la que engrana la cadena."
+    },
+    {
+      "term": "Filar",
+      "text": "Largar cadena o cabo poco a poco."
+    },
+    {
+      "term": "Levar",
+      "text": "Recoger la cadena y el ancla para salir del fondeo."
+    }
+  ],
+  "questions": {
+    "xvu6szokatzzlgo": "lugar-de-fondeo",
+    "vaq2hzyqutcxvnm": "nudo-llano",
+    "y39en9fs06guf5d": "orinque",
+    "t0upl9t6sg80cc9": "maniobra-de-fondeo",
+    "duai72otty12fhw": "garreo-y-vigilancia",
+    "5rko1m3nq2mvo2k": "tenederos",
+    "4sye3xr1wx6z6zf": "partes-de-un-cabo",
+    "xu1ho9u5hjtn1mc": "garreo-y-vigilancia",
+    "gp670vuppdi47dd": "lugar-de-fondeo",
+    "go8g919ikuir0cv": "levar-el-ancla",
+    "juxg0xunzxbbj52": "elementos-a-bordo",
+    "8n31uqht3hdhtt7": "longitud-de-fondeo-y-borneo",
+    "726ldymdgc95eq1": "defensas-y-bichero",
+    "9glnrmmoeb9o1cw": "lugar-de-fondeo",
+    "k90nvn0503cc4tk": "longitud-de-fondeo-y-borneo",
+    "9dghfe446gmq2nj": "levar-el-ancla",
+    "6dgnin971mi228m": "elementos-en-tierra-y-en-el-agua",
+    "w6ly6q3q9tsnhw0": "ballestrinque-y-vuelta-de-rezon",
+    "yeq2coejst25yv1": "nudo-llano",
+    "irvlpqohljl8cqv": "garreo-y-vigilancia",
+    "vpbdy0cnhocs90t": "levar-el-ancla",
+    "uf7gv6dj6a690iy": "as-de-guia",
+    "1pu2r4fppydh1nz": "elementos-a-bordo",
+    "wtn6bvmpxjbwgy1": "lugar-de-fondeo",
+    "h55fis1m3v5aend": "tenederos",
+    "vb6iuc8r3ehrem1": "garreo-y-vigilancia",
+    "5dqc1nmqwdpombf": "levar-el-ancla",
+    "eutqt9ms4v3gh0n": "ballestrinque-y-vuelta-de-rezon",
+    "cc4kp7wwvne2f3g": "as-de-guia",
+    "qs9dbd1dp9le2vs": "ballestrinque-y-vuelta-de-rezon",
+    "y899vic4h9r98a1": "defensas-y-bichero",
+    "cmaay80hr7waanc": "levar-el-ancla",
+    "edg23hh9e5hxdtm": "elementos-a-bordo",
+    "qqadz67xowmzc8a": "tenederos",
+    "issqp1qp4sjgh3s": "elementos-a-bordo",
+    "x1v9fv6vibvoh0j": "levar-el-ancla",
+    "wzvo8d5mntg7gfj": "elementos-en-tierra-y-en-el-agua",
+    "eb06skv2fi1i2jj": "longitud-de-fondeo-y-borneo",
+    "nvc44utqi6x2nwi": "levar-el-ancla",
+    "v71k01o99oyoghx": "partes-de-un-cabo",
+    "ir4yi3w05a842q0": "ballestrinque-y-vuelta-de-rezon",
+    "we1xe1tqeytmk1u": "longitud-de-fondeo-y-borneo",
+    "4sra580swhjziba": "tenederos",
+    "f51munrx5xf9lk1": "longitud-de-fondeo-y-borneo",
+    "cl0aoldvdr3u2oe": "maniobra-de-fondeo",
+    "fjjt8ls849f1ij1": "orinque",
+    "kbjagb4l4da71jx": "nudo-llano",
+    "2p2or5o8o2kacdn": "longitud-de-fondeo-y-borneo",
+    "s6109cnot14uk15": "ballestrinque-y-vuelta-de-rezon",
+    "i38vldd0spfkx6c": "partes-de-un-cabo",
+    "j5vy6divrwezeuu": "ballestrinque-y-vuelta-de-rezon",
+    "gafzsncr5mr5n3z": "longitud-de-fondeo-y-borneo",
+    "h3nlkh5rdkr7nah": "nudo-llano",
+    "i201cuk03t9n15a": "longitud-de-fondeo-y-borneo",
+    "eggj9msupt2w1mu": "orinque",
+    "94v92tjkd2qpibf": "longitud-de-fondeo-y-borneo",
+    "u5ohh242t9gpfez": "elementos-a-bordo",
+    "oltlyyoevp77nc2": "orinque",
+    "tw10zjpnj3dmxmw": "ballestrinque-y-vuelta-de-rezon",
+    "p0sqegdxl69rdj7": "levar-el-ancla",
+    "elchir9be90uii8": "nudo-llano",
+    "2wgthy3yprasxd1": "tenederos",
+    "gidgk7gf90histe": "ballestrinque-y-vuelta-de-rezon",
+    "m5aes41vrxdt8s9": "orinque",
+    "wvj8n1ifr7d89tu": "as-de-guia",
+    "ekx4pvb1ccy9y79": "garreo-y-vigilancia",
+    "kq7cjzkdav02jni": "elementos-a-bordo",
+    "5kxfrtdj3z1cudo": "lugar-de-fondeo"
+  }
+}

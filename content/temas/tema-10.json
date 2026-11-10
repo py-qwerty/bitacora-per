@@ -1,0 +1,1855 @@
+{
+  "topic": 10,
+  "title": "Teoría de navegación",
+  "minutes": 55,
+  "intro": {
+    "why": "Es la unidad que te enseña a saber dónde estás y hacia dónde vas: cómo leer una carta, qué marca de verdad el compás y cómo pasar de lo que ves a bordo a lo que se dibuja en la carta. También es la base de los ejercicios de carta del examen. La mayoría de sus preguntas son definiciones muy parecidas entre sí, así que aquí se aprueba distinguiendo bien cada término.",
+    "before": [
+      "Una circunferencia tiene 360 grados y cada grado tiene 60 minutos.",
+      "Babor es el lado izquierdo del barco mirando a proa; estribor, el derecho. La línea de crujía es la línea proa-popa.",
+      "Barlovento es el lado por donde viene el viento; sotavento, el lado hacia donde va.",
+      "Sumar algebraicamente es sumar respetando el signo: sumar un número negativo es restar."
+    ],
+    "goals": [
+      "Definir latitud, longitud, meridiano del lugar y paralelo sin confundirlos.",
+      "Distinguir los tipos de carta y leer sondas, veriles, naturaleza del fondo y luces de faros.",
+      "Usar la milla, el nudo, la corredera con su coeficiente y la Hora Reloj Bitácora.",
+      "Diferenciar declinación, desvío y corrección total, y pasar entre rumbo de aguja, magnético y verdadero.",
+      "Actualizar la declinación magnética de la carta.",
+      "Convertir rumbos cuadrantales en circulares.",
+      "Relacionar rumbo, demora y marcación, y saber qué líneas de posición se pueden trazar en la carta.",
+      "Explicar el cero hidrográfico, la amplitud y la duración de la marea, y cómo las alteran la presión y el viento.",
+      "Distinguir abatimiento y deriva."
+    ]
+  },
+  "sections": [
+    {
+      "id": "esfera-terrestre",
+      "title": "La esfera terrestre: meridianos, paralelos, latitud y longitud",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Para decir dónde está un barco necesitamos una «cuadrícula» dibujada sobre la Tierra. Esa cuadrícula la forman los paralelos y los meridianos, y la posición se da con dos números: la latitud y la longitud."
+        },
+        {
+          "type": "term",
+          "term": "Eje y polos",
+          "text": "El eje es el diámetro alrededor del cual gira la Tierra. Sus dos extremos son el polo norte y el polo sur."
+        },
+        {
+          "type": "term",
+          "term": "Ecuador",
+          "text": "Circunferencia (círculo) máxima perpendicular al eje. Divide la Tierra en hemisferio norte y hemisferio sur."
+        },
+        {
+          "type": "term",
+          "term": "Paralelos",
+          "text": "Circunferencias o **círculos menores paralelos al ecuador**. Hay infinitos. Un paralelo es el lugar geométrico de los puntos que tienen **la misma latitud**."
+        },
+        {
+          "type": "term",
+          "term": "Meridianos",
+          "text": "Circunferencias **máximas que pasan por los polos**; por eso son perpendiculares al ecuador. Hay infinitos. Todos los puntos de un mismo meridiano tienen **la misma longitud**."
+        },
+        {
+          "type": "term",
+          "term": "Meridiano del lugar",
+          "text": "El meridiano que pasa por el punto donde está el observador o el barco. Dicho con precisión: la circunferencia máxima que pasa por los polos terrestres y por la situación del barco."
+        },
+        {
+          "type": "term",
+          "term": "Meridiano cero, primer meridiano o meridiano de Greenwich",
+          "text": "El meridiano que se toma como origen para contar las longitudes. Su longitud es 0º. El opuesto es el meridiano de los 180º."
+        },
+        {
+          "type": "analogy",
+          "text": "Piensa en una naranja: los gajos van de arriba abajo, de «polo» a «polo», como los meridianos. Si la cortas en rodajas horizontales, cada corte es un paralelo; el corte del centro, el más grande, es el ecuador."
+        },
+        {
+          "type": "term",
+          "term": "Latitud (l)",
+          "text": "**Arco de meridiano** contado desde el **ecuador** hasta el paralelo del lugar (hasta el lugar o el buque). Se mide de 0º a 90º y es Norte (signo +) o Sur (signo −). En el ecuador vale 0º y en los polos 90º."
+        },
+        {
+          "type": "term",
+          "term": "Longitud (L)",
+          "text": "**Arco de ecuador** contado desde el **meridiano de Greenwich** (meridiano cero) hasta el **meridiano del lugar**. Se mide de 0º a 180º y es Este u Oeste."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Dato",
+            "Latitud",
+            "Longitud"
+          ],
+          "rows": [
+            [
+              "Qué arco es",
+              "Arco de meridiano",
+              "Arco de ecuador"
+            ],
+            [
+              "Desde dónde se cuenta",
+              "Desde el ecuador",
+              "Desde el meridiano de Greenwich (meridiano cero)"
+            ],
+            [
+              "Hasta dónde",
+              "Hasta el paralelo del lugar",
+              "Hasta el meridiano del lugar"
+            ],
+            [
+              "Valores",
+              "0º a 90º, N o S",
+              "0º a 180º, E o W"
+            ],
+            [
+              "Misma cifra significa",
+              "Estar en el mismo paralelo",
+              "Estar en el mismo meridiano"
+            ]
+          ],
+          "title": "Latitud y longitud, cara a cara"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dos buques con la **misma longitud** están en el **mismo meridiano**.",
+            "Dos buques con la **misma latitud** (y que no estén en el ecuador) están en el **mismo paralelo**. Y al revés: dos buques en el mismo paralelo tienen la misma latitud.",
+            "Dos buques en el mismo meridiano pero en hemisferios distintos NO tienen la misma latitud: una es Norte y la otra Sur.",
+            "Un buque en el ecuador tiene latitud 0º; su longitud puede ser cualquiera (no «siempre cero»).",
+            "El meridiano del lugar y el meridiano cero solo son el mismo si estás justo en Greenwich; en general son distintos."
+          ],
+          "title": "Consecuencias que se preguntan"
+        },
+        {
+          "type": "exam",
+          "text": "Trampas habituales: decir que los paralelos son círculos «máximos» (son **menores**; el único círculo máximo de esa familia es el propio ecuador), cambiar «arco de meridiano» por «arco de ecuador» en las definiciones, o decir que el meridiano del lugar es «paralelo» al meridiano cero o al ecuador. Si entre las opciones aparecen palabras raras como «vertical» o «almicantarat», descártalas: misma latitud = mismo paralelo; misma longitud = mismo meridiano."
+        },
+        {
+          "type": "key",
+          "text": "Latitud: arco de meridiano desde el ecuador (0º-90º N/S). Longitud: arco de ecuador desde Greenwich hasta el meridiano del lugar (0º-180º E/W). Misma latitud, mismo paralelo; misma longitud, mismo meridiano."
+        }
+      ]
+    },
+    {
+      "id": "cartas-nauticas",
+      "title": "Cartas náuticas: tipos y qué información dan",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "La carta náutica es el «mapa» del navegante. Las que usarás son **mercatorianas**: una proyección cilíndrica en la que los meridianos aparecen como rectas paralelas y equidistantes, y los paralelos como rectas cuya separación aumenta al alejarse del ecuador. Sirven para trazar rumbos como líneas rectas (derrotas loxodrómicas). Las cartas gnomónicas se usan para derrotas ortodrómicas."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Tipo",
+            "Para qué sirve"
+          ],
+          "rows": [
+            [
+              "De navegación costera",
+              "Para navegar reconociendo la costa."
+            ],
+            [
+              "De recalada (o aproches)",
+              "Su misión es **facilitar la aproximación a los puertos** y a aquellos accidentes geográficos que por su importancia o peligro requieren un mayor detalle."
+            ],
+            [
+              "Portulanos",
+              "Muestran **el detalle más completo de una pequeña extensión de costa y mar**: puertos, radas, ensenadas, fondeaderos, etc."
+            ],
+            [
+              "Cartuchos",
+              "No son una carta aparte: son **una inserción dentro del marco de una carta**, con marcos propios, que representa **a mayor escala** una parte de la zona que abarca esa carta (un puerto, una ensenada…)."
+            ]
+          ],
+          "title": "Clases de cartas según la extensión que representan"
+        },
+        {
+          "type": "analogy",
+          "text": "Es como hacer zoom: la carta costera es la vista general, la de recalada te acerca a la entrada, el portulano es el plano del puerto, y el cartucho es la «lupa» pegada en una esquina de otra carta."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Accidentes de la costa (acantilados, playas) y del terreno (montes, cumbres).",
+            "Puntos de referencia: torres, chimeneas, campanarios, espigones.",
+            "Luces (faros con su característica), boyas y balizas.",
+            "Sondas, veriles y naturaleza del fondo.",
+            "Peligros: bajos, arrecifes, naufragios.",
+            "**Zonas prohibidas**, como las de **fondeo prohibido** o de pesca de arrastre. Sí: las zonas de fondeadero prohibido las dan las cartas de navegación (todas, no solo los portulanos).",
+            "La declinación magnética, en la rosa de los vientos."
+          ],
+          "title": "Información que proporciona una carta"
+        },
+        {
+          "type": "exam",
+          "text": "Se pregunta con la definición literal. «Detalle más completo de una pequeña extensión» = **portulano**. «Facilitar la aproximación a los puertos» = **recalada**. «Trozo de zona ampliada e insertada», «representación a mayor escala insertada dentro de marcos propios» = **cartucho** (no es una señal de balizamiento, ni la zona de tierra, ni el recuadro de las leyendas)."
+        },
+        {
+          "type": "key",
+          "text": "Costera para navegar a la vista de costa, recalada para aproximarse, portulano para el máximo detalle de un trozo pequeño, y cartucho como ampliación insertada en otra carta. Las cartas sí señalan las zonas de fondeo prohibido."
+        }
+      ]
+    },
+    {
+      "id": "sondas-veriles-fondo",
+      "title": "Sondas, veriles y naturaleza del fondo en la carta",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Sonda (en la carta)",
+          "text": "Cada número suelto sobre el mar es una profundidad en metros. No está medida desde el nivel del mar de hoy, sino desde el **cero hidrográfico** (lo verás en el apartado de mareas)."
+        },
+        {
+          "type": "term",
+          "term": "Veriles",
+          "text": "Líneas que en la carta **unen puntos de igual profundidad (la misma sonda)**. También se llaman **líneas isobáticas**. Por ejemplo, el veril de 10 m une todos los puntos con 10 m de sonda."
+        },
+        {
+          "type": "analogy",
+          "text": "Los veriles son las «curvas de nivel» del fondo del mar: igual que en un mapa de montaña, pero hacia abajo."
+        },
+        {
+          "type": "p",
+          "text": "Debajo o junto a la sonda, la carta indica con abreviaturas de qué está hecho el fondo. Te interesa para fondear: el ancla agarra bien en arena o fango y mal en roca. En el examen aparecen dos familias de abreviaturas: las españolas tradicionales y las internacionales (en inglés), que son las de las cartas actuales."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Abreviatura",
+            "Viene de",
+            "Fondo"
+          ],
+          "rows": [
+            [
+              "S",
+              "sand",
+              "Arena"
+            ],
+            [
+              "M",
+              "mud",
+              "Fango"
+            ],
+            [
+              "G",
+              "gravel",
+              "**Cascajo** (grava)"
+            ],
+            [
+              "St",
+              "stones",
+              "**Piedras**"
+            ],
+            [
+              "Sh",
+              "shells",
+              "**Conchuela** (restos de conchas)"
+            ],
+            [
+              "R",
+              "rock",
+              "Roca"
+            ],
+            [
+              "S G",
+              "sand + gravel",
+              "**Arena con cascajo** (dos abreviaturas juntas = fondo mixto)"
+            ]
+          ],
+          "title": "Abreviaturas internacionales"
+        },
+        {
+          "type": "table",
+          "head": [
+            "Abreviatura",
+            "Fondo"
+          ],
+          "rows": [
+            [
+              "A",
+              "Arena"
+            ],
+            [
+              "F",
+              "Fango"
+            ],
+            [
+              "L",
+              "Lodo o **limo**"
+            ],
+            [
+              "Arc",
+              "Arcilla"
+            ],
+            [
+              "Co",
+              "**Cascajo**"
+            ],
+            [
+              "Ca",
+              "Conchuela"
+            ],
+            [
+              "Go",
+              "Guijarro"
+            ],
+            [
+              "P",
+              "Piedra"
+            ],
+            [
+              "R",
+              "**Roca**"
+            ],
+            [
+              "Alg",
+              "Algas"
+            ],
+            [
+              "Cl",
+              "Coral"
+            ]
+          ],
+          "title": "Abreviaturas españolas tradicionales"
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test: «Co, L y R» = **cascajo, limo y roca** (clave del banco). Ojo: el temario llama «lodo» a la L y, en la nomenclatura internacional, «Co» significa coral; aun así, la respuesta que da el banco es cascajo, limo y roca. Otra trampa: la letra **G es cascajo**, no guijarro (el guijarro era «Go» en la nomenclatura española). «St» = piedras, «Sh» = conchuela, «S G» = arena con cascajo."
+        },
+        {
+          "type": "exam",
+          "text": "Los veriles unen puntos de igual **sonda**; no de igual «datum», amplitud de marea ni temperatura. No los confundas con las isobaras (igual presión atmosférica, del tema de meteorología) ni con nombres inventados como «buriles» o «sondiles»."
+        },
+        {
+          "type": "key",
+          "text": "Veril = línea isobática = puntos de igual sonda. G cascajo, S arena, St piedras, Sh conchuela, R roca; y para el banco, Co cascajo y L limo."
+        }
+      ]
+    },
+    {
+      "id": "luces-y-publicaciones",
+      "title": "Luces de los faros en la carta y publicaciones náuticas",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "De día un faro se reconoce por su forma y color. **De noche se identifica por su característica: el color de su luz y su ritmo** (cómo se enciende y se apaga). La altura no sirve para identificarlo de noche. La carta resume esa característica con una inscripción junto al símbolo del faro."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Abreviatura",
+            "Significado"
+          ],
+          "rows": [
+            [
+              "F",
+              "Luz **fija** (fixed): encendida siempre, sin ritmo."
+            ],
+            [
+              "Fl",
+              "Luz de **destellos** (flashing): está apagada y da destellos; pasa más tiempo apagada que encendida."
+            ],
+            [
+              "LFl",
+              "Luz de **destellos largos** (long flash): cada destello dura **2 segundos o más**."
+            ],
+            [
+              "Oc",
+              "Luz de **ocultaciones**: está encendida continuamente y **se apaga** a intervalos; pasa más tiempo encendida que apagada."
+            ],
+            [
+              "(2), (3)…",
+              "Grupo: los destellos (o las ocultaciones) van agrupados de 2 en 2, de 3 en 3…"
+            ],
+            [
+              "W, R, G",
+              "Color: blanco (white), rojo, verde. Si no se indica color, la luz es blanca."
+            ],
+            [
+              "10s",
+              "Periodo: los segundos que dura el ciclo completo antes de repetirse."
+            ],
+            [
+              "15M",
+              "Alcance (nominal) de la luz en **millas**: M mayúscula."
+            ],
+            [
+              "30m",
+              "Altura (elevación) de la luz en **metros**: m minúscula."
+            ]
+          ],
+          "title": "Cómo leer la inscripción de una luz"
+        },
+        {
+          "type": "analogy",
+          "text": "Una luz de destellos es como un intermitente: oscuridad con chispazos de luz. Una luz de ocultaciones es lo contrario: una lámpara encendida a la que alguien tapa con la mano de vez en cuando. En esta, lo importante para reconocerla es el periodo en que está apagada."
+        },
+        {
+          "type": "example",
+          "text": "**FW**: luz blanca fija. **Fl 5s 22M**: un destello cada 5 segundos y alcance nominal de 22 millas. **Fl (2) 10s 15M**: grupos de 2 destellos cada 10 segundos; «15M» son 15 millas de alcance. **Oc 5s 13M 30m**: luz encendida continuamente que se apaga (una ocultación) cada 5 segundos, con 13 millas de alcance y 30 metros de altura. **Oc (2) 10s 15M**: encendida continuamente, se apaga en grupos de dos cada 10 segundos, alcance 15 millas. **Oc (3) 10s 12M**: continuamente encendida, se apaga 3 veces cada 10 segundos, alcance 12 millas.",
+          "title": "Inscripciones que salen en el banco"
+        },
+        {
+          "type": "exam",
+          "text": "Las opciones falsas repiten siempre los mismos inventos: que una luz de ocultación «está apagada y da destellos» (eso es Fl), que «se enciende u oculta en caso de emergencia», que la cifra con M son «destellos» o «minutos», o que 22M son 22 metros de altura. Regla fija: **M = millas de alcance, m = metros de altura, s = segundos de periodo**. Y «LFl» no es una luz fija con un destello: es destello largo, de 2 o más segundos."
+        },
+        {
+          "type": "p",
+          "text": "Además de la carta, a bordo se consultan varias publicaciones. Las edita el Instituto Hidrográfico de la Marina (IHM), con sede en Cádiz."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Publicación",
+            "Qué contiene"
+          ],
+          "rows": [
+            [
+              "**Libro de Faros y Señales de Niebla**",
+              "Información detallada del **balizamiento luminoso, del balizamiento ciego** (sin luz) y de las **señales de niebla** de las costas que abarca. Más detalle sobre cada luz que la carta."
+            ],
+            [
+              "Derroteros",
+              "Descripción de la costa para reconocerla: puertos y sus servicios, corrientes, enfilaciones, fondeaderos, peligros, vientos y clima de la zona, con vistas y perfiles de la costa."
+            ],
+            [
+              "Guías náuticas para la navegación de recreo y otras",
+              "Publicaciones de ayuda: anuario de mareas, reglamento de balizamiento, RIPA, libro de radioseñales, código internacional de señales, manual de primeros auxilios."
+            ]
+          ]
+        },
+        {
+          "type": "key",
+          "text": "Un faro de noche se identifica por el color y el ritmo de su luz. F fija, Fl destellos, LFl destello largo (2 s o más), Oc ocultaciones (encendida y se apaga); M millas de alcance, m metros de altura. El detalle de luces y señales de niebla está en el Libro de Faros."
+        }
+      ]
+    },
+    {
+      "id": "milla-nudo-distancias",
+      "title": "Milla náutica, nudo y cómo medir distancias en la carta",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Milla náutica",
+          "text": "Unidad de distancia en la mar. Es la longitud de **un minuto de arco** de círculo máximo de la Tierra y equivale a **1852 metros**."
+        },
+        {
+          "type": "term",
+          "term": "Nudo",
+          "text": "Unidad de velocidad: **una milla náutica por hora**. Navegar a 6 nudos es recorrer 6 millas cada hora."
+        },
+        {
+          "type": "p",
+          "text": "Como un minuto de arco de meridiano vale una milla, la escala de latitudes de la carta (los márgenes verticales, izquierdo y derecho) es directamente una regla graduada en millas: **1 minuto de latitud = 1 milla**; 1 grado = 60 millas. La escala de longitudes (márgenes superior e inferior) NO sirve para medir distancias, porque en la carta mercatoriana el minuto de longitud no representa una milla."
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Abre el compás de puntas entre los dos puntos de la carta cuya distancia quieres conocer.",
+            "Traslada esa abertura del compás a la **escala de latitudes** (margen lateral), nunca a la de longitudes.",
+            "Hazlo a la altura de la zona donde está la distancia medida (la escala va creciendo con la latitud).",
+            "Cuenta los minutos que abarca: **cada minuto de la escala es una milla**; las décimas de minuto son décimas de milla."
+          ],
+          "title": "Medir una distancia en la carta"
+        },
+        {
+          "type": "example",
+          "text": "El compás abarca en el margen lateral desde 36º 00' hasta 36º 14' de latitud: la distancia es de 14 millas. Si abarca 7,5 minutos, son 7,5 millas."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Unidad",
+            "Equivalencia"
+          ],
+          "rows": [
+            [
+              "Milla náutica",
+              "1852 m"
+            ],
+            [
+              "Cable",
+              "Décima parte de la milla: unos 185 m"
+            ],
+            [
+              "Braza",
+              "1,83 m"
+            ],
+            [
+              "Pie",
+              "0,3048 m"
+            ]
+          ],
+          "title": "Otras medidas"
+        },
+        {
+          "type": "exam",
+          "text": "Hay dos preguntas sobre la milla que parecen contradecirse; apréndete las dos claves. 1) «La milla náutica es…»: el banco da por buena «la longitud del arco de **ecuador** correspondiente a un ángulo central de un minuto; equivale a 1852 metros» (es también la definición del temario; no elijas «paralelo 45º» ni «diezmillonésima parte del cuadrante del meridiano», que es el metro). 2) «El valor de un minuto de arco de **meridiano** es…»: **una milla**, a secas (no «sería una milla si fuese de ecuador», ni dos millas). En ambos casos: un minuto de círculo máximo = una milla = 1852 m."
+        },
+        {
+          "type": "exam",
+          "text": "En las preguntas de medir distancias, la respuesta correcta siempre dice «escala de **latitudes**, donde cada **minuto** equivale a una milla». Son falsas las que dicen escala de longitudes, «indistintamente», «escala de los paralelos» o «cada grado equivale a una milla»."
+        },
+        {
+          "type": "key",
+          "text": "Milla = 1 minuto de arco = 1852 m. Nudo = 1 milla por hora. Las distancias se miden con el compás sobre la escala de latitudes: 1 minuto = 1 milla."
+        }
+      ]
+    },
+    {
+      "id": "corredera-y-sonda",
+      "title": "La corredera y su coeficiente. La sonda",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Corredera",
+          "text": "Instrumento de a bordo que mide **la velocidad del barco y la distancia navegada** (respecto al agua). En recreo la más común es la de hélice o paletas. Como todo instrumento, tiene error."
+        },
+        {
+          "type": "term",
+          "term": "Coeficiente de corredera (K)",
+          "text": "Número que corrige el error de la corredera. Es la **relación entre lo verdadero y lo que marca la corredera**: K = distancia real navegada ÷ distancia de corredera, o lo que es lo mismo, K = velocidad verdadera ÷ velocidad de corredera."
+        },
+        {
+          "type": "p",
+          "text": "De ahí sale la única fórmula que necesitas: **lo real = lo que marca la corredera × K**. Vale igual para distancias y para velocidades. Se multiplica, nunca se divide ni se suma."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Si K es…",
+            "Significa que…"
+          ],
+          "rows": [
+            [
+              "Igual a 1",
+              "La corredera marca exactamente lo real (distancia real = distancia de corredera)."
+            ],
+            [
+              "Menor que 1 (p. ej. 0,9)",
+              "Lo real es **menor** que lo que marca: la corredera marca de más. La velocidad real es menor que la de corredera."
+            ],
+            [
+              "Mayor que 1 (p. ej. 1,1)",
+              "Lo real es **mayor** que lo que marca: la corredera marca de menos."
+            ]
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Navega entre dos puntos conocidos y mide en la carta la distancia real entre ellos.",
+            "Anota la distancia que ha marcado la corredera en ese tramo.",
+            "Divide: K = distancia real ÷ distancia de corredera.",
+            "A partir de entonces, multiplica cualquier lectura de la corredera por K."
+          ],
+          "title": "Cómo se halla y se usa el coeficiente"
+        },
+        {
+          "type": "example",
+          "text": "1) K = 1,1 y la corredera marca 8 millas: distancia verdadera = 8 × 1,1 = **8,8 millas**. 2) La corredera marca 10,4 millas en una hora y K = 0,97: distancia real = 10,4 × 0,97 = 10,09, es decir, **10,1 millas** (y la velocidad real, 10,1 nudos). 3) Hallar K: entre dos faros hay 9,5 millas en la carta y la corredera ha marcado 10: K = 9,5 ÷ 10 = 0,95.",
+          "title": "Cálculos resueltos"
+        },
+        {
+          "type": "exam",
+          "text": "El banco pregunta lo mismo de muchas formas: «¿cómo conocemos la velocidad real o verdadera del barco?» → **multiplicando el coeficiente de corredera por la velocidad de corredera**. «Si se multiplica la distancia de corredera por el coeficiente obtenemos…» → la **distancia real navegada**. «El coeficiente es la relación entre…» → la **velocidad verdadera y la velocidad de corredera** (en ese orden; al revés es falso). Las opciones con «dividir», «sumar» o «restar» son falsas. Con K = 0,9 la única cierta es «la velocidad real es menor que la de corredera»."
+        },
+        {
+          "type": "term",
+          "term": "Sonda (el instrumento)",
+          "text": "Aparato que sirve para **conocer la profundidad**: mide la distancia vertical entre el fondo y el punto del casco donde va el transductor. Emite impulsos hacia el fondo y calcula la profundidad por el tiempo que tarda en volver el eco. Sus partes son emisor, transductor y receptor, y suele tener alarmas de profundidad mínima y máxima."
+        },
+        {
+          "type": "exam",
+          "text": "No confundas instrumentos: la **corredera** mide velocidad y distancia navegada; la **sonda** mide profundidad (no el calado ni el francobordo); el **transductor** es solo una parte de la sonda; la aguja náutica da el rumbo."
+        },
+        {
+          "type": "key",
+          "text": "Corredera: velocidad y distancia. K = real ÷ corredera, así que real = corredera × K. Con K menor que 1, lo real es menor que lo marcado. Sonda: profundidad."
+        }
+      ]
+    },
+    {
+      "id": "hora-reloj-bitacora",
+      "title": "Hora Reloj Bitácora y cálculos de distancia, velocidad y tiempo",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Hora Reloj Bitácora (HRB)",
+          "text": "Es **la hora de a bordo**: la hora que se lleva a bordo, **fijada por el patrón**, y por la que **se rige la vida a bordo**. Es la que se anota en los cálculos de navegación."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Hora",
+            "Qué es",
+            "¿Es la HRB?"
+          ],
+          "rows": [
+            [
+              "Hora Reloj Bitácora",
+              "La que fija el patrón; la hora de a bordo",
+              "Sí"
+            ],
+            [
+              "Hora legal",
+              "La que corresponde al huso horario",
+              "No"
+            ],
+            [
+              "Hora oficial",
+              "La fijada por el Gobierno de la Nación (o por el Estado del pabellón o de las aguas por las que se navega)",
+              "No"
+            ],
+            [
+              "Hora civil del lugar",
+              "La que corresponde al meridiano del lugar",
+              "No"
+            ],
+            [
+              "Hora del meridiano de Greenwich",
+              "La del meridiano cero (tiempo universal)",
+              "No"
+            ]
+          ],
+          "title": "Para descartar opciones"
+        },
+        {
+          "type": "exam",
+          "text": "Hay muchas preguntas casi idénticas sobre la HRB. La correcta siempre es alguna de estas: «la hora de a bordo», «la hora que se lleva a bordo (fijada por el patrón)» o «la hora fijada por el patrón, por la que se rige la vida a bordo». Nunca es la legal, la oficial, la del huso, la civil del lugar ni la de Greenwich."
+        },
+        {
+          "type": "p",
+          "text": "Con la HRB y el nudo ya puedes resolver los problemas de estima. Las tres magnitudes van siempre atadas: **distancia (millas) = velocidad (nudos) × tiempo (horas)**."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Quiero saber",
+            "Fórmula"
+          ],
+          "rows": [
+            [
+              "Distancia",
+              "D = V × T"
+            ],
+            [
+              "Velocidad",
+              "V = D ÷ T"
+            ],
+            [
+              "Tiempo",
+              "T = D ÷ V"
+            ]
+          ]
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Pasa el tiempo a horas decimales: divide los minutos entre 60 (30 min = 0,5 h; 15 min = 0,25 h; 20 min = 0,33 h; 45 min = 0,75 h).",
+            "Aplica la fórmula que corresponda.",
+            "Si el resultado es un tiempo, vuelve a minutos multiplicando la parte decimal por 60.",
+            "Para la hora de llegada, suma el tiempo a la HRB de salida."
+          ],
+          "title": "Método"
+        },
+        {
+          "type": "example",
+          "text": "1) Un barco recorre 24 millas en 2 horas: V = 24 ÷ 2 = **12 nudos**. 2) A 6 nudos durante 2 h 30 min: D = 6 × 2,5 = **15 millas**. 3) Faltan 9 millas y navegas a 6 nudos: T = 9 ÷ 6 = 1,5 h = **1 h 30 min**; si sales a HRB 10:00, llegas a HRB 11:30. 4) A 6 nudos, en 20 minutos recorres 6 × 20 ÷ 60 = **2 millas**. Truco: a 6 nudos haces una milla cada 10 minutos.",
+          "title": "Cálculos resueltos"
+        },
+        {
+          "type": "key",
+          "text": "La HRB es la hora de a bordo, fijada por el patrón. Distancia = velocidad × tiempo, con el tiempo en horas."
+        }
+      ]
+    },
+    {
+      "id": "declinacion-magnetica",
+      "title": "Declinación magnética y cómo actualizarla",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "En la mar se manejan tres «nortes». El **norte verdadero o geográfico** (Nv) es el de los meridianos de la carta. El **norte magnético** (Nm) es hacia donde apunta un imán libre, y no coincide con el geográfico. El **norte de aguja** (Na) es el que señala de verdad tu compás, alterado además por el propio barco. Este apartado trata de la diferencia entre los dos primeros."
+        },
+        {
+          "type": "term",
+          "term": "Declinación magnética (dm)",
+          "text": "Ángulo formado entre el **norte verdadero (geográfico) y el norte magnético**; dicho de otro modo, el ángulo entre el **meridiano geográfico y el meridiano magnético**. Depende del lugar y cambia poco a poco con los años. No depende del barco ni del rumbo."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Si el norte magnético queda al **Este** del verdadero, la dm es **NE (o E) y positiva (+)**.",
+            "Si queda al **Oeste**, la dm es **NW (o W) y negativa (−)**.",
+            "Relación con los rumbos: **Rv = Rm + dm** y **Rm = Rv − dm** (siempre con su signo).",
+            "Si la **declinación es cero**, el norte magnético coincide con el verdadero y, por tanto, **el rumbo verdadero y el rumbo magnético son iguales**."
+          ],
+          "title": "Signo y fórmulas"
+        },
+        {
+          "type": "p",
+          "text": "La carta da la declinación en una leyenda dentro de la rosa de los vientos: el valor en el año de edición y su variación anual (incremento o decremento «anuo»). Por ejemplo: «2º 56' W 2005 (7' E)» significa que en 2005 la dm era 2º 56' al Oeste y que cada año se desplaza 7' hacia el Este."
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Calcula los años transcurridos: año actual menos año de la carta.",
+            "Multiplica esos años por la variación anual. Si pasan de 60 minutos, conviértelos a grados y minutos (60' = 1º).",
+            "Combina con signo: Este +, Oeste −. Si la variación va en el **mismo sentido** que la declinación (W con W, E con E), se **suma** y la dm crece; si va en **sentido contrario** (W con E), se **resta** y la dm disminuye. Si la leyenda dice «decremento anuo», se resta; si dice «incremento anuo», se suma al valor absoluto.",
+            "Redondea al medio grado más próximo para trabajar en la carta (recuerda que son sexagesimales: 30' = 0,5º)."
+          ],
+          "title": "Actualizar la declinación"
+        },
+        {
+          "type": "example",
+          "text": "1) Leyenda «2º 56' W 2005 (7' E)», año 2010: 5 años × 7' = 35' E. Sentidos contrarios, se resta: 2º 56' − 0º 35' = **2º 21' W**, que se redondea a 2,5º W, es decir, **dm = −2,5º**. 2) Leyenda «4º 20' W 2015 (8' E)», año 2026: 11 años × 8' = 88' = 1º 28' E. 4º 20' − 1º 28' = **2º 52' W**, redondeado **dm = −3º**. 3) Leyenda «1º 10' E 2018 (6' E)», año 2026: 8 años × 6' = 48' E. Mismo sentido, se suma: 1º 10' + 0º 48' = **1º 58' E**, redondeado **dm = +2º**.",
+          "title": "Actualizaciones resueltas"
+        },
+        {
+          "type": "exam",
+          "text": "En las preguntas de definición, no confundas los tres ángulos: **declinación** = norte verdadero (geográfico) con norte magnético; **desvío** = norte magnético con norte de aguja; **corrección total** = norte verdadero con norte de aguja. Y con dm = 0 lo que se iguala es Rv y Rm; el rumbo de aguja solo se igualaría al magnético si el desvío fuera cero."
+        },
+        {
+          "type": "key",
+          "text": "Declinación magnética: ángulo entre el norte (o meridiano) geográfico y el magnético. E positiva, W negativa. Rv = Rm + dm. Se actualiza con años × variación anual y se redondea al medio grado."
+        }
+      ]
+    },
+    {
+      "id": "aguja-nautica-y-desvio",
+      "title": "La aguja náutica, el desvío y la tablilla de desvíos",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "La aguja náutica (el compás magnético) indica en todo momento el rumbo de la embarcación. Funciona porque sus imanes se orientan hacia el norte magnético."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Parte",
+            "Qué es"
+          ],
+          "rows": [
+            [
+              "**Imanes**",
+              "Van sujetos bajo la rosa y la orientan. Usar varios (imanes múltiples) aumenta la sensibilidad."
+            ],
+            [
+              "Rosa",
+              "Disco graduado con los 360º del horizonte."
+            ],
+            [
+              "**Chapitel**",
+              "Hendidura cónica en el centro de la rosa; es la pieza que descansa sobre el estilo. Es un elemento de la aguja magnética (no del radar, la sonda ni el girocompás)."
+            ],
+            [
+              "**Estilo**",
+              "Punta dura y afilada sobre la que pivota el conjunto de rosa e imanes, casi sin rozamiento."
+            ],
+            [
+              "**Mortero**",
+              "Carcasa que lo contiene todo, cerrada por arriba con un cristal. Con aire dentro es aguja seca; con una mezcla de agua destilada y alcohol, aguja líquida."
+            ],
+            [
+              "**Línea de fe**",
+              "Marca **grabada en el mortero** que coincide con la **línea proa-popa o línea de crujía** del buque. Frente a ella se lee el rumbo."
+            ],
+            [
+              "Suspensión cardán",
+              "Mantiene la aguja horizontal aunque el barco cabecee o se balancee, y amortigua vibraciones."
+            ]
+          ],
+          "title": "Partes de la aguja"
+        },
+        {
+          "type": "exam",
+          "text": "«¿Cuáles son partes de una aguja náutica?» → **chapitel, imanes, estilo**. Las opciones que incluyen «núcleo» o «capacete» son falsas, aunque las acompañen partes reales como el mortero o la línea de fe; por eso tampoco valen las combinaciones del tipo «a) y c)». La marca del mortero se llama línea de fe; «al medio» y «a la vía» son órdenes al timón, no partes de la aguja."
+        },
+        {
+          "type": "p",
+          "text": "Una buena aguja debe tener **sensibilidad** (acusar el menor cambio de rumbo) y **estabilidad** (no verse afectada por los movimientos del barco)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Debe ir en el plano de crujía, con su **línea de fe sobre la línea de crujía o paralela a ella** (es necesario, no opcional).",
+            "Lo más lejos posible de aparatos electrónicos y de circuitos eléctricos (una corriente intensa crea campo magnético y aumenta los desvíos, no los disminuye).",
+            "Se debe procurar que **no esté rodeada de planchas de hierro o acero que la apantallen**."
+          ],
+          "title": "Instalación"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Aparatos electrónicos o instalaciones eléctricas defectuosas en sus cercanías.",
+            "**Un teléfono móvil muy cerca**.",
+            "Herramientas u objetos de hierro o acero cerca.",
+            "Burbujas de aire en el mortero, tormentas eléctricas, lámparas cercanas de mucha intensidad.",
+            "NO la perturban los materiales no magnéticos: una bolsa de plástico o una caja de aluminio."
+          ],
+          "title": "Perturbaciones"
+        },
+        {
+          "type": "term",
+          "term": "Desvío de la aguja (Δ)",
+          "text": "Ángulo entre el **norte magnético y el norte de aguja** (o entre el meridiano magnético y la dirección Norte-Sur que marca la aguja). Lo causan los hierros y los circuitos eléctricos y electrónicos del propio barco, que crean un campo magnético que se suma al terrestre."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Signo: desvío al **Este (NE) positivo**; al **Oeste (NW) negativo**.",
+            "Fórmulas: **Rm = Ra + Δ** y **Ra = Rm − Δ**.",
+            "**El desvío depende del rumbo** al que se navegue: cambia al cambiar de rumbo. No es fijo, no depende solo de la situación y no es nulo en los veleros.",
+            "**Si el desvío es cero, la aguja señala al meridiano magnético** (norte de aguja = norte magnético), no al verdadero o geográfico."
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Tablilla de desvíos",
+          "text": "Tabla propia de cada barco que da el desvío para cada rumbo de aguja (de 10º en 10º o de 15º en 15º). Es **el medio por el que conocemos el desvío a los diferentes rumbos**. Recoge los desvíos residuales que quedan después de que un compensador haya ajustado la aguja con imanes."
+        },
+        {
+          "type": "example",
+          "text": "En la tablilla del temario, al rumbo de aguja 225º le corresponde un desvío de −2,0º y al 270º, −3,5º. Navegando al Ra 225º: Rm = Ra + Δ = 225 + (−2) = 223º.",
+          "title": "Uso de la tablilla"
+        },
+        {
+          "type": "exam",
+          "text": "«El desvío a los diferentes rumbos lo conocemos por medio de…» → **la tablilla de desvíos**, solo eso. Aplicar la declinación al rumbo de aguja no da el desvío, y una enfilación o una demora no dan «directamente» el desvío: dan la corrección total, de la que hay que restar la declinación (Δ = Ct − dm)."
+        },
+        {
+          "type": "key",
+          "text": "Desvío: ángulo entre el norte magnético y el de aguja; lo causa el barco y cambia con el rumbo; se consulta en la tablilla. Partes: chapitel, imanes, estilo, rosa, mortero y línea de fe (alineada con la crujía)."
+        }
+      ]
+    },
+    {
+      "id": "correccion-total-y-rumbos",
+      "title": "Corrección total y rumbos: verdadero, magnético y de aguja",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Rumbo",
+          "text": "Ángulo formado por **el meridiano (el Norte) y la línea proa-popa (línea de crujía) del buque**. Se cuenta desde el Norte hasta la proa. No interviene ningún objeto exterior: si hay «visual a un objeto», ya no es un rumbo."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Rumbo",
+            "Se mide desde",
+            "Dónde se usa"
+          ],
+          "rows": [
+            [
+              "**Verdadero (Rv)**",
+              "El meridiano **geográfico** (norte verdadero)",
+              "Es el que se traza en la carta."
+            ],
+            [
+              "**Magnético (Rm)**",
+              "El meridiano magnético",
+              "Paso intermedio."
+            ],
+            [
+              "**De aguja (Ra)**",
+              "El norte de aguja",
+              "Es el que **se lee directamente en la aguja** y el que se le da al timonel."
+            ]
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Corrección total (Ct)",
+          "text": "Ángulo que forma el **norte de aguja con el norte verdadero (geográfico)**. Es la suma algebraica de la declinación y el desvío: **Ct = dm + Δ**. Como el desvío cambia con el rumbo, la Ct también cambia con el rumbo."
+        },
+        {
+          "type": "analogy",
+          "text": "Imagina tres relojes que marcan casi la misma hora. Del reloj «aguja» al reloj «magnético» hay un pequeño desfase (el desvío); del «magnético» al «verdadero», otro (la declinación). La corrección total es el desfase completo entre el primero y el último."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Paso",
+            "Fórmula"
+          ],
+          "rows": [
+            [
+              "De aguja a magnético",
+              "Rm = Ra + Δ"
+            ],
+            [
+              "De magnético a verdadero",
+              "Rv = Rm + dm"
+            ],
+            [
+              "De aguja a verdadero (directo)",
+              "**Rv = Ra + Ct**"
+            ],
+            [
+              "De verdadero a aguja (directo)",
+              "**Ra = Rv − Ct**"
+            ],
+            [
+              "De verdadero a magnético",
+              "Rm = Rv − dm"
+            ],
+            [
+              "Corrección total",
+              "Ct = dm + Δ = Rv − Ra"
+            ]
+          ],
+          "title": "Todas las fórmulas (con signo: NE/E +, NW/W −)"
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Pon signo a los datos: NE o E es **positivo**; NW o W es **negativo**.",
+            "Suma algebraicamente declinación y desvío: Ct = dm + Δ.",
+            "Si vas **de la aguja a la carta** (de Ra a Rv), **suma** la Ct con su signo: Rv = Ra + Ct.",
+            "Si vas **de la carta a la aguja** (de Rv a Ra), **resta** la Ct con su signo: Ra = Rv − Ct. Restar un negativo es sumar.",
+            "Si el resultado pasa de 360º, réstale 360º; si sale negativo, súmale 360º."
+          ],
+          "title": "Método de cálculo"
+        },
+        {
+          "type": "example",
+          "text": "1) dm = 6º NW y Δ = 3º NE: Ct = −6 + (+3) = **−3º**. Si la aguja marca Ra = 100º: Rv = 100 + (−3) = **097º**. Comprobación por pasos: Rm = 100 + 3 = 103º; Rv = 103 + (−6) = 097º. 2) Quieres hacer Rv = 220º con dm = 2º NW y Δ = 4º NE: Ct = −2 + 4 = +2º; Ra = 220 − (+2) = **218º**. Comprobación: Rm = 220 − (−2) = 222º; Ra = 222 − 4 = 218º. 3) Rv = 002º y Ct = −5º: Ra = 2 − (−5) = **007º**. 4) Ra = 357º y Ct = +6º: Rv = 363º − 360º = **003º**.",
+          "title": "Cálculos resueltos"
+        },
+        {
+          "type": "example",
+          "text": "Si navegando a cierto rumbo **la aguja coincide con el rumbo verdadero**, es que Ct = 0. Como Ct = dm + Δ, eso solo ocurre cuando **la declinación y el desvío tienen el mismo valor pero distinto signo** (por ejemplo dm = −3º y Δ = +3º). No es que el desvío sea cero ni que la declinación «no se tenga en cuenta».",
+          "title": "Un caso que se pregunta"
+        },
+        {
+          "type": "exam",
+          "text": "«El rumbo que se lee directamente en la aguja náutica» es el rumbo de aguja, y en las opciones aparece escrito como **«rumbo verdadero menos la corrección total»** (Ra = Rv − Ct). No es el verdadero ni el magnético. Otra pregunta: el ángulo entre el norte de aguja y el norte verdadero (o geográfico) es la **corrección total**, no el desvío ni la declinación."
+        },
+        {
+          "type": "p",
+          "text": "Los rumbos (y las demoras) se pueden expresar de dos formas. **Circular**: de 000º a 360º desde el Norte en sentido horario. **Cuadrantal**: se parte del Norte o del Sur y se cuentan de 0º a 90º hacia el Este o el Oeste; por ejemplo S30E es «desde el Sur, 30º hacia el Este»."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Cuadrante",
+            "Forma cuadrantal",
+            "Paso a circular",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "1.º (NE)",
+              "N … E",
+              "El mismo número",
+              "N45E = 045º"
+            ],
+            [
+              "2.º (SE)",
+              "S … E",
+              "180º − el ángulo",
+              "S30E = 150º"
+            ],
+            [
+              "3.º (SW)",
+              "S … W",
+              "180º + el ángulo",
+              "S45W = 225º"
+            ],
+            [
+              "4.º (NW)",
+              "N … W",
+              "360º − el ángulo",
+              "N65W = 295º"
+            ]
+          ],
+          "title": "Convertir de cuadrantal a circular"
+        },
+        {
+          "type": "example",
+          "text": "S30E = 180 − 30 = **150º**. S25E = 180 − 25 = **155º**. S65E = 180 − 65 = **115º**. S45W = 180 + 45 = **225º**. N35W = 360 − 35 = **325º**. N64W = 360 − 64 = **296º**. N65W = 360 − 65 = **295º**.",
+          "title": "Los que salen en el banco"
+        },
+        {
+          "type": "exam",
+          "text": "Truco para no fallar: si empieza por **S**, el resultado tiene que quedar cerca de 180º (entre 090º y 270º); si empieza por **N** y va al **W**, entre 270º y 360º. Las opciones falsas suelen sumar cuando hay que restar (S30E no es 210º) o dar un valor imposible como 365º."
+        },
+        {
+          "type": "key",
+          "text": "Rumbo: ángulo entre el meridiano y la línea proa-popa. Ct = dm + Δ = ángulo entre norte de aguja y norte verdadero. Rv = Ra + Ct; Ra = Rv − Ct. Cuadrantal: desde S, 180 ∓ ángulo; desde N al W, 360 − ángulo."
+        }
+      ]
+    },
+    {
+      "id": "lineas-de-posicion",
+      "title": "Líneas de posición: enfilación, oposición, demora y veril",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Línea de posición",
+          "text": "Línea, trazada en la carta, sobre la que sabemos que está el barco. Con una sola sabes que estás «en algún punto de ella»; el cruce de dos o más da la situación."
+        },
+        {
+          "type": "term",
+          "term": "Demora",
+          "text": "Ángulo que forma **el Norte (el meridiano) con la visual a un objeto**. Como los rumbos, puede ser verdadera (Dv), magnética (Dm) o de aguja (Da), y se expresa en circular o cuadrantal."
+        },
+        {
+          "type": "term",
+          "term": "Enfilación",
+          "text": "**La visual que une dos marcas o puntos de referencia de la costa con nuestro buque**: ves los dos objetos en línea, uno detrás de otro. En la carta es la recta que pasa por ambos, prolongada hacia el mar."
+        },
+        {
+          "type": "term",
+          "term": "Oposición",
+          "text": "Línea que une dos puntos cuando el observador está sobre ella y **entre** los dos puntos: ves uno por un lado y el otro justo por el lado contrario."
+        },
+        {
+          "type": "term",
+          "term": "Veril",
+          "text": "Línea de igual sonda. Si la sonda marca 20 m, estás sobre el veril de 20 m: es una línea de posición irregular."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Línea",
+            "Forma",
+            "¿Hay que corregirla antes de trazarla?"
+          ],
+          "rows": [
+            [
+              "Enfilación",
+              "Recta",
+              "No: se traza directamente uniendo los dos puntos en la carta."
+            ],
+            [
+              "Oposición",
+              "Recta",
+              "No: se traza directamente."
+            ],
+            [
+              "Distancia a un punto (radar)",
+              "Curva (circunferencia)",
+              "No."
+            ],
+            [
+              "Veril (sonda)",
+              "Irregular",
+              "No."
+            ],
+            [
+              "Demora tomada con la aguja",
+              "Recta",
+              "**Sí**: hay que convertirla en verdadera."
+            ]
+          ]
+        },
+        {
+          "type": "exam",
+          "text": "«¿Cuál de las siguientes no es una línea de posición?» → **el rumbo**. El rumbo dice hacia dónde apunta la proa, no dónde está el barco. Demora, oposición y enfilación sí lo son. Y cuidado con las definiciones cruzadas: norte + visual = demora; proa + visual = marcación; norte + proa = rumbo."
+        },
+        {
+          "type": "p",
+          "text": "En la carta solo se trazan líneas **verdaderas**. Una demora tomada con la aguja lleva dentro el mismo error que el rumbo de aguja, así que se corrige con la misma corrección total: **Dv = Da + Ct** (y Da = Dv − Ct; Dm = Da + Δ). Por eso **la diferencia entre la demora verdadera y la demora de aguja es la corrección total**. El desvío que se aplica es el del rumbo al que navega el barco, no el de la demora."
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Toma la demora de aguja (Da) al punto de la costa.",
+            "Calcula Ct = dm + Δ, con la declinación actualizada y el desvío del rumbo que llevas.",
+            "Dv = Da + Ct.",
+            "Traza desde el punto de tierra la demora opuesta (Dv ± 180º): el barco está en algún punto de esa línea."
+          ],
+          "title": "De la aguja a la carta"
+        },
+        {
+          "type": "example",
+          "text": "Da a un faro = 175º, dm = 5º NW, Δ = 1º NW. Ct = −5 + (−1) = −6º. Dv = 175 + (−6) = **169º**. En la carta se traza desde el faro la opuesta: 169 + 180 = 349º.",
+          "title": "Demora resuelta"
+        },
+        {
+          "type": "example",
+          "text": "Las enfilaciones y oposiciones sirven para **hallar la corrección total**: mides en la carta la demora verdadera de la enfilación y la comparas con lo que marca la aguja al estar enfilado. Dv de la enfilación = 045º; la aguja marca Da = 050º. Ct = Dv − Da = 45 − 50 = **−5º**. Si además dm = −3º, el desvío a ese rumbo es Δ = Ct − dm = −5 − (−3) = −2º.",
+          "title": "Corrección total por enfilación"
+        },
+        {
+          "type": "exam",
+          "text": "«Obtenemos una demora de aguja de cabo Espartel y otra de Punta Gracia, ¿podemos posicionarnos directamente en la carta?» → **Nunca**. No vale «sí, trazándolas adecuadamente», ni basta con «el desvío»: hay que convertirlas antes en verdaderas con la corrección total completa (declinación y desvío)."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Dos líneas de posición deben cortarse lo más cerca posible del ángulo recto. **Para una situación óptima por dos demoras, el ángulo de corte debe ser de 60º a 90º.**",
+            "Al tomar las demoras, el barco debe estar lo más parado y estable posible.",
+            "Los puntos de tierra deben ser claramente reconocibles y estar en la carta.",
+            "Las distancias de radar deben tomarse al punto deseado y no a un eco de más adentro.",
+            "**Enfilación fiable (según el banco):** los objetos que se enfilan deben estar **lejanos a nuestro buque y separados entre sí**, y el objeto **posterior (más lejano) debe ser igual o más alto que el anterior** (más próximo), para que no quede tapado."
+          ],
+          "title": "Condiciones para que sean fiables"
+        },
+        {
+          "type": "exam",
+          "text": "Sobre la enfilación fiable hay dos preguntas. En una, la correcta es «objetos lejos de nuestro buque y separados entre sí» (la opción de que el posterior esté «por debajo» del anterior es falsa). En la otra, la correcta es «las respuestas b) y c)»: posterior igual o más alto, y objetos lejanos al buque y separados entre sí. Nunca es «próximos a nuestro buque». Aviso: el temario dice otra cosa (que la distancia del barco a la enfilación sea menor que la separación entre los dos puntos, que es lo que da más precisión), pero en el test manda la clave del banco."
+        },
+        {
+          "type": "p",
+          "text": "Estas líneas también se usan como **líneas de seguridad**: una enfilación que marca la entrada a un puerto o la parte más profunda de un canal, una demora que no hay que rebasar para librar un bajo, o seguir un veril con la alarma de la sonda, muy útil cerca de costa con niebla."
+        },
+        {
+          "type": "key",
+          "text": "Demora: norte con visual a un objeto. Enfilación: dos marcas alineadas con el barco. Dv = Da + Ct: las demoras de aguja nunca se trazan directamente. Dos demoras, mejor cortándose entre 60º y 90º. El rumbo no es una línea de posición."
+        }
+      ]
+    },
+    {
+      "id": "marcacion",
+      "title": "Marcación y su relación con el rumbo y la demora",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Marcación (M)",
+          "text": "Ángulo (horizontal), **contado desde la proa**, que forman **la línea proa-popa o línea de crujía del buque y la visual a un objeto** (un faro, un punto de la costa, otro barco). Se mide desde la proa de la embarcación, es decir, desde la dirección del rumbo; no desde ningún norte."
+        },
+        {
+          "type": "analogy",
+          "text": "La demora responde a «¿hacia qué punto de la brújula está el faro?». La marcación responde a «¿cuánto tengo que girar la cabeza desde la proa para verlo?»."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Ángulo",
+            "Entre qué y qué"
+          ],
+          "rows": [
+            [
+              "**Rumbo**",
+              "El Norte (meridiano) y la línea proa-popa"
+            ],
+            [
+              "**Demora**",
+              "El Norte (meridiano) y la visual a un objeto"
+            ],
+            [
+              "**Marcación**",
+              "La línea proa-popa (crujía) y la visual a un objeto"
+            ],
+            [
+              "Enfilación",
+              "No es un ángulo: es la visual que alinea dos marcas con el barco"
+            ]
+          ],
+          "title": "Para no confundirlos"
+        },
+        {
+          "type": "table",
+          "head": [
+            "Forma",
+            "Cómo se cuenta",
+            "Signo"
+          ],
+          "rows": [
+            [
+              "**Semicircular**",
+              "De **0º a 180º** desde la proa hasta la popa, **indicando si es a babor o a estribor**. 0º es la proa, 90º el través, 180º la popa.",
+              "Estribor +, babor −"
+            ],
+            [
+              "**Circular**",
+              "Desde la proa de **000º a 360º en el mismo sentido de las agujas del reloj** (hacia estribor).",
+              "Siempre +"
+            ]
+          ],
+          "title": "Dos formas de medirla"
+        },
+        {
+          "type": "exam",
+          "text": "Hay tres preguntas sobre cómo se mide, con claves distintas según las opciones. 1) Si aparecen a la vez «de 0º a 360º en sentido horario» y «de 0º a 180º indicando si es a babor o estribor», el banco marca **de 0º a 180º, babor o estribor**. 2) Si las opciones son «de proa a popa de 0º a 90º», «de 000º a 360º en sentido contrario a las agujas» y «de 000º a 360º en el mismo sentido de las agujas del reloj», la correcta es **en el mismo sentido de las agujas**. 3) Si aparece «de proa hasta popa por estribor y de proa hasta popa por babor», esa es la correcta. Siempre falsas: «de 0º a 90º», «en sentido antihorario», «indicando si es hacia proa o hacia popa» y «de 0º a 360º indicando babor o estribor»."
+        },
+        {
+          "type": "p",
+          "text": "La fórmula que lo une todo: **Demora = Rumbo + Marcación**. Despejando: **Marcación = Demora − Rumbo**. Con la marcación circular siempre se suma. Con la semicircular se suma si es por estribor y se resta si es por babor: Dv = Rv + M (estribor), Dv = Rv − M (babor)."
+        },
+        {
+          "type": "p",
+          "text": "La fórmula vale para cualquier «norte», siempre que rumbo y demora sean del mismo tipo: Dv = Rv + M, y también **Da = Ra + M** (la demora de aguja es la suma algebraica del rumbo de aguja y la marcación). La marcación no depende del norte: es la misma en los dos casos."
+        },
+        {
+          "type": "steps",
+          "items": [
+            "Pon signo a la marcación: estribor +, babor − (o pásala a circular: una marcación de 60º a babor es 360 − 60 = 300º).",
+            "Suma: D = R + M.",
+            "Si pasa de 360º, resta 360º; si sale negativa, suma 360º.",
+            "Si has trabajado con rumbo de aguja, convierte la Da en verdadera: Dv = Da + Ct. Las marcaciones nunca se trazan en la carta: se convierten antes en demoras verdaderas."
+          ],
+          "title": "Método de cálculo"
+        },
+        {
+          "type": "example",
+          "text": "1) Rv = 080º y marcas un faro 35º por estribor: Dv = 80 + 35 = **115º**. 2) Rv = 040º y marcas 60º por babor: Dv = 40 − 60 = −20 → + 360 = **340º** (en circular: 40 + 300 = 340º). 3) Ra = 120º, M = 30º estribor, Ct = −4º: Da = 120 + 30 = 150º; Dv = 150 + (−4) = **146º**. Comprobación: Rv = 120 − 4 = 116º; Dv = 116 + 30 = 146º. 4) Al revés: Dv = 200º y Rv = 150º: M = 200 − 150 = **50º por estribor**.",
+          "title": "Cálculos resueltos"
+        },
+        {
+          "type": "exam",
+          "text": "En las preguntas de «indique la afirmación correcta», las buenas son: «la marcación es igual a la demora menos el rumbo», «Demora = Rumbo + Marcación» y «la demora de aguja es igual a la suma algebraica del rumbo de aguja y la marcación». Son falsas «Demora = Rumbo + Corrección total», «Demora = Rumbo − Marcación» y «Demora = Marcación + Corrección total». En esas mismas preguntas se cuelan como falsas frases de otros apartados: la amplitud no es la diferencia entre dos pleamares ni una diferencia de horas, los paralelos no son círculos máximos, el ángulo proa-visual no es una enfilación, el ángulo entre norte magnético y de aguja no es la declinación (es el desvío), el rumbo medido desde el meridiano geográfico no es el magnético (es el verdadero) y el ángulo entre la estela y la crujía no es la deriva (es el abatimiento)."
+        },
+        {
+          "type": "key",
+          "text": "Marcación: ángulo desde la proa entre la línea de crujía y la visual a un objeto; 0º-180º a babor o estribor, o 000º-360º en sentido horario. Demora = Rumbo + Marcación; Marcación = Demora − Rumbo."
+        }
+      ]
+    },
+    {
+      "id": "mareas",
+      "title": "Mareas: cero hidrográfico, sonda, amplitud y duración",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Marea",
+          "text": "Movimiento periódico y alternativo de ascenso y descenso del nivel del mar. Se produce fundamentalmente por la atracción gravitatoria **del Sol y de la Luna** (los dos; la Luna influye unas 2,3 veces más que el Sol porque está mucho más cerca)."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Término",
+            "Significado"
+          ],
+          "rows": [
+            [
+              "Pleamar",
+              "Momento de máxima altura del agua."
+            ],
+            [
+              "Bajamar",
+              "Momento de mínima altura."
+            ],
+            [
+              "Creciente / vaciante",
+              "La marea mientras sube / mientras baja."
+            ],
+            [
+              "Flujo / reflujo",
+              "Corriente de marea entrante / saliente; es más fuerte a mitad del periodo."
+            ],
+            [
+              "Repunte",
+              "Momento en que la marea está parada y empieza a cambiar de sentido."
+            ],
+            [
+              "Mareas vivas (sicigias)",
+              "Sol y Luna alineados (luna nueva o llena): mayor amplitud."
+            ],
+            [
+              "Mareas muertas (cuadraturas)",
+              "Sol y Luna en ángulo recto (cuarto creciente o menguante): menor amplitud."
+            ]
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Cero hidrográfico (datum)",
+          "text": "**Plano horizontal de referencia sobre el cual se miden, de forma vertical, las profundidades representadas en las cartas náuticas y las alturas de todo accidente geográfico que vele en bajamar** («velar» es quedar al descubierto). El Instituto Hidrográfico de la Marina tiene adoptada como referencia vertical de las sondas la **Mayor Bajamar Astronómica (LAT)**, lo que el temario llama bajamar escorada: la bajamar más baja que cabe esperar."
+        },
+        {
+          "type": "term",
+          "term": "Sonda de la carta (sonda carta)",
+          "text": "Distancia vertical desde el fondo hasta **el nivel del cero hidrográfico**. No es la profundidad hasta el nivel medio de la marea ni hasta la bajamar de un día cualquiera."
+        },
+        {
+          "type": "analogy",
+          "text": "El cero hidrográfico es el «suelo» de la tabla de mareas. La carta te dice cuánta agua hay con el mar en ese suelo, y el anuario de mareas te dice cuántos metros está el agua por encima de él a cada hora. Como el suelo es la bajamar más baja posible, casi siempre tendrás más agua de la que marca la carta."
+        },
+        {
+          "type": "term",
+          "term": "Altura de la marea",
+          "text": "Lo que el nivel del agua está por encima del cero hidrográfico en un momento dado. El anuario de mareas da la altura y la hora de cada pleamar y cada bajamar."
+        },
+        {
+          "type": "term",
+          "term": "Amplitud de la marea (carrera)",
+          "text": "**Diferencia entre la altura de la pleamar y la altura de la bajamar consecutivas** (o viceversa). Es una diferencia de alturas, en metros."
+        },
+        {
+          "type": "term",
+          "term": "Duración de la marea",
+          "text": "**Tiempo** que transcurre entre la pleamar y la bajamar **y viceversa**: entre una bajamar y la pleamar siguiente es la duración de la creciente; entre una pleamar y la bajamar siguiente, la de la vaciante. Ronda las 6 horas, pero no es constante ni exactamente igual a 6 horas."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Quiero saber",
+            "Operación"
+          ],
+          "rows": [
+            [
+              "Agua real en un momento (sonda en el momento)",
+              "Sonda de la carta + altura de la marea en ese momento"
+            ],
+            [
+              "Agua en pleamar",
+              "Sonda de la carta + altura de la pleamar"
+            ],
+            [
+              "Agua en bajamar",
+              "Sonda de la carta + altura de la bajamar"
+            ],
+            [
+              "Amplitud",
+              "Altura de la pleamar − altura de la bajamar"
+            ],
+            [
+              "Duración",
+              "Hora de la pleamar − hora de la bajamar (o al revés)"
+            ],
+            [
+              "Agua bajo la quilla",
+              "Sonda en el momento − calado"
+            ]
+          ],
+          "title": "Cálculos básicos de mareas"
+        },
+        {
+          "type": "example",
+          "text": "La carta marca una sonda de 3,0 m. El anuario da bajamar a las 04:10 con 0,6 m y pleamar a las 10:25 con 3,2 m. **Amplitud** = 3,2 − 0,6 = **2,6 m**. **Duración** de la creciente = 10:25 − 04:10 = **6 h 15 min**. Agua en bajamar = 3,0 + 0,6 = **3,6 m**. Agua en pleamar = 3,0 + 3,2 = **6,2 m**. Con un calado de 1,8 m, en bajamar quedan 3,6 − 1,8 = 1,8 m bajo la quilla.",
+          "title": "Cálculo resuelto"
+        },
+        {
+          "type": "exam",
+          "text": "Cero hidrográfico: la correcta es siempre la frase del «plano horizontal de referencia…». Son falsas: que equivale a la amplitud; que es «la sonda máxima de agua»; que en la cartografía española se define como «la mayor **marea** astronómica predecible» (LAT es la mayor **bajamar** astronómica); que la LAT es una referencia «horizontal» (es vertical). Por eso, cuando una opción dice «a) y c)» o «a) y b)» mezclando la buena con una de estas, la respuesta es solo la del plano de referencia."
+        },
+        {
+          "type": "exam",
+          "text": "Pregunta de «indique la afirmación falsa»: la falsa es «la sonda que viene reflejada en la carta coincide con la altura de la bajamar». La sonda se refiere al cero hidrográfico, y la bajamar de cada día suele quedar por encima. En la misma pregunta son verdaderas la definición del cero hidrográfico, que el IHM adopta la LAT y que la diferencia entre pleamar y bajamar es la amplitud."
+        },
+        {
+          "type": "exam",
+          "text": "Amplitud y duración se confunden a propósito. **Amplitud = diferencia de alturas** entre pleamar y bajamar consecutivas (no entre dos pleamares, ni entre dos bajamares, ni entre no consecutivas, ni una diferencia de horas). **Duración = diferencia de horas** entre bajamar y pleamar; la opción correcta es la que incluye «y viceversa», no las que dicen «solamente». «Intervalo» y «hora de marea» son distractores."
+        },
+        {
+          "type": "key",
+          "text": "Las sondas de la carta se miden desde el cero hidrográfico (LAT, la mayor bajamar astronómica). Agua real = sonda carta + altura de marea. Amplitud = diferencia de alturas pleamar-bajamar; duración = tiempo entre ambas. Las causan el Sol y la Luna."
+        }
+      ]
+    },
+    {
+      "id": "mareas-meteorologia",
+      "title": "Cómo alteran la marea la presión atmosférica y el viento",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "El anuario de mareas calcula alturas para condiciones meteorológicas medias: presión normal de 1013 mb (760 mm de mercurio) y sin viento. Si el tiempo se aparta de eso, la marea real también se aparta de la prevista."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Situación",
+            "Efecto sobre la altura de la marea"
+          ],
+          "rows": [
+            [
+              "**Presión alta** (superior a la normal, anticiclón)",
+              "**Disminuye**: el nivel queda por debajo del previsto."
+            ],
+            [
+              "**Presión baja** (menor que la normal, depresión)",
+              "**Aumenta**: el nivel queda por encima del previsto."
+            ],
+            [
+              "**Viento fuerte y estable procedente de la mar** (de la mar a tierra, hacia la costa)",
+              "**Aumenta** la altura: puede dar mareas más altas que las previstas."
+            ],
+            [
+              "**Viento fuerte y estable de tierra** (de la tierra a la mar)",
+              "**Disminuye** la altura de la marea."
+            ]
+          ]
+        },
+        {
+          "type": "analogy",
+          "text": "La atmósfera es una mano apoyada sobre el agua: si aprieta más (alta presión), el nivel baja; si aprieta menos (baja presión), sube. El viento hace de escoba: si sopla hacia la costa, amontona agua contra ella; si sopla desde tierra, se la lleva mar adentro."
+        },
+        {
+          "type": "p",
+          "text": "Cuantía aproximada: el nivel cambia alrededor de **1 cm por cada milibar** de diferencia respecto a la presión normal (el temario lo da como 13,5 mm de agua por cada milímetro de mercurio). El viento, además, puede adelantar o atrasar algo las horas, pero lo que pregunta el test es su efecto sobre la altura."
+        },
+        {
+          "type": "example",
+          "text": "Altura prevista de la pleamar: 3,20 m. El barómetro marca 1003 mb, 10 mb por debajo de la normal: el agua subirá unos 10 cm más, hasta unos 3,30 m. Con 1023 mb quedaría en unos 3,10 m.",
+          "title": "Ejemplo"
+        },
+        {
+          "type": "exam",
+          "text": "Todas las preguntas van de la altura. Alta presión → **disminuye** la altura; baja presión → **aumenta**; viento de la mar → **aumenta**; viento de tierra → **disminuye**. Descarta siempre las opciones de «retrasa o adelanta la hora de la pleamar o la bajamar», «no afecta», «aumenta o disminuye la amplitud», «el doble» o las que ponen umbrales inventados (1020 mb, 800 mb)."
+        },
+        {
+          "type": "key",
+          "text": "Presión alta, marea más baja; presión baja, marea más alta (alrededor de 1 cm por mb). Viento de la mar, más altura; viento de tierra, menos altura."
+        }
+      ]
+    },
+    {
+      "id": "viento-y-corriente",
+      "title": "Viento y corriente: abatimiento y deriva",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Que la proa apunte a un sitio no significa que el barco vaya hacia allí. El viento lo empuja de lado sobre el agua, y la corriente mueve el agua entera con el barco dentro. Son dos efectos distintos con dos nombres distintos."
+        },
+        {
+          "type": "term",
+          "term": "Obra muerta y obra viva",
+          "text": "La obra muerta es la parte del casco que queda por encima del agua (junto con las superestructuras, es donde pega el viento). La obra viva o carena es la parte sumergida (donde actúa el agua)."
+        },
+        {
+          "type": "term",
+          "term": "Abatimiento (Ab)",
+          "text": "Alteración del rumbo producida por **el viento**. Es el ángulo entre **el rumbo verdadero y el rumbo de superficie (o rumbo real)** que hace el barco al ser desplazado **hacia sotavento**. Dicho de otras dos formas equivalentes: el ángulo entre la derrota que sigue el buque por causa del viento y la que seguiría si no hubiera viento; y el ángulo entre **la estela del buque y el plano de crujía**."
+        },
+        {
+          "type": "term",
+          "term": "Rumbo de superficie (Rs)",
+          "text": "El rumbo que el barco hace realmente sobre la superficie del agua, ya con el abatimiento."
+        },
+        {
+          "type": "term",
+          "term": "Deriva",
+          "text": "Efecto de **la corriente**, y se debe **exclusivamente a las corrientes marinas**. Es el ángulo entre **el rumbo verdadero y el rumbo efectivo** (siempre que no haya otra causa perturbadora, es decir, en ausencia de viento). Dicho de otra forma: el ángulo formado por las direcciones del movimiento del buque **con relación a la superficie y con relación al fondo del mar**."
+        },
+        {
+          "type": "term",
+          "term": "Rumbo efectivo (o eficaz)",
+          "text": "El rumbo que el barco hace realmente sobre el fondo, resultado de combinar su rumbo y velocidad con el rumbo y la velocidad de la corriente. La velocidad resultante es la velocidad efectiva."
+        },
+        {
+          "type": "table",
+          "head": [
+            "Aspecto",
+            "Abatimiento",
+            "Deriva"
+          ],
+          "rows": [
+            [
+              "Causa",
+              "Viento",
+              "Corriente"
+            ],
+            [
+              "Sobre qué actúa",
+              "Obra muerta y superestructuras",
+              "Mueve toda la masa de agua en la que flota el barco"
+            ],
+            [
+              "Ángulo entre",
+              "Rumbo verdadero y rumbo de superficie",
+              "Rumbo verdadero (o de superficie) y rumbo efectivo"
+            ],
+            [
+              "Movimiento respecto a",
+              "La superficie del agua",
+              "El fondo"
+            ],
+            [
+              "Pista visual",
+              "La estela no queda alineada con la crujía",
+              "No se nota en la estela"
+            ],
+            [
+              "Depende del barco",
+              "Sí: **a más obra muerta, más abatimiento**",
+              "No: **una corriente afecta a todos los buques por igual**, independientemente de su tamaño"
+            ]
+          ]
+        },
+        {
+          "type": "analogy",
+          "text": "Abatimiento: cruzas una pista de hielo y un ventilador te empuja de lado; te deslizas sobre el hielo. Deriva: caminas recto sobre una cinta transportadora que se mueve; respecto a la cinta vas recto, pero respecto al suelo del edificio te desvías."
+        },
+        {
+          "type": "list",
+          "items": [
+            "La acción del viento sobre los costados y la superestructura hace que el barco **se desplace según una dirección distinta de la de la proa** (no solo cambia la velocidad).",
+            "Un barco con **gran obra muerta abatirá más** que otro con una obra muerta más pequeña. La obra muerta no cambia la deriva.",
+            "Con viento justo de proa o de popa no hay abatimiento: solo cambia la velocidad.",
+            "La deriva no depende de la velocidad del viento ni, para el banco, del tamaño de la obra viva."
+          ],
+          "title": "Lo que se pregunta"
+        },
+        {
+          "type": "p",
+          "text": "En los cálculos: **Rs = Rv + Ab**, con el abatimiento **a estribor positivo y a babor negativo**. Recuerda que el viento se nombra por donde viene y te empuja hacia el lado contrario (sotavento)."
+        },
+        {
+          "type": "example",
+          "text": "Quieres hacer sobre el agua un Rs = 151º. Sopla levante (viento del Este), que te entra por babor y te abate 5º a estribor: Ab = +5º. Rv = Rs − Ab = 151 − 5 = **146º**. Con dm = 4º NW y Δ = 1º NE: Ct = −4 + 1 = −3º; Ra = Rv − Ct = 146 − (−3) = **149º**. Es decir, metes la proa 5º hacia el viento para compensar.",
+          "title": "Cálculo resuelto"
+        },
+        {
+          "type": "exam",
+          "text": "Definiciones de abatimiento: es correcta «**en ausencia de corriente**, el ángulo entre el rumbo verdadero y el rumbo real que hace el barco como consecuencia de su desplazamiento **hacia sotavento**». Son falsas la de «en ausencia de viento… por la corriente» (eso es la deriva) y la de «con viento y corriente… respecto al fondo». En otra pregunta se dan tres definiciones buenas (rumbo verdadero y rumbo real o de superficie; derrota con viento y sin viento; estela y plano de crujía) y la respuesta es «todas las anteriores son correctas»."
+        },
+        {
+          "type": "exam",
+          "text": "Definiciones de deriva: «en ausencia de viento, la deriva es…» → valen tanto «el ángulo entre el rumbo verdadero y el rumbo efectivo» como «el ángulo formado por las direcciones del movimiento del buque con relación a la superficie y al fondo», así que la respuesta es **«a) y c) son correctas»**. La que habla de rumbo de superficie es el abatimiento. Y la frase «el ángulo entre la estela y el plano de crujía es la deriva» es falsa: eso es el abatimiento."
+        },
+        {
+          "type": "key",
+          "text": "Abatimiento: viento, hacia sotavento, ángulo entre rumbo verdadero y de superficie, mayor cuanto mayor es la obra muerta. Deriva: corriente, ángulo entre rumbo verdadero y efectivo, igual para todos los barcos."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Latitud: arco de meridiano desde el ecuador (0º-90º N/S). Longitud: arco de ecuador desde Greenwich hasta el meridiano del lugar (0º-180º E/W). Misma latitud = mismo paralelo; misma longitud = mismo meridiano.",
+    "Recalada para aproximarse a puerto; portulano para el máximo detalle de una pequeña extensión; cartucho es una ampliación insertada en otra carta.",
+    "Veriles: líneas que unen puntos de igual sonda. Fondo: S arena, G cascajo, St piedras, Sh conchuela, R roca; para el banco, Co cascajo y L limo.",
+    "Un faro de noche se identifica por el color y el ritmo de su luz. F fija, Fl destellos, LFl destello largo (2 s o más), Oc ocultaciones (encendida, se apaga). M = millas de alcance; m = metros de altura.",
+    "Milla = un minuto de arco = 1852 m. Nudo = una milla por hora. Las distancias se miden en la escala de latitudes: 1 minuto = 1 milla.",
+    "Corredera: mide velocidad y distancia. Real = corredera × K. La sonda mide la profundidad.",
+    "Hora Reloj Bitácora: la hora de a bordo, fijada por el patrón. Distancia = velocidad × tiempo.",
+    "Declinación: norte verdadero con norte magnético. Desvío: norte magnético con norte de aguja (depende del rumbo; tablilla). Corrección total: norte verdadero con norte de aguja; Ct = dm + Δ.",
+    "Signos: NE o E positivo, NW o W negativo. Rv = Ra + Ct; Ra = Rv − Ct; Rm = Ra + Δ; Rv = Rm + dm.",
+    "Cuadrantal a circular: NE igual; SE 180 − ángulo; SW 180 + ángulo; NW 360 − ángulo.",
+    "Rumbo: norte con proa. Demora: norte con visual a un objeto. Marcación: proa con visual a un objeto. Demora = Rumbo + Marcación.",
+    "Las demoras de aguja nunca se trazan directamente: Dv = Da + Ct. Dos demoras deben cortarse entre 60º y 90º. El rumbo no es línea de posición.",
+    "Las sondas de la carta se miden desde el cero hidrográfico (la mayor bajamar astronómica, LAT). Amplitud = diferencia de alturas entre pleamar y bajamar; duración = tiempo entre ambas.",
+    "Presión alta o viento de tierra: menos altura de marea. Presión baja o viento de la mar: más altura.",
+    "Abatimiento: viento, rumbo verdadero frente a rumbo de superficie, mayor con más obra muerta. Deriva: corriente, rumbo verdadero frente a rumbo efectivo, igual para todos los barcos."
+  ],
+  "glossary": [
+    {
+      "term": "Ecuador",
+      "text": "Círculo máximo perpendicular al eje de la Tierra; origen de las latitudes."
+    },
+    {
+      "term": "Paralelo",
+      "text": "Círculo menor paralelo al ecuador; une los puntos de igual latitud."
+    },
+    {
+      "term": "Meridiano",
+      "text": "Círculo máximo que pasa por los polos; une los puntos de igual longitud."
+    },
+    {
+      "term": "Meridiano del lugar",
+      "text": "Meridiano que pasa por la posición del observador o del barco."
+    },
+    {
+      "term": "Meridiano cero o de Greenwich",
+      "text": "Meridiano origen desde el que se cuentan las longitudes."
+    },
+    {
+      "term": "Latitud",
+      "text": "Arco de meridiano desde el ecuador hasta el paralelo del lugar, de 0º a 90º N o S."
+    },
+    {
+      "term": "Longitud",
+      "text": "Arco de ecuador desde el meridiano de Greenwich hasta el meridiano del lugar, de 0º a 180º E o W."
+    },
+    {
+      "term": "Carta de recalada",
+      "text": "Carta para facilitar la aproximación a puertos y accidentes que requieren mayor detalle."
+    },
+    {
+      "term": "Portulano",
+      "text": "Carta con el detalle más completo de una pequeña extensión de costa: puertos, radas, fondeaderos."
+    },
+    {
+      "term": "Cartucho",
+      "text": "Representación a mayor escala de una zona, insertada dentro del marco de otra carta."
+    },
+    {
+      "term": "Sonda",
+      "text": "Profundidad indicada en la carta, medida desde el cero hidrográfico; también el instrumento que mide la profundidad."
+    },
+    {
+      "term": "Veril",
+      "text": "Línea isobática: une en la carta los puntos de igual profundidad."
+    },
+    {
+      "term": "Luz de ocultaciones (Oc)",
+      "text": "Luz encendida continuamente que se apaga a intervalos regulares."
+    },
+    {
+      "term": "Luz de destellos (Fl)",
+      "text": "Luz que da destellos sobre un fondo de oscuridad; LFl si el destello dura 2 segundos o más."
+    },
+    {
+      "term": "Libro de Faros y Señales de Niebla",
+      "text": "Publicación del IHM con el detalle del balizamiento luminoso y ciego y de las señales de niebla."
+    },
+    {
+      "term": "Derrotero",
+      "text": "Publicación del IHM que describe la costa, sus puertos, peligros y condiciones para reconocerla."
+    },
+    {
+      "term": "Milla náutica",
+      "text": "Unidad de distancia igual a un minuto de arco de círculo máximo: 1852 metros."
+    },
+    {
+      "term": "Nudo",
+      "text": "Unidad de velocidad igual a una milla náutica por hora."
+    },
+    {
+      "term": "Corredera",
+      "text": "Instrumento que mide la velocidad del barco y la distancia navegada."
+    },
+    {
+      "term": "Coeficiente de corredera",
+      "text": "Relación entre la distancia o velocidad real y la que marca la corredera; se multiplica por la lectura."
+    },
+    {
+      "term": "Hora Reloj Bitácora",
+      "text": "Hora de a bordo, fijada por el patrón, por la que se rige la vida a bordo."
+    },
+    {
+      "term": "Declinación magnética",
+      "text": "Ángulo entre el norte verdadero o geográfico y el norte magnético."
+    },
+    {
+      "term": "Desvío",
+      "text": "Ángulo entre el norte magnético y el norte de aguja, causado por el propio barco y distinto a cada rumbo."
+    },
+    {
+      "term": "Tablilla de desvíos",
+      "text": "Tabla de cada barco que da el desvío de la aguja para cada rumbo."
+    },
+    {
+      "term": "Corrección total",
+      "text": "Ángulo entre el norte verdadero y el norte de aguja; suma algebraica de declinación y desvío."
+    },
+    {
+      "term": "Chapitel",
+      "text": "Pieza cónica del centro de la rosa de la aguja que descansa sobre el estilo."
+    },
+    {
+      "term": "Estilo",
+      "text": "Punta dura sobre la que pivota la rosa de la aguja náutica."
+    },
+    {
+      "term": "Mortero",
+      "text": "Carcasa que contiene la rosa y los imanes de la aguja."
+    },
+    {
+      "term": "Línea de fe",
+      "text": "Marca grabada en el mortero, alineada con la línea de crujía, frente a la que se lee el rumbo."
+    },
+    {
+      "term": "Rumbo",
+      "text": "Ángulo entre el meridiano (norte) y la línea proa-popa del buque; verdadero, magnético o de aguja."
+    },
+    {
+      "term": "Demora",
+      "text": "Ángulo entre el norte (meridiano) y la visual a un objeto."
+    },
+    {
+      "term": "Marcación",
+      "text": "Ángulo, contado desde la proa, entre la línea de crujía y la visual a un objeto."
+    },
+    {
+      "term": "Enfilación",
+      "text": "Visual que une dos marcas de la costa con el buque, vistas una detrás de otra."
+    },
+    {
+      "term": "Oposición",
+      "text": "Línea que une dos puntos con el observador situado entre ambos."
+    },
+    {
+      "term": "Cero hidrográfico",
+      "text": "Plano horizontal de referencia desde el que se miden las sondas de la carta y las alturas de lo que vela en bajamar."
+    },
+    {
+      "term": "Amplitud de la marea",
+      "text": "Diferencia de altura entre una pleamar y una bajamar consecutivas."
+    },
+    {
+      "term": "Duración de la marea",
+      "text": "Tiempo entre una pleamar y la bajamar siguiente, o viceversa."
+    },
+    {
+      "term": "Abatimiento",
+      "text": "Ángulo entre el rumbo verdadero y el de superficie, producido por el viento."
+    },
+    {
+      "term": "Deriva",
+      "text": "Ángulo entre el rumbo verdadero y el efectivo, producido por la corriente."
+    },
+    {
+      "term": "Rumbo efectivo",
+      "text": "Rumbo que el barco hace realmente sobre el fondo, teniendo en cuenta la corriente."
+    }
+  ],
+  "questions": {
+    "ycuycuvjh1jrdt8": "mareas",
+    "7j92sankj8zb0bf": "correccion-total-y-rumbos",
+    "lzge5k56nywfzv4": "mareas-meteorologia",
+    "6gvgxcryxyedl0n": "aguja-nautica-y-desvio",
+    "35pt4624m0lgsn7": "luces-y-publicaciones",
+    "w1cye96t7nvcdbt": "aguja-nautica-y-desvio",
+    "dn1gcyl5q5zhq4m": "luces-y-publicaciones",
+    "yxcsyt10nwie60k": "milla-nudo-distancias",
+    "wx6tin1l8tslxox": "corredera-y-sonda",
+    "9o9q3oxhxlgte7f": "marcacion",
+    "kjuwplehsaeqbjs": "mareas",
+    "jy7l2pyifp47ufp": "corredera-y-sonda",
+    "l19w8myvna8hlkc": "esfera-terrestre",
+    "3f79fo71e83d02p": "viento-y-corriente",
+    "ited67h1avocnjv": "marcacion",
+    "uju5iyzey23gqyx": "correccion-total-y-rumbos",
+    "772zr38z1zzrqhp": "aguja-nautica-y-desvio",
+    "vzy9yknryjqyyuv": "mareas-meteorologia",
+    "cvz19zpnrq0c9kg": "viento-y-corriente",
+    "h1xk27q65uytfzs": "cartas-nauticas",
+    "1lj03h5j3o59uu3": "marcacion",
+    "qyu80opr951f46i": "hora-reloj-bitacora",
+    "3lo74v1yvesn5po": "aguja-nautica-y-desvio",
+    "hvqe93nal8dyj52": "correccion-total-y-rumbos",
+    "svwjsxpkh3e1u2y": "corredera-y-sonda",
+    "vtcyh7nu2rk5pjq": "sondas-veriles-fondo",
+    "oo2h5tye2irk39k": "mareas",
+    "1dq837tvyr8p9n8": "mareas-meteorologia",
+    "6mmsei5iiid3l4c": "declinacion-magnetica",
+    "gi4iz8wxcxj6aqj": "aguja-nautica-y-desvio",
+    "fgwfm7gd5pgtnf1": "mareas-meteorologia",
+    "o6807u6j7gsnd0l": "luces-y-publicaciones",
+    "6fplnlk2yv80yyu": "correccion-total-y-rumbos",
+    "f5zfl301yqppqf6": "mareas",
+    "cbjcisbdtn5m3u6": "viento-y-corriente",
+    "2lo6osrt2yuzyci": "lineas-de-posicion",
+    "ajahc0k5jigdcq9": "esfera-terrestre",
+    "iu2ngvp8osmtfx6": "aguja-nautica-y-desvio",
+    "wgsrgp0vtgzmtjy": "aguja-nautica-y-desvio",
+    "q80cztm5bsdoumf": "hora-reloj-bitacora",
+    "5zw4ay99kbtbghw": "correccion-total-y-rumbos",
+    "p6d7bzkvyq2jbll": "sondas-veriles-fondo",
+    "97j7mf2atsumpbi": "hora-reloj-bitacora",
+    "2qxg9e7v250o6pa": "mareas-meteorologia",
+    "t5960hmnklpmzhy": "marcacion",
+    "ames3vtva5inhtb": "marcacion",
+    "din0wn2w02y4n8g": "luces-y-publicaciones",
+    "jyhvymbcjl327er": "cartas-nauticas",
+    "doc8vt24m2xga52": "mareas-meteorologia",
+    "m0cz3d138fg96jy": "corredera-y-sonda",
+    "2szzay1rkqynbeb": "esfera-terrestre",
+    "jsgic6qen07z3lr": "viento-y-corriente",
+    "e6t4fj1vowcsz6f": "cartas-nauticas",
+    "5m1kcpkh9avah45": "corredera-y-sonda",
+    "qlaoqrmq1asv3vn": "mareas-meteorologia",
+    "247a9zd1c81vwq5": "aguja-nautica-y-desvio",
+    "dhva6ia7vyt9hcm": "corredera-y-sonda",
+    "cqrmslqcgnca7k2": "hora-reloj-bitacora",
+    "dgg9kro27v2nlp3": "viento-y-corriente",
+    "v48p1f3d5is5tto": "mareas-meteorologia",
+    "qyeiuucufq73mnm": "declinacion-magnetica",
+    "ahoz903gkc01i8j": "corredera-y-sonda",
+    "wz6veb9holeh8xq": "milla-nudo-distancias",
+    "4hpp5i9mpb1ro44": "viento-y-corriente",
+    "5m29ub1rli7vvh5": "mareas",
+    "41lquzwsa01dsgs": "aguja-nautica-y-desvio",
+    "5c6nhz1rm0m17tu": "hora-reloj-bitacora",
+    "hoaghcr1y8aynz9": "esfera-terrestre",
+    "vm8rq794br1pqkr": "correccion-total-y-rumbos",
+    "oynfjq3uo8xutw7": "marcacion",
+    "oot8rgacgxc1teg": "declinacion-magnetica",
+    "egbj1zylusf515w": "hora-reloj-bitacora",
+    "vnc8umzrn5klicq": "esfera-terrestre",
+    "1o6jblbf3rhbuwf": "correccion-total-y-rumbos",
+    "2nkol3q12ak5gb4": "lineas-de-posicion",
+    "nuw1e2qrudhnv73": "lineas-de-posicion",
+    "6medph3rf7gswkh": "marcacion",
+    "vryk1hfyjqvl32l": "correccion-total-y-rumbos",
+    "4f357tkrb28z792": "esfera-terrestre",
+    "g0mkg0x25toth77": "esfera-terrestre",
+    "ov6058yxf1d8sxf": "mareas",
+    "bi39hlg1i1galyu": "corredera-y-sonda",
+    "x3135aewnnn0dm2": "esfera-terrestre",
+    "ams2fx66psyx8bp": "viento-y-corriente",
+    "asm05r615y11wbu": "correccion-total-y-rumbos",
+    "644qt4o9i0fkflq": "declinacion-magnetica",
+    "4hx7wmg9r5m1u95": "aguja-nautica-y-desvio",
+    "z2subqbjok13i7s": "lineas-de-posicion",
+    "678oyg7swetmk57": "marcacion",
+    "s3rryf2lsiu11dk": "luces-y-publicaciones",
+    "kjzmhxsutz85f4v": "correccion-total-y-rumbos",
+    "flgyxizka8ffid0": "luces-y-publicaciones",
+    "5o2i965rhy9x2xq": "cartas-nauticas",
+    "3fv97gvyr9fja98": "esfera-terrestre",
+    "gxrvm5fb4ozrvlf": "declinacion-magnetica",
+    "k1wgiehfpbworjr": "aguja-nautica-y-desvio",
+    "9u2dflxwl8g9r24": "aguja-nautica-y-desvio",
+    "guzln6yv9pzkuf5": "sondas-veriles-fondo",
+    "6o0kbp46iwxoi6f": "esfera-terrestre",
+    "yfg840z30h9sbmt": "lineas-de-posicion",
+    "lry1u2untkkd5s5": "viento-y-corriente",
+    "088j7q4ms0ln6w6": "mareas",
+    "6gp5514zz3lh9z8": "corredera-y-sonda",
+    "x5nwq2kpqeftnju": "correccion-total-y-rumbos",
+    "27jadcaoy4mx0q9": "cartas-nauticas",
+    "3gwpug1pdq3ptj3": "aguja-nautica-y-desvio",
+    "25xc9i6hs7r5fd3": "esfera-terrestre",
+    "olm16pcq43m0zey": "viento-y-corriente",
+    "wfhhxfwk9dlhzlu": "sondas-veriles-fondo",
+    "wo74zz716opf2pc": "mareas",
+    "kut2lc3jovb3kdm": "declinacion-magnetica",
+    "9l6kpr356q0f3j6": "corredera-y-sonda",
+    "minxvtjatn131tz": "mareas-meteorologia",
+    "qayy5xthx4988z4": "hora-reloj-bitacora",
+    "59c55xkw7l2nz40": "esfera-terrestre",
+    "i9596iy9e646mbn": "marcacion",
+    "duwhmjw4fiqe5yj": "luces-y-publicaciones",
+    "doipcp669rufc5f": "sondas-veriles-fondo",
+    "mfz5zxi53f7yukz": "cartas-nauticas",
+    "1yi9asrdmm8zcor": "aguja-nautica-y-desvio",
+    "vaz3dexxe9sjius": "lineas-de-posicion",
+    "3rei44dqmpy6djo": "mareas-meteorologia",
+    "irjmvsvb8xy4rpn": "luces-y-publicaciones",
+    "cuq1smm14myzift": "aguja-nautica-y-desvio",
+    "69e3nkwqnwq63f7": "esfera-terrestre",
+    "yk4i9kib52nmz5c": "marcacion",
+    "phxwjwh4nadj6n8": "correccion-total-y-rumbos",
+    "97w0vsc5yfa3duu": "correccion-total-y-rumbos",
+    "2l4aifx0tm3w5z8": "corredera-y-sonda",
+    "6l8b0sayjqn6xu7": "milla-nudo-distancias",
+    "wnp9gvdxmm4yxz0": "mareas",
+    "izddc1tbkcd0ijn": "correccion-total-y-rumbos",
+    "3i550h2x18lokaq": "aguja-nautica-y-desvio",
+    "ozos8s8if5ky0y9": "sondas-veriles-fondo",
+    "kfs4pxq5ulm9xwb": "viento-y-corriente",
+    "dalndhwz8v399p5": "esfera-terrestre",
+    "etly5mwu2iz6dhp": "sondas-veriles-fondo",
+    "uir7le5rhjoe23z": "milla-nudo-distancias",
+    "jka2hs50zqsp2vy": "corredera-y-sonda",
+    "9245tm2601gmwap": "sondas-veriles-fondo",
+    "4tz1lat6ftc4awy": "hora-reloj-bitacora",
+    "n366ik42fnmitmk": "esfera-terrestre",
+    "nj4tk31w1p6qjg9": "marcacion",
+    "gb9talbs9is65vn": "luces-y-publicaciones",
+    "vsp1vzn8hfq5vuo": "mareas",
+    "m5prj5pq1p0eyba": "esfera-terrestre",
+    "ioeenkwnjpmvn3r": "correccion-total-y-rumbos",
+    "y86uywvplqjaiw0": "cartas-nauticas",
+    "4g0oozucr10bi15": "milla-nudo-distancias",
+    "1ezlsusnpecip7z": "mareas",
+    "ffand2slny2lalf": "lineas-de-posicion",
+    "mb57o3uvnamk8yb": "esfera-terrestre",
+    "2ypj298wlh76rhv": "mareas",
+    "bto3s3n7lvrzj1g": "viento-y-corriente",
+    "on1cqymxvruk4e2": "marcacion",
+    "a0nmhhigoal8ks5": "declinacion-magnetica",
+    "fii59473tppqdod": "lineas-de-posicion",
+    "bsnrxm7epzy4c3u": "lineas-de-posicion",
+    "suo59wwop6thag7": "marcacion",
+    "42scsms453mts42": "luces-y-publicaciones",
+    "q8s9x1wc9kneyfg": "esfera-terrestre",
+    "z8ti93wosiktri2": "marcacion",
+    "fikzze7ed1u5w94": "mareas",
+    "xcyt7e8nxtef41l": "corredera-y-sonda",
+    "psmbin6zb545bgm": "cartas-nauticas",
+    "uu2rm1q163szi1h": "lineas-de-posicion",
+    "h6mbm3sucuga6uz": "corredera-y-sonda",
+    "3yfvpcvji3qqdat": "mareas",
+    "217qav38ymq664u": "hora-reloj-bitacora",
+    "c4l0n10rjb4t1s4": "luces-y-publicaciones"
+  }
+}

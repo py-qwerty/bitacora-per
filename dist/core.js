@@ -62,3 +62,46 @@ export function validPractice(p,ids,map) {
 export function swipeDirection(dx,dy) {
   return Math.abs(dx)>=44&&Math.abs(dx)>Math.abs(dy)*1.25?(dx<0?1:-1):0;
 }
+
+// ── Temas para estudiar (content/temas → dist/temas) ───────────────────────────
+export const TEMA_BLOCKS = ['p', 'analogy', 'term', 'list', 'steps', 'table', 'example', 'exam', 'key'];
+const filled = v => typeof v === 'string' && v.trim().length > 0;
+const allFilled = a => Array.isArray(a) && a.length > 0 && a.every(filled);
+/** Valida un tema y comprueba que ninguna pregunta del banco de ese tema queda sin apartado. */
+export function validateTema(tema, bank) {
+  const fail = message => { throw Error(`Tema no válido: ${message}`); };
+  if (!tema || typeof tema !== 'object') fail('vacío');
+  const topic = bank.topics.find(t => t.id === tema.topic);
+  if (!topic) fail(`el tema ${tema.topic} no existe en el banco`);
+  if (tema.title !== topic.title) fail(`el título debe ser «${topic.title}»`);
+  if (tema.minutes !== undefined && !(Number.isInteger(tema.minutes) && tema.minutes > 0)) fail('minutos');
+  if (!tema.intro || !filled(tema.intro.why) || (tema.intro.before && !allFilled(tema.intro.before)) || (tema.intro.goals && !allFilled(tema.intro.goals))) fail('introducción incompleta');
+  if (!Array.isArray(tema.sections) || !tema.sections.length) fail('sin apartados');
+  const sections = new Set();
+  for (const s of tema.sections) {
+    if (!s || typeof s.id !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(s.id) || sections.has(s.id) || s.id === 'resumen' || s.id === 'glosario') fail(`id de apartado ${s?.id}`);
+    sections.add(s.id);
+    if (!filled(s.title) || !Array.isArray(s.blocks) || !s.blocks.length) fail(`apartado ${s.id} incompleto`);
+    for (const b of s.blocks) {
+      const where = `bloque ${b?.type} en ${s.id}`;
+      if (!b || !TEMA_BLOCKS.includes(b.type)) fail(where);
+      if (b.title !== undefined && !filled(b.title)) fail(`título de ${where}`);
+      if (b.type === 'term') { if (!filled(b.term) || !filled(b.text)) fail(where); }
+      else if (b.type === 'list' || b.type === 'steps') { if (!allFilled(b.items)) fail(where); }
+      else if (b.type === 'table') { if (!allFilled(b.head) || !Array.isArray(b.rows) || !b.rows.length || !b.rows.every(r => Array.isArray(r) && r.length === b.head.length && r.every(filled))) fail(where); }
+      else if (!filled(b.text)) fail(where);
+    }
+  }
+  if (!allFilled(tema.summary)) fail('falta el resumen');
+  if (!Array.isArray(tema.glossary) || !tema.glossary.length || !tema.glossary.every(g => g && filled(g.term) && filled(g.text))) fail('falta el glosario');
+  if (!tema.questions || typeof tema.questions !== 'object' || Array.isArray(tema.questions)) fail('falta el reparto de preguntas');
+  const ids = bank.questions.filter(q => q.topic === topic.id).map(q => q.id);
+  const missing = ids.filter(id => !Object.hasOwn(tema.questions, id));
+  if (missing.length) fail(`${missing.length} preguntas sin apartado: ${missing.slice(0, 8).join(', ')}`);
+  const known = new Set(ids);
+  for (const [id, section] of Object.entries(tema.questions)) {
+    if (!known.has(id)) fail(`la pregunta ${id} no es de este tema`);
+    if (!sections.has(section)) fail(`la pregunta ${id} apunta al apartado inexistente «${section}»`);
+  }
+  return topic;
+}

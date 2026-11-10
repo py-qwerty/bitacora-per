@@ -1,0 +1,1226 @@
+{
+  "topic": 9,
+  "title": "Meteorología",
+  "minutes": 24,
+  "intro": {
+    "why": "El tiempo decide si una salida es un paseo o un problema. En el examen esta unidad es de las más agradecidas: son pocas ideas, se repiten muchísimo y casi todas las preguntas se resuelven con una definición exacta. Si te aprendes bien el vocabulario (rolar, refrescar, caer, terral, virazón, fetch, persistencia) y el sentido de giro de borrascas y anticiclones, tienes la unidad aprobada.",
+    "before": [
+      "El viento se nombra siempre por la dirección de la que viene: un viento del norte viene del norte y va hacia el sur.",
+      "Proa es la parte delantera del barco, popa la trasera, través el costado y amura la zona entre la proa y el través.",
+      "Un nudo es una milla náutica por hora."
+    ],
+    "goals": [
+      "Definir la presión atmosférica, dar su valor normal y explicar cómo la mide el barómetro aneroide.",
+      "Decir qué es una isobara y distinguirla de otras líneas con las que el test intenta confundirte.",
+      "Describir borrascas y anticiclones en el hemisferio norte: presión, sentido de giro y trayectoria.",
+      "Usar con precisión los verbos del viento: rolar, refrescar, caer, rachear y calmar.",
+      "Distinguir viento real, relativo y aparente, y saber cuál mide el anemómetro en cada caso.",
+      "Explicar el terral y la virazón: cuándo soplan, de dónde vienen y por qué.",
+      "Definir intensidad, persistencia y fetch, y manejar las escalas Beaufort y Douglas."
+    ]
+  },
+  "sections": [
+    {
+      "id": "prevision-meteorologica",
+      "title": "Antes de salir: la previsión meteorológica",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Antes de planificar cualquier navegación hay que valorar el riesgo según el tiempo previsto. Los boletines son cada vez más fiables, sobre todo para las **24 horas siguientes**. Si la previsión es mala, la salida se suspende o se aplaza sin dudar. Y en una travesía larga conviene organizar turnos para escuchar por radio los boletines a sus horas."
+        },
+        {
+          "type": "list",
+          "title": "Dónde se consigue la previsión",
+          "items": [
+            "**Agencia Estatal de Meteorología (AEMET)**: boletines para la navegación marítima, de zonas costeras y de alta mar, en su web y por el servicio telefónico Teletiempo.",
+            "**Centros de Salvamento Marítimo**: emisiones por radio en VHF y por el sistema Navtex.",
+            "**Estaciones costeras** del Servicio Marítimo: emisiones en onda media y en VHF.",
+            "**Avisos por fax** de Salvamento Marítimo a cofradías, clubes náuticos y prácticos cuando hay aviso de temporal o de fenómenos adversos.",
+            "**Medios de comunicación**: radio, televisión y prensa; Radio 5 de RNE emite el boletín de alta mar."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Los partes dan la fuerza del viento en la **escala Beaufort** y el estado de la mar en la **escala Douglas**. Por eso conviene llevar las dos a bordo: así no hace falta memorizarlas para entender un boletín."
+        },
+        {
+          "type": "key",
+          "text": "La previsión se obtiene, entre otras vías, de los boletines marítimos de la AEMET y de los Centros de Salvamento Marítimo. Con mala previsión, no se sale."
+        }
+      ]
+    },
+    {
+      "id": "presion-atmosferica",
+      "title": "La presión atmosférica y su valor normal",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Presión atmosférica",
+          "text": "Es el **peso por unidad de superficie de la columna de aire que gravita sobre un lugar dado**. Dicho de otra forma, que también aparece en el test: el peso ejercido sobre todo cuerpo situado en la superficie de la Tierra por la masa de aire, equivalente a la columna de aire que se extiende desde ese punto hasta el límite superior de la atmósfera."
+        },
+        {
+          "type": "analogy",
+          "text": "Imagina que vives en el fondo de un océano de aire. Encima de cada centímetro cuadrado de tu barco hay una columna de aire que llega hasta el final de la atmósfera. Lo que pesa esa columna sobre ese trozo de superficie es la presión."
+        },
+        {
+          "type": "p",
+          "text": "El aire frío es más denso y pesa más (más presión). El aire caliente es más ligero y sube (menos presión). Como el Sol no calienta toda la Tierra por igual, hay zonas de alta y de baja presión, y el aire se mueve de las altas hacia las bajas: eso es el viento."
+        },
+        {
+          "type": "term",
+          "term": "Valor normal de la presión",
+          "text": "También llamado valor medio normal. Es la presión que equilibra una columna de mercurio de **760 mm**, a **0 °C**, a **nivel del mar** y a **45° de latitud**."
+        },
+        {
+          "type": "table",
+          "title": "La presión normal en sus distintas unidades",
+          "head": [
+            "Unidad",
+            "Valor normal"
+          ],
+          "rows": [
+            [
+              "Milímetros de mercurio (mm Hg)",
+              "760 mm"
+            ],
+            [
+              "Milibares (mb) o hectopascales (hPa)",
+              "1013,2 (con más precisión, 1013,25)"
+            ],
+            [
+              "Atmósferas",
+              "1 atmósfera"
+            ],
+            [
+              "Pulgadas de mercurio",
+              "29,92"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "El milibar y el hectopascal valen lo mismo: 1 mb = 1 hPa. Y 1 mm de mercurio equivale a 1,33 mb, de modo que 1000 mb son solo unos 750 mm, no 760."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. Trampas con los números: «1000 milibares corresponden a 760 mm» es **falso** (son 1013,2 mb); «760 hPa» es falso (760 son milímetros, no hectopascales); «780 mm», «960 mm», «980 mb» o «1025 hPa» también son falsos. Si preguntan por el «valor normal» y ofrecen «760 mm Hg» y «1000 mb», solo vale 760 mm Hg. Sí es correcto decir que el valor normal a nivel del mar es de **una atmósfera**."
+        },
+        {
+          "type": "exam",
+          "text": "Trampas con la definición. Lo correcto es peso **por unidad de superficie**: «peso por unidad de volumen» es falso, igual que «la altura de la columna de aire», «el peso de 5 metros de columna de agua» o «el de 100 mm de mercurio». Ojo: en una pregunta el banco da por incompleta la frase «el peso de la columna de aire que gravita en el lugar de medida» (sin «por unidad de superficie») porque hay otra opción mejor; en cambio, da por buena la definición larga del «peso ejercido sobre todo cuerpo… hasta el límite superior de la atmósfera». La presión se mide con el **barómetro**, no con el manómetro. Y la magnitud relacionada con el peso de la columna de aire es la presión, no la temperatura, la humedad absoluta ni el punto de rocío."
+        },
+        {
+          "type": "key",
+          "text": "Presión atmosférica = peso por unidad de superficie de la columna de aire que gravita sobre un lugar. Valor normal: 760 mm Hg = 1013,2 mb (hPa) = 1 atmósfera, a 0 °C, nivel del mar y 45° de latitud."
+        }
+      ]
+    },
+    {
+      "id": "barometro-aneroide",
+      "title": "El barómetro aneroide",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "La presión se mide con el **barómetro**. Hay dos familias: el de **mercurio** (el de Torricelli, una columna de mercurio) y el **aneroide**. El de mercurio es el más exacto, pero a bordo es poco práctico por los movimientos del barco, las vibraciones y la temperatura; se usa en los observatorios. En los barcos se usa el aneroide."
+        },
+        {
+          "type": "term",
+          "term": "Barómetro aneroide",
+          "text": "Mide la presión por las **deformaciones de una cápsula metálica estanca a la que se le ha hecho el vacío** (cápsula de Vidi). Si la presión sube, la cápsula se aplasta; si baja, se hincha. Un mecanismo amplifica ese movimiento y lo lleva a una aguja que marca sobre una esfera graduada."
+        },
+        {
+          "type": "list",
+          "title": "Cuatro datos que pregunta el test",
+          "items": [
+            "Equilibra la presión por **fuerzas elásticas** (la elasticidad de la cápsula y de su muelle). No por fuerzas magnéticas ni eléctricas.",
+            "Es un aparato de **lectura directa**: la aguja señala la presión sin más cálculos. Decir que es de «lectura indirecta» es falso.",
+            "Su **exactitud es menor** que la del barómetro de mercurio.",
+            "**No lleva mercurio**: la cápsula está vacía, no es «una cápsula de mercurio»."
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Barógrafo",
+          "text": "Barómetro aneroide que registra la presión: una plumilla dibuja sus variaciones sobre un papel enrollado en un cilindro que gira con un mecanismo de relojería. Permite ver la tendencia de la presión a lo largo de la semana."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. Dos descripciones que NO son del aneroide, sino de barómetros de mercurio: «un estrechamiento capilar que amortigua las oscilaciones bruscas de la columna de mercurio debidas a los movimientos del buque» y «un tubo en forma de U con una rama abierta y otra cerrada parcialmente llena de mercurio». También es falso que el aneroide sea más exacto que el de mercurio. Y el anemómetro no mide la presión: mide la velocidad del viento."
+        },
+        {
+          "type": "key",
+          "text": "Aneroide: cápsula estanca con vacío que se deforma, fuerzas elásticas, lectura directa, menos exacto que el de mercurio."
+        }
+      ]
+    },
+    {
+      "id": "isobaras",
+      "title": "Las isobaras y el gradiente de presión",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Isobara (línea isobara)",
+          "text": "Línea que **une puntos de igual presión atmosférica** al nivel del mar en un instante dado. Definición técnica, que es la que más repite el test: las isobaras son **las intersecciones de las superficies isobáricas existentes en un momento dado con la superficie del nivel del mar**."
+        },
+        {
+          "type": "term",
+          "term": "Superficie isobárica",
+          "text": "Superficie imaginaria formada por todos los puntos de la atmósfera que tienen la misma presión en un momento determinado. Donde esa superficie corta al nivel del mar se dibuja la isobara."
+        },
+        {
+          "type": "analogy",
+          "text": "Son como las curvas de nivel de un mapa de montaña, pero en lugar de unir puntos de igual altura unen puntos de igual presión. Donde las curvas están muy juntas, la «pendiente» es fuerte."
+        },
+        {
+          "type": "p",
+          "text": "Como la presión cambia mucho con la altura, todas las medidas se reducen al nivel del mar para poder compararlas: los mapas del tiempo de superficie están referidos a cero metros. En ellos las isobaras se suelen dibujar **cada 4 milibares**, y se toma 1012 mb como frontera redondeada entre altas y bajas presiones."
+        },
+        {
+          "type": "term",
+          "term": "Gradiente de presión",
+          "text": "Diferencia de presión entre dos isobaras por unidad de distancia (el temario la refiere a 60 millas). Isobaras **muy juntas** = gradiente grande = **viento fuerte**. Isobaras **separadas** = gradiente pequeño = viento flojo y buen tiempo."
+        },
+        {
+          "type": "table",
+          "title": "No confundas las isobaras con otras líneas",
+          "head": [
+            "Línea",
+            "Qué une"
+          ],
+          "rows": [
+            [
+              "Isobaras",
+              "Puntos de igual presión"
+            ],
+            [
+              "Isalobaras",
+              "Puntos de igual tendencia barométrica (igual variación de la presión)"
+            ],
+            [
+              "Isohipsas",
+              "Puntos de igual altura (altitud de una superficie isobárica)"
+            ],
+            [
+              "Isotermas",
+              "Puntos de igual temperatura"
+            ]
+          ]
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. Son **falsas** para las isobaras: «unen puntos de igual tendencia barométrica» (eso son isalobaras; es el distractor más repetido), «unen puntos con el mismo gradiente horizontal de presión», «de igual temperatura», «de igual intensidad de viento», «de igual profundidad», «el valor normal a las superficies isobáricas», «las perpendiculares a las superficies isobáricas», «los puntos de corte de las superficies isobáricas con intervalos de 4 milibares» y «las intersecciones de las superficies isobáricas entre sí». Tampoco «tienen la misma presión normal y a la misma altura»: basta con «tienen la misma presión»."
+        },
+        {
+          "type": "exam",
+          "text": "Ojo con la superficie de corte. El banco da por buenas tres redacciones: intersección de las superficies isobáricas «con la superficie del nivel del mar», «con una superficie de nivel» y también «con la superficie terrestre». En la pregunta que ofrece «a) intersecciones con la superficie terrestre» y «b) líneas que unen puntos de igual presión atmosférica», la clave es «a) y b) son correctas». En rigor la referencia es el nivel del mar, pero en el test acepta la superficie terrestre."
+        },
+        {
+          "type": "key",
+          "text": "Isobara = línea de igual presión = corte de las superficies isobáricas con el nivel del mar. Igual tendencia barométrica son las isalobaras. Isobaras juntas, viento fuerte."
+        }
+      ]
+    },
+    {
+      "id": "temperatura",
+      "title": "La temperatura y la escala centígrada",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Temperatura",
+          "text": "Magnitud física que indica el nivel de calor de un cuerpo. En meteorología interesa la de las masas de aire. Se mide con el **termómetro** (de mercurio, de alcohol para fríos intensos, o de máxima y mínima); el termógrafo la registra en una gráfica."
+        },
+        {
+          "type": "term",
+          "term": "Escala centígrada",
+          "text": "Divide en cien partes iguales el intervalo entre dos puntos fijos del agua: **0°** es el punto de fusión del hielo (congelación del agua) y **100°** el punto de ebullición del agua. Su unidad es el **grado centígrado**, también conocido como **grado Celsius** (°C). Es la escala habitual en meteorología; existen otras, como la Fahrenheit o la Kelvin (absoluta)."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. Si te dan tres afirmaciones (0° = congelación del agua, 100° = ebullición del agua, la unidad es el grado centígrado o Celsius), las tres son ciertas: marca «todas las respuestas son correctas». Otra trampa: «la temperatura de un cuerpo es la suma de la energía cinética y potencial de sus partículas» es **falsa** (eso describe la energía interna, no la temperatura)."
+        },
+        {
+          "type": "key",
+          "text": "Escala centígrada o Celsius: 0° congelación del agua, 100° ebullición del agua."
+        }
+      ]
+    },
+    {
+      "id": "borrascas-y-anticiclones",
+      "title": "Borrascas y anticiclones: presión y sentido de giro",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "En un mapa del tiempo las isobaras cerradas dibujan dos tipos de figuras. Todo lo que sigue se refiere al **hemisferio norte**, que es lo que pregunta el examen (en el sur los giros son al revés)."
+        },
+        {
+          "type": "term",
+          "term": "Borrasca (depresión, área de bajas presiones)",
+          "text": "Región donde la presión atmosférica es **más baja que la del aire circundante**. La presión es **mínima en el centro**: disminuye de la periferia hacia el interior o, dicho al revés, aumenta del interior hacia la periferia. En el hemisferio norte sus vientos giran en **sentido contrario a las agujas del reloj** (antihorario), que se llama **sentido ciclónico**."
+        },
+        {
+          "type": "term",
+          "term": "Anticiclón (área de altas presiones)",
+          "text": "Región de altas presiones. La presión es **máxima en el centro**: aumenta de la periferia hacia el interior. En el hemisferio norte sus vientos giran en el **sentido de las agujas del reloj** (horario), que se llama **sentido anticiclónico**."
+        },
+        {
+          "type": "table",
+          "title": "Comparación en el hemisferio norte",
+          "head": [
+            "Rasgo",
+            "Borrasca o depresión",
+            "Anticiclón"
+          ],
+          "rows": [
+            [
+              "Presión",
+              "Baja (por debajo de 1012 mb)",
+              "Alta (por encima de 1012 mb)"
+            ],
+            [
+              "Centro frente a periferia",
+              "Menor en el centro que en la periferia",
+              "Mayor en el centro que en la periferia"
+            ],
+            [
+              "Giro del viento",
+              "Antihorario = ciclónico",
+              "Horario = anticiclónico"
+            ],
+            [
+              "Componente del viento",
+              "Hacia dentro (converge hacia el centro)",
+              "Hacia fuera (diverge del centro)"
+            ],
+            [
+              "Isobaras y gradiente",
+              "Juntas, gradiente grande",
+              "Separadas, gradiente pequeño"
+            ],
+            [
+              "Extensión",
+              "Poca",
+              "Grande"
+            ],
+            [
+              "Tiempo",
+              "Inestable: vientos fuertes, nubes y precipitaciones",
+              "Estable: buen tiempo, vientos flojos o moderados"
+            ],
+            [
+              "Letra en los mapas",
+              "B en España (L ingleses y EE. UU., D Francia, T Alemania)",
+              "A en España, Italia y Francia (H ingleses, EE. UU. y Alemania)"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "¿Por qué gira el viento en lugar de ir recto de la alta a la baja? El aire sale de las altas presiones buscando las bajas, pero la rotación de la Tierra lo desvía, y a eso se suman la fuerza centrífuga y el rozamiento. El resultado es que el viento circula **casi paralelo a las isobaras**, con una pequeña componente hacia el centro en la borrasca y hacia fuera en el anticiclón. No va en línea recta de un centro a otro ni sopla perpendicular a las isobaras."
+        },
+        {
+          "type": "analogy",
+          "text": "Truco para el giro: la borrasca es como el desagüe de un lavabo, el aire entra hacia el centro girando; el anticiclón es una montaña de aire que se desparrama hacia fuera. Y para el sentido: **A**nticiclón, **a** favor de las agujas del reloj; borrasca, al contrario."
+        },
+        {
+          "type": "term",
+          "term": "Ley de Buys Ballot",
+          "text": "En el hemisferio norte, si te pones cara al viento, el centro de la borrasca queda a tu derecha y algo hacia atrás (entre 90° y 135°, por tu aleta de estribor). En el hemisferio sur, a la izquierda."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. Las opciones mezclan tres parejas y solo una combinación es buena: **depresión = antihorario = ciclónico = presión central menor**; **anticiclón = horario = anticiclónico = presión central mayor**. Descarta cualquier opción que diga «contrario a las agujas del reloj o sentido anticiclónico» o «sentido horario o ciclónico»: los nombres están cruzados. Si el enunciado describe «aumento de la presión desde el interior hacia la periferia y giro contrario a las agujas del reloj», es una **depresión**. Si preguntan cómo «circulan» los vientos, la respuesta es el sentido de giro, nunca «de oeste a este», «de norte a sur», «de sur a norte» o «de abajo a arriba»."
+        },
+        {
+          "type": "exam",
+          "text": "Más trampas vistas: «en una borrasca la presión crece del exterior hacia el interior» (falso, decrece); «en un anticiclón la presión es mayor en la periferia que en el interior» (falso); «en una borrasca el viento sopla siempre perpendicular a las isobaras» (falso); «la circulación en la borrasca va del interior al exterior» (falso, va hacia dentro); «un anticiclón es una zona de bajas presiones con tiempo inestable» (falso). Para el anticiclón, la opción completa es «en el mismo sentido que las agujas del reloj y con una componente hacia fuera»."
+        },
+        {
+          "type": "key",
+          "text": "Hemisferio norte: borrasca = baja presión, mínima en el centro, giro antihorario (ciclónico), mal tiempo. Anticiclón = alta presión, máxima en el centro, giro horario (anticiclónico), buen tiempo."
+        }
+      ]
+    },
+    {
+      "id": "trayectoria-borrascas",
+      "title": "Hacia dónde se mueven las borrascas",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Una cosa es cómo gira el viento dentro de la borrasca (antihorario) y otra hacia dónde se desplaza la borrasca entera. Las borrascas casi siempre son móviles y, en el hemisferio norte, en general se trasladan **de oeste a este (de W a E)**, a unos 25 nudos, aunque con frecuentes **cambios de latitud**: suben o bajan según los anticiclones que encuentran."
+        },
+        {
+          "type": "p",
+          "text": "La mayoría de las depresiones que afectan al continente europeo se forman en la costa de **Estados Unidos o Canadá** y cruzan el Atlántico con trayectoria general hacia el **NE**. Muchas se deshacen antes de llegar a Europa; unas acaban en Islandia y otras entran por el Canal de la Mancha hacia Noruega y Finlandia. Sobre la Península Ibérica la trayectoria suele ser hacia el ENE."
+        },
+        {
+          "type": "example",
+          "title": "Qué viento trae una borrasca que se acerca",
+          "text": "La borrasca llega desde el oeste y gira en sentido antihorario. Tú estás delante de ella, en su lado este. En ese lado el giro antihorario lleva el aire de sur a norte. Por eso, antes de la llegada de una borrasca en el hemisferio norte, con carácter general los vientos son de **componente sur**."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. «Trayectoria de las borrascas en el hemisferio norte»: de oeste a este. Las opciones «en sentido contrario a las agujas del reloj» o «en el mismo sentido» hablan del giro del viento, no de la trayectoria: no las marques. Si aparece «del ecuador hacia los polos, en dirección NE» junto a «de W a E» y «b y c son correctas», la clave del banco es solo **«se desplazan de W a E»**. Otra redacción correcta: «se desplazan en general hacia el este, aunque con cambios de latitud en muchas ocasiones». Y si preguntan por las depresiones que nacen en la costa de Estados Unidos o Canadá, la trayectoria es hacia el **NE**. Es falso que las borrascas vayan «de este a oeste»."
+        },
+        {
+          "type": "key",
+          "text": "Las borrascas del hemisferio norte se desplazan de W a E; las que nacen en la costa de Estados Unidos o Canadá van hacia el NE. Antes de que llegue una, el viento es de componente sur."
+        }
+      ]
+    },
+    {
+      "id": "vocabulario-del-viento",
+      "title": "Rolar, refrescar, caer, racha y calmar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "El viento es aire en movimiento y tiene dos datos: **dirección** (de dónde viene, en puntos de la rosa o en grados de 0° a 360°) e **intensidad** (su fuerza o velocidad). Cada cambio tiene su verbo, y el examen los pregunta una y otra vez."
+        },
+        {
+          "type": "table",
+          "title": "Qué cambia y cómo se dice",
+          "head": [
+            "Término",
+            "Qué le pasa al viento",
+            "Qué cambia"
+          ],
+          "rows": [
+            [
+              "Rolar",
+              "Cambia de dirección. Si cambia y se mantiene en la nueva, «ha rolado»",
+              "La dirección"
+            ],
+            [
+              "Refrescar",
+              "Aumenta su intensidad",
+              "La intensidad, a más"
+            ],
+            [
+              "Caer",
+              "Disminuye su intensidad (disminuye y se mantiene)",
+              "La intensidad, a menos"
+            ],
+            [
+              "Racha / racheado",
+              "Aumento brusco y momentáneo de la velocidad; racheado si la intensidad varía continuamente, a más y a menos",
+              "La intensidad, a saltos"
+            ],
+            [
+              "Calmar",
+              "Disminuye la intensidad del viento o de la mar, total o parcialmente",
+              "La intensidad, hasta la calma"
+            ]
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Rolar",
+          "text": "Variar el viento de **dirección**. Vale para el cambio lento y sucesivo («el viento está rolando») y para el cambio ya hecho: si la dirección ha cambiado y se mantiene constante en la nueva, el viento **ha rolado**."
+        },
+        {
+          "type": "term",
+          "term": "Refrescar",
+          "text": "**Aumentar** la intensidad del viento. No tiene nada que ver con la temperatura."
+        },
+        {
+          "type": "term",
+          "term": "Caer",
+          "text": "**Disminuir** la intensidad del viento. Cuando la intensidad disminuye y se mantiene, el viento cae o ha caído."
+        },
+        {
+          "type": "term",
+          "term": "Racha y viento racheado",
+          "text": "La **racha** es el aumento brusco y momentáneo de la velocidad del viento, breve e intenso, en intervalos por lo general cortos. Se dice que el viento **es o está racheado** cuando su intensidad varía continuamente, tanto a más como a menos."
+        },
+        {
+          "type": "term",
+          "term": "Calmar",
+          "text": "Disminuir la intensidad del viento o de la mar, total o parcialmente. Si el viento desaparece del todo, ha cesado o se ha quedado en calma."
+        },
+        {
+          "type": "analogy",
+          "text": "Regla rápida: **rolar** va con **r**umbo (dirección); **refrescar** es que el viento «se viene arriba»; **caer** es que se viene abajo; **racha** es un empujón que dura poco."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. Trampas repetidas: «refresca cuando baja la temperatura» (falso); «refresca cuando disminuye su intensidad y se mantiene» (falso, eso es caer); «un viento cae cuando cambia de dirección» (falso, eso es rolar); «una racha es un cambio suave y estable de la intensidad» (falso, es brusco y momentáneo). Si las tres primeras opciones son de este estilo, marca «ninguna es correcta». En la pregunta «un viento rola cuando…» con opciones que solo hablan de intensidad (aumenta, cesa, disminuye), la respuesta también es **«ninguna de las anteriores»**, porque rolar es cambiar de dirección."
+        },
+        {
+          "type": "exam",
+          "text": "Tres matices del banco. 1) «Se dice que el viento ha rolado cuando…»: la clave es «ha cambiado de dirección», no «cambia constantemente de dirección». 2) «Definimos racha como…»: la clave es **«el aumento brusco y momentáneo de la velocidad del viento»**, aunque también ofrezcan «un golpe de viento»; quédate con la definición completa. 3) «El viento ha caído cuando…»: «la intensidad del viento disminuye». Si la dirección y la intensidad varían continuamente a más y a menos, eso no es rolar ni caer: lo que varía a más y a menos es la intensidad, y el viento está racheado. «Contraste», «persistencia» o «permanencia» no son verbos del viento."
+        },
+        {
+          "type": "key",
+          "text": "Rolar = cambiar de dirección. Refrescar = aumentar de intensidad. Caer = disminuir de intensidad. Racha = aumento brusco y momentáneo; racheado = intensidad que varía a más y a menos."
+        }
+      ]
+    },
+    {
+      "id": "instrumentos-del-viento",
+      "title": "Anemómetro, veleta y catavientos",
+      "blocks": [
+        {
+          "type": "table",
+          "title": "Qué mide cada uno",
+          "head": [
+            "Instrumento",
+            "Qué indica",
+            "Cómo es"
+          ],
+          "rows": [
+            [
+              "Anemómetro",
+              "La **velocidad** (intensidad) del viento",
+              "Molinete de cazoletas que gira más deprisa cuanto más viento hay"
+            ],
+            [
+              "Veleta",
+              "La **dirección** del viento",
+              "Flecha que pivota sobre un eje vertical; la cola, más ancha, la orienta al viento"
+            ],
+            [
+              "Catavientos",
+              "La **dirección** del viento",
+              "Manga de tela troncocónica, abierta por los dos extremos, o cintas en las velas"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "El anemómetro mide el viento que le llega, y eso depende de si el barco se mueve. **Si estamos parados**, la lectura del anemómetro es la velocidad del **viento real**. **Si vamos avante** (navegando hacia delante), la lectura es la velocidad del **viento aparente**. El anemómetro da velocidad, no dirección."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. «Podemos conocer la dirección del viento gracias a…»: veleta **y** catavientos, así que la respuesta es «b) y c) son correctas». Son falsas: «la veleta se emplea para determinar o estimar la intensidad del viento», «los anemómetros indican la dirección del viento», «el anemómetro mide la presión atmosférica», «el catavientos mide la velocidad de rotación de la Tierra», «para medir con el anemómetro el barco tiene que estar navegando» y «navegando la lectura es errónea y no sirve». Navegando, lo que da el anemómetro es la **velocidad del viento aparente**: no el viento verdadero ni la dirección."
+        },
+        {
+          "type": "key",
+          "text": "Anemómetro = velocidad (real si estamos parados, aparente si navegamos). Veleta y catavientos = dirección."
+        }
+      ]
+    },
+    {
+      "id": "viento-real-y-aparente",
+      "title": "Viento real, relativo y aparente",
+      "blocks": [
+        {
+          "type": "analogy",
+          "text": "Un día sin nada de viento sacas la mano por la ventanilla del coche y notas aire: lo crea tu propio movimiento. A un barco le pasa igual. El viento que sientes a bordo es la mezcla del que sopla de verdad y del que fabricas al avanzar."
+        },
+        {
+          "type": "term",
+          "term": "Viento real o verdadero",
+          "text": "El que existe de verdad sobre el mar; es el que notas con la embarcación **parada**."
+        },
+        {
+          "type": "term",
+          "term": "Viento relativo",
+          "text": "El que genera el propio barco al moverse. Viene siempre de **proa** (con marcha avante) y su velocidad es **igual a la del barco**."
+        },
+        {
+          "type": "term",
+          "term": "Viento aparente",
+          "text": "El que parece existir con el barco en movimiento: la **resultante** de combinar el real y el relativo. Es el que se siente a bordo y el que marcan el anemómetro y la veleta cuando navegas. Depende del viento real, del rumbo y también de la **velocidad** del barco."
+        },
+        {
+          "type": "p",
+          "text": "Como el viento relativo entra por la proa, al sumarlo tira del aparente hacia delante: con arrancada avante, el viento aparente se recibe **más hacia proa que el real**, y más cuanto más deprisa vayas. Pero no siempre es más fuerte que el real: con el viento por popa, el aparente es más flojo."
+        },
+        {
+          "type": "example",
+          "title": "El caso que más se pregunta: navegas y no sientes viento",
+          "text": "Vas a 10 nudos y a bordo no notas viento, o el anemómetro marca cero. Lo que se siente a bordo es el aparente, así que **el viento aparente es cero**. Tu marcha crea 10 nudos de viento de proa; para que se anulen tiene que haber un viento real de 10 nudos que venga exactamente de **popa**. Es decir: el viento real no es cero, viene de popa y es igual a tu velocidad. Dicho al revés: si recibes el viento verdadero por popa y la velocidad del buque es igual a la intensidad de ese viento, el viento aparente es **nulo**."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. «Vamos a 10 nudos y no sentimos viento»: el viento aparente es cero (no «el real es cero», ni «el aparente es de 10 nudos de proa»). «El anemómetro marca cero a 10 nudos, ¿de dónde viene el real?»: de popa. «Con arrancada avante, el viento aparente…»: se recibe más hacia proa que el real; la opción «será siempre mayor que el real» es falsa, y por tanto también «a) y c) son correctas». «Viento aparente» = «el que parece existir con el barco en movimiento»; no tiene que ver con la mar de viento ni con la mar de fondo."
+        },
+        {
+          "type": "exam",
+          "text": "Aviso sobre una clave del banco. En la pregunta «si estamos navegando y no sentimos ningún viento…», el banco da por buena: **«el viento aparente es cero y el viento real o verdadero sopla en dirección opuesta a nuestro rumbo»**. La redacción es ambigua: el viento real viene de popa, es decir, se mueve en el mismo sentido que el barco; la clave solo encaja si entiendes «dirección del viento» como la dirección de la que viene (la popa, opuesta a la proa). En el examen marca esa opción. Y recuerda que es falso que el aparente «solo dependa del viento real y del rumbo, no de la velocidad del buque»."
+        },
+        {
+          "type": "key",
+          "text": "Aparente = real + el creado por la marcha. Navegando se recibe más a proa que el real. Si navegas y no sientes viento, el aparente es cero y el real viene de popa con tu misma velocidad."
+        }
+      ]
+    },
+    {
+      "id": "escala-beaufort",
+      "title": "La escala Beaufort: la fuerza del viento",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Escala Beaufort",
+          "text": "Escala que designa los diferentes **estados del viento**: gradúa su **intensidad o fuerza** en **13 grados, del 0 (calma) al 12 (huracán)**. Se usa universalmente y sus velocidades se dan normalmente en **nudos**. La ideó el almirante Francis Beaufort en 1806 y describe el efecto de cada fuerza de viento sobre la superficie del mar."
+        },
+        {
+          "type": "p",
+          "text": "Hay que llevarla a bordo porque los partes meteorológicos dan el viento en fuerza Beaufort («viento del SW fuerza 5»). Con la tabla delante sabes al momento qué velocidad y qué mar te esperan."
+        },
+        {
+          "type": "table",
+          "title": "Escala Beaufort completa",
+          "head": [
+            "Fuerza",
+            "Denominación",
+            "Velocidad en nudos",
+            "Aspecto de la mar"
+          ],
+          "rows": [
+            [
+              "0",
+              "Calma",
+              "Menos de 1",
+              "Mar como un espejo"
+            ],
+            [
+              "1",
+              "Ventolina",
+              "1 a 3",
+              "Pequeños rizos sin espuma"
+            ],
+            [
+              "2",
+              "Flojito (brisa muy débil)",
+              "4 a 6",
+              "Olas pequeñas que no rompen"
+            ],
+            [
+              "3",
+              "Flojo (brisa débil)",
+              "7 a 10",
+              "Las crestas empiezan a romper; borreguillos dispersos"
+            ],
+            [
+              "4",
+              "Bonancible (brisa moderada)",
+              "11 a 16",
+              "Olas algo más largas; borreguillos numerosos"
+            ],
+            [
+              "5",
+              "Fresquito (brisa fresca)",
+              "17 a 21",
+              "Olas moderadas y alargadas; muchos borreguillos"
+            ],
+            [
+              "6",
+              "Fresco (brisa fuerte)",
+              "22 a 27",
+              "Olas grandes; crestas de espuma blanca y salpicaduras"
+            ],
+            [
+              "7",
+              "Frescachón (viento fuerte)",
+              "28 a 33",
+              "La mar engorda; la espuma se dispone en bandas"
+            ],
+            [
+              "8",
+              "Temporal (duro)",
+              "34 a 40",
+              "Olas altas con rompientes; espuma en regueros"
+            ],
+            [
+              "9",
+              "Temporal fuerte (muy duro)",
+              "41 a 47",
+              "Olas muy gruesas; la espuma dificulta la visibilidad"
+            ],
+            [
+              "10",
+              "Temporal duro",
+              "48 a 55",
+              "Olas muy altas con crestas en penacho; mar blanca"
+            ],
+            [
+              "11",
+              "Temporal muy duro (borrasca)",
+              "56 a 63",
+              "Olas excepcionalmente grandes; visibilidad muy reducida"
+            ],
+            [
+              "12",
+              "Temporal huracanado (huracán)",
+              "64 o más",
+              "Aire lleno de espuma y rociones; mar totalmente blanca"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "No hace falta saberse la tabla de memoria para el test: las preguntas del banco solo piden saber **qué mide** y cuántos grados tiene. Por eso se lleva a bordo."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. Beaufort = **viento**. Son falsas: «la escala Beaufort se utiliza para estimar la salinidad del agua de mar» y «la escala Beaufort clasifica el oleaje en función de su altura» (eso es Douglas). «La escala que designa los diferentes estados del viento» es la de Beaufort; no existen la «escala de Coriolis» ni la «escala de Persistencia». Es correcta la frase «la escala Beaufort se utiliza universalmente para indicar la graduación de la intensidad y la fuerza del viento, normalmente en nudos»."
+        },
+        {
+          "type": "key",
+          "text": "Beaufort = intensidad o fuerza del viento, de 0 (calma) a 12 (huracán)."
+        }
+      ]
+    },
+    {
+      "id": "brisas-costeras",
+      "title": "Brisas costeras: terral y virazón",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "El **régimen de brisas** o brisas costeras son vientos locales y flojos que soplan en la costa cuando no hay gradiente de presión general, es decir, cuando no hay otro viento. Nacen porque **la tierra y el mar no se calientan por igual**: la tierra se calienta más deprisa de día y se enfría más deprisa de noche. Sus dos nombres son **terral y virazón**."
+        },
+        {
+          "type": "term",
+          "term": "Terral",
+          "text": "Brisa que sopla **de la tierra al mar**, en las **horas nocturnas**. De noche la masa continental pierde el calor más rápido que la masa oceánica: sobre la tierra queda aire frío y una alta presión relativa, sobre el mar una baja presión relativa, y el aire va de tierra a mar."
+        },
+        {
+          "type": "term",
+          "term": "Virazón",
+          "text": "Brisa costera local que sopla **de la mar a tierra**, en las **horas diurnas**. De día la tierra se calienta más deprisa que el mar: se forma una baja presión relativa sobre la tierra, el gradiente se dirige hacia ella y el viento sopla desde el mar. Lo verás escrito «la virazón» y «el virazón»: es lo mismo."
+        },
+        {
+          "type": "table",
+          "title": "Las dos brisas, de un vistazo",
+          "head": [
+            "Rasgo",
+            "Terral",
+            "Virazón"
+          ],
+          "rows": [
+            [
+              "Cuándo",
+              "De noche",
+              "De día"
+            ],
+            [
+              "De dónde a dónde",
+              "De la tierra al mar",
+              "Del mar a la tierra"
+            ],
+            [
+              "Baja presión relativa",
+              "Sobre el mar",
+              "Sobre la tierra"
+            ],
+            [
+              "Alta presión relativa",
+              "Sobre la tierra",
+              "Sobre el mar"
+            ],
+            [
+              "Alcance máximo",
+              "Unas 20 millas mar adentro",
+              "Unos 50 km tierra adentro"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "El fenómeno es periódico y diario: terral de noche, virazón de día. **Entre el terral y la virazón suele haber un intervalo de calma**, mientras se igualan las temperaturas."
+        },
+        {
+          "type": "analogy",
+          "text": "El nombre lo dice todo: el **terral** viene de **tierra**. La **virazón** es el viento que «vira» y entra del mar cuando aprieta el sol; es la brisa fresca de la playa a mediodía."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. Las opciones cruzan los dos datos (sentido y hora); la única combinación buena es **terral = tierra a mar, de noche** y **virazón = mar a tierra, de día**. Son falsas: «el terral se produce a las horas diurnas», «la virazón sopla por la noche», «el terral sopla del mar a la tierra», «la virazón sopla de la tierra al mar» y «la tierra y el mar se calientan por igual». La virazón no tiene nada que ver con los alisios ni con una borrasca, y no sopla «de norte a sur» ni «de este a oeste»: es simplemente la brisa costera local que sopla de la mar a tierra. Las brisas no se llaman «levante y poniente», «terrestre y marítimo» ni «Beaufort y Douglas»."
+        },
+        {
+          "type": "exam",
+          "text": "Preguntas con truco en las opciones. 1) «Brisa que sopla de la tierra al mar» y las opciones son «viento costero marítimo», «virazón», «terrazón» y «ninguna»: la respuesta es **«ninguna de las anteriores»**, porque «terrazón» no existe y el terral no aparece. Si el terral sí está entre las opciones, es terral. 2) Si las tres primeras afirmaciones sobre las brisas son falsas, marca «todas son falsas» o «ninguna es correcta». 3) Si te dan «b) terral nocturno y virazón diurno» y «c) entre ambos suele haber un intervalo de calma», marca «b) y c) son correctas»."
+        },
+        {
+          "type": "key",
+          "text": "Terral: de tierra a mar, de noche. Virazón: de mar a tierra, de día. Entre los dos, un rato de calma."
+        }
+      ]
+    },
+    {
+      "id": "intensidad-persistencia-fetch",
+      "title": "De qué depende el oleaje: intensidad, persistencia y fetch",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "El estado de la mar no depende solo de lo fuerte que sople el viento. Depende de **tres variables**: con qué fuerza sopla, durante cuánto tiempo y sobre cuánta extensión de mar."
+        },
+        {
+          "type": "term",
+          "term": "Intensidad",
+          "text": "La **fuerza que ejerce el viento sobre la superficie del mar**, que depende de su velocidad y de la presión que el aire ejerce sobre el mar. Es lo que gradúa la escala Beaufort; se mide en nudos o en metros por segundo."
+        },
+        {
+          "type": "term",
+          "term": "Persistencia",
+          "text": "El **tiempo** (número de horas) que lleva soplando el viento sobre una zona **con la misma dirección e intensidad**. La mar no responde al instante: necesita horas de viento constante para crecer hasta estabilizarse."
+        },
+        {
+          "type": "term",
+          "term": "Fetch",
+          "text": "La **extensión rectilínea** de mar (zona, área o longitud) **sobre la que sopla un viento de dirección y fuerza constantes**. Se mide en la dirección del viento, en millas o kilómetros. Cuanto más largo es el fetch, más altas son las olas. En algún examen aparece mal escrito como «fecht»."
+        },
+        {
+          "type": "table",
+          "title": "Las tres variables",
+          "head": [
+            "Variable",
+            "Qué es",
+            "Se mide en"
+          ],
+          "rows": [
+            [
+              "Intensidad",
+              "Fuerza del viento sobre el mar",
+              "Nudos, m/s o grados Beaufort"
+            ],
+            [
+              "Persistencia",
+              "Tiempo que lleva soplando igual",
+              "Horas"
+            ],
+            [
+              "Fetch",
+              "Extensión de mar sobre la que sopla igual",
+              "Millas o kilómetros"
+            ]
+          ]
+        },
+        {
+          "type": "analogy",
+          "text": "Sopla sobre un plato de sopa y apenas se mueve; el mismo viento sobre un lago levanta olitas y sobre el Atlántico, olas de metros. La diferencia es el fetch: la distancia de agua que el viento tiene para trabajar. Y la persistencia es cuánto rato lleva soplando."
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. La regla: **persistencia = tiempo; fetch = espacio**. Si el enunciado dice «el tiempo que lleva soplando» o «el número de horas», es persistencia; si dice «extensión», «zona», «área», «longitud» o «extensión marítima», es fetch. Distractores habituales que no existen como términos: «permanencia», «periodo», «potencia». El fetch tampoco es «mar de viento», ni «la profundidad a la que rompen las olas», ni «la altura que alcanza la ola», ni «la mar encontrada», ni una zona donde el viento sopla «en varias direcciones» o donde «rola continuamente». La persistencia no es «la rapidez con que cambia la dirección del viento»."
+        },
+        {
+          "type": "exam",
+          "text": "Aviso sobre una clave del banco. En la pregunta «la extensión rectilínea o longitud del área sobre la que sopla un viento de dirección y fuerza constantes» con opciones «persistencia», «zona generadora de mar», «fetch» y «b) y c) son correctas», la clave es solo **«fetch»**. Algunos textos llaman al fetch «zona de generación» del oleaje, así que la pregunta es discutible; en el examen marca fetch."
+        },
+        {
+          "type": "key",
+          "text": "Intensidad = fuerza del viento. Persistencia = tiempo que lleva soplando con la misma dirección e intensidad. Fetch = extensión rectilínea de mar sobre la que sopla con dirección y fuerza constantes."
+        }
+      ]
+    },
+    {
+      "id": "escala-douglas",
+      "title": "La escala Douglas: el estado de la mar",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Escala Douglas",
+          "text": "Escala que clasifica los diferentes **estados de la mar** en **10 grados (del 0 al 9)** tomando como referencia la **altura de las olas**. Va de la mar llana, con oleaje insignificante, a la mar enorme, con olas de más de 14 metros. La estableció el británico Sir Percy Douglas en 1907."
+        },
+        {
+          "type": "table",
+          "title": "Escala Douglas completa",
+          "head": [
+            "Grado",
+            "Denominación",
+            "Altura de las olas"
+          ],
+          "rows": [
+            [
+              "0",
+              "Mar llana o calma",
+              "0 m"
+            ],
+            [
+              "1",
+              "Mar rizada",
+              "0 a 0,1 m"
+            ],
+            [
+              "2",
+              "Marejadilla",
+              "0,1 a 0,5 m"
+            ],
+            [
+              "3",
+              "Marejada",
+              "0,5 a 1,25 m"
+            ],
+            [
+              "4",
+              "Fuerte marejada",
+              "1,25 a 2,5 m"
+            ],
+            [
+              "5",
+              "Gruesa",
+              "2,5 a 4 m"
+            ],
+            [
+              "6",
+              "Muy gruesa",
+              "4 a 6 m"
+            ],
+            [
+              "7",
+              "Arbolada",
+              "6 a 9 m"
+            ],
+            [
+              "8",
+              "Montañosa",
+              "9 a 14 m"
+            ],
+            [
+              "9",
+              "Enorme",
+              "Más de 14 m"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Los partes dan el viento en Beaufort y la mar en Douglas, y entre las dos escalas hay una correspondencia aproximada (a más viento, más mar), pensada para un fetch medio. Por eso conviene llevar las dos a bordo. Pero no las mezcles: una mide viento y la otra, olas."
+        },
+        {
+          "type": "table",
+          "title": "Beaufort frente a Douglas",
+          "head": [
+            "Rasgo",
+            "Beaufort",
+            "Douglas"
+          ],
+          "rows": [
+            [
+              "Qué clasifica",
+              "El viento",
+              "El estado de la mar"
+            ],
+            [
+              "Referencia",
+              "Intensidad o fuerza (velocidad en nudos)",
+              "Altura de las olas"
+            ],
+            [
+              "Grados",
+              "13 (de 0 a 12)",
+              "10 (de 0 a 9)"
+            ]
+          ]
+        },
+        {
+          "type": "exam",
+          "text": "Así cae en el test. Douglas = **mar = altura de las olas**. Son falsas: «la graduación está en función de la **velocidad** de las olas», «clasifica los estados de la mar tomando como referencia la intensidad del viento», «designa los diferentes estados del viento», «mide la salinidad del agua», «proporciona el fetch», «clasifica la intensidad de la marea» o «el ángulo de abatimiento». Frases correctas: «la escala de Douglas clasifica el estado de la mar» y «clasifica el estado de la mar en función de la altura de las olas». No existen la «escala altimétrica» ni la «escala de nivelización»."
+        },
+        {
+          "type": "key",
+          "text": "Douglas = estado de la mar según la altura de las olas, en 10 grados (0 a 9). Beaufort es viento; Douglas es mar."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "Presión atmosférica: peso por unidad de superficie de la columna de aire que gravita sobre un lugar. Valor normal: 760 mm Hg = 1013,2 mb o hPa = 1 atmósfera, a 0 °C, nivel del mar y 45° de latitud.",
+    "El barómetro aneroide mide la presión por la deformación de una cápsula estanca con vacío: fuerzas elásticas, lectura directa y menos exactitud que el de mercurio.",
+    "Las isobaras unen puntos de igual presión: son las intersecciones de las superficies isobáricas con la superficie del nivel del mar. Las de igual tendencia barométrica son isalobaras.",
+    "Escala centígrada o Celsius: 0° congelación del agua, 100° ebullición.",
+    "Borrasca o depresión (hemisferio norte): bajas presiones, mínima en el centro, giro antihorario o ciclónico, tiempo inestable.",
+    "Anticiclón (hemisferio norte): altas presiones, máxima en el centro, giro horario o anticiclónico con componente hacia fuera, buen tiempo.",
+    "Las borrascas del hemisferio norte se desplazan de W a E; las que nacen en la costa de Estados Unidos o Canadá van hacia el NE. Antes de su llegada el viento es de componente sur.",
+    "Rolar = cambiar de dirección; refrescar = aumentar de intensidad; caer = disminuir de intensidad; racha = aumento brusco y momentáneo; racheado = intensidad que varía a más y a menos.",
+    "Anemómetro: velocidad del viento (real si estamos parados, aparente si navegamos). Veleta y catavientos: dirección.",
+    "Viento aparente: el que parece existir con el barco en movimiento; con arrancada avante se recibe más a proa que el real. Si navegas y no sientes viento, el aparente es cero y el real viene de popa a tu misma velocidad.",
+    "Terral: de tierra a mar, de noche. Virazón: de mar a tierra, de día. Entre ambos suele haber un intervalo de calma.",
+    "Intensidad = fuerza del viento; persistencia = tiempo que lleva soplando con la misma dirección e intensidad; fetch = extensión rectilínea de mar sobre la que sopla con dirección y fuerza constantes.",
+    "Escala Beaufort: intensidad del viento, de 0 a 12. Escala Douglas: estado de la mar según la altura de las olas, 10 grados de 0 a 9.",
+    "La previsión se obtiene de los boletines marítimos de la AEMET y de los Centros de Salvamento Marítimo, entre otros medios."
+  ],
+  "glossary": [
+    {
+      "term": "Presión atmosférica",
+      "text": "Peso por unidad de superficie de la columna de aire que gravita sobre un lugar."
+    },
+    {
+      "term": "Valor normal de la presión",
+      "text": "760 mm de mercurio, 1013,2 mb o hPa, o 1 atmósfera, a 0 °C, nivel del mar y 45° de latitud."
+    },
+    {
+      "term": "Milibar (mb) y hectopascal (hPa)",
+      "text": "Unidades de presión equivalentes entre sí: 1 mb = 1 hPa."
+    },
+    {
+      "term": "Barómetro",
+      "text": "Instrumento que mide la presión atmosférica."
+    },
+    {
+      "term": "Barómetro aneroide",
+      "text": "Barómetro de lectura directa que mide la presión por la deformación elástica de una cápsula estanca con vacío."
+    },
+    {
+      "term": "Barógrafo",
+      "text": "Barómetro aneroide que registra en un papel las variaciones de la presión."
+    },
+    {
+      "term": "Superficie isobárica",
+      "text": "Superficie formada por los puntos de la atmósfera que tienen la misma presión en un momento dado."
+    },
+    {
+      "term": "Isobara",
+      "text": "Línea que une puntos de igual presión; intersección de una superficie isobárica con el nivel del mar."
+    },
+    {
+      "term": "Isalobara",
+      "text": "Línea que une puntos de igual tendencia barométrica."
+    },
+    {
+      "term": "Isohipsa",
+      "text": "Línea que une puntos de igual altura de una superficie isobárica."
+    },
+    {
+      "term": "Gradiente de presión",
+      "text": "Diferencia de presión entre isobaras por unidad de distancia; cuanto mayor es, más fuerte sopla el viento."
+    },
+    {
+      "term": "Temperatura",
+      "text": "Magnitud que indica el nivel de calor de un cuerpo; se mide con el termómetro."
+    },
+    {
+      "term": "Escala centígrada o Celsius",
+      "text": "Escala de temperatura con 0° en la congelación del agua y 100° en su ebullición."
+    },
+    {
+      "term": "Borrasca o depresión",
+      "text": "Área de bajas presiones, con la presión mínima en el centro y giro antihorario en el hemisferio norte."
+    },
+    {
+      "term": "Anticiclón",
+      "text": "Área de altas presiones, con la presión máxima en el centro y giro horario en el hemisferio norte."
+    },
+    {
+      "term": "Sentido ciclónico",
+      "text": "Giro contrario a las agujas del reloj en el hemisferio norte, propio de las borrascas."
+    },
+    {
+      "term": "Sentido anticiclónico",
+      "text": "Giro en el sentido de las agujas del reloj en el hemisferio norte, propio de los anticiclones."
+    },
+    {
+      "term": "Ley de Buys Ballot",
+      "text": "Cara al viento en el hemisferio norte, el centro de la borrasca queda a la derecha y algo hacia atrás."
+    },
+    {
+      "term": "Rolar",
+      "text": "Cambiar el viento de dirección."
+    },
+    {
+      "term": "Refrescar",
+      "text": "Aumentar la intensidad del viento."
+    },
+    {
+      "term": "Caer",
+      "text": "Disminuir la intensidad del viento."
+    },
+    {
+      "term": "Racha",
+      "text": "Aumento brusco y momentáneo de la velocidad del viento."
+    },
+    {
+      "term": "Viento racheado",
+      "text": "Viento cuya intensidad varía continuamente, a más y a menos."
+    },
+    {
+      "term": "Calmar",
+      "text": "Disminuir la intensidad del viento o de la mar, total o parcialmente."
+    },
+    {
+      "term": "Anemómetro",
+      "text": "Instrumento que mide la velocidad del viento."
+    },
+    {
+      "term": "Veleta",
+      "text": "Instrumento que indica la dirección del viento."
+    },
+    {
+      "term": "Catavientos",
+      "text": "Manga o cinta de tela que indica la dirección del viento."
+    },
+    {
+      "term": "Viento real o verdadero",
+      "text": "El que existe sobre el mar y se nota con el barco parado."
+    },
+    {
+      "term": "Viento relativo",
+      "text": "El que crea el barco al avanzar; viene de proa y es igual a su velocidad."
+    },
+    {
+      "term": "Viento aparente",
+      "text": "El que parece existir con el barco en movimiento: resultante del real y del relativo."
+    },
+    {
+      "term": "Escala Beaufort",
+      "text": "Escala de la intensidad o fuerza del viento, de 0 (calma) a 12 (huracán)."
+    },
+    {
+      "term": "Brisas costeras",
+      "text": "Vientos locales flojos de la costa causados por el distinto calentamiento de la tierra y el mar."
+    },
+    {
+      "term": "Terral",
+      "text": "Brisa nocturna que sopla de la tierra al mar."
+    },
+    {
+      "term": "Virazón",
+      "text": "Brisa diurna que sopla de la mar a tierra."
+    },
+    {
+      "term": "Intensidad",
+      "text": "Fuerza que ejerce el viento sobre la superficie del mar, ligada a su velocidad."
+    },
+    {
+      "term": "Persistencia",
+      "text": "Tiempo que lleva soplando el viento con la misma dirección e intensidad."
+    },
+    {
+      "term": "Fetch",
+      "text": "Extensión rectilínea de mar sobre la que sopla un viento de dirección y fuerza constantes."
+    },
+    {
+      "term": "Escala Douglas",
+      "text": "Escala del estado de la mar en 10 grados (0 a 9) según la altura de las olas."
+    }
+  ],
+  "questions": {
+    "n90zugzsowtc88g": "vocabulario-del-viento",
+    "ei9ew1qe5ka89s4": "intensidad-persistencia-fetch",
+    "cshdjp4jcmiealv": "escala-beaufort",
+    "zfzg4t8cw5xgza2": "borrascas-y-anticiclones",
+    "r0qosh9lvl152bw": "presion-atmosferica",
+    "othcd91g9j1gf02": "barometro-aneroide",
+    "d05wnm9cjjjtk15": "instrumentos-del-viento",
+    "pbp97yy5cq0ocyi": "vocabulario-del-viento",
+    "4quztsxmyypkwns": "brisas-costeras",
+    "1qcp4tggxgxlvpk": "vocabulario-del-viento",
+    "i0pif9obao2zk1j": "borrascas-y-anticiclones",
+    "ziqluaoabz5cukl": "viento-real-y-aparente",
+    "2chxgwtj0s39t8e": "presion-atmosferica",
+    "bxdps019wdfw7hq": "vocabulario-del-viento",
+    "8jaamrod0wbesbo": "borrascas-y-anticiclones",
+    "iwyu8r8x86rldc2": "intensidad-persistencia-fetch",
+    "0ulurhj456alcbh": "intensidad-persistencia-fetch",
+    "zmfh8cytlflrnlq": "brisas-costeras",
+    "rcd3jkkmzzl4s1r": "borrascas-y-anticiclones",
+    "4icio96u3n353my": "vocabulario-del-viento",
+    "zgkl11qphbo3zhh": "isobaras",
+    "ct7mb6ceihqhr9x": "brisas-costeras",
+    "s40aw3s7uqbjhun": "borrascas-y-anticiclones",
+    "iou50sf9ynngk6h": "vocabulario-del-viento",
+    "512so0khit6rean": "brisas-costeras",
+    "bmklojklokq8bih": "vocabulario-del-viento",
+    "hqaexnhrqb7twvv": "trayectoria-borrascas",
+    "dcs1xnr7mk6nngc": "isobaras",
+    "lyuspbuphqqc9p9": "borrascas-y-anticiclones",
+    "ogf3rnq0itx99nw": "vocabulario-del-viento",
+    "40j8swzzcf2k769": "presion-atmosferica",
+    "q1kmhpespnkh6wy": "presion-atmosferica",
+    "r771ss9d89x1w4u": "vocabulario-del-viento",
+    "m121qkebh1rv1ti": "viento-real-y-aparente",
+    "0ppd3691pl14um0": "intensidad-persistencia-fetch",
+    "nn8je4t1y9cxrb4": "presion-atmosferica",
+    "6e7refifzam5p0x": "vocabulario-del-viento",
+    "lrqea2vlxyvthir": "instrumentos-del-viento",
+    "0l7was3l02gd8yh": "brisas-costeras",
+    "04s9qt8liknxzzo": "temperatura",
+    "2m8oog9uztfy64i": "vocabulario-del-viento",
+    "v8ywciyakbnxbzq": "instrumentos-del-viento",
+    "j9hjkl1d8so9c8z": "borrascas-y-anticiclones",
+    "o2vzwyvugxb1csi": "isobaras",
+    "6gzqt2is62ialie": "presion-atmosferica",
+    "pycgo4x3bzhoz6d": "trayectoria-borrascas",
+    "q9ukfc6c87hdqtv": "vocabulario-del-viento",
+    "ra5ckpfnpxm4wzy": "viento-real-y-aparente",
+    "uk3lg9p35dqc54o": "isobaras",
+    "fvlni8wwkv56u3m": "borrascas-y-anticiclones",
+    "fiutrtgp5tornpp": "brisas-costeras",
+    "t7ruk7bs34fakqw": "intensidad-persistencia-fetch",
+    "0gzya64kxwy65cu": "isobaras",
+    "dl7u5sluuwvx3lb": "borrascas-y-anticiclones",
+    "mf72j6cgl3xi7nr": "brisas-costeras",
+    "h31vy62wxve2kna": "intensidad-persistencia-fetch",
+    "dgbj0yuw5dncblo": "presion-atmosferica",
+    "pnf8zb8chyi9kcu": "vocabulario-del-viento",
+    "77hwapjsy17q3up": "escala-beaufort",
+    "8o22lgyg6lmxba8": "brisas-costeras",
+    "dk6tkdnwombfyrz": "barometro-aneroide",
+    "us2y4i51biify45": "escala-douglas",
+    "7qs6353fvmnikgw": "borrascas-y-anticiclones",
+    "7rj3ivaa2lmdopx": "vocabulario-del-viento",
+    "32e7h6hj7xm0w8u": "brisas-costeras",
+    "w417xqcraoqizxb": "trayectoria-borrascas",
+    "klufv650qdy4y8z": "borrascas-y-anticiclones",
+    "1iap9zud6t65zkv": "brisas-costeras",
+    "v2i4e7cuobsx91q": "isobaras",
+    "irdlddk633aeadk": "intensidad-persistencia-fetch",
+    "zurtho5bsux787v": "brisas-costeras",
+    "sg1nd2h46m9plbj": "borrascas-y-anticiclones",
+    "at447bz2pnhmpm6": "escala-beaufort",
+    "crfg1qbdqkal109": "vocabulario-del-viento",
+    "2b1st7boocn2ooy": "borrascas-y-anticiclones",
+    "4ioo4mh5uq2vm8p": "barometro-aneroide",
+    "kmgjiy757h1064u": "vocabulario-del-viento",
+    "dqts5geq82revil": "intensidad-persistencia-fetch",
+    "lbdd5oqqigmsdic": "presion-atmosferica",
+    "v5ve0vyebv941mi": "intensidad-persistencia-fetch",
+    "34v3u4etp4qzp0o": "escala-douglas",
+    "lcacprq1dxzpeco": "vocabulario-del-viento",
+    "en1f1oo468ms28k": "intensidad-persistencia-fetch",
+    "w6932mv06wxxbxk": "brisas-costeras",
+    "3bqr67q45dfsukx": "vocabulario-del-viento",
+    "to7qspmyci1k3nb": "barometro-aneroide",
+    "vx2cqq1a0ezu9lg": "borrascas-y-anticiclones",
+    "p4a7csospj3a83m": "escala-douglas",
+    "gjxtscg0ybtml25": "brisas-costeras",
+    "bjhmjzi9q0zph1f": "presion-atmosferica",
+    "90hhc740jf4owse": "vocabulario-del-viento",
+    "nbfjxnzx9nwnykl": "borrascas-y-anticiclones",
+    "x6ef8urb44i85uu": "intensidad-persistencia-fetch",
+    "qrqg1e2qp16vm6x": "isobaras",
+    "j4j0rokyqmzexq8": "borrascas-y-anticiclones",
+    "wy0l8o8jb9vb4ka": "trayectoria-borrascas",
+    "o4t24gx30r1794r": "brisas-costeras",
+    "ri0wmx3li478qq3": "vocabulario-del-viento",
+    "nnnvhxstvtvx9mv": "escala-beaufort",
+    "lrg3xfj0enww0eq": "isobaras",
+    "nk8ocu1bvq2jfd7": "viento-real-y-aparente",
+    "s94nji5c7wqgtsz": "intensidad-persistencia-fetch",
+    "b78fdcq7beil75j": "vocabulario-del-viento",
+    "tog1gy7vmsxrclj": "brisas-costeras",
+    "id9i7flw8qwp8du": "presion-atmosferica",
+    "4dc6f51rll1p78l": "borrascas-y-anticiclones",
+    "snzzkrqzsluvqoj": "trayectoria-borrascas",
+    "bphmpnnxps9zcem": "viento-real-y-aparente",
+    "3ktp26v1ocmo0od": "escala-douglas",
+    "lyzpnmoyb5bj50v": "isobaras",
+    "6js3k8kh4j5g0rt": "isobaras",
+    "6pahywcfsiebsdj": "borrascas-y-anticiclones",
+    "keguocq459d8wqb": "brisas-costeras",
+    "mp6mgnvlf0rq2og": "intensidad-persistencia-fetch",
+    "kche8z6p0w1jsu1": "vocabulario-del-viento",
+    "rm4cv5o3r3vkw1i": "borrascas-y-anticiclones",
+    "5eynoidxbgotsl7": "brisas-costeras",
+    "n02ciwy48b5axfe": "isobaras",
+    "xlilz3yvk7t17rm": "vocabulario-del-viento",
+    "ec28d738d50r7f8": "borrascas-y-anticiclones",
+    "sj1xtpgx99tqfhl": "intensidad-persistencia-fetch",
+    "jraj1jtekr6c2kf": "viento-real-y-aparente",
+    "5ju3bu1h7tns81s": "brisas-costeras",
+    "4z5ow8uqkhh2wx3": "vocabulario-del-viento",
+    "55v8634tp3jkcyf": "escala-douglas",
+    "i4p7fhkynaj2yys": "barometro-aneroide",
+    "hz2z5suzz0gryj4": "brisas-costeras",
+    "m7lnl34gyvqmad6": "vocabulario-del-viento",
+    "oxbg9vr72t8rjxc": "intensidad-persistencia-fetch",
+    "vd51hx3k49llu6y": "instrumentos-del-viento",
+    "4b0xic262njsdia": "presion-atmosferica",
+    "jsuuodqehroqls3": "borrascas-y-anticiclones",
+    "rg68pv1nekh05zr": "intensidad-persistencia-fetch",
+    "718phlzdfw5o8j2": "brisas-costeras",
+    "9bt4yisfugmf063": "instrumentos-del-viento",
+    "9wuhk4raw83itkv": "isobaras"
+  }
+}

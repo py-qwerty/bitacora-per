@@ -1,0 +1,60 @@
+{
+ "version": "2026-11-01",
+ "temas": [
+  {
+   "topic": 1,
+   "sections": 15,
+   "minutes": 30
+  },
+  {
+   "topic": 2,
+   "sections": 14,
+   "minutes": 22
+  },
+  {
+   "topic": 3,
+   "sections": 16,
+   "minutes": 40
+  },
+  {
+   "topic": 4,
+   "sections": 15,
+   "minutes": 30
+  },
+  {
+   "topic": 5,
+   "sections": 12,
+   "minutes": 28
+  },
+  {
+   "topic": 6,
+   "sections": 20,
+   "minutes": 55
+  },
+  {
+   "topic": 7,
+   "sections": 13,
+   "minutes": 30
+  },
+  {
+   "topic": 8,
+   "sections": 18,
+   "minutes": 35
+  },
+  {
+   "topic": 9,
+   "sections": 14,
+   "minutes": 24
+  },
+  {
+   "topic": 10,
+   "sections": 15,
+   "minutes": 55
+  },
+  {
+   "topic": 11,
+   "sections": 12,
+   "minutes": 50
+  }
+ ]
+}

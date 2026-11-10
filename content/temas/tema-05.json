@@ -1,0 +1,1390 @@
+{
+  "topic": 5,
+  "title": "Balizamiento",
+  "minutes": 28,
+  "intro": {
+    "why": "Las boyas y balizas son las señales de tráfico del mar: te dicen por dónde va el canal, dónde hay un peligro y por qué lado pasar. En el examen esta unidad solo admite 2 fallos, y casi todas las preguntas cambian un único detalle (un color, un tope o un ritmo de luz), así que aquí hay que saberse las tablas al milímetro.",
+    "before": [
+      "Babor es el costado izquierdo del barco mirando hacia proa y estribor el derecho.",
+      "Caer a una banda es cambiar el rumbo hacia ese lado; dejar algo por una banda es pasar de modo que quede a ese costado.",
+      "Los rumbos cardinales: Norte 000°, Este 090°, Sur 180°, Oeste 270°."
+    ],
+    "goals": [
+      "Saber por qué banda se dejan las marcas rojas y verdes entrando y saliendo de puerto en la región A.",
+      "Reconocer las marcas laterales y las de bifurcación por su color, forma, tope y luz.",
+      "Identificar las cuatro cardinales por sus conos, sus bandas y sus centelleos, y decidir a qué banda caer.",
+      "Distinguir las marcas de peligro aislado, de aguas navegables, especiales y de peligro nuevo.",
+      "Deducir de qué marca se trata viendo solo su luz."
+    ]
+  },
+  "sections": [
+    {
+      "id": "sistema-iala",
+      "title": "El sistema IALA y cómo se lee una marca",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "El balizamiento es el conjunto de **marcas** (boyas flotantes o balizas fijas) que señalan canales, peligros y zonas. Todas siguen el **Sistema de Balizamiento Marítimo IALA-AISM** (IALA son las siglas en inglés de la Asociación Internacional de Señalización Marítima; AISM, las francesas)."
+        },
+        {
+          "type": "p",
+          "text": "El mundo se divide en dos regiones, **A** y **B**, que solo se diferencian en los colores de las marcas laterales. **España está en la región A**: rojo a babor y verde a estribor al entrar. Todo este tema es región A."
+        },
+        {
+          "type": "list",
+          "title": "Los cinco tipos de marca que entran en el examen",
+          "items": [
+            "**Laterales** (y sus variantes de bifurcación): marcan los bordes de un canal.",
+            "**Cardinales**: dicen por qué lado (norte, sur, este u oeste) están las aguas seguras.",
+            "**De peligro aislado**: están sobre un peligro pequeño rodeado de aguas navegables.",
+            "**De aguas navegables**: indican que hay agua navegable todo alrededor.",
+            "**Especiales**: señalan zonas particulares que explica la carta."
+          ]
+        },
+        {
+          "type": "list",
+          "title": "Las cuatro cosas en que hay que fijarse",
+          "items": [
+            "**Forma** del cuerpo: cilíndrica, cónica, esférica, de castillete o de espeque.",
+            "**Color** del cuerpo y dibujo de sus bandas (horizontales) o franjas (verticales).",
+            "**Marca de tope**: la figura que lleva arriba del todo (cilindro, cono, esferas, aspa).",
+            "**Luz**: su color y su ritmo. De noche es lo único que se ve."
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Castillete",
+          "text": "Boya con una estructura alta en forma de torre de celosía. No tiene significado por sí misma: pueden ser de castillete marcas de cualquier tipo."
+        },
+        {
+          "type": "term",
+          "term": "Espeque",
+          "text": "Marca en forma de palo o poste vertical. Tampoco significa nada por sí sola."
+        },
+        {
+          "type": "term",
+          "term": "Marca de tope",
+          "text": "Figura geométrica colocada en lo más alto de la marca. Es la pista más fiable de día, sobre todo cuando el cuerpo es un castillete o un espeque."
+        },
+        {
+          "type": "table",
+          "title": "Ritmos de luz que usa el balizamiento",
+          "head": [
+            "Ritmo",
+            "Cómo se ve",
+            "Abreviatura"
+          ],
+          "rows": [
+            [
+              "Destellos (D)",
+              "Luz corta y oscuridad larga: está más tiempo apagada que encendida",
+              "D / Fl"
+            ],
+            [
+              "Grupo de destellos (Gp D)",
+              "Varios destellos seguidos y una pausa. Gp D(2) = de dos en dos; Gp D(2+1) = dos destellos, pausa corta, uno más",
+              "Gp D / Fl( )"
+            ],
+            [
+              "Destello largo (DL)",
+              "Un destello que dura 2 segundos o más",
+              "DL / LFl"
+            ],
+            [
+              "Isofase (Iso)",
+              "Igual duración de luz y de oscuridad (por ejemplo 2 s encendida y 2 s apagada, o 3 s y 3 s)",
+              "Iso"
+            ],
+            [
+              "Ocultaciones (Oc)",
+              "Luz larga y oscuridad corta: está más tiempo encendida que apagada (por ejemplo 3 s encendida y 1 s apagada, periodo 4 s)",
+              "Oc"
+            ],
+            [
+              "Centelleante (Ct)",
+              "Destellos muy seguidos, unos 50 o 60 por minuto: más o menos un centelleo cada segundo",
+              "Ct / Q"
+            ],
+            [
+              "Centelleante rápido (CtRp)",
+              "El doble de rápido, unos 100 o 120 centelleos por minuto",
+              "CtRp / VQ"
+            ],
+            [
+              "Morse «A»",
+              "Un destello corto seguido de uno largo (punto y raya)",
+              "Mo(A)"
+            ]
+          ]
+        },
+        {
+          "type": "term",
+          "term": "Periodo",
+          "text": "Tiempo que tarda la luz en repetir su ciclo completo. «Gp D(2) cada 10 s» quiere decir que los dos destellos se repiten cada diez segundos."
+        },
+        {
+          "type": "key",
+          "text": "España es región A. Cada marca se reconoce por forma, color, marca de tope y luz; el castillete y el espeque valen para cualquier tipo, así que con ellos manda el color y el tope."
+        }
+      ]
+    },
+    {
+      "id": "sentido-convencional",
+      "title": "Sentido convencional del balizamiento: entrar y salir de puerto",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Sentido (o dirección) convencional del balizamiento",
+          "text": "El que sigue el navegante que **viene de alta mar** y se aproxima a un puerto, río, estuario o vía navegable. Es decir: **entrando**, de la mar hacia tierra."
+        },
+        {
+          "type": "p",
+          "text": "Las marcas laterales se llaman «de babor» y «de estribor» pensando en ese barco que entra. En la **región A** (España): las **rojas** señalan el **lado de babor** del canal y las **verdes** el **lado de estribor**."
+        },
+        {
+          "type": "table",
+          "title": "Por qué banda se deja cada marca lateral (región A)",
+          "head": [
+            "Situación",
+            "Rojas (tope cilindro)",
+            "Verdes (tope cono)"
+          ],
+          "rows": [
+            [
+              "**Entrando** en puerto",
+              "Por **babor**",
+              "Por **estribor**"
+            ],
+            [
+              "**Saliendo** de puerto",
+              "Por **estribor**",
+              "Por **babor**"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Al salir todo se invierte porque vas en sentido contrario al convencional: las marcas no cambian, cambias tú. Saliendo tendrás **por estribor las rojas** (las que llevan cilindro) y **por babor las verdes** (las que llevan cono)."
+        },
+        {
+          "type": "analogy",
+          "text": "Entrando, el color de la marca coincide con el de tus luces de costado: la roja con tu luz roja de babor y la verde con tu luz verde de estribor. Saliendo, van cruzadas."
+        },
+        {
+          "type": "example",
+          "title": "Las verdes por babor al entrar",
+          "text": "Entras de noche por el canal principal de un puerto español y ves las marcas laterales verdes por tu costado de babor. Deberían ir por estribor, así que te has salido del canal por su borde de estribor: **el canal de navegación queda a tu babor**. No significa que estés en la región B: España siempre es región A."
+        },
+        {
+          "type": "exam",
+          "text": "Lee primero si la pregunta dice «entrando» o «saliendo». Trampas vistas: «las rojas se dejan siempre por babor, entrando y saliendo» (falso: saliendo van por estribor); «saliendo tendremos por estribor las verdes» y «saliendo tendremos por babor las marcas con tope de cilindro» (las dos falsas: saliendo las verdes van por babor y las de cilindro, que son las rojas, por estribor; si aparecen juntas, la respuesta es «ninguna es correcta»). Y en un puerto español nunca «depende del puerto»."
+        },
+        {
+          "type": "key",
+          "text": "Entrando (región A): rojas por babor, verdes por estribor. Saliendo, al revés: rojas por estribor, verdes por babor."
+        }
+      ]
+    },
+    {
+      "id": "marcas-laterales",
+      "title": "Marcas laterales de la región A",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Las marcas laterales señalan los **límites laterales (los bordes) de los canales navegables**. Hay dos: la de babor y la de estribor."
+        },
+        {
+          "type": "table",
+          "title": "Marcas laterales, región A",
+          "head": [
+            "Rasgo",
+            "Lateral de babor",
+            "Lateral de estribor"
+          ],
+          "rows": [
+            [
+              "Color",
+              "**Rojo**",
+              "**Verde**"
+            ],
+            [
+              "Forma",
+              "**Cilíndrica**, de castillete o de espeque",
+              "**Cónica**, de castillete o de espeque"
+            ],
+            [
+              "Marca de tope (si la tiene)",
+              "Un **cilindro rojo**",
+              "Un **cono verde con el vértice hacia arriba**"
+            ],
+            [
+              "Luz (si la tiene)",
+              "**Roja**, de cualquier ritmo **excepto Gp D(2+1)**",
+              "**Verde**, de cualquier ritmo **excepto Gp D(2+1)**"
+            ],
+            [
+              "Numeración",
+              "Números **pares**",
+              "Números **impares**"
+            ],
+            [
+              "Entrando se deja por",
+              "Babor",
+              "Estribor"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "El ritmo **grupo de (2+1) destellos** está prohibido en las laterales normales porque se reserva para las marcas de bifurcación. Cualquier otro vale: destellos aislados, grupos de dos, grupos de tres, ocultaciones…"
+        },
+        {
+          "type": "example",
+          "title": "Luces laterales corrientes",
+          "text": "Un grupo de **2 destellos rojos cada 5 segundos** es una **marca lateral de babor**. Un grupo de **2 destellos verdes cada 10 segundos** es una **marca lateral de estribor**. Ninguna es de bifurcación, porque el ritmo no es 2+1."
+        },
+        {
+          "type": "p",
+          "text": "Las luces de un canal pueden ser **sincronizadas** (todas destellan a la vez), **secuenciadas** (destellan una tras otra) o una combinación de ambas."
+        },
+        {
+          "type": "term",
+          "term": "Ordenación numérica o alfabética",
+          "text": "Si las marcas de un canal llevan números o letras, la sucesión creciente sigue el sentido convencional del balizamiento: **de la mar hacia tierra**. Además, **pares para las rojas e impares para las verdes**."
+        },
+        {
+          "type": "p",
+          "text": "Cuando no se distingue el color (por la reverberación del sol, por ejemplo), la forma y el tope bastan: **un solo cono con el vértice hacia arriba** es una marca de estribor, que entrando se deja por estribor; **un cilindro** es una marca de babor. Ojo: un solo cono no es una cardinal, porque las cardinales llevan **dos** conos."
+        },
+        {
+          "type": "exam",
+          "text": "Trampas vistas: (1) «luz roja Gp D(2+1)» como lateral de babor: no, eso es bifurcación. (2) «¿Qué forma y color tienen las laterales de babor? a) Castillete y roja; b) Espeque y roja; c) Cilíndrica y roja; d) Todas»: las tres formas son válidas y lo lógico sería «todas», pero **el banco da por buena la a) «Castillete y roja»**; parece un error de la clave, apréndete esa respuesta para esa pregunta concreta. (3) Si preguntan solo «forma y color» con «cilíndrica roja» frente a «cónica roja» o «cilíndrica verde», es **cilíndrica roja**. (4) «Un cilindro rojo es el tope de…»: de la lateral de babor; no vale «canal principal a babor», que lleva cono verde. (5) Un cono visto sin color: de las opciones, **lateral de estribor** (también lo lleva la bifurcación con canal principal a babor, que igualmente se deja por estribor al entrar)."
+        },
+        {
+          "type": "key",
+          "text": "Babor: roja, cilíndrica, cilindro rojo, luz roja, pares. Estribor: verde, cónica, cono verde vértice arriba, luz verde, impares. Cualquier ritmo menos Gp D(2+1). Se numeran desde la mar."
+        }
+      ]
+    },
+    {
+      "id": "marcas-de-bifurcacion",
+      "title": "Marcas de bifurcación: canal principal a babor o a estribor",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Cuando un canal se divide en dos, se coloca en la bifurcación una **marca lateral modificada** que indica dónde sigue el **canal principal** (también llamado **canal preferente**). Es una lateral normal a la que se le añade **una banda ancha horizontal del color contrario** y cuya luz usa el ritmo reservado **Gp D(2+1)**: dos destellos, una pausa corta y uno más."
+        },
+        {
+          "type": "table",
+          "title": "Las dos marcas de bifurcación (región A)",
+          "head": [
+            "Rasgo",
+            "Canal principal a ESTRIBOR",
+            "Canal principal a BABOR"
+          ],
+          "rows": [
+            [
+              "Qué lateral es",
+              "**Babor modificada**",
+              "**Estribor modificada**"
+            ],
+            [
+              "Color",
+              "**Roja con una banda ancha horizontal verde** en el centro",
+              "**Verde con una banda ancha horizontal roja** en el centro"
+            ],
+            [
+              "Forma",
+              "Cilíndrica, de castillete o de espeque",
+              "Cónica, de castillete o de espeque"
+            ],
+            [
+              "Marca de tope (si la tiene)",
+              "Un **cilindro rojo**",
+              "Un **cono verde con el vértice hacia arriba**"
+            ],
+            [
+              "Luz",
+              "**Roja, Gp D(2+1)**",
+              "**Verde, Gp D(2+1)**"
+            ],
+            [
+              "Dónde queda el canal principal",
+              "A **estribor** de la marca",
+              "A **babor** de la marca"
+            ],
+            [
+              "Entrando, para seguir el canal principal se deja por",
+              "**Babor** (es una marca de babor)",
+              "**Estribor** (es una marca de estribor)"
+            ],
+            [
+              "Saliendo, para seguir el canal principal se deja por",
+              "**Estribor**",
+              "**Babor**"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "La regla que lo resuelve todo: **el color dominante (el del cuerpo, el tope y la luz) te dice qué lateral es, y se trata como esa lateral**. La roja con banda verde es una marca de babor: entrando la dejas por babor y, al hacerlo, el canal principal te queda a estribor. La verde con banda roja es una marca de estribor: entrando la dejas por estribor y el canal principal te queda a babor."
+        },
+        {
+          "type": "analogy",
+          "text": "El nombre de la marca parece ir al revés que su color, y no es casualidad: si dejas una boya por tu babor, tú pasas por su estribor. Por eso la roja (que se deja por babor) se llama «canal principal a estribor»."
+        },
+        {
+          "type": "p",
+          "text": "De día manda la banda; **de noche**, como no se ven los colores del cuerpo, manda la luz: **2+1 destellos rojos = canal principal a estribor; 2+1 destellos verdes = canal principal a babor**. El periodo (cada 10 s, por ejemplo) no cambia nada."
+        },
+        {
+          "type": "list",
+          "title": "Quién lleva cada tope y cada color de luz",
+          "items": [
+            "**Cilindro rojo**: lateral de babor y bifurcación con canal principal a **estribor**.",
+            "**Cono verde con el vértice hacia arriba**: lateral de estribor y bifurcación con canal principal a **babor**.",
+            "**Luz roja**: solo la lateral de babor y la bifurcación con canal principal a estribor.",
+            "**Luz verde**: solo la lateral de estribor y la bifurcación con canal principal a babor."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Casos tal como los pregunta el test",
+          "text": "Castillete (o espeque, o boya cilíndrica) **rojo con banda ancha verde** y cilindro rojo: bifurcación, canal principal a estribor; entrando lo dejas por **babor** y el canal principal queda a tu estribor. Castillete (o boya cónica) **verde con banda ancha roja**: bifurcación, canal principal a babor; entrando lo dejas por **estribor**. **Saliendo** hacia la mar ves una luz roja de 2+1 destellos: es la marca de canal preferente a estribor y, como toda marca roja al salir, la dejas por **estribor** para seguir el canal principal."
+        },
+        {
+          "type": "exam",
+          "text": "Trampas vistas: (1) Preguntan el tope o la luz de «canal principal a babor» esperando que digas rojo: es **cono verde y luz verde**. Y «canal principal a estribor»: **cilindro rojo y luz roja**. (2) «Luz verde 2+1» con la opción «lateral de estribor, se deja por estribor»: aunque se deje por estribor, la respuesta buena es **bifurcación con el canal principal por babor**. (3) «Navegando de noche por el canal de un puerto español vemos Gp D(2+1) rojos»: el banco da por buena **«el canal principal queda a estribor de la marca»**, aunque «se deja por babor» también sea cierto entrando; cuando aparezcan las dos, elige la que habla del canal principal. (4) «Grupo de 2 destellos verdes + 1 destello rojo» no existe: los tres destellos son del mismo color. (5) Una marca roja con banda verde nunca es a la vez «lateral de babor» o «de estribor» a secas: es de bifurcación. (6) Verla no significa que estés en un canal secundario ni que haya que dar la vuelta."
+        },
+        {
+          "type": "key",
+          "text": "Roja con banda verde, cilindro rojo, luz roja 2+1 = canal principal a estribor, entrando se deja por babor. Verde con banda roja, cono verde, luz verde 2+1 = canal principal a babor, entrando se deja por estribor."
+        }
+      ]
+    },
+    {
+      "id": "cardinales-color-y-tope",
+      "title": "Marcas cardinales: qué indican, colores y marca de tope",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Una marca cardinal indica que **las aguas más profundas (las seguras) de esa zona están en el cuadrante que da nombre a la marca**. Una cardinal **Norte** se pasa por su norte; una **Este**, por su este; una **Sur**, por su sur; una **Oeste**, por su oeste. El peligro queda al lado contrario."
+        },
+        {
+          "type": "list",
+          "title": "Para qué puede usarse una cardinal (las tres son ciertas)",
+          "items": [
+            "Para indicar que **las aguas más profundas** de la zona están en el cuadrante del nombre de la marca.",
+            "Para indicar **el lado por el que se ha de pasar** para salvar un peligro.",
+            "Para **llamar la atención sobre una configuración especial de un canal**: un recodo, una confluencia, una bifurcación o el extremo de un bajo fondo."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "En resumen, su objeto es indicar al navegante **dónde están las aguas seguras**. No tienen una forma propia (suelen ser de castillete o de espeque). Siempre son **amarillas y negras en bandas horizontales**, y su marca de tope son siempre **dos conos negros superpuestos**. Lo que cambia de una a otra es hacia dónde apuntan los conos y dónde va el negro."
+        },
+        {
+          "type": "table",
+          "title": "Las cuatro cardinales de día",
+          "head": [
+            "Cardinal",
+            "Marca de tope (dos conos negros)",
+            "Color del cuerpo, de arriba abajo",
+            "Se pasa por"
+          ],
+          "rows": [
+            [
+              "**Norte**",
+              "Los dos con los **vértices hacia arriba**",
+              "**Negro** arriba y **amarillo** abajo (mitad superior negra, mitad inferior amarilla)",
+              "Su norte"
+            ],
+            [
+              "**Sur**",
+              "Los dos con los **vértices hacia abajo**",
+              "**Amarillo** arriba y **negro** abajo (mitad superior amarilla, mitad inferior negra)",
+              "Su sur"
+            ],
+            [
+              "**Este**",
+              "**Opuestos (unidos) por sus bases**: el superior con el vértice hacia arriba y el inferior con el vértice hacia abajo. Dibuja un rombo",
+              "**Negro con una ancha banda horizontal amarilla** en el centro (negro, amarillo, negro)",
+              "Su este"
+            ],
+            [
+              "**Oeste**",
+              "**Opuestos (unidos) por sus vértices**: el superior con el vértice hacia abajo y el inferior con el vértice hacia arriba. Dibuja un reloj de arena",
+              "**Amarillo con una ancha banda horizontal negra** en el centro (amarillo, negro, amarillo)",
+              "Su oeste"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Truco para los colores: **el negro está donde apuntan los vértices de los conos** (y el amarillo, en las bases). Norte: vértices arriba, negro arriba. Sur: vértices abajo, negro abajo. Este: vértices hacia fuera (arriba y abajo), negro en los extremos y amarillo en medio. Oeste: vértices hacia dentro, negro en el centro y amarillo arriba y abajo."
+        },
+        {
+          "type": "analogy",
+          "text": "Los conos del Norte apuntan hacia arriba, como el norte en la carta; los del Sur, hacia abajo. El Oeste parece una copa o un reloj de arena; el Este, un rombo o un huevo."
+        },
+        {
+          "type": "exam",
+          "text": "Trampas vistas: (1) Opciones del tipo «las aguas menos profundas están al este» o «hay un peligro al este»: falsas; la cardinal Este dice que las aguas **más profundas** están al este (el peligro está al oeste). (2) «Dos triángulos unidos por su base» es la forma de describir los dos conos del Este en un dibujo. (3) Topes inventados con «una esfera amarilla entre los conos»: no existen. (4) Dos conos con los vértices hacia arriba, aunque no se vea el color, son **con seguridad una cardinal Norte**: ninguna otra marca lleva dos conos (la lateral de estribor lleva uno solo). (5) «Marca colocada sobre un peligro rodeado de aguas navegables» es peligro aislado, no cardinal; «zonas cuya naturaleza se ve en la carta» son las especiales. (6) «Un castillete negro en su parte central y amarillo arriba y abajo» es la Oeste."
+        },
+        {
+          "type": "key",
+          "text": "Cardinal = aguas más profundas en el cuadrante de su nombre. Dos conos negros: arriba Norte, abajo Sur, bases unidas Este, vértices unidos Oeste. El negro va donde apuntan los vértices."
+        }
+      ]
+    },
+    {
+      "id": "cardinales-luces",
+      "title": "Luces de las marcas cardinales",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "La luz de una cardinal es siempre **blanca y centelleante** (Ct/Q) o **centelleante rápida** (CtRp/VQ). El número de centelleos sigue la **esfera de un reloj**: Este a las 3, Sur a las 6, Oeste a las 9 y Norte a las 12, que se hace con un centelleo continuo."
+        },
+        {
+          "type": "table",
+          "title": "Las cuatro cardinales de noche (luz blanca)",
+          "head": [
+            "Cardinal",
+            "Ritmo",
+            "Centelleante rápida CtRp / VQ",
+            "Centelleante Ct / Q"
+          ],
+          "rows": [
+            [
+              "**Norte**",
+              "Centelleo **continuo**, sin interrupción",
+              "CtRp / VQ continuo",
+              "Ct / Q continuo (un centelleo cada segundo)"
+            ],
+            [
+              "**Este**",
+              "Grupos de **3** centelleos",
+              "CtRp(3) / VQ(3) **cada 5 s**",
+              "Ct(3) / Q(3) **cada 10 s**"
+            ],
+            [
+              "**Sur**",
+              "Grupos de **6** centelleos **más un destello largo**",
+              "CtRp(6) / VQ(6) + destello largo **cada 10 s**",
+              "Ct(6) / Q(6) + destello largo **cada 15 s**"
+            ],
+            [
+              "**Oeste**",
+              "Grupos de **9** centelleos",
+              "CtRp(9) / VQ(9) **cada 10 s**",
+              "Ct(9) / Q(9) **cada 15 s**"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "El **destello largo** de la Sur sirve para que nadie confunda sus 6 centelleos con 3 o con 9. Es la única cardinal que lo lleva: «6 centelleos» a secas no es la respuesta, tiene que ser **6 centelleos más un destello largo**."
+        },
+        {
+          "type": "p",
+          "text": "Para los periodos: la versión rápida (VQ) va **5, 10, 10** segundos para Este, Sur y Oeste; la normal (Q), **10, 15, 15**. La Norte no tiene periodo porque no para."
+        },
+        {
+          "type": "list",
+          "title": "De la luz al color y al tope",
+          "items": [
+            "Mitad superior amarilla y mitad inferior negra es la **Sur**: su luz es blanca, grupo de 6 centelleos rápidos más un destello largo cada 10 s, o grupo de 6 centelleos más un destello largo cada 15 s.",
+            "Un centelleo blanco cada segundo, de forma ininterrumpida, es la **Norte** (negra arriba, amarilla abajo, conos hacia arriba).",
+            "Grupos de 9 centelleos, cada 10 s o cada 15 s, es la **Oeste**.",
+            "Grupos de 3 centelleos, cada 5 s o cada 10 s, es la **Este**."
+          ]
+        },
+        {
+          "type": "exam",
+          "text": "Trampas vistas: (1) Para la Oeste ofrecen «VQ(9) cada 15 segundos» y «Q(9) cada 15 segundos»: la buena es **Q(9) cada 15 s** (la rápida, VQ, es cada 10 s). (2) Para la Este ofrecen «grupo de 3 destellos», «grupo de 3 ocultaciones» o «un destello cada 3 segundos»: la buena es **centelleante de grupos de 3 centelleos cada 10 segundos**; las cardinales centellean, no dan destellos ni ocultaciones. (3) La Este pregunta a la vez cuadrante y luz: **cuadrante Este** y VQ(3) cada 5 s o Q(3) cada 10 s. (4) Para la Norte, «centelleante continua más un destello largo» es falsa: solo **centelleante continua**. (5) Algún enunciado dice «grupo de 9 destellos» o «seis destellos muy rápidos más un destello» queriendo decir centelleos: son la Oeste y la Sur."
+        },
+        {
+          "type": "key",
+          "text": "Luz blanca centelleante: Norte continua; Este 3 (VQ 5 s, Q 10 s); Sur 6 + destello largo (VQ 10 s, Q 15 s); Oeste 9 (VQ 10 s, Q 15 s). Como las horas de un reloj."
+        }
+      ]
+    },
+    {
+      "id": "cardinales-maniobra",
+      "title": "Cardinal por la proa: a qué banda caer",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "El test combina una cardinal con tu rumbo y pregunta por qué banda la dejas. Nunca es indiferente: hay que pasar por el lado que da nombre a la marca, y la marca queda entonces por la banda contraria."
+        },
+        {
+          "type": "steps",
+          "title": "Método en tres pasos",
+          "items": [
+            "Identifica la cardinal por su luz, su color o su tope (Norte, Sur, Este u Oeste).",
+            "Mira dónde queda ese punto cardinal respecto a tu rumbo: ¿a tu babor o a tu estribor? Hacia ese lado tienes que **caer** (cambiar el rumbo).",
+            "La marca queda por la banda **contraria** a la que has caído."
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Dónde queda cada punto cardinal según tu rumbo",
+          "head": [
+            "Tu rumbo",
+            "A tu babor queda el",
+            "A tu estribor queda el"
+          ],
+          "rows": [
+            [
+              "Norte",
+              "Oeste",
+              "Este"
+            ],
+            [
+              "Este",
+              "Norte",
+              "Sur"
+            ],
+            [
+              "Sur",
+              "Este",
+              "Oeste"
+            ],
+            [
+              "Oeste",
+              "Sur",
+              "Norte"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Los casos que salen en el banco",
+          "head": [
+            "Rumbo",
+            "Lo que ves por la proa",
+            "Es la cardinal",
+            "Qué haces"
+          ],
+          "rows": [
+            [
+              "Este",
+              "Luz blanca centelleante continua",
+              "Norte",
+              "**Caes a babor** y la dejas por **estribor**"
+            ],
+            [
+              "Este",
+              "Marca con la mitad superior negra y la inferior amarilla",
+              "Norte",
+              "**Caes a babor** y la dejas por **estribor**"
+            ],
+            [
+              "Oeste",
+              "Grupos de 6 centelleos rápidos más un destello largo cada 10 s",
+              "Sur",
+              "Caes a babor (al sur) y la dejas por **estribor**"
+            ],
+            [
+              "Norte",
+              "Espeque negro con banda central ancha amarilla y tope de dos triángulos unidos por la base",
+              "Este",
+              "Caes a estribor (al este) y la dejas por **babor**"
+            ],
+            [
+              "Norte",
+              "Luz blanca en grupos de 9",
+              "Oeste",
+              "**Cambias el rumbo a babor** (al oeste); la marca queda por estribor"
+            ]
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Paso a paso",
+          "text": "Navegas a rumbo Este (090°) y ves por la proa una luz blanca centelleante continua. Es una cardinal Norte: las aguas seguras están al norte de ella. Con proa al este, el norte lo tienes a babor. Caes a babor, pasas por el norte de la marca y la boya te queda por estribor."
+        },
+        {
+          "type": "exam",
+          "text": "La pregunta puede pedir «a qué banda caes» o «por qué banda la dejas», que son respuestas opuestas: con la cardinal Norte a rumbo Este **caes a babor** y **la dejas por estribor**. Descarta siempre «es indiferente» y «no hay ninguna marca con esa luz»."
+        },
+        {
+          "type": "key",
+          "text": "Caes hacia el punto cardinal que da nombre a la marca y la marca queda por la banda contraria. Nunca es indiferente."
+        }
+      ]
+    },
+    {
+      "id": "peligro-aislado",
+      "title": "Marca de peligro aislado",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Marca de peligro aislado",
+          "text": "Marca que se coloca **sobre, o próxima, a un peligro rodeado por todas partes de aguas navegables**: un peligro de dimensiones limitadas (una roca, un bajo pequeño, un naufragio) a cuyo alrededor se puede navegar."
+        },
+        {
+          "type": "table",
+          "title": "Cómo es",
+          "head": [
+            "Rasgo",
+            "Peligro aislado"
+          ],
+          "rows": [
+            [
+              "Color",
+              "**Negra con una o varias anchas bandas horizontales rojas**"
+            ],
+            [
+              "Forma",
+              "Cualquiera que no se confunda con una lateral; normalmente castillete o espeque"
+            ],
+            [
+              "Marca de tope",
+              "**Dos esferas negras superpuestas** (una encima de la otra)"
+            ],
+            [
+              "Luz",
+              "**Blanca, grupo de dos destellos**: Gp D(2) / Fl(2)"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Truco: **dos esferas, dos destellos**. El periodo puede variar (cada 5, 10 o 15 segundos) sin que cambie el significado: un grupo de dos destellos blancos es siempre peligro aislado."
+        },
+        {
+          "type": "p",
+          "text": "Como la marca no dice el tamaño del peligro ni a qué distancia se puede pasar, hay que consultar la carta y darle un resguardo prudente. Se puede pasar por cualquier lado."
+        },
+        {
+          "type": "exam",
+          "text": "Trampas vistas, todas cambiando un solo detalle: «franjas **verticales** rojas y negras» (son bandas horizontales); «negra con bandas **amarillas**» (eso sería una cardinal Este); «negra con bandas **verdes**»; «**una** esfera negra» o «dos esferas **rojas**» (son dos y negras; una esfera roja es aguas navegables); «luz roja», «dos destellos rojos» o «verdes» (es blanca); «un destello largo cada 10 s» o «Morse A» (son de aguas navegables); «grupo de dos **ocultaciones**» (son destellos); «grupos de tres destellos». Tampoco señala un peligro «que no figura en las cartas» (eso es un peligro nuevo) ni un peligro «al sur» o «al norte» de la marca."
+        },
+        {
+          "type": "key",
+          "text": "Peligro aislado: negra con bandas horizontales rojas, dos esferas negras, luz blanca de grupos de dos destellos. Está sobre un peligro rodeado de aguas navegables."
+        }
+      ]
+    },
+    {
+      "id": "aguas-navegables",
+      "title": "Marca de aguas navegables",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Marca de aguas navegables",
+          "text": "Marca que indica que **las aguas son navegables alrededor de ella**. No señala ningún peligro: es la única marca que puedes dejar por cualquier banda y pasando cerca."
+        },
+        {
+          "type": "list",
+          "title": "Para qué se usa (todas son ciertas)",
+          "items": [
+            "Para indicar que las aguas son navegables alrededor de la marca.",
+            "Para **definir los ejes de los canales** y como marca de **centro de canal**.",
+            "Para indicar la **entrada de un canal**, la **aproximación a un puerto o estuario** o un **punto de recalada**.",
+            "Para indicar **el lugar más adecuado para pasar por debajo de un puente** fijo."
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Cómo es",
+          "head": [
+            "Rasgo",
+            "Aguas navegables"
+          ],
+          "rows": [
+            [
+              "Color",
+              "**Franjas verticales rojas y blancas**"
+            ],
+            [
+              "Forma",
+              "**Esférica**, o de castillete o de espeque"
+            ],
+            [
+              "Marca de tope (si la tiene)",
+              "**Una esfera roja**"
+            ],
+            [
+              "Luz",
+              "**Blanca**, con uno de cuatro ritmos: **isofase**, de **ocultaciones**, **un destello largo cada 10 segundos** o la señal de **Morse «A»**"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Es la única marca con franjas **verticales** (junto con la de peligros nuevos, que es azul y amarilla). Si lees «franjas verticales rojas y blancas», no hay duda."
+        },
+        {
+          "type": "table",
+          "title": "Reconocer sus luces por la descripción",
+          "head": [
+            "Lo que dice el enunciado",
+            "Ritmo"
+          ],
+          "rows": [
+            [
+              "Luz blanca con igual duración de luz y de oscuridad; 2 s encendida y 2 s apagada; 3 s encendida y 3 s apagada",
+              "**Isofase**"
+            ],
+            [
+              "Luz blanca de periodo 4 s que está 3 s encendida y 1 s apagada (más luz que oscuridad)",
+              "**De ocultaciones**"
+            ],
+            [
+              "Un destello blanco largo cada 10 segundos",
+              "**Destello largo** (DL / LFl 10 s)"
+            ],
+            [
+              "Un destello corto y uno largo (punto y raya)",
+              "**Morse «A»**"
+            ]
+          ]
+        },
+        {
+          "type": "exam",
+          "text": "Trampas vistas: (1) «Las luces de ocultaciones solo las emiten los faros»: falso, las usa la marca de aguas navegables. (2) «No existe ninguna marca con luz isofase» o «con Morse A»: falso, es aguas navegables. (3) «Nunca tiene marca de tope»: falso, puede llevar una esfera roja. (4) Topes trampa: una esfera negra, dos esferas negras, dos esferas rojas, una esfera verde, una esfera a franjas. Es **una** y **roja**. (5) «Una marca cuya luz es un destello blanco cada diez segundos»: el banco da por buena **aguas navegables** aunque el enunciado no diga «largo»; en rigor el destello de esta marca es largo. (6) Para el eje o el centro de un canal la respuesta es aguas navegables, no las laterales. (7) Franjas «horizontales» blancas y rojas no existen."
+        },
+        {
+          "type": "key",
+          "text": "Aguas navegables: franjas verticales rojas y blancas, esférica, una esfera roja de tope, luz blanca isofase, de ocultaciones, destello largo cada 10 s o Morse «A». Marca ejes, centros y entradas de canal, recaladas y el paso bajo puentes."
+        }
+      ]
+    },
+    {
+      "id": "marcas-especiales",
+      "title": "Marcas especiales",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Marca especial",
+          "text": "Marca que indica **una zona o una configuración particular cuya naturaleza exacta está indicada en la carta u otra publicación náutica**. No sirve para guiar la navegación, sino para avisar de que allí hay algo."
+        },
+        {
+          "type": "table",
+          "title": "Cómo es",
+          "head": [
+            "Rasgo",
+            "Marca especial"
+          ],
+          "rows": [
+            [
+              "Color",
+              "**Amarillo**"
+            ],
+            [
+              "Forma",
+              "De libre elección, pero **que no se preste a confusión** con las marcas de ayuda a la navegación"
+            ],
+            [
+              "Marca de tope (si la tiene)",
+              "**Un aspa amarilla en forma de X**"
+            ],
+            [
+              "Luz (si la tiene)",
+              "**Amarilla**, con cualquier ritmo **excepto los que usan las luces blancas** de las cardinales, de peligro aislado y de aguas navegables"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "La restricción del ritmo existe porque con mala visibilidad el amarillo se confunde con el blanco. Y la de la forma, para no engañar: una boya especial colocada en el lado de babor de un canal puede ser cilíndrica, pero no cónica."
+        },
+        {
+          "type": "list",
+          "title": "Ejemplos de uso",
+          "items": [
+            "Sistemas de adquisición de datos oceanográficos (SADO).",
+            "**Separación de tráfico** donde el balizamiento convencional del canal puede prestarse a confusión.",
+            "Vertederos.",
+            "Zonas de **ejercicios militares**.",
+            "**Cables o conductos (tuberías) submarinos**.",
+            "**Zonas reservadas al recreo**.",
+            "Límites de un área de **fondeo**.",
+            "Instalaciones de energía renovable alejadas de la costa.",
+            "Instalaciones de acuicultura."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Pueden llevar letras, cifras o un pictograma que aclare su significado. De noche, si ves una **luz amarilla** y no distingues nada más, es una marca especial: ninguna otra de las cinco usa ese color."
+        },
+        {
+          "type": "exam",
+          "text": "Trampas vistas: (1) «El ritmo de su luz puede ser cualquiera» es la afirmación **falsa** cuando piden la que NO es correcta: es cualquiera **menos** los de las luces blancas. (2) El tope es un **aspa en X**; no lo confundas con la **cruz vertical** (en forma de +) de la boya de peligros nuevos, ni con una esfera amarilla. (3) «Marcan un canal» o «señalan aguas seguras» no son funciones de las especiales."
+        },
+        {
+          "type": "key",
+          "text": "Especiales: amarillas, aspa amarilla en X, luz amarilla de ritmo distinto a los de las luces blancas. Su significado está en la carta."
+        }
+      ]
+    },
+    {
+      "id": "peligros-nuevos",
+      "title": "Peligros nuevos y boya de emergencia o naufragio",
+      "blocks": [
+        {
+          "type": "term",
+          "term": "Peligro nuevo",
+          "text": "Peligro descubierto hace poco, natural o causado por el hombre (un naufragio reciente, por ejemplo), que **todavía no figura en las cartas ni en los documentos náuticos**."
+        },
+        {
+          "type": "p",
+          "text": "Hasta que la información se difunde, se señaliza con las marcas adecuadas (laterales, cardinales o de peligro aislado) o con la **boya de emergencia o naufragio**. Si el riesgo es muy alto, al menos una de las señales se duplica."
+        },
+        {
+          "type": "table",
+          "title": "Boya de emergencia o naufragio",
+          "head": [
+            "Rasgo",
+            "Cómo es"
+          ],
+          "rows": [
+            [
+              "Color",
+              "**Franjas verticales azules y amarillas** en igual número (entre 4 y 8 en total; por ejemplo, seis franjas iguales)"
+            ],
+            [
+              "Forma",
+              "De castillete o de espeque"
+            ],
+            [
+              "Marca de tope",
+              "**Cruz amarilla vertical/perpendicular** (en forma de +)"
+            ],
+            [
+              "Luz",
+              "**Alternativa azul y amarilla**"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Puede llevar además una baliza radar (RACON) con la letra Morse «D» o un transmisor AIS. Se retira cuando el peligro ya está suficientemente difundido o ha desaparecido."
+        },
+        {
+          "type": "exam",
+          "text": "En el test: «un castillete con seis franjas verticales iguales azules y amarillas indica…» **peligro nuevo**. No es «aguas libres» ni «depende del puerto». El azul solo aparece en esta marca."
+        },
+        {
+          "type": "key",
+          "text": "Franjas verticales azules y amarillas, cruz amarilla en + y luz alternativa azul y amarilla: peligro nuevo."
+        }
+      ]
+    },
+    {
+      "id": "reconocer-de-noche",
+      "title": "Todo junto: reconocer cualquier marca de día y de noche",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "De noche el color de la luz ya descarta casi todo. Apréndete qué marcas usan cada color."
+        },
+        {
+          "type": "table",
+          "title": "Quién usa cada color de luz",
+          "head": [
+            "Color de la luz",
+            "Marcas que lo usan"
+          ],
+          "rows": [
+            [
+              "**Blanca**",
+              "Únicamente las **cardinales**, las de **peligro aislado** y las de **aguas navegables**"
+            ],
+            [
+              "**Roja**",
+              "Solo las **laterales de babor** y las de bifurcación que indican **canal principal a estribor**"
+            ],
+            [
+              "**Verde**",
+              "Solo las **laterales de estribor** y las de bifurcación que indican **canal principal a babor**"
+            ],
+            [
+              "**Amarilla**",
+              "Solo las **marcas especiales**"
+            ],
+            [
+              "Azul y amarilla alternativa",
+              "Boya de emergencia o naufragio (peligro nuevo)"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "De la luz a la marca",
+          "head": [
+            "Lo que ves",
+            "Marca"
+          ],
+          "rows": [
+            [
+              "Roja, cualquier ritmo menos 2+1 (p. ej. grupo de 2 destellos cada 5 s)",
+              "Lateral de babor"
+            ],
+            [
+              "Verde, cualquier ritmo menos 2+1 (p. ej. grupo de 2 destellos cada 10 s)",
+              "Lateral de estribor"
+            ],
+            [
+              "Roja, grupo de 2+1 destellos",
+              "Bifurcación, canal principal a estribor"
+            ],
+            [
+              "Verde, grupo de 2+1 destellos",
+              "Bifurcación, canal principal a babor"
+            ],
+            [
+              "Blanca centelleante continua",
+              "Cardinal Norte"
+            ],
+            [
+              "Blanca, grupos de 3 centelleos (5 s o 10 s)",
+              "Cardinal Este"
+            ],
+            [
+              "Blanca, grupos de 6 centelleos + un destello largo (10 s o 15 s)",
+              "Cardinal Sur"
+            ],
+            [
+              "Blanca, grupos de 9 centelleos (10 s o 15 s)",
+              "Cardinal Oeste"
+            ],
+            [
+              "Blanca, grupo de 2 destellos",
+              "Peligro aislado"
+            ],
+            [
+              "Blanca isofase, de ocultaciones, un destello largo cada 10 s o Morse «A»",
+              "Aguas navegables"
+            ],
+            [
+              "Amarilla",
+              "Especial"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "title": "De día: color, tope y forma de todas las marcas",
+          "head": [
+            "Marca",
+            "Color del cuerpo",
+            "Marca de tope",
+            "Forma"
+          ],
+          "rows": [
+            [
+              "Lateral de babor",
+              "Rojo",
+              "Cilindro rojo",
+              "Cilíndrica, castillete o espeque"
+            ],
+            [
+              "Lateral de estribor",
+              "Verde",
+              "Cono verde, vértice arriba",
+              "Cónica, castillete o espeque"
+            ],
+            [
+              "Canal principal a estribor",
+              "Rojo con banda ancha horizontal verde",
+              "Cilindro rojo",
+              "Cilíndrica, castillete o espeque"
+            ],
+            [
+              "Canal principal a babor",
+              "Verde con banda ancha horizontal roja",
+              "Cono verde, vértice arriba",
+              "Cónica, castillete o espeque"
+            ],
+            [
+              "Cardinal Norte",
+              "Negro arriba, amarillo abajo",
+              "Dos conos negros, vértices arriba",
+              "Castillete o espeque"
+            ],
+            [
+              "Cardinal Sur",
+              "Amarillo arriba, negro abajo",
+              "Dos conos negros, vértices abajo",
+              "Castillete o espeque"
+            ],
+            [
+              "Cardinal Este",
+              "Negro con banda horizontal amarilla",
+              "Dos conos negros unidos por las bases",
+              "Castillete o espeque"
+            ],
+            [
+              "Cardinal Oeste",
+              "Amarillo con banda horizontal negra",
+              "Dos conos negros unidos por los vértices",
+              "Castillete o espeque"
+            ],
+            [
+              "Peligro aislado",
+              "Negro con una o varias bandas horizontales rojas",
+              "Dos esferas negras superpuestas",
+              "Castillete o espeque"
+            ],
+            [
+              "Aguas navegables",
+              "Franjas verticales rojas y blancas",
+              "Una esfera roja",
+              "Esférica, castillete o espeque"
+            ],
+            [
+              "Especial",
+              "Amarillo",
+              "Aspa amarilla en X",
+              "Cualquiera que no confunda"
+            ],
+            [
+              "Peligro nuevo",
+              "Franjas verticales azules y amarillas",
+              "Cruz amarilla en +",
+              "Castillete o espeque"
+            ]
+          ]
+        },
+        {
+          "type": "exam",
+          "text": "Trampas vistas: (1) «Las únicas marcas con luz blanca son las cardinales, de peligro aislado, de aguas navegables **y especiales**»: falso, las especiales tienen luz amarilla; son solo las tres primeras. (2) «Emiten luz roja las de babor y las de canal principal a **babor**» o «…y las de peligro aislado»: falso; solo las laterales de babor y las de canal principal a **estribor** (el peligro aislado tiene bandas rojas, pero su luz es blanca)."
+        },
+        {
+          "type": "key",
+          "text": "Blanca: cardinales, peligro aislado y aguas navegables. Roja: babor y canal principal a estribor. Verde: estribor y canal principal a babor. Amarilla: especiales."
+        }
+      ]
+    }
+  ],
+  "summary": [
+    "España es región A: entrando, rojas por babor y verdes por estribor; saliendo, al revés.",
+    "El sentido convencional del balizamiento es el del que viene de la mar hacia el puerto; las marcas se numeran en ese sentido, pares las rojas e impares las verdes.",
+    "Lateral de babor: roja, cilíndrica, cilindro rojo, luz roja. Lateral de estribor: verde, cónica, cono verde con el vértice hacia arriba, luz verde. Cualquier ritmo excepto Gp D(2+1).",
+    "Roja con banda verde, cilindro rojo y luz roja Gp D(2+1): bifurcación con canal principal a estribor; entrando se deja por babor.",
+    "Verde con banda roja, cono verde y luz verde Gp D(2+1): bifurcación con canal principal a babor; entrando se deja por estribor.",
+    "Las cardinales indican que las aguas más profundas están en el cuadrante de su nombre; son amarillas y negras con dos conos negros de tope.",
+    "Conos: Norte vértices arriba, Sur vértices abajo, Este unidos por las bases, Oeste unidos por los vértices. El negro va donde apuntan los vértices.",
+    "Colores: Norte negro sobre amarillo, Sur amarillo sobre negro, Este negro con banda amarilla, Oeste amarillo con banda negra.",
+    "Luces cardinales, blancas y centelleantes: Norte continua, Este 3 (5 s o 10 s), Sur 6 + destello largo (10 s o 15 s), Oeste 9 (10 s o 15 s).",
+    "Con una cardinal por la proa caes hacia el punto cardinal de su nombre y la dejas por la banda contraria: Norte a rumbo Este, caes a babor y queda por estribor.",
+    "Peligro aislado: negra con bandas horizontales rojas, dos esferas negras, luz blanca de grupos de dos destellos.",
+    "Aguas navegables: franjas verticales rojas y blancas, una esfera roja, luz blanca isofase, de ocultaciones, destello largo cada 10 s o Morse «A»; marca ejes y centros de canal, entradas, recaladas y el paso bajo puentes.",
+    "Especiales: amarillas, aspa amarilla en X, luz amarilla con ritmo distinto a los de las luces blancas; su significado está en la carta.",
+    "Peligro nuevo: franjas verticales azules y amarillas, cruz amarilla en +, luz alternativa azul y amarilla.",
+    "Luz blanca solo en cardinales, peligro aislado y aguas navegables; roja solo en babor y canal principal a estribor; verde solo en estribor y canal principal a babor; amarilla solo en especiales."
+  ],
+  "glossary": [
+    {
+      "term": "IALA-AISM",
+      "text": "Asociación Internacional de Señalización Marítima, que da nombre al sistema de balizamiento marítimo."
+    },
+    {
+      "term": "Región A",
+      "text": "Zona del mundo, que incluye España, donde las marcas de babor son rojas y las de estribor verdes."
+    },
+    {
+      "term": "Sentido convencional del balizamiento",
+      "text": "Sentido del navegante que viene de alta mar y se aproxima a un puerto, río, estuario o vía navegable."
+    },
+    {
+      "term": "Marca",
+      "text": "Boya o baliza del sistema de balizamiento, con forma, color, tope y luz propios de su tipo."
+    },
+    {
+      "term": "Marca de tope",
+      "text": "Figura geométrica (cilindro, cono, esfera, aspa o cruz) colocada en lo más alto de una marca."
+    },
+    {
+      "term": "Castillete",
+      "text": "Boya con estructura alta de celosía, válida para cualquier tipo de marca."
+    },
+    {
+      "term": "Espeque",
+      "text": "Marca en forma de poste o palo vertical, válida para cualquier tipo de marca."
+    },
+    {
+      "term": "Marca lateral",
+      "text": "Marca que señala el límite de babor (roja) o de estribor (verde) de un canal navegable."
+    },
+    {
+      "term": "Marca lateral de babor",
+      "text": "Roja, cilíndrica, con cilindro rojo de tope y luz roja; entrando se deja por babor."
+    },
+    {
+      "term": "Marca lateral de estribor",
+      "text": "Verde, cónica, con cono verde vértice arriba y luz verde; entrando se deja por estribor."
+    },
+    {
+      "term": "Marca de bifurcación",
+      "text": "Lateral modificada con una banda del color contrario y luz Gp D(2+1) que indica dónde sigue el canal principal."
+    },
+    {
+      "term": "Canal principal (o preferente)",
+      "text": "El ramal más importante de los dos en que se divide un canal en una bifurcación."
+    },
+    {
+      "term": "Canal principal a estribor",
+      "text": "Marca roja con banda verde, cilindro rojo y luz roja Gp D(2+1) (babor modificada)."
+    },
+    {
+      "term": "Canal principal a babor",
+      "text": "Marca verde con banda roja, cono verde y luz verde Gp D(2+1) (estribor modificada)."
+    },
+    {
+      "term": "Gp D(2+1)",
+      "text": "Ritmo de dos destellos, pausa corta y un destello más, reservado a las marcas de bifurcación."
+    },
+    {
+      "term": "Marca cardinal",
+      "text": "Marca amarilla y negra con dos conos negros que indica en qué cuadrante están las aguas más profundas."
+    },
+    {
+      "term": "Cuadrante",
+      "text": "Cada uno de los cuatro sectores (Norte, Este, Sur, Oeste) alrededor de un punto."
+    },
+    {
+      "term": "Marca de peligro aislado",
+      "text": "Negra con bandas horizontales rojas y dos esferas negras, colocada sobre un peligro rodeado de aguas navegables."
+    },
+    {
+      "term": "Marca de aguas navegables",
+      "text": "Marca de franjas verticales rojas y blancas con una esfera roja que indica aguas navegables a su alrededor."
+    },
+    {
+      "term": "Punto de recalada",
+      "text": "Lugar al que se dirige el barco que llega de alta mar para reconocer la costa o la entrada de un puerto."
+    },
+    {
+      "term": "Marca especial",
+      "text": "Marca amarilla con aspa en X que señala una zona cuya naturaleza se explica en la carta."
+    },
+    {
+      "term": "Peligro nuevo",
+      "text": "Peligro recién descubierto que aún no aparece en las cartas ni en los documentos náuticos."
+    },
+    {
+      "term": "Boya de emergencia o naufragio",
+      "text": "Boya de franjas verticales azules y amarillas, con cruz amarilla y luz alternativa azul y amarilla, que señala un peligro nuevo."
+    },
+    {
+      "term": "Destello",
+      "text": "Aparición breve de luz, más corta que la oscuridad que la sigue."
+    },
+    {
+      "term": "Destello largo",
+      "text": "Destello de 2 segundos o más de duración."
+    },
+    {
+      "term": "Isofase",
+      "text": "Luz con igual duración de luz y de oscuridad."
+    },
+    {
+      "term": "Ocultaciones",
+      "text": "Luz que está más tiempo encendida que apagada."
+    },
+    {
+      "term": "Centelleante (Ct / Q)",
+      "text": "Luz de destellos muy seguidos, unos 50 o 60 por minuto."
+    },
+    {
+      "term": "Centelleante rápida (CtRp / VQ)",
+      "text": "Luz de unos 100 o 120 centelleos por minuto."
+    },
+    {
+      "term": "Morse «A»",
+      "text": "Señal luminosa de un destello corto y uno largo (punto y raya)."
+    },
+    {
+      "term": "Periodo",
+      "text": "Tiempo que tarda una luz en repetir su ciclo completo."
+    },
+    {
+      "term": "Luces sincronizadas",
+      "text": "Luces de un canal que destellan todas a la vez."
+    },
+    {
+      "term": "Luces secuenciadas",
+      "text": "Luces de un canal que destellan una tras otra."
+    },
+    {
+      "term": "Resguardo",
+      "text": "Distancia de seguridad que se da a un peligro al pasar cerca de él."
+    }
+  ],
+  "questions": {
+    "8r4frbi5sv7y3n5": "marcas-laterales",
+    "bch1k01rodozjv2": "marcas-de-bifurcacion",
+    "ibhpmz0b8gfja03": "cardinales-luces",
+    "rrbnk474hv3w1wl": "aguas-navegables",
+    "yaut84f1978iz9h": "peligro-aislado",
+    "c8ognd0ve6ncluy": "aguas-navegables",
+    "97zj8b3h34hcpg7": "cardinales-color-y-tope",
+    "wqit6p9pny1aybz": "cardinales-luces",
+    "atxo4h0dwdamx3n": "marcas-de-bifurcacion",
+    "w2dyxv4ja58hqlr": "cardinales-luces",
+    "14tyecslpoudfct": "marcas-de-bifurcacion",
+    "rpc347vqb4bxikt": "aguas-navegables",
+    "m34vgbjb0pm88am": "cardinales-luces",
+    "lum29b3xlmbbyhn": "cardinales-color-y-tope",
+    "kd0ut79ozggzcn1": "marcas-especiales",
+    "i0b7emjht64qmuk": "cardinales-maniobra",
+    "tdwxggj4sbpolvi": "peligro-aislado",
+    "ho5e8larrgndn5b": "marcas-de-bifurcacion",
+    "5be04uij97s45ph": "peligro-aislado",
+    "8ypp2tgive54hpx": "cardinales-color-y-tope",
+    "fwlevqo5lt4marp": "reconocer-de-noche",
+    "zxmzoa5e3zr2vut": "peligro-aislado",
+    "qk6zwqbrtgjztn8": "marcas-de-bifurcacion",
+    "50vyk1j2vmtpwwj": "marcas-laterales",
+    "5mjv3ajy79190n9": "cardinales-luces",
+    "53qxj7qwpvt8vsj": "aguas-navegables",
+    "u5mjyx6cuwed21a": "cardinales-color-y-tope",
+    "wmndqd7en8o5g86": "aguas-navegables",
+    "gizapwbtbptwggh": "marcas-de-bifurcacion",
+    "n7d8irhujrgxkc2": "cardinales-luces",
+    "28hhrwxvllc6ela": "aguas-navegables",
+    "8ne4w3vrdxb63e7": "cardinales-luces",
+    "yx83g2k8wyr73ko": "cardinales-color-y-tope",
+    "tri0bs794x5zhs2": "marcas-de-bifurcacion",
+    "y2vc3bkfygk5hwf": "peligro-aislado",
+    "61kcj22iangait9": "marcas-especiales",
+    "a8l16dn5z1zhase": "marcas-de-bifurcacion",
+    "3oathf2m17ufo7d": "cardinales-maniobra",
+    "w6qhwl6f3f2nqf9": "aguas-navegables",
+    "z4nmywsfb5pzgzd": "cardinales-color-y-tope",
+    "thsbccl7ndpzp7k": "cardinales-color-y-tope",
+    "y58sj31dokxpemz": "marcas-de-bifurcacion",
+    "a81jr036nctvj03": "cardinales-color-y-tope",
+    "hlisnqwtsrq1a2l": "marcas-laterales",
+    "qjqwobycugf4z1n": "marcas-especiales",
+    "eadmmvet55z9dqo": "cardinales-color-y-tope",
+    "latg44kpo6naod6": "marcas-laterales",
+    "m89q88w0djs26xo": "cardinales-color-y-tope",
+    "it6os45xqkxsjjh": "marcas-de-bifurcacion",
+    "vo3gsp54kalyehm": "cardinales-color-y-tope",
+    "9h1qvfxl2ilini3": "peligros-nuevos",
+    "nuhhytjt96qq19u": "peligro-aislado",
+    "acqo55pco66dllh": "marcas-de-bifurcacion",
+    "g3d1n5h35ecl6t6": "cardinales-maniobra",
+    "mihalc5g8h9h3kp": "sentido-convencional",
+    "nvv1ldx8s3jwc8e": "sentido-convencional",
+    "motpsy8ow8udqcb": "peligro-aislado",
+    "jbbzlgp0ht8i6ti": "marcas-de-bifurcacion",
+    "bv73d1e1bryc7kq": "cardinales-maniobra",
+    "btetpv2qww2fysb": "sentido-convencional",
+    "hlu9fncw69wl892": "cardinales-maniobra",
+    "xa9vcsshywui53a": "peligro-aislado",
+    "apkxs67ycgrosru": "peligro-aislado",
+    "zdtsz5tesfmegdp": "cardinales-luces",
+    "0r2cy8082orrc2r": "marcas-de-bifurcacion",
+    "9hplzqvc7es94sn": "cardinales-luces",
+    "dtzbjedx4jap9ac": "marcas-de-bifurcacion",
+    "9p6uoadzy0mtg5s": "aguas-navegables",
+    "etqdoahbznegy7r": "peligro-aislado",
+    "g08or7j0tt8bqvi": "aguas-navegables",
+    "0jp1douqulh5rgj": "aguas-navegables",
+    "ty62s99425afr0s": "sentido-convencional",
+    "hlq4m7axl6uf5ei": "cardinales-color-y-tope",
+    "3m1jaq7c1h2apsi": "cardinales-color-y-tope",
+    "iutb4c9q7mp6ym3": "aguas-navegables",
+    "i5b0astiw8nqo09": "aguas-navegables",
+    "0q1ref6bnrrm16s": "marcas-laterales",
+    "vooecinnqxjknr5": "marcas-de-bifurcacion",
+    "ic5v07pyp6aktxu": "marcas-de-bifurcacion",
+    "b8fxvyir9tue50d": "cardinales-color-y-tope",
+    "pjzq4xd8kq1d9k4": "marcas-de-bifurcacion",
+    "x68m7671kgkxh7y": "marcas-de-bifurcacion",
+    "7fjliqjubt2yqyy": "cardinales-color-y-tope",
+    "qjmfenv45qu6pt6": "marcas-especiales",
+    "sjv940g6nwll8os": "peligro-aislado",
+    "2jzvw4xk4aonmmq": "marcas-de-bifurcacion",
+    "tngjniqf9hfvw5r": "peligro-aislado",
+    "owvhfzfvgq99xf9": "aguas-navegables",
+    "eg60twe9rpvjc35": "cardinales-color-y-tope",
+    "zsr9d04trwmarpc": "marcas-laterales",
+    "g4ntwrzi6vo1u2v": "sentido-convencional",
+    "65dt5pg590j4rm5": "cardinales-luces",
+    "gategvw68st7s5w": "marcas-de-bifurcacion",
+    "945kl3pxrrukrq9": "peligro-aislado",
+    "4i9vpih1yg9p7z9": "marcas-de-bifurcacion",
+    "icewtvd337ag0q0": "marcas-laterales",
+    "kr54uhvql4dggdq": "cardinales-color-y-tope",
+    "ktlwt9pt0tmlpl5": "peligro-aislado",
+    "subv1hqi5fl6ra2": "marcas-de-bifurcacion",
+    "898r5rstp0bpsud": "marcas-especiales",
+    "l15114ganr64k51": "marcas-de-bifurcacion",
+    "ob9l58hdwi7y3go": "aguas-navegables",
+    "fu6stzbr1ki8a9l": "cardinales-color-y-tope",
+    "l9nmz46avrxxh8l": "peligro-aislado",
+    "6zm65ykczd6uydz": "marcas-de-bifurcacion",
+    "ab7lgb516pj8gzk": "sentido-convencional",
+    "u32udz5pxbaalql": "marcas-de-bifurcacion",
+    "2gs9loyrgc0zl7p": "cardinales-color-y-tope",
+    "ws21zc403rc120t": "cardinales-luces",
+    "q7b2bcs8lq7wnpy": "peligro-aislado",
+    "kwe4duuv2bx9dld": "peligro-aislado",
+    "cdzwo53b8u9z8z7": "marcas-especiales",
+    "nto8ih9b8vfuu5w": "marcas-de-bifurcacion",
+    "c3rsl53aydnumy3": "sentido-convencional",
+    "0xujh6mp08e62pf": "cardinales-color-y-tope",
+    "2tn6zocm7f70plw": "sentido-convencional",
+    "zp30ka8qcw4rtgf": "aguas-navegables",
+    "4a3jduq323caxha": "aguas-navegables",
+    "8t5yl6xckpaizzt": "cardinales-color-y-tope",
+    "0ecpg9gxqh4ipo4": "cardinales-luces",
+    "l8e9bf3u460dicx": "peligro-aislado",
+    "g3p8mc9hdrk3aqg": "peligro-aislado",
+    "zi1ln9ya8dchdyt": "marcas-de-bifurcacion",
+    "ta3iavoa3iww3k0": "cardinales-color-y-tope",
+    "d5lvlmaf6bwncue": "cardinales-luces",
+    "2c96v3k5s4ym6ed": "sentido-convencional",
+    "7nunt30ba84s5oe": "peligro-aislado",
+    "63v3eozju9tinlf": "marcas-de-bifurcacion",
+    "82sycjko646gnwq": "cardinales-color-y-tope",
+    "tqglpptmoe2j8xu": "cardinales-luces",
+    "7c2er363qanjbn9": "marcas-laterales",
+    "wfu8pi8r2flbmyf": "peligro-aislado",
+    "bjt6d79g8aixtoo": "marcas-especiales",
+    "2k0n14ej7pi814v": "aguas-navegables",
+    "4vr2zibk7l6w87o": "cardinales-color-y-tope",
+    "jv29ncdd9tttg61": "cardinales-color-y-tope",
+    "bih6dmj0rlv0339": "marcas-de-bifurcacion",
+    "2cioe4s42m3dn2q": "aguas-navegables",
+    "qz51p2534d3emyc": "aguas-navegables",
+    "0lauadsak091v3c": "cardinales-color-y-tope",
+    "8d3kifcy9ruwrc9": "aguas-navegables",
+    "not9btd1rn2scif": "marcas-laterales",
+    "iy5yh3voxe3mys5": "cardinales-luces",
+    "t6d0tkq4h5g2t1r": "aguas-navegables",
+    "vbnxfr5ckmgegjk": "marcas-de-bifurcacion",
+    "fp7qpqscasdgruj": "aguas-navegables",
+    "24mnjf4yzsf8397": "peligro-aislado",
+    "fwljxx8lrok4qse": "marcas-de-bifurcacion",
+    "6ziucbxr9n02mqe": "aguas-navegables",
+    "3it4ouv5upmipf7": "reconocer-de-noche",
+    "l0q2097suo25s99": "marcas-especiales",
+    "dy9ii4tv69lfi5p": "marcas-de-bifurcacion",
+    "coorggi5qlhitp6": "marcas-laterales",
+    "cyzq599g381dcwq": "aguas-navegables",
+    "3gvn7793k3akx2g": "cardinales-maniobra",
+    "tpiq4puedbh6t2a": "marcas-de-bifurcacion",
+    "f3a78yiras04jjt": "peligro-aislado",
+    "ktce11e748vldve": "aguas-navegables",
+    "5g4bdh0ldlo4saw": "cardinales-color-y-tope",
+    "90evka91498atm8": "aguas-navegables",
+    "l6ho8k06x361io4": "peligro-aislado",
+    "i0tu8t30zds5tge": "aguas-navegables",
+    "tyx09v7jhes69nb": "marcas-laterales",
+    "duo25y347q86r1a": "sentido-convencional",
+    "u9js1kigtkbq9io": "cardinales-color-y-tope",
+    "qhw39206unk6q9c": "peligro-aislado",
+    "hka83niiskrwubc": "aguas-navegables",
+    "65sxegfx5vvt5ff": "marcas-laterales",
+    "5t5fyhayh60mg8u": "marcas-de-bifurcacion",
+    "twmpluamdgh1tni": "aguas-navegables"
+  }
+}

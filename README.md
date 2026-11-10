@@ -1,6 +1,6 @@
 # Bitácora PER
 
-Web personal de estudio del **Patrón de Embarcaciones de Recreo**: 1.464 preguntas, 149 tests de origen y 11 temas. App móvil minimalista de una sola columna, con navegación inferior. Cada tema se divide en tests de exactamente 10 preguntas, una por pantalla, con respuestas, posición y resultado guardados en el navegador. El último bloque parcial se completa con preguntas del inicio del tema para incluir todo el banco.
+Web personal de estudio del **Patrón de Embarcaciones de Recreo**: 1.464 preguntas, 149 tests de origen y 11 temas. App minimalista: una sola columna con navegación inferior en el móvil y diseño a lo ancho en el ordenador. Cada tema se divide en tests de exactamente 10 preguntas, una por pantalla, con respuestas, posición y resultado guardados en el navegador. El último bloque parcial se completa con preguntas del inicio del tema para incluir todo el banco.
 
 ## Explicaciones
 
@@ -19,6 +19,22 @@ que valida los IDs y genera `dist/explanations.json`; las preguntas repetidas co
 [Fuente oficial: Real Decreto 875/2014, anexo II](https://www.boe.es/buscar/act.php?id=BOE-A-2014-10344#ai-2). Verificado el 1 de noviembre de 2026. Examen completo; no implementa la modalidad complementaria para quien tiene el título de Patrón para Navegación Básica.
 
 Los simulacros existen solo en memoria mientras la pestaña siga abierta. El reloj no se pausa en la navegación interna. Cerrar o recargar descarta el intento; se guarda únicamente el resultado final al entregar o agotarse el tiempo. El resultado informa de cada límite, incluso si el total de aciertos bastaría para aprobar.
+
+## Temario para repasar
+
+La pestaña «Temario» reúne las once unidades explicadas para repasar: apartados numerados con definiciones, tablas, pasos, trampas habituales del test e idea clave, resumen y glosario. Se pueden marcar apartados como estudiados y continuar donde se dejó (se guarda en el navegador). Cada apartado lista **las preguntas del banco que se resuelven con él**, para ponerse a prueba al momento: las 1.464 preguntas están asignadas a un apartado y `npm run check` falla si alguna queda fuera.
+
+Los temas se escriben en `content/temas/tema-NN.json` (formato y criterios en `content/temas/README.md`) y se publican con:
+
+```sh
+npm run temas
+```
+
+Son explicaciones propias redactadas con ayuda de IA a partir del temario y de las preguntas del banco, sin revisión académica. Cuando la clave del banco parece discutible, el tema explica la respuesta del banco y lo avisa.
+
+## En el ordenador
+
+Desde 1024 px de ancho la app usa la pantalla: la navegación pasa a un carril lateral, las listas van a dos columnas, la página de un tema pone el estudio junto a los tests, la práctica muestra la explicación al lado de la pregunta y el tema para estudiar añade un índice fijo de apartados y las preguntas de cada apartado en un panel lateral. En el móvil sigue siendo una sola columna.
 
 ## Carta interactiva
 

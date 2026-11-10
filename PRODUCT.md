@@ -19,6 +19,8 @@ Own Boat Málaga bank, exported 1 November 2026: 1464 records, 149 source tests,
 
 Chart exercises use the Estrecho de Gibraltar practice chart. User instruction, 9 November 2026: topic 11 exercises open the PER teaching chart (L105 enseñanza, user-supplied KAP) georeferenced in latitude/longitude, with the tools needed to solve them virtually. The app supplies points (tap or coordinates), ruler (true bearing and distance), bearing lines, distance circles and snapping to intersections. Rhumb-line maths, 1 mile = 1′ of latitude. The scan's distortion against the printed graticule is corrected (scripts/calibrate-chart.py). Not valid for navigation. It does not solve exercises or apply compass corrections for the user.
 
+User instruction, 9 November 2026: adapt the web for desktop browsers as was done in the user's Bitácora Ciber (UNIR) app, with every unit available to review, containing the key points needed to pass every bank question, none left out. Implemented as eleven study topics (content/temas) whose validator requires every bank question of the unit to be assigned to a section, and a desktop layout from 1024px. This supersedes the earlier «desktop retains mobile dimensions» revision; phones keep the single column.
+
 ## Access and retention
 
 The user explicitly requested public visibility and GitHub publication after the initial private deployment. Public GitHub repository and GitHub Pages hosting; the separate Sites copy remains owner-private. Browser-only storage, no backend/analytics/synchronization. Practice answers, checked feedback, current position and completion are persisted per ten-question test. Repeating a test explicitly resets that test after confirmation.
