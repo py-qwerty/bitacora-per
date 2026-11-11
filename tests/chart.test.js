@@ -52,5 +52,5 @@ test('coordinates are written and read as in the exam statements',()=>{
 });
 test('every chart tile referenced by the viewer is published',()=>{
   assert(existsSync(new URL('../dist/assets/chart/0.webp',import.meta.url)));
-  for(const [level,factor] of [[1,2],[2,1]])for(let c=0;c<Math.ceil(CHART.width/factor/CHART.tile);c++)for(let r=0;r<Math.ceil(CHART.height/factor/CHART.tile);r++)assert(existsSync(new URL(`../dist/assets/chart/${level}-${c}-${r}.webp`,import.meta.url)),`${level}-${c}-${r}`);
+  for(const [level,factor] of [[1,2],[2,1],[3,.5]])for(let c=0;c<Math.ceil(CHART.width/factor/CHART.tile);c++)for(let r=0;r<Math.ceil(CHART.height/factor/CHART.tile);r++)assert(existsSync(new URL(`../dist/assets/chart/${level}-${c}-${r}.webp`,import.meta.url)),`${level}-${c}-${r}`);
 });

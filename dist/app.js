@@ -1,4 +1,4 @@
-import { openChart, closeChart, isChartOpen } from './chart.js?v=3';
+import { openChart, closeChart, isChartOpen } from './chart.js?v=4';
 import { QUOTAS, LIMITS, DURATION, RULES_URL, generateExam, gradeExam, remaining, formatTime, isValidSession, practiceBlocks, validPractice, swipeDirection, validateTema } from './core.js?v=7';
 const $ = s => document.querySelector(s);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

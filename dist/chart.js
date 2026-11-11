@@ -4,7 +4,8 @@ import { CHART, toPixel, toGeo, toPlane, fromPlane, bearing, distance, destinati
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const LEVELS = [null, { width: 2482, height: 1754 }, { width: CHART.width, height: CHART.height }];
+const LEVELS = [null, { width: 2482, height: 1754 }, { width: CHART.width, height: CHART.height }, { width: CHART.width * 2, height: CHART.height * 2 }];
+const TILES_VERSION = 2, NOTES_MAX = 5000;
 const MAX_SCALE = 4, TAP_SLOP = 6, SNAP_RADIUS = 16, HIT_RADIUS = 13, TOUCH_LIFT = 52;
 const CARDINALS = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'], ALIGN_DEGREES = 3.5;
 const offCardinal = brg => Math.abs(((brg - Math.round(brg / 45) * 45 + 540) % 360) - 180);
@@ -29,7 +30,7 @@ const HINTS = {
 const DEG = Math.PI / 180, AUTO_KEY = 'bitacora-per:v1:chartAuto';
 let autoMeasures = true;
 try { autoMeasures = localStorage.getItem(AUTO_KEY) !== '0'; } catch { /* Sin almacenamiento: se queda activado. */ }
-let dlg, view, world, ink, panel, readout, st = null, options = null, lastView = null, frame = 0;
+let dlg, view, world, ink, panel, readout, notesBox, st = null, options = null, lastView = null, frame = 0;
 const tiles = new Map(), shapes = new Map(), pointers = new Map();
 let gesture = null;
 
@@ -61,7 +62,7 @@ function applyView() {
   if (!frame) frame = requestAnimationFrame(() => { frame = 0; if (st) draw(); });
 }
 function updateTiles() {
-  const sharp = st.s * (window.devicePixelRatio || 1), level = sharp > .55 ? 2 : sharp > .27 ? 1 : 0;
+  const sharp = st.s * (window.devicePixelRatio || 1), level = sharp > 1.05 ? 3 : sharp > .5 ? 2 : sharp > .25 ? 1 : 0;
   const wanted = new Set();
   if (level) {
     const L = LEVELS[level], f = CHART.width / L.width, size = CHART.tile * f;
@@ -73,7 +74,7 @@ function updateTiles() {
       const img = new Image();
       img.alt = ''; img.draggable = false; img.decoding = 'async'; img.className = `chart-tile level-${level}`;
       img.style.cssText = `left:${c * size}px;top:${r * size}px;width:${Math.min(CHART.tile, L.width - c * CHART.tile) * f}px;height:${Math.min(CHART.tile, L.height - r * CHART.tile) * f}px`;
-      img.src = `assets/chart/${key}.webp`;
+      img.src = `assets/chart/${key}.webp?v=${TILES_VERSION}`;
       world.append(img); tiles.set(key, img);
     }
   }
@@ -227,10 +228,11 @@ function sanitize(saved) {
   const pos = p => ({ lat: p.lat, lon: p.lon });
   return { els, letter: Number.isInteger(saved?.letter) && saved.letter >= 0 ? saved.letter : els.filter(e => e.t === 'p').length,
     pro: validPos(saved?.pro?.c) ? { c: pos(saved.pro.c), pinned: !!saved.pro.pinned } : null,
-    div: validPos(saved?.div?.a) && validPos(saved?.div?.b) ? { a: pos(saved.div.a), b: pos(saved.div.b), locked: !!saved.div.locked } : null };
+    div: validPos(saved?.div?.a) && validPos(saved?.div?.b) ? { a: pos(saved.div.a), b: pos(saved.div.b), locked: !!saved.div.locked } : null,
+    notes: typeof saved?.notes === 'string' ? saved.notes.slice(0, NOTES_MAX) : '' };
 }
 const snapshot = () => JSON.stringify({ els: st.els, letter: st.letter });
-function save() { options.store.save({ els: st.els, letter: st.letter, pro: st.pro, div: st.div }); }
+function save() { options.store.save({ els: st.els, letter: st.letter, pro: st.pro, div: st.div, notes: st.notes }); }
 function commit(change) {
   st.history.push(snapshot()); if (st.history.length > 60) st.history.shift();
   change(); save(); refresh();
@@ -327,6 +329,7 @@ function onControl(e) {
   const control = e.target.closest('[data-c]'); if (!control || control.disabled) return;
   const c = control.dataset.c, el = selected();
   if (c === 'close') closeChart();
+  if (c === 'notes') { const open = !notesBox.classList.contains('open'); notesBox.classList.toggle('open', open); control.setAttribute('aria-expanded', String(open)); if (open) notesBox.querySelector('textarea').focus(); }
   if (c === 'undo') undo();
   if (c === 'clear') options.confirm('¿Borrar todos los trazos?', 'Se eliminarán los puntos, rectas y círculos de esta carta. Podrás recuperarlos con Deshacer mientras no la cierres.', 'Borrar todo', () => commit(() => { st.els = []; st.sel = null; st.pending = null; st.letter = 0; }), 'Cancelar');
   if (c === 'snap') { st.snap = !st.snap; syncControls(); }
@@ -442,12 +445,14 @@ function mount() {
   dlg.id = 'chart'; dlg.className = 'chart'; dlg.setAttribute('aria-label', 'Carta del Estrecho de Gibraltar');
   dlg.innerHTML = `<header class="chart-bar"><button type="button" class="btn secondary" data-c="close">← Volver</button><div class="chart-title"><b></b><span class="chart-readout" aria-live="off"></span></div><button type="button" class="btn text" data-c="undo" aria-label="Deshacer el último cambio">↶ <span>Deshacer</span></button><button type="button" class="btn text" data-c="clear">Borrar <span>todo</span></button></header>
 <details class="chart-question"><summary>Enunciado</summary><div></div></details>
-<div class="chart-view" tabindex="0" role="application" aria-label="Carta. Arrastra para moverla, pellizca o usa más y menos para ampliar."><div class="chart-world"><img class="chart-base" src="assets/chart/0.webp" width="${CHART.width}" height="${CHART.height}" alt="Carta L105 de enseñanza: Estrecho de Gibraltar, de Cabo Roche a Punta de la Chullera y de Cabo Espartel a Cabo Negro." draggable="false"></div><svg class="chart-ink" aria-hidden="true"></svg><div class="chart-zoom"><button type="button" data-c="zoom-in" aria-label="Ampliar">+</button><button type="button" data-c="zoom-out" aria-label="Reducir">−</button><button type="button" data-c="fit" aria-label="Ver la carta entera">⤢</button><button type="button" data-c="snap" aria-pressed="true" aria-label="Imán: ajustar a puntos y cruces" title="Imán: ajustar a puntos y cruces">⌖</button><button type="button" class="chart-auto" data-c="auto" aria-pressed="true" aria-label="Mostrar medidas automáticas" title="Medidas automáticas: desactívalo para leer tú en el transportador y las escalas">12°</button></div></div>
+<div class="chart-view" tabindex="0" role="application" aria-label="Carta. Arrastra para moverla, pellizca o usa más y menos para ampliar."><div class="chart-world"><img class="chart-base" src="assets/chart/0.webp?v=${TILES_VERSION}" width="${CHART.width}" height="${CHART.height}" alt="Carta L105 de enseñanza: Estrecho de Gibraltar, de Cabo Roche a Punta de la Chullera y de Cabo Espartel a Cabo Negro." draggable="false"></div><svg class="chart-ink" aria-hidden="true"></svg><div class="chart-zoom"><button type="button" data-c="zoom-in" aria-label="Ampliar">+</button><button type="button" data-c="zoom-out" aria-label="Reducir">−</button><button type="button" data-c="fit" aria-label="Ver la carta entera">⤢</button><button type="button" data-c="snap" aria-pressed="true" aria-label="Imán: ajustar a puntos y cruces" title="Imán: ajustar a puntos y cruces">⌖</button><button type="button" class="chart-auto" data-c="auto" aria-pressed="true" aria-label="Mostrar medidas automáticas" title="Medidas automáticas: desactívalo para leer tú en el transportador y las escalas">12°</button></div></div>
 <section class="chart-panel" aria-label="Útil y medidas"></section>
+<section class="chart-notes"><button type="button" class="chart-notes-toggle" data-c="notes" aria-expanded="false" aria-controls="chart-notes-text">Notas</button><textarea id="chart-notes-text" aria-label="Notas de esta pregunta" maxlength="${NOTES_MAX}" spellcheck="false" placeholder="Apunta aquí tus cálculos: Ct = dm + desvío, Ra = Rv − Ct…"></textarea></section>
 <div class="chart-tools" role="toolbar" aria-label="Útiles de trazado">${TOOLS.map(([id, label, svg]) => `<button type="button" data-tool="${id}" aria-pressed="false">${svg}<span>${label}</span></button>`).join('')}</div>
 <p class="chart-legal">Carta de enseñanza. No válida para la navegación. 1 milla = 1′ de latitud.</p>`;
   document.body.append(dlg);
-  view = dlg.querySelector('.chart-view'); world = dlg.querySelector('.chart-world'); ink = dlg.querySelector('.chart-ink'); panel = dlg.querySelector('.chart-panel'); readout = dlg.querySelector('.chart-readout');
+  view = dlg.querySelector('.chart-view'); world = dlg.querySelector('.chart-world'); ink = dlg.querySelector('.chart-ink'); panel = dlg.querySelector('.chart-panel'); readout = dlg.querySelector('.chart-readout'); notesBox = dlg.querySelector('.chart-notes');
+  notesBox.addEventListener('input', e => { if (st) { st.notes = e.target.value; save(); } });
   dlg.addEventListener('click', onControl);
   dlg.addEventListener('submit', onSubmit);
   dlg.addEventListener('keydown', onKey);
@@ -472,11 +477,13 @@ export function openChart(opts) {
   if (dlg.open) return;
   options = opts;
   const data = sanitize(opts.store.load());
-  st = { els: data.els, letter: data.letter, pro: data.pro, div: data.div, auto: autoMeasures, nextId: data.els.length + 1, sel: null, tool: 'select', pending: null, hover: null, snap: true, history: [], s: 1, tx: 0, ty: 0 };
+  st = { els: data.els, letter: data.letter, pro: data.pro, div: data.div, notes: data.notes, auto: autoMeasures, nextId: data.els.length + 1, sel: null, tool: 'select', pending: null, hover: null, snap: true, history: [], s: 1, tx: 0, ty: 0 };
   dlg.querySelector('.chart-title b').textContent = opts.title;
   const details = dlg.querySelector('.chart-question');
   details.hidden = !opts.question; details.open = matchMedia('(min-width:900px)').matches;
   if (opts.question) details.lastElementChild.innerHTML = `<p>${esc(opts.question.text)}</p><ol>${opts.question.options.map(o => `<li><b>${esc(o.key.toUpperCase())}</b> ${esc(o.text)}</li>`).join('')}</ol>`;
+  notesBox.querySelector('textarea').value = st.notes;
+  notesBox.classList.toggle('open', !!st.notes); notesBox.firstElementChild.setAttribute('aria-expanded', String(!!st.notes));
   dlg.showModal();
   if (lastView && lastView.w === view.clientWidth && lastView.h === view.clientHeight) Object.assign(st, { s: lastView.s, tx: lastView.tx, ty: lastView.ty }); else { st.s = Math.max(fitScale(), view.clientHeight / CHART.height); st.tx = (view.clientWidth - CHART.width * st.s) / 2; }
   showPosition(null); applyView(); refresh();

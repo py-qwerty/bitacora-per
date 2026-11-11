@@ -3,12 +3,26 @@
 
 Uso: python3 scripts/build-chart.py /ruta/a/L105_ensenanza_PER.kap
 
-Genera tres niveles: 0 (1/4, una sola imagen), 1 (1/2) y 2 (resolución completa),
-los dos últimos troceados en teselas de 1024 px. Requiere Pillow con soporte WebP.
+Genera cuatro niveles: 0 (1/4, una sola imagen), 1 (1/2), 2 (resolución del escaneo)
+y 3 (ampliado ×2 con Lanczos para que el zoom no dependa del suavizado del navegador),
+los tres últimos troceados en teselas de 1024 px. El escaneo se realza antes: papel a
+blanco, tinta a negro y máscara de enfoque. Requiere Pillow con soporte WebP.
 """
 import json, re, sys
 from pathlib import Path
-from PIL import Image
+from PIL import Image, ImageFilter
+
+Image.MAX_IMAGE_PIXELS = None
+# Niveles del escaneo: tinta ≈ 40, papel ≈ 252. Las tramas grises (240–245) se conservan.
+BLACK, WHITE, GAMMA = 40, 252, 1.2
+LUT = [0 if v <= BLACK else round(min(1, (v - BLACK) / (WHITE - BLACK)) ** GAMMA * 255) for v in range(256)]
+# Máscara de enfoque por factor de escala: (radio, porcentaje).
+SHARPEN = {4: (0.7, 70), 2: (0.8, 90), 1: (1.2, 120), 0.5: (2.2, 140)}
+
+
+def enhance(image, factor):
+    radius, percent = SHARPEN[factor]
+    return image.filter(ImageFilter.UnsharpMask(radius=radius, percent=percent, threshold=2))
 
 TILE = 1024
 OUT = Path(__file__).resolve().parent.parent / 'dist' / 'assets' / 'chart'
@@ -50,12 +64,13 @@ def main():
     if len(sys.argv) != 2: sys.exit(__doc__)
     image, refs = decode(sys.argv[1])
     if len(set(image.convert('HSV').getchannel('S').getextrema())) == 1: image = image.convert('L')
+    image = image.point(LUT * len(image.getbands()))
     OUT.mkdir(parents=True, exist_ok=True)
     for old in OUT.glob('*.webp'): old.unlink()
     width, height = image.size
     levels = []
-    for level, factor in enumerate((4, 2, 1)):
-        scaled = image if factor == 1 else image.resize((round(width / factor), round(height / factor)), Image.LANCZOS)
+    for level, factor in enumerate((4, 2, 1, 0.5)):
+        scaled = enhance(image if factor == 1 else image.resize((round(width / factor), round(height / factor)), Image.LANCZOS), factor)
         if level == 0:
             scaled.save(OUT / '0.webp', quality=82, method=6)
             levels.append({'factor': factor, 'width': scaled.width, 'height': scaled.height})
