@@ -1,4 +1,4 @@
-import { openChart, closeChart, isChartOpen } from './chart.js?v=4';
+import { openChart, closeChart, isChartOpen, updateChart, setChartQuestion } from './chart.js?v=5';
 import { QUOTAS, LIMITS, DURATION, RULES_URL, generateExam, gradeExam, remaining, formatTime, isValidSession, practiceBlocks, validPractice, swipeDirection, validateTema } from './core.js?v=7';
 const $ = s => document.querySelector(s);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -151,6 +151,26 @@ function scrollToSection(id, smooth = true) {
   el.scrollIntoView({ behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'auto', block: 'start' });
   el.querySelector('h2')?.setAttribute('tabindex', '-1'); el.querySelector('h2')?.focus({ preventScroll: true });
 }
+// La carta abierta sigue a la pregunta en curso: se responde y se cambia de pregunta sin cerrarla.
+let chartQid=null,chartLive=false;
+function currentQuestionId(){const ctx=navigationContext();return ctx?.kind==='practice'?ctx.practice.ids[ctx.index]:ctx?.kind==='exam'?session.ids[session.index]:null;}
+function chartQuestionHtml(q,live){
+  const ctx=live?navigationContext():null;
+  if(!ctx)return `<p>${esc(q.text)}</p><ol>${q.options.map(o=>`<li><b>${o.key.toUpperCase()}</b> ${esc(o.text)}</li>`).join('')}</ol>`;
+  const exam=ctx.kind==='exam',p=ctx.practice,selected=exam?session.answers[q.id]:p.answers[q.id],checked=!exam&&p.checked.includes(q.id),locked=!exam&&!!p.finishedAt;
+  return `<p class="chart-position">Pregunta ${ctx.index+1} / ${ctx.total}</p><p>${esc(q.text)}</p><form class="chart-answers"><fieldset><legend class="sr-only">Elige una respuesta</legend>${q.options.map(o=>`<label class="chart-answer ${selected===o.key?'selected':''} ${checked&&q.correct===o.key?'is-correct':''} ${checked&&selected===o.key&&selected!==q.correct?'is-incorrect':''}"><input type="radio" name="${exam?'answer':'practice-answer'}" value="${o.key}" data-k="${o.key}" ${locked?'disabled':''} ${selected===o.key?'checked':''}><b>${o.key.toUpperCase()}</b><span>${esc(o.text)}</span></label>`).join('')}</fieldset></form>${checked?`<p class="chart-feedback ${selected===q.correct?'right':'wrong'}" role="status">${selected===q.correct?'✓ Correcto':'La respuesta correcta es '+q.correct.toUpperCase()+'.'}</p>`:''}<div class="chart-nav"><button type="button" class="btn secondary" data-k="prev" data-action="question-step" data-direction="-1" ${ctx.index===0?'disabled':''}>← Anterior</button>${exam||checked||locked?'':`<button type="button" class="btn secondary" data-k="check" data-action="practice-check" ${selected?'':'disabled'}>Comprobar</button>`}<button type="button" class="btn" data-k="next" data-action="question-step" data-direction="1" ${ctx.index===ctx.total-1?'disabled':''}>Siguiente →</button></div>`;
+}
+function chartOptions(q){
+  const key='chart:'+(q?.id??'libre'),exam=currentRoute().path==='/examen';
+  return {title:q?'Carta · '+topicTitle(11):'Carta del Estrecho · Práctica libre',questionHtml:q?chartQuestionHtml(q,chartLive):'',confirm:ask,onClose:()=>{chartQid=null;chartLive=false;},store:exam?{load:()=>chartMemory.get(key),save:data=>chartMemory.set(key,structuredClone(data))}:{load:()=>read(key),save:data=>write(key,data)}};
+}
+function syncChart(){
+  if(!chartLive||!isChartOpen())return;
+  const id=currentQuestionId(),q=id&&questionMap.get(id);
+  if(!q||q.topic!==11){closeChart();return;}
+  if(id!==chartQid){chartQid=id;updateChart(chartOptions(q));}
+  else setChartQuestion('Carta · '+topicTitle(11),chartQuestionHtml(q,true));
+}
 function chartButton(q) { return q.topic === 11 ? `<button type="button" class="btn secondary full chart-open" data-action="open-chart" data-qid="${esc(q.id)}">Abrir la carta para esta pregunta</button>` : ''; }
 function optionsRead(q, selected, showCorrect = false) {
   return `<ol class="read-options">${q.options.map(o => `<li class="${showCorrect && o.key === q.correct ? 'correct' : ''} ${showCorrect && selected === o.key && selected !== q.correct ? 'incorrect' : ''}"><span class="option-letter">${o.key.toUpperCase()}</span><span>${esc(o.text)}${showCorrect && o.key === q.correct ? '<strong class="answer-label">Respuesta correcta</strong>' : ''}${showCorrect && selected === o.key ? '<strong class="answer-label">Tu respuesta</strong>' : ''}</span></li>`).join('')}</ol>`;
@@ -299,6 +319,7 @@ function render(focus=true) {
   if(focus){main.style?.removeProperty('min-height');window.scrollTo(0,0);main.focus({preventScroll:true});}
   const target=params.get('apartado');if(wide&&target)scrollToSection(target,false);
   markCurrentSection();
+  syncChart();
 }
 let dialogAction, dialogTrigger;
 function ask(title,description,confirmLabel,action,cancelLabel='Seguir con el simulacro') {
@@ -370,7 +391,7 @@ function retainQuestionScroll(commit,position={x:window.scrollX||0,y:window.scro
 function transitionQuestion(direction,commit,after) {
   if(questionTransition)return false;
   const outgoing=$('.question-panel,.study-question');
-  if(!outgoing?.animate||matchMedia('(prefers-reduced-motion: reduce)').matches){retainQuestionScroll(commit);after?.();return true;}
+  if(!outgoing?.animate||isChartOpen()||matchMedia('(prefers-reduced-motion: reduce)').matches){retainQuestionScroll(commit);after?.();return true;}
   const tx={hash:location.hash,cancelled:false,animation:null,scroll:{x:window.scrollX||0,y:window.scrollY||0}};
   const offset=Math.min(outgoing.clientWidth*.65,260);
   questionTransition=tx;main.inert=true;
@@ -453,7 +474,7 @@ document.addEventListener('keydown',e=>{
   const direction=e.key==='ArrowLeft'?-1:e.key==='ArrowRight'?1:0;
   if(direction&&navigateQuestion(direction))e.preventDefault();
 });
-function renderExamSafely(){clearInterval(timer);renderExam();}
+function renderExamSafely(){clearInterval(timer);renderExam();syncChart();}
 document.addEventListener('click',e=>{
   if(e.target.closest('.skip')){e.preventDefault();main.focus();return;}
   const sectionLink=e.target.closest('.tema-index a[data-section], a[data-resume]');
@@ -489,8 +510,9 @@ document.addEventListener('click',e=>{
   }
   if(a==='review-filter'){reviewPage=0;reviewFilter=button.dataset.filter;const y=window.scrollY;render(false);window.scrollTo(0,y);$(`[data-filter="${reviewFilter}"]`)?.focus({preventScroll:true});}
   if(a==='open-chart'){
-    const q=questionMap.get(button.dataset.qid),key='chart:'+(q?.id??'libre'),exam=currentRoute().path==='/examen';
-    openChart({title:q?'Carta · '+topicTitle(11):'Carta del Estrecho · Práctica libre',question:q,confirm:ask,store:exam?{load:()=>chartMemory.get(key),save:data=>chartMemory.set(key,structuredClone(data))}:{load:()=>read(key),save:data=>write(key,data)}});
+    const q=questionMap.get(button.dataset.qid);
+    chartQid=q?.id??null;chartLive=!!q&&currentQuestionId()===q.id;
+    openChart(chartOptions(q));
   }
   if(a==='reload')location.reload();
 });

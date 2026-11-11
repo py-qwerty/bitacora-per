@@ -305,6 +305,7 @@ function readMiles(form, name, optional = false) {
 function onSubmit(e) {
   e.preventDefault();
   const form = e.target, kind = form.dataset.f, el = selected();
+  if (!kind) return;
   if (kind === 'add-point') { const p = readCoords(form); if (!p) return; addPoint(p); reveal(p); }
   if (kind === 'move-point') { const p = readCoords(form); if (!p) return; commit(() => { el.p = p; }); reveal(p); }
   if (kind === 'bearing') {
@@ -470,20 +471,37 @@ export function isChartOpen() { return !!dlg?.open; }
 export function closeChart() { if (dlg?.open) dlg.close(); }
 /**
  * Abre la carta. `store` = {load(), save(data)} guarda los trazos; `confirm` muestra el
- * diálogo de confirmación de la app; `question` (opcional) deja el enunciado a mano.
+ * diálogo de confirmación de la app; `questionHtml` (opcional) deja a mano el enunciado
+ * y los controles que la app quiera poner (respuestas, anterior/siguiente).
  */
+function fillQuestion(title, html) {
+  const box = dlg.querySelector('.chart-question'), body = box.lastElementChild;
+  const key = body.contains(document.activeElement) ? document.activeElement.dataset.k : null;
+  dlg.querySelector('.chart-title b').textContent = title;
+  box.hidden = !html; body.innerHTML = html || '';
+  if (key) { const again = body.querySelector(`[data-k="${key}"]:not(:disabled)`); (again ?? view).focus({ preventScroll: true }); }
+}
+function loadState(opts, keep = null) {
+  options = opts;
+  const data = sanitize(opts.store.load());
+  st = { els: data.els, letter: data.letter, pro: data.pro, div: data.div, notes: data.notes, auto: autoMeasures, nextId: data.els.length + 1, sel: null, tool: 'select', pending: null, hover: null, snap: keep?.snap ?? true, history: [], s: keep?.s ?? 1, tx: keep?.tx ?? 0, ty: keep?.ty ?? 0 };
+  fillQuestion(opts.title, opts.questionHtml);
+  notesBox.querySelector('textarea').value = st.notes;
+  notesBox.classList.toggle('open', !!st.notes); notesBox.firstElementChild.setAttribute('aria-expanded', String(!!st.notes));
+}
+/** Actualiza solo el enunciado y sus controles, sin tocar los trazos. */
+export function setChartQuestion(title, html) { if (dlg?.open) fillQuestion(title, html); }
+/** Cambia la carta abierta a otra pregunta (otros trazos y notas) conservando la vista. */
+export function updateChart(opts) {
+  if (!dlg?.open) return;
+  loadState(opts, st);
+  showPosition(null); applyView(); refresh();
+}
 export function openChart(opts) {
   if (!dlg) mount();
   if (dlg.open) return;
-  options = opts;
-  const data = sanitize(opts.store.load());
-  st = { els: data.els, letter: data.letter, pro: data.pro, div: data.div, notes: data.notes, auto: autoMeasures, nextId: data.els.length + 1, sel: null, tool: 'select', pending: null, hover: null, snap: true, history: [], s: 1, tx: 0, ty: 0 };
-  dlg.querySelector('.chart-title b').textContent = opts.title;
-  const details = dlg.querySelector('.chart-question');
-  details.hidden = !opts.question; details.open = matchMedia('(min-width:900px)').matches;
-  if (opts.question) details.lastElementChild.innerHTML = `<p>${esc(opts.question.text)}</p><ol>${opts.question.options.map(o => `<li><b>${esc(o.key.toUpperCase())}</b> ${esc(o.text)}</li>`).join('')}</ol>`;
-  notesBox.querySelector('textarea').value = st.notes;
-  notesBox.classList.toggle('open', !!st.notes); notesBox.firstElementChild.setAttribute('aria-expanded', String(!!st.notes));
+  loadState(opts);
+  dlg.querySelector('.chart-question').open = matchMedia('(min-width:900px)').matches;
   dlg.showModal();
   if (lastView && lastView.w === view.clientWidth && lastView.h === view.clientHeight) Object.assign(st, { s: lastView.s, tx: lastView.tx, ty: lastView.ty }); else { st.s = Math.max(fitScale(), view.clientHeight / CHART.height); st.tx = (view.clientWidth - CHART.width * st.s) / 2; }
   showPosition(null); applyView(); refresh();
