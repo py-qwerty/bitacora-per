@@ -8,6 +8,6 @@
     "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory dist",
     "temas": "node scripts/build-temas.mjs",
     "test": "node --test tests/*.test.js",
-    "check": "node --check dist/app.js && node --check dist/core.js && node --check dist/chart.js && node --check dist/chart-geo.js && node --test tests/*.test.js"
+    "check": "node --check dist/app.js && node --check dist/core.js && node --check dist/chart.js && node --check dist/chart-geo.js && node --check dist/pomodoro.js && node --test tests/*.test.js"
   }
 }
