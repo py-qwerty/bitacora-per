@@ -298,3 +298,7 @@ dialog.chart{--chart-ink:#0b55c4;--chart-ink-selected:#c2410c;width:100vw;max-wi
 .pomo-alert .pomo-pill{animation:pomo-pulse 1s ease-in-out 4;border-color:var(--color-warning)}
 @keyframes pomo-pulse{50%{transform:scale(1.08)}}
 @media(min-width:1024px){.pomo{right:24px;bottom:24px}.in-exam .pomo{bottom:24px}}
+
+/* Panel «Pon a prueba»: en escritorio es sticky con altura máxima y debe hacer scroll interno;
+   la regla de rediseño anterior lo dejaba en overflow:visible y las preguntas se montaban sobre el contenido. */
+@media(min-width:1024px){.tema-section-questions{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding-right:6px}}
